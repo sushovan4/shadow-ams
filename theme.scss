@@ -2317,8 +2317,8 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
   margin: 0.5rem auto 0.45rem;
   padding: 0.42rem 1.15rem 0.4rem 1.2rem;
   max-width: 50em;
-  font-size: 0.66em;
-  line-height: 1.34;
+  font-size: 0.73em;
+  line-height: 1.32;
   text-align: left;
   background: var(--paper-soft);
   border-left: 3px solid var(--oxblood);
@@ -2422,8 +2422,8 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
   margin: 0.2rem auto 0.35rem;
   padding: 0 1.2rem;
   max-width: 50em;
-  font-size: 0.62em;
-  line-height: 1.34;
+  font-size: 0.68em;
+  line-height: 1.32;
   color: var(--ink);
 }
 .reveal .sketch p { margin: 0.18em 0; text-align: left; }
@@ -2468,7 +2468,7 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
 .reveal .aside-note {
   max-width: 46em;
   margin: 0.2rem auto 0;
-  font-size: 0.6em;
+  font-size: 0.66em;
   font-style: italic;
   color: var(--ink-soft);
   text-align: center;
@@ -2505,7 +2505,7 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
 .reveal .theorem ol > li::marker, .reveal .problem ol > li::marker { content: none; }
 
 // Standfirst on math slides: one line, smaller than the ML decks.
-.reveal .standfirst.math { font-size: 0.8em !important; margin: -0.35rem auto 0.3rem !important; }
+.reveal .standfirst.math { font-size: 0.86em !important; margin: -0.35rem auto 0.3rem !important; }
 
 // In a two-column row the header line is too short to carry a flush-right
 // attribution; set it under the statement instead.

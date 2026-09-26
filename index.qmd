@@ -173,7 +173,7 @@ $$
 :::
 :::
 
-::: {.fig-wide .fragment style="width: 62%;"}
+::: {.fig-wide .fragment style="width: 52%;"}
 ![](assets/hairpin.svg)
 :::
 
@@ -553,7 +553,7 @@ If $\mathcal K$ is a flag complex satisfying the apex condition, then $p\colon|\
 :::
 
 ::: {.fig-row}
-::: {.fig style="flex-basis: 30%;"}
+::: {.fig style="flex-basis: 36%;"}
 ![](assets/apex.svg)
 :::
 

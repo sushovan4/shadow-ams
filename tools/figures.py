@@ -275,14 +275,14 @@ def fig_shadow():
                 g.append(circle(X, 4.2, fill=PAPER, stroke=OX, stroke_width=1.6))
         for p in P:
             g.append(circle(p, 3.8, fill=INK))
-        g.append(text((105, 190), label, 15, fill=SEPIA))
+        g.append(text((105, 190), label, 18, fill=SEPIA))
         g.append("</g>")
         body += g
     for x0 in (262, 522):
         body.append(line((x0, 90), (x0 + 22, 90), stroke=SEPIA, stroke_width=1))
         body.append(f'<path d="M {x0+16} 86 L {x0+23} 90 L {x0+16} 94" '
                     f'fill="none" stroke="{SEPIA}" stroke-width="1"/>')
-    body.append(text((285, 80), "p", 15, fill=SEPIA))
+    body.append(text((285, 80), "p", 18, fill=SEPIA))
     write("shadow.svg", svg(780, 220, body, "A complex, its shadow, and the shadow complex"))
 
 
@@ -343,8 +343,8 @@ def octa_hexagon(scale=1.0, dx=0, dy=0, labels=True, captions=True):
     if labels:
         out.append(text(T((hc[0] + 14, hc[1] + 5)), "x", 15 * scale, fill=OX, anchor="start"))
     if captions:
-        out.append(text(T((170, 312)), "ℛ ≃ S²,  π₂(ℛ) ≅ ℤ", 15, fill=SEPIA))
-        out.append(text(T((520, 312)), "Sh(ℛ) is a hexagon: contractible", 15, fill=SEPIA))
+        out.append(text(T((170, 312)), "ℛ ≃ S²,  π₂(ℛ) ≅ ℤ", 18, fill=SEPIA))
+        out.append(text(T((520, 312)), "Sh(ℛ) is a hexagon: contractible", 18, fill=SEPIA))
     return out
 
 
@@ -369,8 +369,8 @@ def fig_hairpin():
         g.append("</g>")
         body += g
         body.append(text((dx + 112, 262), title, 16, fill=OX if k else SEPIA))
-    body.append(text((172, 290), "fills the gap: a disk, the loop is lost", 14, fill=SEPIA))
-    body.append(text((512, 290), "respects the gap: the arc survives", 14, fill=SEPIA))
+    body.append(text((172, 290), "fills the gap: a disk, the loop is lost", 18, fill=SEPIA))
+    body.append(text((512, 290), "respects the gap: the arc survives", 18, fill=SEPIA))
     write("hairpin.svg", svg(680, 300, body,
                              "Euclidean and path-metric Rips complexes of a hairpin sample"))
 
@@ -394,7 +394,7 @@ def fig_lifting():
                       (D, "D", (0, 20)), (E, "E", (12, -4))]:
         g += [circle(p, 4, fill=INK), text((p[0] + off[0], p[1] + off[1]), s, 16)]
     g += [text((v[0] - 12, v[1] + 20), "v", 15, fill=OX),
-          text((150, 250), "(A)  one apex E joins both", 15, fill=SEPIA), "</g>"]
+          text((150, 250), "(A)  one apex E joins both", 18, fill=SEPIA), "</g>"]
     body += g
     # Case (B)
     A, B, C, D = (40, 110), (250, 110), (95, 25), (205, 200)
@@ -417,8 +417,8 @@ def fig_lifting():
                       (D, "D", (0, 20)), (E, "E", (-12, 12)), (F, "F", (10, -6))]:
         g += [circle(p, 4, fill=INK), text((p[0] + off[0], p[1] + off[1]), s, 16)]
     g += [text((v[0] + 14, v[1] - 6), "v", 15, fill=OX),
-          text((w[0] - 6, w[1] + 22), "w", 15, fill=SEPIA),
-          text((150, 250), "(B)  E, F straddle the hyperplane of σ", 15, fill=SEPIA), "</g>"]
+          text((w[0] - 6, w[1] + 22), "w", 18, fill=SEPIA),
+          text((150, 250), "(B)  E, F straddle the hyperplane of σ", 18, fill=SEPIA), "</g>"]
     body += g
     write("lifting.svg", svg(660, 290, body, "The two alternatives of the lifting condition"))
 
@@ -441,7 +441,7 @@ def fig_annuli():
         g.append(circle(p, 3.0 if inside else 2.0, fill=OX if inside else INK,
                         opacity=1 if inside else 0.45))
     g.append(circle(c, 4.5, fill=PAPER, stroke=INK, stroke_width=1.6))
-    g += [text((130, 238), "on an edge: 2 branches", 15, fill=SEPIA), "</g>"]
+    g += [text((130, 238), "on an edge: 2 branches", 18, fill=SEPIA), "</g>"]
     body += g
     # vertex of degree 3, one sharp angle
     g = ['<g transform="translate(360,20)">']
@@ -460,7 +460,7 @@ def fig_annuli():
                         opacity=1 if inside else 0.45))
     g.append(circle(v, 4.5, fill=PAPER, stroke=INK, stroke_width=1.6))
     g.append(text((v[0] + 8, v[1] - 10), "v", 15, anchor="start"))
-    g += [text((130, 238), "at a branch vertex: 3 branches", 15, fill=SEPIA), "</g>"]
+    g += [text((130, 238), "at a branch vertex: 3 branches", 18, fill=SEPIA), "</g>"]
     body += g
     body.append(text((330, 278), "annulus  β/2 ≤ dᵋ(A, ·) ≤ β  about a sample point A",
                      14, fill=SEPIA))
@@ -469,7 +469,7 @@ def fig_annuli():
 
 def fig_apex():
     """The apex condition: every simplex whose hull covers x joins a common vertex."""
-    body = ['<g transform="translate(20,10)">']
+    body = ['<g transform="translate(60,10)">']
     a, b, c = (60, 200), (250, 190), (120, 40)
     d, e, f_ = (70, 90), (230, 70), (190, 230)
     x = (152, 140)
@@ -484,9 +484,9 @@ def fig_apex():
              text((vx[0] + 12, vx[1] + 5), "vₓ", 17, fill=OX, anchor="start"),
              circle(x, 4.5, fill=PAPER, stroke=OX, stroke_width=1.6),
              text((x[0] - 4, x[1] - 10), "x", 16, fill=OX),
-             text((160, 268), "st(x, 𝒦) = every simplex whose hull contains x", 14, fill=SEPIA),
-             text((160, 288), "apex: vₓ ∗ st(x, 𝒦) ⊂ 𝒦", 14, fill=SEPIA), "</g>"]
-    write("apex.svg", svg(380, 300, body, "The apex condition at a point of the shadow"))
+             text((160, 268), "st(x, 𝒦) = every simplex whose hull contains x", 18, fill=SEPIA),
+             text((160, 288), "apex: vₓ ∗ st(x, 𝒦) ⊂ 𝒦", 18, fill=SEPIA), "</g>"]
+    write("apex.svg", svg(460, 300, body, "The apex condition at a point of the shadow"))
 
 
 def title_plate():

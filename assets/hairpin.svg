@@ -946,6 +946,6 @@
 </g>
 </g>
 <text x="512" y="262" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">ε-path Vietoris–Rips</text>
-<text x="172" y="290" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="14" font-style="italic" text-anchor="middle">fills the gap: a disk, the loop is lost</text>
-<text x="512" y="290" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="14" font-style="italic" text-anchor="middle">respects the gap: the arc survives</text>
+<text x="172" y="290" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">fills the gap: a disk, the loop is lost</text>
+<text x="512" y="290" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">respects the gap: the arc survives</text>
 </svg>
