@@ -8,6 +8,8 @@ date-format: "MMMM D, YYYY"
 format:
   revealjs:
     theme: [default, theme.scss]
+resources:
+  - assets/title-plate.svg
 footer: "Beyond a Shadow of a Doubt  ·  S. Majhi  ·  AMS Fall Eastern Sectional · Washington, D.C.  ·  October 2026"
 ---
 
