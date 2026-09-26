@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="A scale-free configuration at a sharp vertex">
+<g>
+<line x1="30" y1="130" x2="319.8" y2="52.4" stroke="#57473a" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="30" y1="130" x2="319.8" y2="207.6" stroke="#57473a" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="30" y1="130" x2="330" y2="130" stroke="#57473a" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="47.5" y1="130" x2="297.5" y2="130" stroke="#2b211a" stroke-width="2.4"/>
+<line x1="259.4" y1="68.5" x2="39.7" y2="132.6" stroke="#6c1d1a" stroke-width="2.0"/>
+<circle cx="30" cy="130" r="4.5" fill="#f5efde" stroke="#2b211a" stroke-width="1.5"/>
+<circle cx="259.4" cy="68.5" r="4" fill="#2b211a"/>
+<circle cx="39.7" cy="132.6" r="4" fill="#2b211a"/>
+<circle cx="47.5" cy="130" r="4" fill="#2b211a"/>
+<circle cx="297.5" cy="130" r="4" fill="#2b211a"/>
+<circle cx="48.5" cy="130" r="4.6" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.7"/>
+<text x="24" y="135" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="end">v</text>
+<text x="249.4" y="58.5" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="start">0.95β</text>
+<text x="277.5" y="154" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="start">1.07β</text>
+<text x="115" y="126" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="start">15°</text>
+<text x="115" y="147" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="start">15°</text>
+<rect x="24.0" y="116.0" width="40" height="30" fill="none" stroke="#c8b894" stroke-width="1"/>
+</g>
+<defs><clipPath id="zoom"><rect x="385" y="30" width="230" height="200"/></clipPath></defs>
+<rect x="385" y="30" width="230" height="200" fill="none" stroke="#c8b894" stroke-width="1"/>
+<g clip-path="url(#zoom)">
+<line x1="412" y1="130" x2="614.8" y2="75.6" stroke="#57473a" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="412" y1="130" x2="614.8" y2="184.4" stroke="#57473a" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="412" y1="130" x2="622" y2="130" stroke="#57473a" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="534.5" y1="130" x2="2284.5" y2="130" stroke="#2b211a" stroke-width="2.4"/>
+<line x1="2017.9" y1="-300.3" x2="479.6" y2="148.1" stroke="#6c1d1a" stroke-width="2.0"/>
+<circle cx="412" cy="130" r="4.5" fill="#f5efde" stroke="#2b211a" stroke-width="1.5"/>
+<circle cx="2017.9" cy="-300.3" r="4" fill="#2b211a"/>
+<circle cx="479.6" cy="148.1" r="4" fill="#2b211a"/>
+<circle cx="534.5" cy="130" r="4" fill="#2b211a"/>
+<circle cx="2284.5" cy="130" r="4" fill="#2b211a"/>
+<circle cx="541.8" cy="130" r="4.6" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.7"/>
+<text x="408" y="120" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="end">v</text>
+<text x="483.6" y="170.1" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="start">0.04β</text>
+<text x="514.5" y="118" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="start">0.07β</text>
+<text x="547.8" y="156" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="start">0.074β</text>
+</g>
+<text x="320" y="262" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">no point is within β of all four endpoints, at any scale β;</text>
+<text x="320" y="284" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">the pairwise condition (B) still holds</text>
+</svg>

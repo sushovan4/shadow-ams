@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-605876e7b31a83dc33fede4a2e7a8bc8.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-a29fecb80d4ea4746292bb90366be0f5.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -179,26 +179,26 @@ Sushovan Majhi
 <section class="slide level2">
 <h2>Where is the shape?</h2>
 <div class="standfirst math">
-<p>A sample <span class="math inline">\mathcal S\subset\mathbb R^N</span> lies near an unknown shape <span class="math inline">\mathcal G\subset\mathbb R^N</span>. Vietoris–Rips complexes recover <em>what</em> <span class="math inline">\mathcal G</span> is. They do not say <em>where</em> it is.</p>
+<p>A sample <span class="math inline">\mathcal S\subset\mathbb R^N</span> lies near an unknown graph <span class="math inline">\mathcal G\subset\mathbb R^N</span>. Vietoris–Rips complexes recover <em>what</em> <span class="math inline">\mathcal G</span> is. They do not say <em>where</em> it is.</p>
 </div>
 <div class="definition" data-num="1" data-name="Vietoris–Rips complex">
 <p>For a metric space <span class="math inline">(\mathcal S,d)</span> and a scale <span class="math inline">\beta&gt;0</span>, <span class="math inline">\mathcal R_\beta(\mathcal S)</span> is the abstract simplicial complex with a simplex for every finite <span class="math inline">\sigma\subseteq\mathcal S</span> of diameter <span class="math inline">&lt;\beta</span>. It is a flag complex: determined by its edges.</p>
 </div>
 <div class="rmk" data-name="What is known">
-<p>For many classes of shapes, <span class="math inline">\mathcal R_\beta(\mathcal S)\simeq\mathcal G</span> at suitable scales: Hausmann and Latschev for Riemannian manifolds, with quantitative versions for metric graphs, Euclidean submanifolds and spaces of curvature bounded above. But <span class="math inline">\mathcal R_\beta(\mathcal S)</span> is abstract. It is not a subset of <span class="math inline">\mathbb R^N</span>.</p>
+<p>Rips complexes recover homotopy type at suitable scales. Metric-graph reconstructions (Aanjaneya–Chazal–Chen–Glisse–Guibas–Morozov; Lecci–Rinaldo–Wasserman; Bokor–Turner–Williams) recover a graph up to homeomorphism, but return a combinatorial or abstract graph. For branched graphs in <span class="math inline">\mathbb R^N</span> we know of no embedded output proved both homeomorphic and Hausdorff-close.</p>
 </div>
 <div class="problem fragment" data-num="2" data-name="Geometric reconstruction">
-<p>From a finite <span class="math inline">\mathcal S\subset\mathbb R^N</span> with <span class="math inline">d_H(\mathcal S,\mathcal G)</span> small, compute <span class="math inline">\widehat{\mathcal G}\subset\mathbb R^N</span> with</p>
+<p>From a finite <span class="math inline">\mathcal S\subset\mathbb R^N</span> with <span class="math inline">d_H(\mathcal S,\mathcal G)</span> small, compute from <span class="math inline">\mathcal S</span> alone</p>
 <ol type="1">
-<li><span class="math inline">\widehat{\mathcal G}\simeq\mathcal G</span>, and</li>
-<li><span class="math inline">d_H(\widehat{\mathcal G},\mathcal G)</span> small,</li>
+<li>an embedded <span class="math inline">1</span>-complex <span class="math inline">C\subset\mathbb R^N</span> with <span class="math inline">C\cong\mathcal G</span> and <span class="math inline">d_H(C,\mathcal G)</span> small, and</li>
+<li>a polyhedron in <span class="math inline">\mathbb R^N</span> whose topology is that of <span class="math inline">\mathcal G</span>,</li>
 </ol>
 <p>at scales stated in explicit quantities of <span class="math inline">\mathcal G</span>.</p>
 </div>
 <aside class="notes">
-<p>The setting. There is an unknown shape G sitting in R^N (for this talk, an embedded metric graph) and a finite sample S that is Hausdorff-close to it. Both live in the same Euclidean space.</p>
-<p>The Vietoris–Rips complex is the standard tool. It is a flag complex, so it costs no more than its edges, and it does not care about the ambient dimension. The reconstruction theory is well developed: Hausmann and Latschev for manifolds, and quantitative versions (explicit windows of scales) for metric graphs, submanifolds and curvature-bounded spaces.</p>
-<p>But the Rips complex is an abstract simplicial complex. It tells you the homotopy type; it does not give you a subset of R^N. So the problem for this talk is geometric reconstruction: produce, from the sample alone, a subset of the same R^N that is homotopy equivalent to G and Hausdorff-close to it, with every scale stated explicitly.</p>
+<p>The setting. There is an unknown embedded metric graph G in R^N (road networks from GPS traces, vascular and neuronal trees, fault networks from earthquake hypocenters) and a finite sample S that is merely Hausdorff-close to it.</p>
+<p>The Vietoris–Rips complex is the standard tool. It is a flag complex, so it costs no more than its edges, and it does not care about the ambient dimension. Its homotopy theory is well developed. And there is a separate literature on metric graph reconstruction, starting with Aanjaneya, Chazal, Chen, Glisse, Guibas and Morozov, that recovers the graph up to homeomorphism. But every one of these returns an abstract or combinatorial object. Where the reconstruction sits in R^N is not part of the guarantee.</p>
+<p>So the problem for this talk has two halves: an embedded 1-complex, homeomorphic and Hausdorff-close; and a polyhedron in the same R^N with the right topology. Every scale stated explicitly.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -221,13 +221,13 @@ Sushovan Majhi
 <div class="fig-wide" style="width: 70%;">
 <p><img data-src="assets/shadow.svg"></p>
 </div>
-<div class="rmk fragment" data-name="The shadow complex">
-<p><span class="math inline">\mathrm{Sh}(\mathcal K)</span> is triangulated by a <em>shadow complex</em> <span class="math inline">\mathrm{SC}(\mathcal K)</span> whose vertices are the vertices of <span class="math inline">\mathcal K</span> and the transverse crossings <span class="math inline">p(\sigma)\cap p(\tau)</span>, where <span class="math inline">\dim\sigma+\dim\tau=N</span>. The question is whether <span class="math inline">p</span> is a homotopy equivalence.</p>
+<div class="definition fragment" data-num="4" data-name="Shadow complex">
+<p>A triangulation <span class="math inline">\mathrm{SC}(\mathcal K)</span> of <span class="math inline">\mathrm{Sh}(\mathcal K)</span> in which every <span class="math inline">\operatorname{Conv}(\sigma)</span> is a subcomplex. <em>Carrier property:</em> if the relative interior of <span class="math inline">|\tau|</span> meets <span class="math inline">\operatorname{Conv}(\sigma)</span>, then <span class="math inline">|\tau|\subset\operatorname{Conv}(\sigma)</span>.</p>
 </div>
 <aside class="notes">
-<p>The shadow is the natural remedy. Take a complex whose vertices happen to be points of R^N. The shadow projection sends each vertex to itself and extends linearly. Its image, the union of the convex hulls of the simplices, is the shadow: an explicit polyhedron in R^N.</p>
-<p>In the picture: an abstract complex with a triangle and two edges that cross it; its shadow; and a triangulation of the shadow, the shadow complex, whose new vertices (open circles) are the transverse crossings. A crossing of a sigma and a tau in a single point forces their dimensions to add to N. That count is Carathéodory, and it is what makes the whole construction work in R^N and not only in the plane.</p>
-<p>The map p is continuous and onto its image. The whole question is whether it is a homotopy equivalence.</p>
+<p>The shadow is the natural candidate for the second half. Take a complex whose vertices happen to be points of R^N. The shadow projection sends each vertex to itself and extends linearly; its image, the union of the convex hulls of the simplices, is the shadow, an explicit polyhedron in R^N.</p>
+<p>In the picture: an abstract complex with a triangle and two edges crossing it; its shadow; and a shadow complex, a triangulation of the shadow in which every hull is a subcomplex. Such a triangulation always exists, by common subdivision of finitely many polyhedra. The one fact the arguments use is the carrier property: a shadow simplex that enters a hull lies inside it.</p>
+<p>The map p is continuous and onto its image. The question is whether it is a homotopy equivalence.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -242,7 +242,7 @@ Sushovan Majhi
 </section>
 <section class="slide level2">
 <h2>The Euclidean obstruction</h2>
-<div class="theorem" data-num="4" data-cite="Chambers–de Silva–Erickson–Ghrist 2010">
+<div class="theorem" data-num="5" data-cite="Chambers–de Silva–Erickson–Ghrist 2010">
 <p>Let <span class="math inline">\mathcal S\subset\mathbb R^N</span> be finite and <span class="math inline">\mathcal R_\beta(\mathcal S)</span> its <strong>Euclidean</strong> Vietoris–Rips complex.</p>
 <ol type="1">
 <li>If <span class="math inline">N=2</span>, then <span class="math inline">p</span> is bijective on <span class="math inline">\pi_0</span> and an isomorphism on <span class="math inline">\pi_1</span>.</li>
@@ -257,9 +257,8 @@ Sushovan Majhi
 <p>In <span class="math inline">\mathbb R^3</span>, <span class="math inline">p_*</span> is onto on <span class="math inline">\pi_1</span> (Adamaszek–Frick–Vakili 2017). The theory stops at the plane.</p>
 </div>
 <aside class="notes">
-<p>For the Euclidean Vietoris–Rips complex the picture is understood precisely, and it is discouraging. Chambers, de Silva, Erickson and Ghrist: in the plane the projection is 1-connected, so the fundamental group is right. But already in the plane, higher homotopy is not preserved, and from dimension four on, even the fundamental group can fail. Adamaszek, Frick and Vakili recovered surjectivity on pi_1 in R^3.</p>
-<p>The picture is their planar example. Six points on a regular hexagon, at a scale between the short and the long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is the boundary of an octahedron, a 2-sphere. Its shadow is the solid hexagon, which is contractible. The 2-sphere is crushed flat.</p>
-<p>So as a theory of geometric reconstruction, the Euclidean shadow stops at the plane.</p>
+<p>For the Euclidean Vietoris–Rips complex the picture is understood, and it is discouraging. Chambers, de Silva, Erickson and Ghrist: in the plane the projection is 1-connected. But already in the plane higher homotopy is not preserved, and from dimension four on even the fundamental group fails. Adamaszek, Frick and Vakili recovered surjectivity on pi_1 in R^3.</p>
+<p>The picture is their planar example. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. Its shadow is the solid hexagon, contractible. Keep this example in mind; it comes back in section four.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -278,7 +277,7 @@ Sushovan Majhi
 <p>Every statement on the last slide is a theorem about the <strong>Euclidean</strong> metric on the sample.</p>
 </div>
 <div class="env-row">
-<div class="theorem" data-num="5" data-name="In the limit" data-cite="Kawamura–Majhi–Mitra">
+<div class="theorem" data-num="6" data-name="In the limit" data-cite="Kawamura–Majhi–Mitra">
 <p>Let <span class="math inline">X\subset\mathbb R^N</span> be a compact ANR. For each <span class="math inline">\beta&gt;0</span> form the direct limit of <span class="math inline">\pi_k\big(\mathrm{Sh}(\mathcal R_\beta(S))\big)</span> over finite <span class="math inline">S\subset X</span>. As <span class="math inline">\beta\to0</span>, the inverse limit of these groups is isomorphic to <span class="math inline">\pi_k(X)</span>.</p>
 </div>
 <div class="rmk fragment" data-name="At one scale: this talk">
@@ -287,13 +286,13 @@ Sushovan Majhi
 </div>
 </div>
 <div class="aside-note fragment">
-<p>The shape-theoretic route says the limit exists. The question here is when a fixed sample is already there, and at which explicit scale.</p>
+<p>The shape-theoretic route says the limit exists. The question here is what a fixed sample already knows, and at which explicit scale.</p>
 </div>
 <aside class="notes">
-<p>Here is the hinge of the talk. Everything on the previous slide is a theorem about the Euclidean metric. The counterexamples are built out of Euclidean distances.</p>
-<p>There are two ways past it. The first is the one Kazuhiro just presented: let the scale go to zero and study the shadows as an inverse system. Shape theory then recovers the homotopy groups of any compact ANR. It is a geometric Latschev theorem, and it is qualitative.</p>
-<p>The second is this talk. Keep one finite sample, at one scale, and change the metric on the sample. Chambers et al.&nbsp;remain true; their hypothesis is simply not met. We are not contradicting them; we are declining their hypothesis.</p>
-<p>So the question Kazuhiro’s theorem leaves, when does the limit stabilize, gets an answer for embedded graphs, in every ambient dimension, with explicit constants.</p>
+<p>The hinge of the talk. Everything on the previous slide is a theorem about the Euclidean metric; the counterexamples are built out of Euclidean distances.</p>
+<p>There are two ways past it. The first is the one Kazuhiro just presented: let the scale go to zero and study the shadows as an inverse system; shape theory recovers the homotopy groups of any compact ANR. It is qualitative.</p>
+<p>The second is this talk. Keep one finite sample, one scale, and change the metric on the sample. Chambers et al.&nbsp;remain true; their hypothesis is simply not met.</p>
+<p>This is joint work with Kazuhiro and Atish.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -313,7 +312,7 @@ Sushovan Majhi
 <p><img data-src="assets/section-ii-plate.svg"></p>
 </div>
 <aside class="notes">
-<p>Section two: the path metric, what it buys at the level of the abstract complex, and a combinatorial condition that makes the shadow faithful on pi_1 without ever mentioning the dimension.</p>
+<p>Section two: the path metric, what it already buys for the abstract complex, and the two quantities of the graph that everything else is stated in.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -329,12 +328,12 @@ Sushovan Majhi
 <section class="slide level2">
 <h2>The <span class="math inline">\varepsilon</span>-path metric</h2>
 <div class="env-row">
-<div class="definition" data-num="6" data-name="Path metric">
+<div class="definition" data-num="7" data-name="Path metric">
 <p>For <span class="math inline">\mathcal A\subset\mathbb R^N</span> and <span class="math inline">\varepsilon&gt;0</span>, an <em><span class="math inline">\varepsilon</span>-path</em> from <span class="math inline">p</span> to <span class="math inline">q</span> is a chain <span class="math inline">p=a_0,a_1,\dots,a_{k+1}=q</span> in <span class="math inline">\mathcal A</span> with <span class="math inline">\|a_i-a_{i+1}\|&lt;\varepsilon</span>. Set <span class="math display">
 d^\varepsilon_{\mathcal A}(p,q)=\inf\ \sum_i\|a_i-a_{i+1}\| ,
 </span> and write <span class="math inline">\mathcal R^\varepsilon_\beta(\mathcal S)</span> for the Vietoris–Rips complex of <span class="math inline">(\mathcal S,d^\varepsilon_{\mathcal S})</span>.</p>
 </div>
-<div class="proposition fragment" data-num="7" data-name="Comparison" data-cite="Majhi 2023">
+<div class="proposition fragment" data-num="8" data-name="Comparison" data-cite="Majhi 2023">
 <p>If <span class="math inline">d_H(\mathcal S,\mathcal G)&lt;\tfrac12\xi\varepsilon</span> with <span class="math inline">\xi\in(0,1)</span>, and <span class="math inline">\|a-A\|,\|b-B\|&lt;\tfrac12\xi\varepsilon</span> for <span class="math inline">a,b\in\mathcal G</span>, <span class="math inline">A,B\in\mathcal S</span>, then <span class="math display">
 \|A-B\|\;\le\;d^\varepsilon_{\mathcal S}(A,B)\;\le\;\frac{d_{\mathcal G}(a,b)+\xi\varepsilon}{1-\xi}.
 </span></p>
@@ -344,9 +343,9 @@ d^\varepsilon_{\mathcal A}(p,q)=\inf\ \sum_i\|a_i-a_{i+1}\| ,
 <p><img data-src="assets/hairpin.svg"></p>
 </div>
 <aside class="notes">
-<p>The replacement metric. An epsilon-path hops through the sample in steps shorter than epsilon; the epsilon-path distance is the shortest such chain. It is computed from pairwise Euclidean distances alone, so it needs no knowledge of G: build the epsilon-neighborhood graph and run shortest paths.</p>
-<p>The comparison proposition says what it measures: up to the factor 1/(1-xi) and an additive xi epsilon, it is the intrinsic distance along the graph. It never undercuts the Euclidean distance.</p>
-<p>The picture is the whole point. A hairpin: two legs of the same arc, close in R^N and far along the arc. The Euclidean Rips complex at this scale bridges the gap and fills in a disk. The path-metric Rips complex on the same points, at the same beta, does not: across the gap the path distance is the length of the detour. Both complexes are computed from the sample, not drawn.</p>
+<p>The replacement metric. An epsilon-path hops through the sample in steps shorter than epsilon; the epsilon-path distance is the shortest such chain. It is computed from pairwise Euclidean distances alone: build the epsilon-neighborhood graph and run shortest paths. No knowledge of G is needed.</p>
+<p>The comparison says what it measures: up to 1/(1-xi) and an additive xi epsilon, it is the intrinsic distance along the graph, and it never undercuts the Euclidean distance.</p>
+<p>The picture: a hairpin, two legs of one arc, close in R^N and far along the arc. The Euclidean Rips complex at this scale bridges the gap and fills in a disk. The path-metric complex on the same points, at the same beta, does not. Both complexes are computed from the sample, not drawn.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -361,23 +360,22 @@ d^\varepsilon_{\mathcal A}(p,q)=\inf\ \sum_i\|a_i-a_{i+1}\| ,
 </section>
 <section class="slide level2">
 <h2>What we import: the abstract complex</h2>
-<div class="theorem" data-num="8" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT">
+<div class="theorem" data-num="9" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT">
 <p><span class="hyp">Let <span class="math inline">\mathcal G\subset\mathbb R^N</span> be a compact, connected metric graph. Fix <span class="math inline">\xi\in(0,\tfrac14)</span>, let <span class="math inline">0&lt;\beta&lt;\tfrac14\ell(\mathcal G)</span>, and choose <span class="math inline">0&lt;\varepsilon\le\tfrac13\beta</span> with <span class="math inline">\delta^\varepsilon_\beta(\mathcal G)\le\tfrac{1+2\xi}{1+\xi}</span>.</span> If <span class="math inline">d_H(\mathcal G,\mathcal S)&lt;\tfrac12\xi\varepsilon</span>, then <span class="math display">
 \mathcal R^\varepsilon_\beta(\mathcal S)\;\simeq\;\mathcal G .
 </span></p>
 </div>
 <div class="env-row">
 <div class="rmk" data-name="The constants">
-<p><span class="math inline">\ell(\mathcal G)</span> is the girth, the length of a shortest simple cycle. <span class="math inline">\delta^\varepsilon_\beta(\mathcal G)</span> is a large-scale distortion of <span class="math inline">\mathcal G</span> against its <span class="math inline">\varepsilon</span>-thickening; it tends to <span class="math inline">1</span> as <span class="math inline">\varepsilon\to0</span>.</p>
+<p><span class="math inline">\ell(\mathcal G)</span> is the girth. <span class="math inline">\delta^\varepsilon_\beta(\mathcal G)</span> is a large-scale distortion of <span class="math inline">\mathcal G</span> against its <span class="math inline">\varepsilon</span>-thickening; it tends to <span class="math inline">1</span> as <span class="math inline">\varepsilon\to0</span>, so the condition is a density requirement.</p>
 </div>
 <div class="rmk fragment" data-name="The boundary">
-<p>No condition on the angles at vertices: cusps are allowed. The homotopy type of the <strong>abstract</strong> complex is theirs. The <strong>shadow</strong>, in every <span class="math inline">N</span>, is what follows.</p>
+<p>In the plane the same paper also proves <span class="math inline">\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))\simeq\mathcal G</span> at one scale, through the Jordan curve theorem and the asphericity of planar sets. What follows is the geometry in <strong>every</strong> <span class="math inline">N</span>.</p>
 </div>
 </div>
 <aside class="notes">
-<p>What we import rather than prove. For the abstract path-metric Rips complex the homotopy type is already known, in any ambient dimension: this is Komendarczyk, Majhi and Mitra. The hypotheses are the girth, the shortest cycle, and a large-scale distortion that tends to one as epsilon shrinks, so a small enough epsilon always exists.</p>
-<p>Note what it does not need: no condition at all on the angles at vertices. Cusps, where two edges leave a vertex tangentially, are fine.</p>
-<p>That paper also has a shadow theorem, but only in the plane. The homotopy half went to R^N; the shadow half stayed in R^2. That asymmetry is exactly the target of this talk.</p>
+<p>What we import. For the abstract path-metric Rips complex the homotopy type is known in any ambient dimension: Komendarczyk, Majhi and Mitra, in JACT. The hypotheses are the girth and a large-scale distortion that tends to one as epsilon shrinks, so a small enough epsilon always exists. There is no condition at all on the angles at vertices.</p>
+<p>That paper also proves the shadow theorem, but only in the plane, and its argument is planar at its core: the Jordan curve theorem, and the fact that planar sets are aspherical. The homotopy half went to R^N; the geometric half stayed in R^2. What we add is the geometry in every dimension.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -391,56 +389,30 @@ d^\varepsilon_{\mathcal A}(p,q)=\inf\ \sum_i\|a_i-a_{i+1}\| ,
       }</style></aside>
 </section>
 <section class="slide level2">
-<h2>The lifting condition</h2>
-<div class="definition" data-num="9" data-name="Lifting condition">
-<p><span class="math inline">\mathcal K</span> with <span class="math inline">\mathcal K^{(0)}\subset\mathbb R^N</span> satisfies the <em>lifting condition</em> if whenever <span class="math inline">p(\sigma)</span> and <span class="math inline">p(\tau)</span> meet transversely, with <span class="math inline">\sigma=[A_0A_1\cdots A_{N-1}]</span> and <span class="math inline">\tau=[CD]</span>, one of the following holds:</p>
-<p>(A) some <span class="math inline">E\in\mathcal K^{(0)}</span> has <span class="math inline">\sigma\cup\{E\}\in\mathcal K</span> and <span class="math inline">[CDE]\in\mathcal K</span>;</p>
-<p>(B) some <span class="math inline">E,F\in\mathcal K^{(0)}</span> have <span class="math inline">\tau\cup\{E,F\}\in\mathcal K</span> and <span class="math inline">[A_0EF]\in\mathcal K</span>, and the segment <span class="math inline">EF</span> meets <span class="math inline">\operatorname{Conv}(\sigma)</span>.</p>
+<h2>Two quantities of the graph</h2>
+<div class="definition" data-num="10" data-name="Hypotheses and the condition number">
+<p>(A1) <span class="math inline">\mathcal G</span> is compact, connected, with finitely many edges; (A2) two edges share at most one vertex; (A3) edges are <span class="math inline">C^1</span> with one-sided tangents at their ends; (A4) incident edges meet at positive angles. With <span class="math inline">\theta_{\min}</span> the sharpest angle, <span class="math display">
+\Theta(\mathcal G)=\max\big\{\tfrac12,\ \cos^2(\tfrac12\theta_{\min})\big\}\in\big[\tfrac12,1\big),\qquad \sqrt{1-\Theta}=\min\big\{\sin\tfrac{\theta_{\min}}{2},\tfrac{1}{\sqrt2}\big\}.
+</span></p>
 </div>
-<div class="fig-row">
-<div class="fig" style="flex-basis: 56%;">
-<p><img data-src="assets/lifting.svg"></p>
+<div class="definition fragment" data-num="11" data-name="Shadow radius">
+<p><span class="math inline">\Delta(\mathcal G)</span> is the supremum of the <span class="math inline">r&gt;0</span> such that <span class="math display">
+d_{\mathcal G}(x,y)\;\le\;\frac{2\,\|x-y\|}{\sqrt{1-\Theta(\mathcal G)}}\qquad\text{whenever } x,y\in\mathcal G,\ \|x-y\|\le r .
+</span></p>
 </div>
-<div class="stmts">
-<div class="rmk fragment">
-<p>A transverse crossing in a point forces <span class="math inline">\dim\sigma+\dim\tau=N</span>. For the Euclidean complex in the plane, (A) is automatic: take <span class="math inline">E</span> the endpoint nearest the crossing.</p>
+<div class="env-row">
+<div class="proposition fragment" data-num="12" data-name="Positivity">
+<p>Under (A1)–(A4), <span class="math inline">\Delta(\mathcal G)&gt;0</span>, with an explicit lower bound. For straight edges, <span class="math inline">\Delta(\mathcal G)\ge\tfrac12\min\{\|x-y\|: d_{\mathcal G}(x,y)\ge\tfrac12\lambda(\mathcal G)\}</span>, a finite computation.</p>
 </div>
+<div class="rmk fragment" data-name="Why this constant">
+<p>Two straight edges at angle <span class="math inline">\theta</span>: points at distance <span class="math inline">t</span> from the vertex have <span class="math inline">d_{\mathcal G}=2t</span> and <span class="math inline">\|x-y\|=2t\sin\tfrac{\theta}{2}</span>. Below <span class="math inline">\Delta</span>, Euclidean proximity is explained by the sharpest corner.</p>
 </div>
-</div>
-<aside class="notes">
-<p>Now the abstract engine: a purely combinatorial condition on a complex with vertices in R^N.</p>
-<p>Whenever the image of an (N-1)-simplex sigma and the image of an edge CD cross in a point, we ask the complex to contain a way around the crossing. Either a single vertex E is joined to both, case A, a common apex for the two simplices; or a pair E, F straddles the hyperplane of sigma, with EF actually passing through the hull of sigma, and the two simplices A_0EF and CDEF are present, case B.</p>
-<p>In the plane, sigma is an edge AB, and case B says the segment EF crosses AB, as in the right-hand picture. For the Euclidean Rips complex in the plane, case A always holds, which is one way to read the Chambers et al.&nbsp;planar theorem.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>Lifting gives <span class="math inline">\pi_1</span>-surjection, in any dimension</h2>
-<div class="proposition" data-num="10" data-name="Surjection">
-<p>If <span class="math inline">\mathcal K</span> satisfies the lifting condition, then <span class="math inline">p_*\colon\pi_1\big(|\mathcal K|\big)\to\pi_1\big(\mathrm{Sh}(\mathcal K)\big)</span> is surjective.</p>
-</div>
-<div class="sketch fragment">
-<p>Represent a loop in <span class="math inline">\mathrm{Sh}(\mathcal K)</span> by an edge-path in <span class="math inline">\mathrm{SC}(\mathcal K)</span> whose interior vertices are vertices of <span class="math inline">\mathcal K</span> or transverse crossings; Steiner points are pushed off by convexity. At a crossing <span class="math inline">v\in p(\sigma)\cap p(\tau)</span>, replace the detour <span class="math inline">A_0\,v\,D</span> by an edge-path of <span class="math inline">\mathcal K</span>:</p>
-<p>in case (A), <span class="math inline">\;A_0ED\simeq A_0vED\simeq A_0vD</span>;</p>
-<p>in case (B), with <span class="math inline">w\in EF\cap\operatorname{Conv}(\sigma)</span>, <span class="math inline">\;A_0FD\simeq A_0wFD\simeq A_0wvFD\simeq A_0wvD\simeq A_0vD</span>.</p>
-<p>Each homotopy is carried out inside a single <span class="math inline">\operatorname{Conv}(\rho)</span>, <span class="math inline">\rho\in\mathcal K</span>, which is convex.</p>
-</div>
-<div class="aside-note fragment">
-<p>No step refers to <span class="math inline">N</span>. The dimension enters only through which pairs <span class="math inline">(\sigma,\tau)</span> can cross.</p>
 </div>
 <aside class="notes">
-<p>And the proposition that makes the condition worth having. If a complex satisfies the lifting condition, the shadow projection is onto on pi_1.</p>
-<p>The proof is short. Take a loop in the shadow as an edge-path in the shadow complex. Its interior vertices are either honest vertices of K or transverse crossings. At each crossing v we have a detour A_0, v, D that does not come from K, and the lifting condition hands us a replacement through E, or through F, that does. Every homotopy in the chain happens inside the convex hull of one simplex of K, and convex sets are contractible, so paths with the same endpoints are homotopic there.</p>
-<p>That is the observation doing all the work, and nothing in it mentions N. The dimension only decides which pairs can cross; the argument is the same in every dimension.</p>
+<p>Everything from here is stated in two quantities of G.</p>
+<p>The hypotheses are mild: finitely many C^1 edges, and positive angles at vertices. The condition number Theta records the sharpest angle; the square root of 1 minus Theta is essentially the sine of half of it. A three-pronged star at 120 degrees has Theta one half; squeeze the sharpest angle to under 30 degrees and Theta is 0.94.</p>
+<p>The shadow radius is new, and it is one line: the scale below which the graph distance is at most twice the Euclidean distance divided by that sine. For two straight edges meeting at angle theta the ratio is exactly one over sine theta over two, so the definition allows twice the corner’s own ratio. What it rules out, below the radius, is two parts of the graph passing close to each other without meeting: the hairpin. Below Delta, Euclidean proximity in G is explained by its sharpest corner.</p>
+<p>It is positive under A1 to A4, with an explicit bound, and for polygonal graphs it is a finite computation over pairs of edges. One honest remark: A4 does give G positive mu-reach, so we claim no larger class of graphs. The advance is in the output, and in the certification.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -455,184 +427,12 @@ d^\varepsilon_{\mathcal A}(p,q)=\inf\ \sum_i\|a_i-a_{i+1}\| ,
 </section></section>
 <section>
 <section class="title-slide slide level1 section-divider center">
-<h1>§ III. Certified Reconstruction</h1>
+<h1>§ III. Embedded Reconstruction</h1>
 <div class="plate" data-plate="III">
 <p><img data-src="assets/section-iii-plate.svg"></p>
 </div>
 <aside class="notes">
-<p>Section three: the lifting condition is a statement about a complex, but a practitioner has a sample. We need a sampling parameter that certifies it, and then the main theorem.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>Hypotheses, and the condition number</h2>
-<div class="definition" data-num="11" data-name="Hypotheses and constants">
-<p><span class="math inline">\mathcal G\subset\mathbb R^N</span> is an embedded metric graph with</p>
-<p>(A1) compact, connected, finitely many edges; (A2) two edges share at most one vertex; (A3) each open edge is <span class="math inline">C^1</span>; (A4) incident edges meet at an angle in <span class="math inline">(0,\pi]</span>.</p>
-<p>Its constants: the girth <span class="math inline">\ell(\mathcal G)</span>; the shortest edge <span class="math inline">\lambda(\mathcal G)</span>; the global distortion <span class="math inline">\delta(\mathcal G)=\sup d_{\mathcal G}(x,y)/\|x-y\|&lt;\infty</span>; the sharpest angle <span class="math inline">\theta_{\min}</span>; and the <em>condition number</em> <span class="math inline">\Theta(\mathcal G)\in[\tfrac12,1)</span>, a maximum over vertices of squared cosines of half-angles between incident tangents, equal to <span class="math inline">\cos^2(\theta_{\min}/2)</span> when attained at an angle.</p>
-</div>
-<div class="rmk fragment" data-name="What is and is not new">
-<p>(A4) excludes cusps, and it gives <span class="math inline">\mathcal G</span> positive <span class="math inline">\mu</span>-reach; we claim no larger class of graphs. The advance is in the ambient dimension, and in the output: an explicit polyhedron assembled from the sample, not an offset of a set one does not know.</p>
-</div>
-<aside class="notes">
-<p>From here on everything is stated in quantities of G alone. The hypotheses are mild: finitely many edges, C^1 edges, and at each vertex no two incident edges leave in the same direction.</p>
-<p>The constants: the girth, the shortest edge, the global distortion (the ratio of graph distance to Euclidean distance, finite under A1 to A4), the sharpest angle, and the condition number Theta. Theta lives in [1/2, 1): it is 1/2 for a graph whose sharpest angle is a right angle or wider, and it tends to 1 as two incident edges become tangent.</p>
-<p>One remark, to answer a question before it is asked. Assumption A4 does imply positive mu-reach for G. So the advance is not in the class of graphs. It is in the ambient dimension, and in what the output is: mu-reach methods return an offset or level set of a distance function to a shape you do not know, whereas the shadow is an explicit polyhedron built from convex hulls of the sample you have.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>The shadow radius</h2>
-<div class="definition" data-num="12" data-name="Shadow radius">
-<p><span class="math inline">\Delta(\mathcal G)</span> is the supremum of <span class="math inline">r&gt;0</span> such that (A) short subsets of one edge have short geodesic hulls, and (B) whenever finite <span class="math inline">\sigma=\{a_0,\dots,a_m\},\tau\subset\mathcal G</span> have <span class="math inline">\operatorname{diam}_{\mathcal G}\le r</span> and <span class="math inline">\operatorname{Conv}(\sigma)^{\eta}\cap\operatorname{Conv}(\tau)\neq\emptyset</span> for some <span class="math inline">\eta\le r</span>, either</p>
-<p>(B1) their geodesic hulls meet: <span class="math inline">\operatorname{Conv}_{\mathcal G}(\sigma)\cap\operatorname{Conv}_{\mathcal G}(\tau)\neq\emptyset</span>; or</p>
-<p>(B2) every <span class="math inline">q\in\operatorname{Conv}_{\mathcal G}(\tau)</span> within <span class="math inline">\varepsilon\le\tfrac12(1-\Theta)^{3/2}r</span> of the affine hull of <span class="math inline">\sigma</span> has <span class="math inline">\displaystyle\min_i d_{\mathcal G}(a_i,q)\le\tfrac{1+\Theta}{2}\operatorname{diam}_{\mathcal G}(\sigma)+\tfrac{2\varepsilon}{1-\Theta}.</span></p>
-</div>
-<div class="env-row">
-<div class="proposition fragment" data-num="13" data-name="Positivity">
-<p>Under (A1)–(A4), <span class="math inline">\Delta(\mathcal G)&gt;0</span>. For Lipschitz tangents with constant <span class="math inline">L</span>, <span class="math inline">\Delta(\mathcal G)\ge c\,\min\big\{\tfrac13\ell(\mathcal G),\ \tfrac{1-\Theta}{12L}\big\}</span>; for straight edges it is a finite computation in the angles.</p>
-</div>
-<div class="example fragment" data-num="14" data-name="Three prongs">
-<p>Unit prongs at <span class="math inline">120^\circ</span>: <span class="math inline">\Theta=\tfrac12</span>, <span class="math inline">\Delta\le0.15</span>. Squeezed to a sharpest angle of <span class="math inline">28.6^\circ</span>: <span class="math inline">\Theta=0.939</span>, <span class="math inline">\Delta\le0.05</span>.</p>
-</div>
-</div>
-<aside class="notes">
-<p>The certificate on the sampling side. In words: at scales below the shadow radius, if the Euclidean hulls of two small pieces of the graph meet (or come within a tolerance eta, which is how the noise enters), then either their geodesic hulls already meet, or the meeting happens near a vertex in a controlled way: a point of tau near the affine hull of sigma is close along the graph to one of the points of sigma. The factor (1+Theta)/2 is less than one, and that is what the argument consumes; it degrades exactly as two incident edges become tangent.</p>
-<p>The shadow radius is positive under A1 to A4, and it is quantitative: linear in 1 - Theta for Lipschitz tangents, and a finite computation in the angles for polygonal graphs, which is the case most likely to arise in practice.</p>
-<p>For a feel for the numbers: a three-pronged star with unit prongs at 120 degrees, versus the same star squeezed until the sharpest angle is under 30 degrees. Sharper vertices, smaller shadow radius.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>The shadow radius certifies the lifting condition</h2>
-<div class="lemma" data-num="15" data-name="Certification">
-<p><span class="hyp">Under the hypotheses of the main theorem,</span> <span class="math inline">\mathcal R^\varepsilon_\beta(\mathcal S)</span> satisfies the lifting condition. Hence <span class="math inline">p_*</span> is onto on <span class="math inline">\pi_1</span>.</p>
-</div>
-<div class="sketch fragment">
-<p>If the hulls of <span class="math inline">\sigma,\tau\subset\mathcal S</span> meet, project to <span class="math inline">\mathcal G</span> by a nearest-point map <span class="math inline">\Psi</span>; the projected hulls come within <span class="math inline">\xi\varepsilon</span>. Below <span class="math inline">\Delta(\mathcal G)</span>, alternative (B1) produces the apex <span class="math inline">E</span> of case (A), and (B2) produces a pair <span class="math inline">E,F</span> separated by the hyperplane of <span class="math inline">\sigma</span>. The factor <span class="math inline">\tfrac{1+\Theta}{2}&lt;1</span>, pushed through the comparison of metrics, keeps <span class="math inline">[A_0EF]</span> below scale <span class="math inline">\beta</span>.</p>
-</div>
-<div class="lemma fragment" data-num="16" data-name="Injectivity">
-<p><span class="hyp">Under the same hypotheses,</span> <span class="math inline">p_*</span> is injective on <span class="math inline">\pi_k</span> for every <span class="math inline">k\ge0</span>.</p>
-</div>
-<div class="sketch fragment">
-<p>Extend <span class="math inline">\Psi</span> to a simplicial map <span class="math inline">\Psi'\colon\mathrm{SC}\big(\mathcal R^\varepsilon_\beta(\mathcal S)\big)\to\mathcal R_{3K\beta}(\mathcal G)</span> with <span class="math inline">\Psi'\circ p\simeq\Psi</span>, using <span class="math inline">K&lt;1.08</span>. Since <span class="math inline">3K\beta&lt;\tfrac13\ell(\mathcal G)</span>, <span class="math inline">\Psi</span> is injective on homotopy groups, so <span class="math inline">p</span> is.</p>
-</div>
-<aside class="notes">
-<p>The two lemmas that carry the main theorem.</p>
-<p>Certification: the path-metric Rips complex of a sample satisfies the lifting condition. Take two simplices whose Euclidean hulls cross. Project to the graph; the projected hulls come within xi epsilon of each other, which is why the shadow radius carries a tolerance. Below the shadow radius, either the geodesic hulls meet, and that gives a common vertex E, case A, or we are near a vertex and (B2) gives a pair E, F on opposite sides of the hyperplane of sigma, case B. The only real work is to show that A_0EF is a simplex at scale beta, and that is exactly where (1+Theta)/2 &lt; 1 is spent.</p>
-<p>Injectivity is cheaper. The nearest-point map extends over the shadow complex to a Rips complex of the graph at scale about 3.2 beta, and at that scale, below a third of the girth, it is injective on homotopy groups. This is why the main theorem assumes beta below one tenth of the girth.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>Geometric reconstruction</h2>
-<div class="theorem" data-num="17" data-name="Geometric reconstruction" data-cite="Majhi–Mitra">
-<p><span class="hyp">Let <span class="math inline">\mathcal G\subset\mathbb R^N</span> satisfy (A1)–(A4); fix <span class="math inline">\xi\in\big(0,\tfrac{1-\Theta}{6}\big)</span>; let <span class="math inline">\beta&lt;\min\{\Delta(\mathcal G),\tfrac{1}{10}\ell(\mathcal G)\}</span> with <span class="math inline">\beta\le\tfrac{\ell(\mathcal G)}{1+8\delta(\mathcal G)}</span>; and let <span class="math inline">\varepsilon\le\tfrac{(1-\Theta)(1-\Theta-6\xi)}{12}\beta</span>, small enough in terms of <span class="math inline">\delta(\mathcal G)</span> and <span class="math inline">\delta^\varepsilon_\beta(\mathcal G)</span>.</span> If <span class="math inline">\mathcal S\subset\mathbb R^N</span> is compact with <span class="math inline">d_H(\mathcal S,\mathcal G)&lt;\tfrac12\xi\varepsilon</span>, then</p>
-<ol type="1">
-<li><span class="math inline">p</span> is bijective on <span class="math inline">\pi_0</span>, an isomorphism on <span class="math inline">\pi_1</span>, and injective on every <span class="math inline">\pi_k</span>;</li>
-<li><span class="math inline">d_H\big(\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S)),\,\mathcal G\big)&lt;\beta+\tfrac12\xi\varepsilon</span>;</li>
-<li>if <span class="math inline">N=2</span>, or if the shadow is aspherical, then <span class="math inline">\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))\simeq\mathcal G</span>.</li>
-</ol>
-</div>
-<div class="corollary fragment" data-num="18" data-name="Controlled inverses">
-<p>When (3) holds, there are homotopy inverses <span class="math inline">f\colon\mathcal G\to\mathrm{Sh}</span> and <span class="math inline">h\colon\mathrm{Sh}\to\mathcal G</span> with <span class="math inline">\sup\|f(g)-g\|\le2\varepsilon</span> and <span class="math inline">\sup\|h(x)-x\|\le8\beta</span>.</p>
-</div>
-<div class="aside-note fragment">
-<p>The asymmetry is forced: the shadow is genuinely <span class="math inline">\beta</span>-thick near a vertex.</p>
-</div>
-<aside class="notes">
-<p>Assembling. Grey is the fine print; the claims are in black.</p>
-<p>For a graph satisfying A1 to A4, the hypotheses produce an explicit window: beta below the shadow radius and a tenth of the girth, epsilon a fixed fraction of beta, and a sample within half xi epsilon. Then, in any ambient dimension: the shadow projection is a bijection on components, an isomorphism on fundamental groups, and injective on all homotopy groups; and the shadow lies within beta plus a hair of G.</p>
-<p>In the plane that is the whole story: planar sets are aspherical, by Cannon, Conner and Zastrow, so pi_1-isomorphism gives a homotopy equivalence. And it comes with controlled inverses: G moves into the shadow by at most 2 epsilon, the shadow moves back by at most 8 beta. The asymmetry is not an artifact. Two samples on perpendicular edges at arclength beta/3 span a chord whose midpoint sits about beta/6 off the graph. Note also that the sample is only Hausdorff-close, so this contains the earlier planar theorem.</p>
-<p>In higher dimensions, (3) needs asphericity of the shadow, and we do not know it. That is the next slide.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>In <span class="math inline">\mathbb R^N</span>: a two-scale form</h2>
-<div class="theorem" data-num="19" data-name="Two-scale reconstruction" data-cite="Majhi–Mitra">
-<p><span class="hyp">Assume also <span class="math inline">8\beta\le(1-\Theta)^{3/2}\Delta(\mathcal G)</span> and <span class="math inline">\beta'=\tfrac{36}{1-\Theta}\beta&lt;\tfrac14\ell(\mathcal G)</span>. Write <span class="math inline">\mathrm{Sh}_\beta=\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))</span>.</span> There are maps <span class="math inline">h\colon\mathrm{Sh}_\beta\to\mathcal G</span> and <span class="math inline">f'\colon\mathcal G\to\mathrm{Sh}_{\beta'}</span> such that the inclusion <span class="math inline">j</span> factors through <span class="math inline">\mathcal G</span> up to homotopy: <span class="math display">
-j\;\simeq\;f'\circ h\colon\ \mathrm{Sh}_\beta\;\xrightarrow{\;h\;}\;\mathcal G\;\xrightarrow{\;f'\;}\;\mathrm{Sh}_{\beta'} .
-</span> Hence <span class="math inline">j_*=0</span> on <span class="math inline">\pi_k</span> for <span class="math inline">k\ge2</span>, and <span class="math inline">j_*\,\pi_1(\mathrm{Sh}_\beta)=f'_*\,\pi_1(\mathcal G)</span>.</p>
-</div>
-<div class="env-row">
-<div class="sketch fragment">
-<p>Hulls that meet have <span class="math inline">d^\varepsilon</span>-diameter at most <span class="math inline">\tfrac{9}{1-\Theta}\beta</span>. This gives a simplicial map <span class="math inline">\mathrm{SC}(\mathcal R^\varepsilon_\beta)\to\mathcal R^\varepsilon_{\beta'}</span> commuting with both projections up to homotopy; compose with <span class="math inline">\mathcal R^\varepsilon_{\beta'}(\mathcal S)\simeq\mathcal G</span>.</p>
-</div>
-<div class="rmk fragment" data-name="Every surviving feature is real">
-<p>Spheres die between the two scales, and the surviving fundamental group is exactly that of <span class="math inline">\mathcal G</span>. The factor <span class="math inline">\tfrac{36}{1-\Theta}</span> is crude; what matters is that it is explicit.</p>
-</div>
-</div>
-<aside class="notes">
-<p>Rather than leave the higher-dimensional statement conditional on asphericity, we prove an unconditional two-scale form, of the same species as the interleavings of persistence.</p>
-<p>Take a second scale beta’, a fixed multiple of beta depending only on Theta. The inclusion of the small shadow into the large one factors through the graph, up to homotopy. So any sphere in the small shadow dies in the large one, and the part of the fundamental group that survives is exactly pi_1 of G.</p>
-<p>The engine is a union-diameter estimate: two simplices whose hulls meet have union of path-metric diameter at most 9/(1-Theta) times beta. That lets us map the shadow complex simplicially into the Rips complex at scale beta’, compatibly with both shadow projections, and the Rips complex at beta’ is homotopy equivalent to G by the imported theorem.</p>
-<p>The constant 36/(1-Theta) is crude and surely improvable. The single-scale question, whether the shadow is itself aspherical for N at least 3, stays open.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section>
-<section class="title-slide slide level1 section-divider center">
-<h1>§ IV. Beyond Homotopy Type</h1>
-<div class="plate" data-plate="IV">
-<p><img data-src="assets/section-iv-plate.svg"></p>
-</div>
-<aside class="notes">
-<p>Section four. For graphs, homotopy type is weak: it sees only the first Betti number, so a theta graph and a wedge of two circles are indistinguishable. So we extract from the shadow a 1-complex homeomorphic to G.</p>
+<p>Section three, the first main result. For graphs, homotopy type is weak: it sees only the first Betti number, so a theta graph and a wedge of two circles are indistinguishable. We want the graph up to homeomorphism, embedded.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -647,10 +447,8 @@ j\;\simeq\;f'\circ h\colon\ \mathrm{Sh}_\beta\;\xrightarrow{\;h\;}\;\mathcal G\;
 </section>
 <section class="slide level2">
 <h2>Reading the degree off the sample</h2>
-<div class="definition" data-num="20" data-name="Degree, clusters, arcs">
-<p>For <span class="math inline">A\in\mathcal S</span> let <span class="math inline">\deg_\beta(A)</span> be the number of components of the <span class="math inline">\varepsilon</span>-graph on the annulus <span class="math display">
-\big\{B\in\mathcal S:\ \tfrac12\beta\le d^\varepsilon_{\mathcal S}(A,B)\le\beta\big\}.
-</span> Let <span class="math inline">\mathcal V=\{A:\deg_\beta(A)\ne2\}</span>; its <em>clusters</em> join points at <span class="math inline">d^\varepsilon</span>-distance <span class="math inline">\le3\beta</span>. Delete the <span class="math inline">\beta</span>-neighborhood of <span class="math inline">\mathcal V</span>; the remaining components are the <em>arcs</em>. <span class="math inline">C(\mathcal S,\beta,\varepsilon)</span> has a vertex per cluster and an edge per arc, drawn as a shortest <span class="math inline">\varepsilon</span>-path.</p>
+<div class="definition" data-num="13" data-name="Degree, clusters, arcs">
+<p>For <span class="math inline">A\in\mathcal S</span> take the annulus <span class="math inline">\mathcal A(A)=\{\beta\le d^\varepsilon_{\mathcal S}(A,\cdot)\le2\beta\}</span> and its band <span class="math inline">\mathcal W(A)=\{\tfrac54\beta\le d^\varepsilon_{\mathcal S}(A,\cdot)\le\tfrac{33}{20}\beta\}</span>; <span class="math inline">\deg_\beta(A)</span> counts the components of the <span class="math inline">\varepsilon</span>-graph on <span class="math inline">\mathcal A(A)</span> that meet <span class="math inline">\mathcal W(A)</span>. Points with <span class="math inline">\deg_\beta\ne2</span> are grouped into <em>clusters</em> (links of <span class="math inline">d^\varepsilon</span>-length <span class="math inline">\le5\beta</span>); deleting their <span class="math inline">\beta</span>-neighborhood leaves the <em>arcs</em>. <span class="math inline">C(\mathcal S,\beta,\varepsilon)</span> has a vertex per cluster and an edge per arc, drawn as shortest <span class="math inline">\varepsilon</span>-graph paths through the arc.</p>
 </div>
 <div class="fig-row">
 <div class="fig" style="flex-basis: 56%;">
@@ -658,14 +456,14 @@ j\;\simeq\;f'\circ h\colon\ \mathrm{Sh}_\beta\;\xrightarrow{\;h\;}\;\mathcal G\;
 </div>
 <div class="stmts">
 <div class="rmk fragment" data-name="Whose device">
-<p>The degree statistic is that of Aanjaneya, Chazal, Chen, Glisse, Guibas and Morozov (2012) for abstract metric graphs. New here: the output is embedded, <span class="math inline">C\subset\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))</span>, and the scales are certified.</p>
+<p>The degree statistic is that of Aanjaneya et al.&nbsp;(2012), for abstract metric graphs. New here: the Hausdorff noise model, a noise-robust count (the band), and an embedded output <span class="math inline">C\subset\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))</span>.</p>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>The construction is not ours, and I want to say so clearly: counting components of a punctured neighborhood to find branch points is the device of Aanjaneya, Chazal, Chen, Glisse, Guibas and Morozov, whose statistical behavior Lecci, Rinaldo and Wasserman analyzed.</p>
-<p>For each sample point, look at the annulus between beta/2 and beta in the path metric and count its components. On an edge, two. At a branch vertex, the degree. Points with count other than two are clustered into branch vertices; removing their neighborhoods leaves the arcs, which become edges.</p>
-<p>What is different is the setting. Their input is an abstract metric space and their output an abstract graph. Ours is a sample in R^N, and the output is drawn from edges of the Rips complex, so it sits inside the shadow, in the same R^N, and we can certify the scales at which it is right.</p>
+<p>The construction is not ours, and I want to say so clearly: counting components of a punctured neighborhood to find branch points is the device of Aanjaneya, Chazal, Chen, Glisse, Guibas and Morozov, whose statistics Lecci, Rinaldo and Wasserman analyzed.</p>
+<p>For each sample point, look at the annulus between beta and 2 beta in the path metric and count the components of its epsilon-graph, but only those that reach the inner band; that discards stray points near the two boundaries, whose membership the noise cannot decide. On an edge the count is two; near a branch vertex it is the degree. The flagged points cluster into branch vertices; removing their neighborhoods leaves the arcs, which become edges.</p>
+<p>What is different is the input and the output. Their input is a metric approximation of the graph; ours is a Euclidean sample that is merely Hausdorff-close. Their output is abstract; ours is drawn from edges of the Rips complex, so it sits in R^N, inside the shadow.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -679,25 +477,25 @@ j\;\simeq\;f'\circ h\colon\ \mathrm{Sh}_\beta\;\xrightarrow{\;h\;}\;\mathcal G\;
       }</style></aside>
 </section>
 <section class="slide level2">
-<h2>Homeomorphic reconstruction</h2>
-<div class="theorem" data-num="21" data-name="Homeomorphic reconstruction" data-cite="Majhi–Mitra">
-<p><span class="hyp">Assume the hypotheses of the main theorem, and</span> <span class="math display">
-\frac{1}{1-\xi}\Big[\frac{\varepsilon}{\sin(\theta_{\min}/2)}+3\xi\varepsilon\Big]\;&lt;\;\beta\;&lt;\;\frac{\lambda(\mathcal G)}{6}.
-</span> Then <span class="math inline">C(\mathcal S,\beta,\varepsilon)</span> is homeomorphic to <span class="math inline">\mathcal G</span>, and <span class="math inline">d_H\big(C(\mathcal S,\beta,\varepsilon),\mathcal G\big)&lt;\beta+\tfrac12\xi\varepsilon</span>.</p>
+<h2>Embedded homeomorphic reconstruction</h2>
+<div class="theorem" data-num="14" data-name="Embedded homeomorphic reconstruction" data-cite="Kawamura–Majhi–Mitra">
+<p><span class="hyp">Let <span class="math inline">\mathcal G\subset\mathbb R^N</span> satisfy (A1)–(A4), with a vertex of degree <span class="math inline">\ne2</span>. Fix <span class="math inline">\xi\in(0,\tfrac1{12}]</span>; let <span class="math inline">3\beta\le\Delta(\mathcal G)</span>, <span class="math inline">5\beta\le\ell(\mathcal G)</span>, <span class="math inline">15\beta\le\lambda(\mathcal G)</span>; and let <span class="math inline">\varepsilon\le\tfrac1{48}\beta</span> with <span class="math inline">\delta^\varepsilon_\beta(\mathcal G)\le\tfrac{1+2\xi}{1+\xi}</span> and</span> <span class="math display">
+\frac{4\varepsilon}{\sqrt{1-\Theta(\mathcal G)}}\;&lt;\;\beta .
+</span> If <span class="math inline">d_H(\mathcal S,\mathcal G)&lt;\tfrac12\xi\varepsilon</span>, then <span class="math inline">C(\mathcal S,\beta,\varepsilon)\cong\mathcal G</span>, <span class="math inline">C\subset\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))</span>, and <span class="math inline">d_H(C,\mathcal G)&lt;10\beta</span>.</p>
 </div>
 <div class="env-row">
 <div class="rmk fragment" data-name="The window closes from below">
-<p>Two branches at angle <span class="math inline">\theta</span> are a chord <span class="math inline">2r\sin(\theta/2)</span> apart at arclength <span class="math inline">r</span>, and must be more than <span class="math inline">\varepsilon</span> apart at <span class="math inline">r=\tfrac12\beta</span>. Sharper angles force <em>larger</em> <span class="math inline">\beta</span>. The window is non-empty once <span class="math inline">\varepsilon&lt;\tfrac12\sin(\tfrac12\theta_{\min})\min\{\Delta,\tfrac{1}{10}\ell,\tfrac16\lambda\}</span>.</p>
+<p>The lower end is the scale at which two branches at angle <span class="math inline">\theta_{\min}</span> have drifted <span class="math inline">\varepsilon</span> apart: sharper angles force <em>larger</em> <span class="math inline">\beta</span>. It is non-empty once <span class="math inline">\varepsilon&lt;\tfrac14\sqrt{1-\Theta}\,\min\{\tfrac13\Delta,\tfrac15\ell,\tfrac1{15}\lambda\}</span>. Experiments put the true threshold near <span class="math inline">\varepsilon/\sin\tfrac{\theta_{\min}}{2}</span>.</p>
 </div>
-<div class="rmk fragment" data-name="Homeomorphic is not isotopic">
-<p>In <span class="math inline">\mathbb R^3</span> a graph may be knotted; homeomorphism at small Hausdorff distance does not recover the embedding class. For <span class="math inline">N\ge3</span> a small perturbation makes <span class="math inline">C</span> embedded; in the plane its arcs may cross.</p>
+<div class="rmk fragment" data-name="One scale, any dimension">
+<p>Only the <span class="math inline">1</span>-skeleton is used, and the metric only to radius <span class="math inline">9\beta</span>: <span class="math inline">O\big(n(k_\rho+n_\rho\log n_\rho)\big)</span> time, near-linear for bounded density, independent of <span class="math inline">N</span>. The shadow is never built. Homeomorphic is not isotopic.</p>
 </div>
 </div>
 <aside class="notes">
-<p>The theorem: in a two-sided window of scales, the extracted complex is homeomorphic to G and within the same Hausdorff distance.</p>
-<p>The right end is simple: beta below a sixth of the shortest edge keeps the neighborhoods of distinct vertices apart and leaves a piece of every edge outside them.</p>
-<p>The left end is the interesting one, and it has no counterpart in the abstract metric setting, because it is Euclidean geometry at a vertex. Two branches leaving a vertex at angle theta are a chord 2r sin(theta/2) apart at arclength r. For the annulus to see them as two components at r = beta/2, that chord must exceed epsilon. So the window closes from below: sharper angles require larger beta, because nearly parallel branches stay close for longer. Sharp vertices are the hard case from both sides, since the shadow radius also shrinks.</p>
-<p>And a caveat: homeomorphic is not isotopic. A knotted graph in R^3 is recovered up to homeomorphism, not up to its embedding.</p>
+<p>The first theorem. Under A1 to A4 alone, and at a single scale in any dimension, the extracted complex is homeomorphic to G, lies inside the shadow, and is within 10 beta of G.</p>
+<p>The window has four upper ends: a third of the shadow radius, a fifth of the girth, a fifteenth of the shortest edge. The fifteenth keeps the neighborhoods of distinct branch vertices apart; the girth keeps the two sides of a point apart; the shadow radius turns Euclidean proximity of samples into graph proximity of their projections.</p>
+<p>The lower end is the interesting one, and it has no counterpart in the metric setting, because it is Euclidean geometry at a vertex. Two branches at the sharpest angle must have drifted more than epsilon apart by the time the annulus sees them. So the window closes from below: sharper angles need larger beta. The constant 4 comes from the factor 2 in the shadow radius; experiments put the truth a factor of four lower.</p>
+<p>Cost: only the one-skeleton, and the metric only locally. Near-linear for bounded local density, nothing depends on N, and the shadow is never built. And a caveat: homeomorphic, not isotopic. A knotted graph in R^3 is recovered up to homeomorphism, not up to its embedding.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -711,23 +509,66 @@ j\;\simeq\;f'\circ h\colon\ \mathrm{Sh}_\beta\;\xrightarrow{\;h\;}\;\mathcal G\;
       }</style></aside>
 </section>
 <section class="slide level2">
-<h2>Two consequences</h2>
-<div class="corollary" data-num="22" data-name="Effective stability">
-<p><span class="hyp">Let <span class="math inline">\mathcal G_1,\mathcal G_2\subset\mathbb R^N</span> satisfy (A1)–(A4), and let <span class="math inline">\xi,\beta,\varepsilon</span> be admissible for both in the homeomorphic theorem.</span> If <span class="math inline">d_H(\mathcal G_1,\mathcal G_2)&lt;\tfrac12\xi\varepsilon</span>, then <span class="math inline">\mathcal G_1\cong\mathcal G_2</span>.</p>
+<h2>Stability, and where this sits</h2>
+<div class="corollary" data-num="15" data-name="Stability of the homeomorphism type">
+<p><span class="hyp">Let <span class="math inline">\mathcal G,\mathcal G'\subset\mathbb R^N</span> both satisfy the hypotheses of the theorem, with the same <span class="math inline">\xi,\beta,\varepsilon</span>.</span> If <span class="math inline">d_H(\mathcal G,\mathcal G')&lt;\tfrac14\xi\varepsilon</span>, then <span class="math inline">\mathcal G\cong\mathcal G'</span>.</p>
 </div>
 <div class="sketch fragment">
-<p>A fine finite sample <span class="math inline">\mathcal S</span> of <span class="math inline">\mathcal G_2</span> lies within <span class="math inline">\tfrac12\xi\varepsilon</span> of both graphs, and <span class="math inline">C(\mathcal S,\beta,\varepsilon)</span> depends on <span class="math inline">\mathcal S</span> alone: it is homeomorphic to each.</p>
+<p>One fine sample is close enough to both graphs, and <span class="math inline">C(\mathcal S,\beta,\varepsilon)</span> depends on <span class="math inline">\mathcal S</span> and the scales alone. The radius is a fixed multiple of <span class="math inline">\xi\sqrt{1-\Theta}\,\min\{\Delta,\ell,\lambda\}</span>.</p>
 </div>
-<div class="proposition fragment" data-num="23" data-name="Checking is cheaper than building">
-<p>For <span class="math inline">\mathcal K</span> on <span class="math inline">n</span> points of <span class="math inline">\mathbb R^N</span>, the lifting condition can be verified in <span class="math inline">O(n^{N+4})</span> time, up to an <span class="math inline">O(N^3)</span> factor: polynomial in <span class="math inline">n</span> for fixed <span class="math inline">N</span>, without constructing the shadow. Building <span class="math inline">\mathrm{Sh}(\mathcal K)</span> explicitly needs the <span class="math inline">(N-1)</span>-skeleton, <span class="math inline">O(n^N)</span> simplices, and an arrangement of their hulls.</p>
-</div>
-<div class="aside-note fragment">
-<p>The theory is dimension-free: no constant above depends on <span class="math inline">N</span>. The computation is not.</p>
+<div class="methods fragment">
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Output</th>
+<th style="text-align: left;">Guarantee</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aanjaneya et al.&nbsp;2012</td>
+<td style="text-align: left;">metric <span class="math inline">(\varepsilon,R)</span>-approximation</td>
+<td style="text-align: left;">abstract metric graph</td>
+<td style="text-align: left;">homeomorphic</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lecci–Rinaldo–Wasserman 2014</td>
+<td style="text-align: left;">sample in a tube</td>
+<td style="text-align: left;">combinatorial graph</td>
+<td style="text-align: left;">isomorphic; needs reach</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bokor–Turner–Williams 2021</td>
+<td style="text-align: left;">sample, straight edges</td>
+<td style="text-align: left;">linear graph</td>
+<td style="text-align: left;">structure; embedding fitted</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dey–Wang–Wang 2018</td>
+<td style="text-align: left;">density on a grid</td>
+<td style="text-align: left;">embedded graph</td>
+<td style="text-align: left;">homotopy equivalent</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>This talk</strong></td>
+<td style="text-align: left;"><strong>Hausdorff-close sample, <span class="math inline">C^1</span> edges</strong></td>
+<td style="text-align: left;"><strong>embedded <span class="math inline">1</span>-complex</strong></td>
+<td style="text-align: left;"><strong>homeomorphic, <span class="math inline">d_H&lt;10\beta</span></strong></td>
+</tr>
+</tbody>
+</table>
 </div>
 <aside class="notes">
-<p>Two consequences.</p>
-<p>First, an effective stability statement. The complex C depends only on the sample and the two scales. So if two graphs are both admissible at the same scales and Hausdorff-closer than half xi epsilon, one fine sample of either is close enough to both, and C is homeomorphic to each of them. The radius is computed from the geometry of the two graphs: angles, shadow radius, girth, shortest edge. Note that these graphs have zero reach at every corner, so reach-based stability does not apply to them.</p>
-<p>Second, the cost. The theorem certifies a complex; checking its hypothesis, the lifting condition, is polynomial in the sample size for fixed N: enumerate the crossing pairs, each an N by N linear system, and search for the E or the pair E, F. Building the shadow itself is more expensive, since it needs the (N-1)-skeleton. So: the theory is dimension-free, and every constant is insensitive to N; the computation is not. The two should not be conflated.</p>
+<p>A consequence. The complex C depends only on the sample and the scales. So if two admissible graphs at the same scales are Hausdorff-closer than a quarter xi epsilon, one fine sample is close enough to both, and C is homeomorphic to each of them. The mechanism is general; what is specific here is the class, C^1 edges with an angle condition, and the radius, which is explicit in Theta, Delta, the girth and the shortest edge.</p>
+<p>And where this sits. The table sorts the metric-graph reconstructions by what they assume and what they return. Several prove homeomorphism; none returns an embedded complex with a proved Hausdorff bound. We are not faster: we pay the same local shortest-path cost as Aanjaneya et al.&nbsp;What the path metric buys is the noise model and the C^1 class, not speed.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -742,12 +583,12 @@ j\;\simeq\;f'\circ h\colon\ \mathrm{Sh}_\beta\;\xrightarrow{\;h\;}\;\mathcal G\;
 </section></section>
 <section>
 <section class="title-slide slide level1 section-divider center">
-<h1>§ V. The Apex Condition</h1>
-<div class="plate" data-plate="V">
-<p><img data-src="assets/section-v-plate.svg"></p>
+<h1>§ IV. The Apex Condition</h1>
+<div class="plate" data-plate="IV">
+<p><img data-src="assets/section-iv-plate.svg"></p>
 </div>
 <aside class="notes">
-<p>The last section is work in preparation with Kazuhiro Kawamura and Atish Mitra: a second combinatorial condition, stronger than lifting, whose payoff is a homotopy equivalence without asphericity.</p>
+<p>Section four: back to the shadow. The combinatorial condition that decides whether the shadow projection is a homotopy equivalence, in every dimension.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -763,13 +604,13 @@ j\;\simeq\;f'\circ h\colon\ \mathrm{Sh}_\beta\;\xrightarrow{\;h\;}\;\mathcal G\;
 <section class="slide level2">
 <h2>The apex condition</h2>
 <div class="env-row">
-<div class="definition" data-num="24" data-name="Apex condition">
-<p>For <span class="math inline">x\in\mathrm{Sh}(\mathcal K)</span> let <span class="math inline">\mathrm{st}(x,\mathcal K)</span> be the subcomplex generated by <span class="math inline">\{\sigma\in\mathcal K: x\in\operatorname{Conv}(\sigma)\}</span>. <span class="math inline">\mathcal K</span> satisfies the <em>apex condition</em> if every <span class="math inline">x</span> has a vertex <span class="math inline">v_x</span> with <span class="math display">
-v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
-</span> that is, <span class="math inline">\sigma\cup\{v_x\}\in\mathcal K</span> whenever <span class="math inline">x\in\operatorname{Conv}(\sigma)</span>.</p>
+<div class="definition" data-num="16" data-name="Apex condition">
+<p>For <span class="math inline">x\in\mathrm{Sh}(\mathcal K)</span> let <span class="math inline">\mathrm{st}(x,\mathcal K)=\{\sigma: x\in\operatorname{Conv}(\sigma)\}</span> and <span class="math inline">V(x)</span> its vertices. A flag complex <span class="math inline">\mathcal K</span> satisfies the <em>apex condition</em> if <span class="math inline">V(x)</span> spans a simplex for every <span class="math inline">x</span>; equivalently, some vertex <span class="math inline">v_x</span> has <span class="math display">
+v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K .
+</span></p>
 </div>
-<div class="proposition fragment" data-num="25" data-name="Homotopy equivalence" data-cite="Kawamura–Majhi–Mitra, in prep.">
-<p>If <span class="math inline">\mathcal K</span> is a flag complex satisfying the apex condition, then <span class="math inline">p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)</span> is a homotopy equivalence, in every ambient dimension.</p>
+<div class="theorem fragment" data-num="17" data-name="Apex theorem" data-cite="Kawamura–Majhi–Mitra">
+<p>If a flag complex <span class="math inline">\mathcal K</span> with <span class="math inline">\mathcal K^{(0)}\subset\mathbb R^N</span> satisfies the apex condition, then <span class="math inline">p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)</span> is a homotopy equivalence, in every <span class="math inline">N</span>.</p>
 </div>
 </div>
 <div class="fig-row">
@@ -778,17 +619,18 @@ v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
 </div>
 <div class="stmts">
 <div class="sketch fragment">
-<p>Order the vertices and take the least apex. Flagness makes apices of nested shadow simplices span a simplex, so <span class="math inline">x\mapsto v_x</span> gives a simplicial map <span class="math inline">\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K</span>; straight-line homotopies inside convex hulls make it a homotopy inverse to <span class="math inline">p</span>.</p>
+<p>Send the barycenter of each shadow simplex <span class="math inline">\tau</span> to a vertex of a simplex whose hull carries <span class="math inline">\tau</span>. Along a chain <span class="math inline">\tau_0\prec\cdots\prec\tau_m</span> these vertices lie in <span class="math inline">V(b_{\tau_0})</span>, which spans a simplex: a simplicial map <span class="math inline">A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K</span>. Both composites with <span class="math inline">p</span> stay in single simplices or single convex hulls, so straight lines give the homotopies.</p>
 </div>
-<div class="rmk fragment" data-name="The hexagon has no apex">
-<p>At the center, <span class="math inline">\mathrm{st}(x)</span> contains <span class="math inline">[135]</span> and <span class="math inline">[246]</span>; an apex would be joined to all six vertices, but each vertex misses its antipode.</p>
+<div class="rmk fragment">
+<p>Nothing refers to <span class="math inline">N</span>. The condition is checkable from the <span class="math inline">1</span>-skeleton and the coordinates: <span class="math inline">x\in\operatorname{Conv}(\sigma)</span> is a linear feasibility question.</p>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>The apex condition asks for more than lifting. At every point x of the shadow, gather all the simplices whose hulls contain x; the condition asks for one vertex, the apex, joined to all of them at once.</p>
-<p>The payoff: for a flag complex, the apex condition makes the shadow projection a homotopy equivalence, in every dimension, with no asphericity and no sample in sight. The proof picks the least apex under a vertex order; flagness makes the choices compatible along chains of shadow simplices, so the apex map is simplicial on the subdivided shadow complex, and straight-line homotopies inside convex hulls show it is a homotopy inverse.</p>
-<p>It is also exactly what fails in the Chambers et al.&nbsp;hexagon: at the center both big triangles cover x, so an apex would have to see all six vertices, and every vertex misses its antipode. So the example that kills the Euclidean theory is a non-example of the condition, as it should be.</p>
+<p>The apex condition. At a point x of the shadow, collect every simplex whose hull contains x. The condition asks that all of their vertices together span a simplex; since K is flag, that is the same as one vertex, the apex, joined to all of them at once.</p>
+<p>The theorem: for a flag complex, the apex condition makes the shadow projection a homotopy equivalence, in every dimension, with no asphericity and no sample in sight.</p>
+<p>The proof is short. Triangulate the shadow compatibly with the hulls, subdivide once, and send each barycenter to a vertex of a simplex whose hull carries that shadow simplex. Along a chain of faces, all these vertices lie in V of the first barycenter, which spans a simplex by the condition; so the map is simplicial. Then both composites move each point only inside one simplex of K, or inside one convex hull in the shadow, and straight-line homotopies finish it.</p>
+<p>This was work in preparation last spring. It is now a theorem of the paper.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -802,20 +644,198 @@ v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
       }</style></aside>
 </section>
 <section class="slide level2">
-<h2>Toward knots, and back to graphs</h2>
-<div class="conjecture" data-num="26" data-cite="Kawamura–Majhi–Mitra">
-<p>Let <span class="math inline">M\subset\mathbb R^N</span> be a smooth simple closed curve. For all sufficiently small <span class="math inline">\beta&gt;0</span> and every finite <span class="math inline">S</span> sufficiently Hausdorff-close to <span class="math inline">M</span>, the shadow of the <strong>Euclidean</strong> complex satisfies <span class="math inline">\mathrm{Sh}(\mathcal R_\beta(S))\simeq M</span>.</p>
+<h2>The hexagon, revisited</h2>
+<div class="fig-row">
+<div class="fig" style="flex-basis: 46%;">
+<p><img data-src="assets/hexagon.svg"></p>
 </div>
-<div class="rmk fragment" data-name="The route, and where it stands">
-<p>For <span class="math inline">S\subset M</span> it would follow from one proposition, not yet proved: that <span class="math inline">\mathcal R_\beta(S)</span> satisfies the apex condition for <span class="math inline">\beta</span> below the reach <span class="math inline">\tau(M)</span>. With it, the shadow is <span class="math inline">\simeq M</span> and within <span class="math inline">\beta+\zeta</span> of <span class="math inline">M</span> in the Hausdorff distance. Recovering the <em>knot type</em> then asks for a curve in the shadow, deformation retract and ambient isotopic to <span class="math inline">M</span>.</p>
+<div class="stmts">
+<div class="example" data-num="18" data-name="The hexagon">
+<p>For the octahedral Rips complex of the hexagon, <span class="math inline">|\mathcal K|\simeq S^2</span> and <span class="math inline">\mathrm{Sh}(\mathcal K)</span> is contractible. At the center, <span class="math inline">\mathrm{st}(x)\ni[135],[246]</span>: an apex would be adjacent to all six vertices, and every vertex misses its antipode. The apex condition fails at <span class="math inline">x</span> and nowhere else.</p>
 </div>
-<div class="question fragment" data-num="27" data-name="Back to graphs">
-<p>Under the hypotheses of the main theorem, does <span class="math inline">\mathcal R^\varepsilon_\beta(\mathcal S)</span> satisfy the apex condition? A yes gives <span class="math inline">\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))\simeq\mathcal G</span> at a single scale, in every <span class="math inline">N</span>.</p>
+<div class="rmk fragment">
+<p>Here <span class="math inline">p</span> is still a <span class="math inline">\pi_1</span>-isomorphism: the apex condition is strictly stronger than <span class="math inline">\pi_1</span>-faithfulness, as it must be. The <span class="math inline">\mathbb R^4</span> example of Chambers et al.&nbsp;fails it at the identified point in the same way.</p>
+</div>
+</div>
+</div>
+<div class="rmk fragment" data-name="Necessity">
+<p>Whether the apex condition is <em>necessary</em> for a homotopy equivalence is open.</p>
 </div>
 <aside class="notes">
-<p>Where the apex condition is meant to go. For a knot, a smooth closed curve, the conjecture is that the plain Euclidean shadow is already right at small scales, and the route is clear: show that the Euclidean Rips complex of a sample on the curve satisfies the apex condition below the reach. That proposition is not yet proved, and I want to be careful to say so: what I am advertising is the condition and the general homotopy equivalence, not the knot theorem.</p>
-<p>Beyond homotopy type, the question Kazuhiro asked us is the knot type: find a curve inside the shadow that is a deformation retract and is embedded like M.</p>
-<p>And the question for this talk: does our path-metric complex satisfy the apex condition under the main theorem’s hypotheses? If yes, the two-scale statement becomes a single-scale homotopy equivalence in every dimension. The lifting and apex conditions are not known to be comparable.</p>
+<p>The example that kills the Euclidean theory is exactly a failure of the condition. At the center of the hexagon both big triangles cover x, so an apex would have to see all six vertices, and every vertex misses its antipode. It fails at the center and nowhere else.</p>
+<p>The projection there is still an isomorphism on pi_1, as every planar Euclidean Rips projection is. So the apex condition is strictly stronger than pi_1-faithfulness, as it must be, since it controls all homotopy groups. The four-dimensional example of Chambers et al., two polar triangles with identified centroids, fails it at the identified point in the same way.</p>
+<p>Whether it is necessary for a homotopy equivalence, we do not know.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>What <span class="math inline">\pi_1</span> alone needs</h2>
+<div class="fig-row">
+<div class="stmts">
+<div class="definition" data-num="19" data-name="Pairwise lifting">
+<p><span class="math inline">\mathcal K</span> satisfies <em>pairwise lifting</em> if for <strong>all</strong> <span class="math inline">\sigma,\tau\in\mathcal K</span> with <span class="math inline">\operatorname{Conv}(\sigma)\cap\operatorname{Conv}(\tau)\ne\emptyset</span>:</p>
+<p>(A) some vertex <span class="math inline">E</span> has <span class="math inline">\sigma\cup\{E\},\,\tau\cup\{E\}\in\mathcal K</span>; or</p>
+<p>(B) up to swapping, some <span class="math inline">E,F</span> and <span class="math inline">A\in\sigma</span> have <span class="math inline">\tau\cup\{E,F\}\in\mathcal K</span>, <span class="math inline">\{A,E,F\}\in\mathcal K</span>, and <span class="math inline">[EF]\cap\operatorname{Conv}(\sigma)\ne\emptyset</span>.</p>
+</div>
+<div class="proposition fragment" data-num="20" data-name="Surjectivity">
+<p>Pairwise lifting implies <span class="math inline">p_*\colon\pi_1(|\mathcal K|)\to\pi_1(\mathrm{Sh}(\mathcal K))</span> is onto.</p>
+</div>
+</div>
+<div class="fig" style="flex-basis: 40%;">
+<p><img data-src="assets/r4.svg"></p>
+</div>
+</div>
+<div class="rmk fragment" data-name="Why all pairs">
+<p>In the plane, with <span class="math inline">\sigma,\tau</span> crossing edges, this is the lifting condition of the JACT paper. A condition on edges alone is vacuous in <span class="math inline">\mathbb R^4</span>: in the picture no edge meets any simplex except at a shared vertex, yet <span class="math inline">p_*</span> misses a <span class="math inline">\mathbb Z</span>.</p>
+</div>
+<aside class="notes">
+<p>What does pi_1 alone need? Less than an apex. Pairwise lifting asks, for every two simplices whose hulls meet, in whatever dimensions, either a common neighbor E, or a pair E, F adjacent to all of tau and to one vertex A of sigma, with EF passing through the hull of sigma. That gives pi_1-surjectivity, by rerouting paths around crossings one pair at a time. Condition (B) is weaker than an apex: E and F need to see one vertex of sigma, not all of them.</p>
+<p>In the plane, with two crossing edges, this is exactly the lifting condition of the planar paper. And the quantifier over all pairs is necessary. Take two triangles in R^4 that meet transversally in a single interior point, and one edge joining a vertex of each. No edge meets any simplex except at a shared vertex, so any condition phrased in terms of edges holds vacuously. But the complex is contractible, while the shadow is two disks glued at a point plus an arc: pi_1 is Z, generated by the loop from x out along one triangle, across the edge, and back through the other.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Star domination: the apex across two scales</h2>
+<div class="definition" data-num="21" data-name="Star domination">
+<p>Let <span class="math inline">\mathcal K\subseteq\mathcal K'</span> on the same vertices in <span class="math inline">\mathbb R^N</span>, with <span class="math inline">\mathcal K'</span> flag. <span class="math inline">\mathcal K'</span> <em>dominates the stars of</em> <span class="math inline">\mathcal K</span> if for every <span class="math inline">x\in\mathrm{Sh}(\mathcal K)</span> the set <span class="math inline">V(x)</span> spans a simplex of <span class="math inline">\mathcal K'</span>. For <span class="math inline">\mathcal K'=\mathcal K</span> this is the apex condition.</p>
+</div>
+<div class="proposition fragment" data-num="22" data-name="Two-scale lifting">
+<p>If <span class="math inline">\mathcal K'</span> dominates the stars of <span class="math inline">\mathcal K</span>, there is a map <span class="math inline">q\colon\mathrm{Sh}(\mathcal K)\to|\mathcal K'|</span> with <span class="math display">
+q\circ p\;\simeq\;|\iota|\colon|\mathcal K|\to|\mathcal K'|,
+\qquad
+p'\circ q\;\simeq\;j\colon\mathrm{Sh}(\mathcal K)\hookrightarrow\mathrm{Sh}(\mathcal K').
+</span> In particular <span class="math inline">p_*</span> is injective on every homotopy group whenever <span class="math inline">\iota</span> is a homotopy equivalence.</p>
+</div>
+<div class="aside-note fragment">
+<p>The single-scale apex is what we cannot certify for a sample. Its two-scale form is what the shadow radius can.</p>
+</div>
+<aside class="notes">
+<p>For a sample from a graph we cannot certify the apex condition at the scale of the complex; I will show you why at the end. What we can certify is the same condition with the target coarsened: the vertices of every star at scale beta span a simplex at a larger scale beta’. Star domination.</p>
+<p>The proof of the apex theorem goes through verbatim with the target changed, and gives a map q from the small shadow to the large complex that interleaves the two shadow projections: q after p is the inclusion of complexes, and p’ after q is the inclusion of shadows. When the inclusion of complexes is a homotopy equivalence, p is injective on all homotopy groups.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section class="title-slide slide level1 section-divider center">
+<h1>§ V. The Shadow in <span class="math inline">\mathbb R^N</span></h1>
+<div class="plate" data-plate="V">
+<p><img data-src="assets/section-v-plate.svg"></p>
+</div>
+<aside class="notes">
+<p>Section five: the shadow radius certifies star domination for a graph sample, and that is the shadow theorem in every dimension.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The shadow radius certifies star domination</h2>
+<div class="lemma" data-num="23" data-name="Union diameter">
+<p><span class="hyp">Let (A1)–(A4) hold, <span class="math inline">\xi&lt;\tfrac14</span>, <span class="math inline">\varepsilon\le\tfrac13\beta</span> with the distortion condition, <span class="math inline">d_H(\mathcal S,\mathcal G)&lt;\tfrac12\xi\varepsilon</span>, and <span class="math inline">3\beta\le\Delta(\mathcal G)</span>.</span> If <span class="math inline">\sigma,\tau\in\mathcal R^\varepsilon_\beta(\mathcal S)</span> have <span class="math inline">\operatorname{Conv}(\sigma)\cap\operatorname{Conv}(\tau)\neq\emptyset</span>, then <span class="math display">
+\operatorname{diam}^\varepsilon_{\mathcal S}(\sigma\cup\tau)\;\le\;\frac{11\,\beta}{\sqrt{1-\Theta(\mathcal G)}} .
+</span></p>
+</div>
+<div class="sketch fragment">
+<p>Projected to <span class="math inline">\mathcal G</span>, both simplices have graph diameter <span class="math inline">&lt;\tfrac43\beta</span>, and a common point of the hulls puts them within <span class="math inline">3\beta\le\Delta</span> in <span class="math inline">\mathbb R^N</span>. The shadow radius turns that into graph distance <span class="math inline">\tfrac{11\beta}{2\sqrt{1-\Theta}}</span>; the comparison of metrics brings it back to <span class="math inline">d^\varepsilon</span>.</p>
+</div>
+<div class="corollary fragment" data-num="24" data-name="Star domination">
+<p>For <span class="math inline">\beta'&gt;\tfrac{11}{\sqrt{1-\Theta}}\beta</span>, <span class="math inline">\mathcal R^\varepsilon_{\beta'}(\mathcal S)</span> dominates the stars of <span class="math inline">\mathcal R^\varepsilon_\beta(\mathcal S)</span>; and for <span class="math inline">\beta'&lt;\tfrac14\ell(\mathcal G)</span> the inclusion <span class="math inline">\mathcal R^\varepsilon_\beta\hookrightarrow\mathcal R^\varepsilon_{\beta'}</span> is a homotopy equivalence.</p>
+</div>
+<aside class="notes">
+<p>The certification is one estimate. If the hulls of two simplices of the Rips complex meet, then their union has path-metric diameter at most 11 beta over the square root of 1 minus Theta.</p>
+<p>Why: project to the graph. Each simplex has small graph diameter by the imported estimate, and a common point of the two hulls puts them within 3 beta of each other in R^N. That is below the shadow radius, so Euclidean proximity becomes graph proximity, at the cost of the corner factor 2 over root 1 minus Theta. The comparison of metrics brings it back to the path metric.</p>
+<p>So at any scale beta’ above that multiple of beta, every star at scale beta spans a simplex: star domination. And below a quarter of the girth, the inclusion of the two Rips complexes is a homotopy equivalence, from the imported theory.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Geometric reconstruction in <span class="math inline">\mathbb R^N</span></h2>
+<div class="theorem" data-num="25" data-name="The shadow in every dimension" data-cite="Kawamura–Majhi–Mitra">
+<p><span class="hyp">Let <span class="math inline">\mathcal G\subset\mathbb R^N</span> satisfy (A1)–(A4); <span class="math inline">\xi&lt;\tfrac14</span>; <span class="math inline">3\beta\le\Delta(\mathcal G)</span> and <span class="math inline">\beta'=\tfrac{12\beta}{\sqrt{1-\Theta}}&lt;\tfrac14\ell(\mathcal G)</span>; <span class="math inline">\varepsilon\le\tfrac13\beta</span> with the distortion condition; <span class="math inline">d_H(\mathcal S,\mathcal G)&lt;\tfrac12\xi\varepsilon</span>. Write <span class="math inline">\mathrm{Sh}_\beta=\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))</span>.</span></p>
+<ol type="1">
+<li><span class="math inline">d_H(\mathrm{Sh}_\beta,\mathcal G)&lt;\beta+\tfrac12\xi\varepsilon</span>;</li>
+<li><span class="math inline">p</span> is bijective on <span class="math inline">\pi_0</span> and injective on <span class="math inline">\pi_k</span> for every <span class="math inline">k\ge1</span>;</li>
+<li>the inclusion <span class="math inline">j\colon\mathrm{Sh}_\beta\hookrightarrow\mathrm{Sh}_{\beta'}</span> factors through <span class="math inline">\mathcal G</span> up to homotopy: <span class="math inline">\;j\simeq f'\circ h</span>, <span class="math inline">\;\mathrm{Sh}_\beta\xrightarrow{\,h\,}\mathcal G\xrightarrow{\,f'\,}\mathrm{Sh}_{\beta'}</span>.</li>
+</ol>
+<p>Hence <span class="math inline">j_*=0</span> on <span class="math inline">\pi_k</span> for <span class="math inline">k\ge2</span>, and <span class="math inline">j_*\pi_1(\mathrm{Sh}_\beta)</span> is a quotient of <span class="math inline">\pi_1(\mathcal G)</span>; under a second such window at <span class="math inline">\beta'</span>, it <em>is</em> <span class="math inline">\pi_1(\mathcal G)</span>.</p>
+</div>
+<div class="aside-note fragment">
+<p>Every feature of the shadow at scale <span class="math inline">\beta</span> that survives to <span class="math inline">\beta'</span> is a feature of <span class="math inline">\mathcal G</span>. Spheres die. The theory is dimension-free; the computation of the shadow is not.</p>
+</div>
+<aside class="notes">
+<p>The second theorem. With beta below a third of the shadow radius and beta’ equal to 12 beta over root 1 minus Theta below a quarter of the girth: in every dimension, the shadow is within beta of G; its projection is injective on all homotopy groups; and the inclusion of the small shadow into the large one factors through G up to homotopy. So spheres die between the two scales, and the fundamental group that survives is a quotient of that of G, and exactly that of G under the same window one scale up.</p>
+<p>This is an interleaving, of the same species as persistence. The constant 12 over root 1 minus Theta is crude, and what matters is that it is explicit and depends on Theta alone.</p>
+<p>And cost: every constant here is insensitive to N, but the shadow itself needs simplices up to dimension N, so it is exponential in N. Certifying star domination from the sample is polynomial for fixed N, a quadratic number of linear programs; it never builds the shadow.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The single-scale question</h2>
+<div class="rmk" data-name="Not claimed">
+<p>For <span class="math inline">N\ge3</span> we do not claim that <span class="math inline">\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))\simeq\mathcal G</span>, or even that <span class="math inline">p_*</span> is onto on <span class="math inline">\pi_1</span>, at a single scale. In the plane both hold (JACT), through Jordan and planar asphericity.</p>
+</div>
+<div class="fig-wide fragment" style="width: 52%; margin-top: 0;">
+<p><img data-src="assets/sharp.svg"></p>
+</div>
+<div class="question fragment" data-num="26" data-name="Single scale">
+<p>For <span class="math inline">N\ge3</span>, is <span class="math inline">p_*</span> onto on <span class="math inline">\pi_1</span> at one scale? Is the shadow homotopy equivalent to <span class="math inline">\mathcal G</span>? Or is there a sample whose shadow has a <span class="math inline">\pi_1</span>-cokernel or a <span class="math inline">\pi_2</span>?</p>
+</div>
+<aside class="notes">
+<p>What we do not claim. At a single scale in dimension three and up, we do not know whether the shadow is homotopy equivalent to G, or even whether its projection is onto on pi_1. In the plane both are theorems of the JACT paper, and the argument there is planar at its core.</p>
+<p>Here is why the apex condition cannot be certified at one scale. At a vertex with a 30 degree angle bisected by a third branch: a chord from 0.95 beta out on one sharp branch to 0.04 beta out on the other crosses the bisecting branch at about 0.074 beta, which is inside an edge along that branch from 0.07 beta to 1.07 beta. Two simplices whose hulls meet. An apex would have to be within beta of all four endpoints, but the two far ones are about 2 beta apart along the graph. So the apex condition fails at scale beta for every beta. The configuration is scale-free. Yet the pairwise condition (B) holds.</p>
+<p>So the pi_1 question is really about certifying pairwise lifting for the path-metric complex. That almost works, and fails for two reasons: the path metric underestimates the graph metric across a corner, and a Rips edge can sit arbitrarily close to the threshold. That is the sharpest open problem the paper leaves.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -830,24 +850,24 @@ v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
 </section>
 <section class="slide level2">
 <h2>What is open</h2>
-<div class="question" data-num="28" data-name="Asphericity">
-<p>For <span class="math inline">N\ge3</span>, is <span class="math inline">\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))</span> aspherical under the main theorem? Or is there a sample whose shadow has <span class="math inline">\pi_2\ne0</span>?</p>
+<div class="question" data-num="27" data-name="Necessity">
+<p>Is the apex condition necessary for <span class="math inline">p</span> to be a homotopy equivalence?</p>
 </div>
-<div class="question fragment" data-num="29" data-name="Necessity">
-<p>Is the lifting condition, or the apex condition, necessary for <span class="math inline">p</span> to be a homotopy equivalence?</p>
+<div class="question fragment" data-num="28" data-name="Isotopy in the plane">
+<p>Are two admissible planar graphs that are Hausdorff-close at the scale of the window ambient isotopic? The clusters and arcs identify vertices and edges, and the rotation systems agree; what remains is the unbounded face and making <span class="math inline">C</span> injective near clusters.</p>
 </div>
-<div class="question fragment" data-num="30" data-name="Scales from the sample">
-<p>Every constant here belongs to the unknown <span class="math inline">\mathcal G</span>. The degrees are recovered from <span class="math inline">\mathcal S</span>, and for straight edges <span class="math inline">\Delta(\mathcal G)</span> is a computation in the angles. Can a reconstruction certify its own scales?</p>
+<div class="question fragment" data-num="29" data-name="Scales from the sample">
+<p>Every constant here belongs to the unknown <span class="math inline">\mathcal G</span>. The degrees are recovered from <span class="math inline">\mathcal S</span>, and for straight edges <span class="math inline">\Delta(\mathcal G)</span> is a finite computation. Can a reconstruction certify its own scales?</p>
 </div>
-<div class="question fragment" data-num="31" data-name="Limits and samples">
-<p>How do these sampling thresholds relate to the scale at which the inverse limit in Kawamura’s theorem stabilizes?</p>
+<div class="question fragment" data-num="30" data-name="Limits and samples">
+<p>How do these sampling thresholds relate to the scale at which the inverse limit of the limit theorem stabilizes?</p>
 </div>
 <aside class="notes">
-<p>Four questions for the room.</p>
-<p>Asphericity: in dimension three and up, can the shadow carry an essential 2-sphere under our hypotheses? Either answer would be interesting; a discrete Morse collapse of the shadow complex would settle it positively.</p>
-<p>Necessity: both conditions are sufficient. Is either necessary? I do not know the smallest configuration that would decide it.</p>
-<p>Scales from the sample: like every reach-type theorem, ours is stated in quantities of the unknown shape. But the degree statistic recovers the vertices, and for polygonal graphs the shadow radius is a computation in the angles at the vertices, which the same annuli estimate. A reconstruction that certifies its own scales looks within reach.</p>
-<p>And the connection to the previous talk: the limit theorem says the shadows converge; ours says when a fixed sample is already there. Relating the two thresholds is the natural joint question.</p>
+<p>Four more questions for the room.</p>
+<p>Necessity: the apex condition is sufficient for a homotopy equivalence; is it necessary?</p>
+<p>Isotopy in the plane: for planar graphs we expect more than homeomorphism. The clusters and arcs identify the vertices and edges of two nearby graphs, and reading branches on a circle about each vertex, the rotation systems agree, which gives an isotopy of the sphere. Two steps remain: matching the unbounded faces, and making the realization of C injective near the clusters. Neither is long; neither is done.</p>
+<p>Scales from the sample: like every reach-type theorem, ours is stated in quantities of the unknown graph. But the degree statistic recovers the vertices, and for polygonal graphs the shadow radius is a finite computation. A reconstruction that certifies its own scales looks within reach.</p>
+<p>And the connection to Kazuhiro’s talk: the limit theorem says the shadows converge; ours says what one sample already knows. Relating the two thresholds is the natural joint question.</p>
 <p>Thank you.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -898,7 +918,7 @@ v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
 <p>Preprint on the arXiv, October 2026 · <a href="https://smajhi.com">smajhi.com</a> · <a href="mailto:s.majhi@email.gwu.edu">s.majhi@email.gwu.edu</a></p>
 </div>
 <div class="subscription">
-<p><em>Joint work with</em> Atish Mitra; the apex condition with Kazuhiro Kawamura and Atish Mitra. AMS Fall Eastern Sectional · Special Session on Advances in Applied Topology · Washington, D.C. · October 3, 2026.</p>
+<p><em>Joint work with</em> Kazuhiro Kawamura and Atish Mitra. AMS Fall Eastern Sectional · Special Session on Advances in Applied Topology · Washington, D.C. · October 3, 2026.</p>
 </div>
 
 </section></section>

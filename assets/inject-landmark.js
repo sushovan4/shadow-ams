@@ -23,6 +23,7 @@
   };
 
   var COAUTHORS = [
+    'Kazuhiro Kawamura',
     'Atish Mitra',
   ];
 
@@ -41,9 +42,9 @@
   // Inline `::: {.notes}` at the top of the .qmd would create a phantom
   // empty slide, so we inject the title's notes here instead.
   var TITLE_NOTES_HTML =
-    '<p>Thank you, and thanks to Atish, Jacob and Abigail for the session. This is joint work with Atish Mitra; the last part is joint with Kazuhiro Kawamura and Atish.</p>' +
-    '<p>Kazuhiro has just shown how shape theory gets past the Euclidean obstruction for shadows in the limit, as the scale goes to zero. This talk is the finite-sample half of the same question: one sample, one scale, explicit constants. His talk said the limit exists; mine says when a fixed sample is already there, for embedded graphs in any ambient dimension.</p>' +
-    '<p>Plan: the shadow and the Chambers–de Silva–Erickson–Ghrist obstruction; the change of metric and a lifting condition that never sees the dimension; the shadow radius and the main theorem; a homeomorphic reconstruction; and, to finish, the apex condition, which is work in preparation with Kazuhiro and Atish.</p>';
+    '<p>Thank you, and thanks to Atish, Jacob and Abigail for the session. This is joint work with Kazuhiro Kawamura and Atish Mitra.</p>' +
+    '<p>Kazuhiro has just shown how shape theory gets past the Euclidean obstruction for shadows in the limit, as the scale goes to zero. This talk is the finite-sample half of the same question: one sample, explicit scales, embedded graphs in any ambient dimension.</p>' +
+    '<p>Two results. First, from a sample merely Hausdorff-close to the graph, an embedded 1-complex homeomorphic to it, at a single scale. Second, the shadow in every dimension: injective on homotopy groups, and every feature that survives an explicit enlargement of scale is a feature of the graph. The engine is a combinatorial condition, the apex condition, under which the shadow projection of a flag complex is a homotopy equivalence in every dimension.</p>';
 
   // Placeholder QR: finder patterns and a caption, no data modules. Swap for
   // a real QR of ARXIV_URL once the preprint is posted.
