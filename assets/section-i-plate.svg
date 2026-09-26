@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-label="Section I plate">
+<rect x="36" y="36" width="648" height="328" fill="none" stroke="#c8b894" stroke-width="0.6"/>
+<text x="360" y="68" fill="#6c1d1a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="16" letter-spacing="4" font-weight="500" text-anchor="middle">THE SHADOW AND ITS OBSTRUCTION</text>
+<text x="360" y="92" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="13" font-style="italic" text-anchor="middle">— the abstract complex says what; its shadow must say where —</text>
+<line x1="120" y1="104" x2="600" y2="104" stroke="#c8b894" stroke-width="0.5"/>
+<polygon points="242.2,144.2 271.3,235 176.4,225.3" fill="#6c1d1a" fill-opacity="0.18" stroke="none"/>
+<polygon points="242.2,289.8 308,208.7 213.1,199" fill="#6c1d1a" fill-opacity="0.08" stroke="none"/>
+<line x1="242.2" y1="144.2" x2="308" y2="208.7" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="242.2" y1="144.2" x2="271.3" y2="235" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="242.2" y1="144.2" x2="176.4" y2="225.3" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="242.2" y1="144.2" x2="213.1" y2="199" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="308" y1="208.7" x2="271.3" y2="235" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="308" y1="208.7" x2="242.2" y2="289.8" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="308" y1="208.7" x2="213.1" y2="199" stroke="#2b211a" stroke-width="0.7260000000000001" stroke-dasharray="4 4"/>
+<line x1="271.3" y1="235" x2="242.2" y2="289.8" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="271.3" y1="235" x2="176.4" y2="225.3" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="242.2" y1="289.8" x2="176.4" y2="225.3" stroke="#2b211a" stroke-width="0.7260000000000001"/>
+<line x1="242.2" y1="289.8" x2="213.1" y2="199" stroke="#2b211a" stroke-width="0.7260000000000001" stroke-dasharray="4 4"/>
+<line x1="176.4" y1="225.3" x2="213.1" y2="199" stroke="#2b211a" stroke-width="0.7260000000000001" stroke-dasharray="4 4"/>
+<circle cx="242.2" cy="144.2" r="2.4" fill="#2b211a"/>
+<circle cx="242.2" cy="289.8" r="2.4" fill="#2b211a"/>
+<circle cx="308" cy="208.7" r="2.4" fill="#2b211a"/>
+<circle cx="271.3" cy="235" r="2.4" fill="#2b211a"/>
+<circle cx="176.4" cy="225.3" r="2.4" fill="#2b211a"/>
+<circle cx="213.1" cy="199" r="2.4" fill="#2b211a"/>
+<line x1="328" y1="217" x2="374.2" y2="217" stroke="#57473a" stroke-width="0.792"/>
+<path d="M 368.9 213.7 L 374.9 217 L 368.9 220.3" fill="none" stroke="#57473a" stroke-width="0.792"/>
+<polygon points="473.2,144.4 536.1,180.7 536.1,253.3 473.2,289.6 410.3,253.3 410.3,180.7" fill="#6c1d1a" fill-opacity="0.08" stroke="none"/>
+<polygon points="473.2,144.4 536.1,253.3 410.3,253.3" fill="#6c1d1a" fill-opacity="0.14" stroke="#6c1d1a" stroke-width="0.9239999999999999"/>
+<polygon points="536.1,180.7 473.2,289.6 410.3,180.7" fill="#6c1d1a" fill-opacity="0.14" stroke="#6c1d1a" stroke-width="0.9239999999999999"/>
+<line x1="473.2" y1="144.4" x2="536.1" y2="180.7" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="473.2" y1="144.4" x2="536.1" y2="253.3" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="473.2" y1="144.4" x2="473.2" y2="289.6" stroke="#8c7d6a" stroke-width="0.528" stroke-dasharray="1.5 4"/>
+<line x1="473.2" y1="144.4" x2="410.3" y2="253.3" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="473.2" y1="144.4" x2="410.3" y2="180.7" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="536.1" y1="180.7" x2="536.1" y2="253.3" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="536.1" y1="180.7" x2="473.2" y2="289.6" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="536.1" y1="180.7" x2="410.3" y2="253.3" stroke="#8c7d6a" stroke-width="0.528" stroke-dasharray="1.5 4"/>
+<line x1="536.1" y1="180.7" x2="410.3" y2="180.7" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="536.1" y1="253.3" x2="473.2" y2="289.6" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="536.1" y1="253.3" x2="410.3" y2="253.3" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="536.1" y1="253.3" x2="410.3" y2="180.7" stroke="#8c7d6a" stroke-width="0.528" stroke-dasharray="1.5 4"/>
+<line x1="473.2" y1="289.6" x2="410.3" y2="253.3" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="473.2" y1="289.6" x2="410.3" y2="180.7" stroke="#2b211a" stroke-width="0.66"/>
+<line x1="410.3" y1="253.3" x2="410.3" y2="180.7" stroke="#2b211a" stroke-width="0.66"/>
+<circle cx="473.2" cy="144.4" r="2.4" fill="#2b211a"/>
+<circle cx="536.1" cy="180.7" r="2.4" fill="#2b211a"/>
+<circle cx="536.1" cy="253.3" r="2.4" fill="#2b211a"/>
+<circle cx="473.2" cy="289.6" r="2.4" fill="#2b211a"/>
+<circle cx="410.3" cy="253.3" r="2.4" fill="#2b211a"/>
+<circle cx="410.3" cy="180.7" r="2.4" fill="#2b211a"/>
+<circle cx="473.2" cy="217" r="2.8" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.056"/>
+<g fill="#c8b894" stroke="none">
+<g transform="translate(52, 52) scale(0.9)"><path d="M 0 -8 Q 5 -3 0 0 Q -5 -3 0 -8 Z"/><path d="M 0 8  Q 5 3  0 0 Q -5 3  0 8  Z"/><path d="M -8 0 Q -3 -5 0 0 Q -3 5 -8 0 Z"/><path d="M 8 0  Q 3 -5  0 0 Q 3 5  8 0  Z"/><circle cx="0" cy="0" r="2.0"/></g>
+<g transform="translate(668, 52) scale(0.9)"><path d="M 0 -8 Q 5 -3 0 0 Q -5 -3 0 -8 Z"/><path d="M 0 8  Q 5 3  0 0 Q -5 3  0 8  Z"/><path d="M -8 0 Q -3 -5 0 0 Q -3 5 -8 0 Z"/><path d="M 8 0  Q 3 -5  0 0 Q 3 5  8 0  Z"/><circle cx="0" cy="0" r="2.0"/></g>
+<g transform="translate(52, 348) scale(0.9)"><path d="M 0 -8 Q 5 -3 0 0 Q -5 -3 0 -8 Z"/><path d="M 0 8  Q 5 3  0 0 Q -5 3  0 8  Z"/><path d="M -8 0 Q -3 -5 0 0 Q -3 5 -8 0 Z"/><path d="M 8 0  Q 3 -5  0 0 Q 3 5  8 0  Z"/><circle cx="0" cy="0" r="2.0"/></g>
+<g transform="translate(668, 348) scale(0.9)"><path d="M 0 -8 Q 5 -3 0 0 Q -5 -3 0 -8 Z"/><path d="M 0 8  Q 5 3  0 0 Q -5 3  0 8  Z"/><path d="M -8 0 Q -3 -5 0 0 Q -3 5 -8 0 Z"/><path d="M 8 0  Q 3 -5  0 0 Q 3 5  8 0  Z"/><circle cx="0" cy="0" r="2.0"/></g>
+</g>
+<text x="360" y="356" fill="#57473a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="11" letter-spacing="3" text-anchor="middle">— AN OCTAHEDRON ABOVE, A HEXAGON BELOW —</text>
+</svg>
