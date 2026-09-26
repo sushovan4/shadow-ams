@@ -33,7 +33,7 @@
 <circle cx="242.8" cy="116.4" r="2" fill="#2b211a" opacity="0.45"/>
 <circle cx="249" cy="120.3" r="2" fill="#2b211a" opacity="0.45"/>
 <circle cx="124.5" cy="109.5" r="4.5" fill="#f5efde" stroke="#2b211a" stroke-width="1.6"/>
-<text x="130" y="238" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">on an edge: 2 branches</text>
+<text x="130" y="238" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">on an edge: 2 branches</text>
 </g>
 <g transform="translate(360,20)">
 <path d="M 130 120 Q 80 90 10 60" fill="none" stroke="#57473a" stroke-width="1" stroke-dasharray="3 3"/>
@@ -87,7 +87,7 @@
 <circle cx="212.6" cy="203.6" r="2" fill="#2b211a" opacity="0.45"/>
 <circle cx="130" cy="120" r="4.5" fill="#f5efde" stroke="#2b211a" stroke-width="1.6"/>
 <text x="138" y="110" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="start">v</text>
-<text x="130" y="238" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">at a branch vertex: 3 branches</text>
+<text x="130" y="238" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">at a branch vertex: 3 branches</text>
 </g>
 <text x="330" y="278" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="14" font-style="italic" text-anchor="middle">annulus  β/2 ≤ dᵋ(A, ·) ≤ β  about a sample point A</text>
 </svg>

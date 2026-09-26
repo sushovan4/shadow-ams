@@ -20,7 +20,7 @@
 <circle cx="205" cy="70" r="4" fill="#2b211a"/>
 <text x="217" y="66" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">E</text>
 <text x="150.2" y="130" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">v</text>
-<text x="150" y="250" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">(A)  one apex E joins both</text>
+<text x="150" y="250" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">(A)  one apex E joins both</text>
 </g>
 <g transform="translate(340,20)">
 <polygon points="95,25 175,45 205,200 90,185" fill="#6c1d1a" fill-opacity="0.1" stroke="none"/>
@@ -49,7 +49,7 @@
 <circle cx="175" cy="45" r="4" fill="#2b211a"/>
 <text x="185" y="39" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">F</text>
 <text x="162.4" y="104" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">v</text>
-<text x="129.5" y="132" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">w</text>
-<text x="150" y="250" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">(B)  E, F straddle the hyperplane of σ</text>
+<text x="129.5" y="132" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">w</text>
+<text x="150" y="250" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">(B)  E, F straddle the hyperplane of σ</text>
 </g>
 </svg>

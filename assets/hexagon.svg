@@ -60,6 +60,6 @@
 <text x="411.7" y="92.5" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="14.0" text-anchor="middle">6</text>
 <circle cx="520" cy="150" r="4.2" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.6"/>
 <text x="534" y="155" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15.0" font-style="italic" text-anchor="start">x</text>
-<text x="170" y="312" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">ℛ ≃ S²,  π₂(ℛ) ≅ ℤ</text>
-<text x="520" y="312" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">Sh(ℛ) is a hexagon: contractible</text>
+<text x="170" y="312" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">ℛ ≃ S²,  π₂(ℛ) ≅ ℤ</text>
+<text x="520" y="312" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">Sh(ℛ) is a hexagon: contractible</text>
 </svg>
