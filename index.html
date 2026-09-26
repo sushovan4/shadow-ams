@@ -216,16 +216,16 @@ Sushovan Majhi
 <div class="definition" data-num="3" data-name="Shadow">
 <p>Let <span class="math inline">\mathcal K</span> be a simplicial complex with vertices <span class="math inline">\mathcal K^{(0)}\subset\mathbb R^N</span>. The <em>shadow projection</em> <span class="math inline">p\colon|\mathcal K|\to\mathbb R^N</span> sends each vertex to itself and extends linearly over simplices. The <em>shadow</em> is <span class="math display">
 \mathrm{Sh}(\mathcal K)\;=\;p\big(|\mathcal K|\big)\;=\;\bigcup_{\sigma\in\mathcal K}\operatorname{Conv}(\sigma)\;\subset\;\mathbb R^N .
-</span></p>
+</span> For the Euclidean complex this is also written <span class="math inline">SR(F;\beta)=\mathrm{Sh}(\mathcal R_\beta(F))</span>.</p>
 </div>
-<div class="fig-wide" style="width: 70%;">
+<div class="fig-wide" style="width: 60%; margin: 0 auto;">
 <p><img data-src="assets/shadow.svg"></p>
 </div>
 <div class="definition fragment" data-num="4" data-name="Shadow complex">
 <p>A triangulation <span class="math inline">\mathrm{SC}(\mathcal K)</span> of <span class="math inline">\mathrm{Sh}(\mathcal K)</span> in which every <span class="math inline">\operatorname{Conv}(\sigma)</span> is a subcomplex. <em>Carrier property:</em> if the relative interior of <span class="math inline">|\tau|</span> meets <span class="math inline">\operatorname{Conv}(\sigma)</span>, then <span class="math inline">|\tau|\subset\operatorname{Conv}(\sigma)</span>.</p>
 </div>
 <aside class="notes">
-<p>The shadow is the natural candidate for the second half. Take a complex whose vertices happen to be points of R^N. The shadow projection sends each vertex to itself and extends linearly; its image, the union of the convex hulls of the simplices, is the shadow, an explicit polyhedron in R^N.</p>
+<p>Kazuhiro has just defined this, as SR of F and beta; I will write Sh of the complex, because we will take shadows of complexes other than the Euclidean Rips complex. The shadow is the natural candidate for the second half. Take a complex whose vertices happen to be points of R^N. The shadow projection sends each vertex to itself and extends linearly; its image, the union of the convex hulls of the simplices, is the shadow, an explicit polyhedron in R^N.</p>
 <p>In the picture: an abstract complex with a triangle and two edges crossing it; its shadow; and a shadow complex, a triangulation of the shadow in which every hull is a subcomplex. Such a triangulation always exists, by common subdivision of finitely many polyhedra. The one fact the arguments use is the carrier property: a shadow simplex that enters a hull lies inside it.</p>
 <p>The map p is continuous and onto its image. The question is whether it is a homotopy equivalence.</p>
 <style type="text/css">
@@ -257,8 +257,8 @@ Sushovan Majhi
 <p>In <span class="math inline">\mathbb R^3</span>, <span class="math inline">p_*</span> is onto on <span class="math inline">\pi_1</span> (Adamaszek–Frick–Vakili 2017). The theory stops at the plane.</p>
 </div>
 <aside class="notes">
-<p>For the Euclidean Vietoris–Rips complex the picture is understood, and it is discouraging. Chambers, de Silva, Erickson and Ghrist: in the plane the projection is 1-connected. But already in the plane higher homotopy is not preserved, and from dimension four on even the fundamental group fails. Adamaszek, Frick and Vakili recovered surjectivity on pi_1 in R^3.</p>
-<p>The picture is their planar example. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. Its shadow is the solid hexagon, contractible. Keep this example in mind; it comes back in section four.</p>
+<p>(If this follows Kazuhiro’s talk, he has just stated these; do not dwell.) in the plane the projection is 1-connected; already in the plane higher homotopy is not preserved; from dimension four on even the fundamental group fails; and in R^3 surjectivity on pi_1 is due to Adamaszek, Frick and Vakili.</p>
+<p>What I want is the picture, their planar example. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. Its shadow is the solid hexagon, contractible. Keep this example in mind; it comes back in section four.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -272,26 +272,28 @@ Sushovan Majhi
       }</style></aside>
 </section>
 <section class="slide level2">
-<h2>Two ways past the wall</h2>
-<div class="standfirst math">
-<p>Every statement on the last slide is a theorem about the <strong>Euclidean</strong> metric on the sample.</p>
+<h2>The shadow in the limit</h2>
+<div class="theorem" data-num="6" data-name="In the limit" data-cite="Kawamura–Majhi–Mitra">
+<p>Let <span class="math inline">M\subset\mathbb R^N</span> be a compact ANR whose metric satisfies (M1)–(M3), and let <span class="math inline">F</span> range over the finite subsets of <span class="math inline">M</span>. Then <span class="math display">
+\varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)\;\cong\;\pi_q(M),
+</span> and, given a Hausmann-type theorem for <span class="math inline">M</span>, the shadow projections induce an isomorphism of the same limits from <span class="math inline">\pi_q(\mathcal R_\beta(F))</span>.</p>
 </div>
 <div class="env-row">
-<div class="theorem" data-num="6" data-name="In the limit" data-cite="Kawamura–Majhi–Mitra">
-<p>Let <span class="math inline">X\subset\mathbb R^N</span> be a compact ANR. For each <span class="math inline">\beta&gt;0</span> form the direct limit of <span class="math inline">\pi_k\big(\mathrm{Sh}(\mathcal R_\beta(S))\big)</span> over finite <span class="math inline">S\subset X</span>. As <span class="math inline">\beta\to0</span>, the inverse limit of these groups is isomorphic to <span class="math inline">\pi_k(X)</span>.</p>
+<div class="rmk fragment" data-name="Question (a): stabilization" data-cite="Kawamura">
+<p>When is <span class="math inline">\varprojlim_\beta\varinjlim_F\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)\cong\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)</span> for <strong>one</strong> dense finite <span class="math inline">F</span> and <strong>one</strong> small <span class="math inline">\beta</span>?</p>
 </div>
-<div class="rmk fragment" data-name="At one scale: this talk">
-<p>Keep <strong>one</strong> finite sample and <strong>one</strong> scale. Replace the Euclidean metric on <span class="math inline">\mathcal S</span> by a path metric <span class="math inline">d^{\varepsilon}_{\mathcal S}</span> built from its pairwise distances.</p>
-<p>The hypotheses of the obstruction are then not met. We decline them; we do not contradict them.</p>
+<div class="rmk fragment" data-name="This talk">
+<p>For embedded graphs, with the Euclidean metric on the sample replaced by a path metric <span class="math inline">d^\varepsilon_{\mathcal S}</span>: explicit scales, one finite sample. A homeomorphic <span class="math inline">1</span>-complex at one scale; for the shadow, a two-scale form of (a).</p>
 </div>
 </div>
 <div class="aside-note fragment">
-<p>The shape-theoretic route says the limit exists. The question here is what a fixed sample already knows, and at which explicit scale.</p>
+<p>The obstruction is a theorem about the <strong>Euclidean</strong> metric. We decline its hypothesis; we do not contradict it.</p>
 </div>
 <aside class="notes">
-<p>The hinge of the talk. Everything on the previous slide is a theorem about the Euclidean metric; the counterexamples are built out of Euclidean distances.</p>
-<p>There are two ways past it. The first is the one Kazuhiro just presented: let the scale go to zero and study the shadows as an inverse system; shape theory recovers the homotopy groups of any compact ANR. It is qualitative.</p>
-<p>The second is this talk. Keep one finite sample, one scale, and change the metric on the sample. Chambers et al.&nbsp;remain true; their hypothesis is simply not met.</p>
+<p>This is where Kazuhiro’s talk ended; in another venue, introduce it as the limit theorem of Kawamura, Majhi and Mitra. In the limit, the system of shadows recovers the homotopy groups of any compact ANR with a reasonable metric, and the shadow projections are isomorphisms in the limit. It is a geometric Latschev theorem, and it is qualitative.</p>
+<p>His first closing question was stabilization: when does one dense finite sample, at one small scale, already carry the limit?</p>
+<p>This talk is an answer to a version of that question. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not Euclidean but a path metric built from its pairwise distances. In that setting everything is at explicit scales and for one finite sample: a homeomorphic 1-complex at a single scale, and for the shadow a two-scale form of stabilization, where every feature that survives an explicit enlargement is a feature of the graph.</p>
+<p>And the reason changing the metric is allowed: the obstruction we just saw is a theorem about the Euclidean metric. Chambers et al.&nbsp;remain true; their hypothesis is simply not met.</p>
 <p>This is joint work with Kazuhiro and Atish.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -859,15 +861,15 @@ p'\circ q\;\simeq\;j\colon\mathrm{Sh}(\mathcal K)\hookrightarrow\mathrm{Sh}(\mat
 <div class="question fragment" data-num="29" data-name="Scales from the sample">
 <p>Every constant here belongs to the unknown <span class="math inline">\mathcal G</span>. The degrees are recovered from <span class="math inline">\mathcal S</span>, and for straight edges <span class="math inline">\Delta(\mathcal G)</span> is a finite computation. Can a reconstruction certify its own scales?</p>
 </div>
-<div class="question fragment" data-num="30" data-name="Limits and samples">
-<p>How do these sampling thresholds relate to the scale at which the inverse limit of the limit theorem stabilizes?</p>
+<div class="question fragment" data-num="30" data-name="Back to the limit">
+<p>Kawamura’s question (a) asks when the inverse limit stabilizes for the <strong>Euclidean</strong> shadow of a compact ANR. Our scales answer a two-scale version for the path-metric shadow of a graph. Is there a Euclidean one?</p>
 </div>
 <aside class="notes">
 <p>Four more questions for the room.</p>
 <p>Necessity: the apex condition is sufficient for a homotopy equivalence; is it necessary?</p>
 <p>Isotopy in the plane: for planar graphs we expect more than homeomorphism. The clusters and arcs identify the vertices and edges of two nearby graphs, and reading branches on a circle about each vertex, the rotation systems agree, which gives an isotopy of the sphere. Two steps remain: matching the unbounded faces, and making the realization of C injective near the clusters. Neither is long; neither is done.</p>
 <p>Scales from the sample: like every reach-type theorem, ours is stated in quantities of the unknown graph. But the degree statistic recovers the vertices, and for polygonal graphs the shadow radius is a finite computation. A reconstruction that certifies its own scales looks within reach.</p>
-<p>And the connection to Kazuhiro’s talk: the limit theorem says the shadows converge; ours says what one sample already knows. Relating the two thresholds is the natural joint question.</p>
+<p>And back to Kazuhiro’s question (a). His stabilization question is about the Euclidean shadow of a compact ANR. What we have is a two-scale answer for the path-metric shadow of a graph. Whether a Euclidean version holds, even for graphs, is the natural joint question.</p>
 <p>Thank you.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
