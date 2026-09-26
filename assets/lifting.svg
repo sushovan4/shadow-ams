@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 290" role="img" aria-label="The two alternatives of the lifting condition">
+<g transform="translate(20,20)">
+<polygon points="40,110 250,110 205,70" fill="#6c1d1a" fill-opacity="0.1" stroke="none"/>
+<polygon points="150,20 175,205 205,70" fill="#6c1d1a" fill-opacity="0.1" stroke="none"/>
+<line x1="40" y1="110" x2="250" y2="110" stroke="#2b211a" stroke-width="2"/>
+<line x1="150" y1="20" x2="175" y2="205" stroke="#2b211a" stroke-width="2"/>
+<line x1="40" y1="110" x2="205" y2="70" stroke="#6c1d1a" stroke-width="1.8"/>
+<line x1="205" y1="70" x2="175" y2="205" stroke="#6c1d1a" stroke-width="1.8"/>
+<line x1="250" y1="110" x2="205" y2="70" stroke="#6c1d1a" stroke-width="0.8" opacity="0.5"/>
+<line x1="150" y1="20" x2="205" y2="70" stroke="#6c1d1a" stroke-width="0.8" opacity="0.5"/>
+<circle cx="162.2" cy="110" r="4.5" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.6"/>
+<circle cx="40" cy="110" r="4" fill="#2b211a"/>
+<text x="26" y="115" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">A</text>
+<circle cx="250" cy="110" r="4" fill="#2b211a"/>
+<text x="264" y="115" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">B</text>
+<circle cx="150" cy="20" r="4" fill="#2b211a"/>
+<text x="150" y="11" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">C</text>
+<circle cx="175" cy="205" r="4" fill="#2b211a"/>
+<text x="175" y="225" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">D</text>
+<circle cx="205" cy="70" r="4" fill="#2b211a"/>
+<text x="217" y="66" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">E</text>
+<text x="150.2" y="130" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">v</text>
+<text x="150" y="250" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">(A)  one apex E joins both</text>
+</g>
+<g transform="translate(340,20)">
+<polygon points="95,25 175,45 205,200 90,185" fill="#6c1d1a" fill-opacity="0.1" stroke="none"/>
+<polygon points="40,110 90,185 175,45" fill="#6c1d1a" fill-opacity="0.1" stroke="none"/>
+<line x1="40" y1="110" x2="250" y2="110" stroke="#2b211a" stroke-width="2"/>
+<line x1="95" y1="25" x2="205" y2="200" stroke="#2b211a" stroke-width="2"/>
+<line x1="90" y1="185" x2="175" y2="45" stroke="#6c1d1a" stroke-width="1.1" opacity="0.7"/>
+<line x1="40" y1="110" x2="175" y2="45" stroke="#6c1d1a" stroke-width="1.8"/>
+<line x1="175" y1="45" x2="205" y2="200" stroke="#6c1d1a" stroke-width="1.8"/>
+<line x1="40" y1="110" x2="90" y2="185" stroke="#6c1d1a" stroke-width="0.8" opacity="0.5"/>
+<line x1="95" y1="25" x2="175" y2="45" stroke="#6c1d1a" stroke-width="0.8" opacity="0.5"/>
+<line x1="95" y1="25" x2="90" y2="185" stroke="#6c1d1a" stroke-width="0.8" opacity="0.5"/>
+<line x1="90" y1="185" x2="205" y2="200" stroke="#6c1d1a" stroke-width="0.8" opacity="0.5"/>
+<circle cx="148.4" cy="110" r="4.5" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.6"/>
+<circle cx="135.5" cy="110" r="4" fill="#f5efde" stroke="#57473a" stroke-width="1.4"/>
+<circle cx="40" cy="110" r="4" fill="#2b211a"/>
+<text x="26" y="115" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">A</text>
+<circle cx="250" cy="110" r="4" fill="#2b211a"/>
+<text x="264" y="115" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">B</text>
+<circle cx="95" cy="25" r="4" fill="#2b211a"/>
+<text x="95" y="16" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">C</text>
+<circle cx="205" cy="200" r="4" fill="#2b211a"/>
+<text x="205" y="220" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">D</text>
+<circle cx="90" cy="185" r="4" fill="#2b211a"/>
+<text x="78" y="197" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">E</text>
+<circle cx="175" cy="45" r="4" fill="#2b211a"/>
+<text x="185" y="39" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">F</text>
+<text x="162.4" y="104" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">v</text>
+<text x="129.5" y="132" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">w</text>
+<text x="150" y="250" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">(B)  E, F straddle the hyperplane of σ</text>
+</g>
+</svg>

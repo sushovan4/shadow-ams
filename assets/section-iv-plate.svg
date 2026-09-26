@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-label="Section IV plate">
+<rect x="36" y="36" width="648" height="328" fill="none" stroke="#c8b894" stroke-width="0.6"/>
+<text x="360" y="68" fill="#6c1d1a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="16" letter-spacing="4" font-weight="500" text-anchor="middle">BEYOND HOMOTOPY TYPE</text>
+<text x="360" y="92" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="13" font-style="italic" text-anchor="middle">— a theta graph and a wedge of two circles —</text>
+<line x1="120" y1="104" x2="600" y2="104" stroke="#c8b894" stroke-width="0.5"/>
+<ellipse cx="250" cy="215" rx="70" ry="52" fill="none" stroke="#2b211a" stroke-width="1.6"/>
+<line x1="250" y1="163" x2="250" y2="267" stroke="#2b211a" stroke-width="1.6"/>
+<circle cx="250" cy="163" r="4" fill="#6c1d1a"/>
+<circle cx="250" cy="267" r="4" fill="#6c1d1a"/>
+<circle cx="428" cy="215" r="42" fill="none" stroke="#2b211a" stroke-width="1.6"/>
+<circle cx="512" cy="215" r="42" fill="none" stroke="#2b211a" stroke-width="1.6"/>
+<circle cx="470" cy="215" r="4" fill="#6c1d1a"/>
+<text x="360" y="224" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="26" text-anchor="middle">≃</text>
+<text x="360" y="305" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="13" font-style="italic" text-anchor="middle">homotopy equivalent, yet not homeomorphic</text>
+<g fill="#c8b894" stroke="none">
+<g transform="translate(52, 52) scale(0.9)"><path d="M 0 -8 Q 5 -3 0 0 Q -5 -3 0 -8 Z"/><path d="M 0 8  Q 5 3  0 0 Q -5 3  0 8  Z"/><path d="M -8 0 Q -3 -5 0 0 Q -3 5 -8 0 Z"/><path d="M 8 0  Q 3 -5  0 0 Q 3 5  8 0  Z"/><circle cx="0" cy="0" r="2.0"/></g>
+<g transform="translate(668, 52) scale(0.9)"><path d="M 0 -8 Q 5 -3 0 0 Q -5 -3 0 -8 Z"/><path d="M 0 8  Q 5 3  0 0 Q -5 3  0 8  Z"/><path d="M -8 0 Q -3 -5 0 0 Q -3 5 -8 0 Z"/><path d="M 8 0  Q 3 -5  0 0 Q 3 5  8 0  Z"/><circle cx="0" cy="0" r="2.0"/></g>
+<g transform="translate(52, 348) scale(0.9)"><path d="M 0 -8 Q 5 -3 0 0 Q -5 -3 0 -8 Z"/><path d="M 0 8  Q 5 3  0 0 Q -5 3  0 8  Z"/><path d="M -8 0 Q -3 -5 0 0 Q -3 5 -8 0 Z"/><path d="M 8 0  Q 3 -5  0 0 Q 3 5  8 0  Z"/><circle cx="0" cy="0" r="2.0"/></g>
+<g transform="translate(668, 348) scale(0.9)"><path d="M 0 -8 Q 5 -3 0 0 Q -5 -3 0 -8 Z"/><path d="M 0 8  Q 5 3  0 0 Q -5 3  0 8  Z"/><path d="M -8 0 Q -3 -5 0 0 Q -3 5 -8 0 Z"/><path d="M 8 0  Q 3 -5  0 0 Q 3 5  8 0  Z"/><circle cx="0" cy="0" r="2.0"/></g>
+</g>
+<text x="360" y="356" fill="#57473a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="11" letter-spacing="3" text-anchor="middle">— HOMOTOPY SEES ONLY THE FIRST BETTI NUMBER —</text>
+</svg>

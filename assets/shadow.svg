@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" role="img" aria-label="A complex, its shadow, and the shadow complex">
+<g transform="translate(40,18)">
+<polygon points="0,154 140,154 70,14" fill="#6c1d1a" fill-opacity="0.1" stroke="#6c1d1a" stroke-width="1.2"/>
+<line x1="0" y1="84" x2="210" y2="49" stroke="#6c1d1a" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.8"/>
+<line x1="175" y1="14" x2="84" y2="126" stroke="#6c1d1a" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.8"/>
+<circle cx="0" cy="154" r="3.8" fill="#2b211a"/>
+<circle cx="140" cy="154" r="3.8" fill="#2b211a"/>
+<circle cx="70" cy="14" r="3.8" fill="#2b211a"/>
+<circle cx="0" cy="84" r="3.8" fill="#2b211a"/>
+<circle cx="210" cy="49" r="3.8" fill="#2b211a"/>
+<circle cx="175" cy="14" r="3.8" fill="#2b211a"/>
+<circle cx="84" cy="126" r="3.8" fill="#2b211a"/>
+<text x="105" y="190" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">the complex 𝒦</text>
+</g>
+<g transform="translate(300,18)">
+<polygon points="0,154 140,154 70,14" fill="#6c1d1a" fill-opacity="0.16" stroke="none"/>
+<line x1="0" y1="84" x2="210" y2="49" stroke="#6c1d1a" stroke-width="2.2" stroke-linecap="round" opacity="0.75"/>
+<line x1="175" y1="14" x2="84" y2="126" stroke="#6c1d1a" stroke-width="2.2" stroke-linecap="round" opacity="0.75"/>
+<circle cx="0" cy="154" r="3.8" fill="#2b211a"/>
+<circle cx="140" cy="154" r="3.8" fill="#2b211a"/>
+<circle cx="70" cy="14" r="3.8" fill="#2b211a"/>
+<circle cx="0" cy="84" r="3.8" fill="#2b211a"/>
+<circle cx="210" cy="49" r="3.8" fill="#2b211a"/>
+<circle cx="175" cy="14" r="3.8" fill="#2b211a"/>
+<circle cx="84" cy="126" r="3.8" fill="#2b211a"/>
+<text x="105" y="190" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">its shadow Sh(𝒦) ⊂ ℝᴺ</text>
+</g>
+<g transform="translate(560,18)">
+<polygon points="0,154 140,154 70,14" fill="#6c1d1a" fill-opacity="0.1" stroke="#6c1d1a" stroke-width="1.0"/>
+<line x1="0" y1="84" x2="210" y2="49" stroke="#6c1d1a" stroke-width="1.0"/>
+<line x1="175" y1="14" x2="84" y2="126" stroke="#6c1d1a" stroke-width="1.0"/>
+<line x1="84" y1="126" x2="0" y2="154" stroke="#6c1d1a" stroke-width="0.8" opacity="0.6"/>
+<line x1="84" y1="126" x2="140" y2="154" stroke="#6c1d1a" stroke-width="0.8" opacity="0.6"/>
+<line x1="84" y1="126" x2="38.2" y2="77.6" stroke="#6c1d1a" stroke-width="0.8" opacity="0.6"/>
+<line x1="84" y1="126" x2="96.9" y2="67.8" stroke="#6c1d1a" stroke-width="0.8" opacity="0.6"/>
+<line x1="84" y1="126" x2="110" y2="94" stroke="#6c1d1a" stroke-width="0.8" opacity="0.6"/>
+<line x1="84" y1="126" x2="136.6" y2="61.2" stroke="#6c1d1a" stroke-width="0.8" opacity="0.6"/>
+<circle cx="38.2" cy="77.6" r="4.2" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.6"/>
+<circle cx="96.9" cy="67.8" r="4.2" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.6"/>
+<circle cx="110" cy="94" r="4.2" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.6"/>
+<circle cx="136.6" cy="61.2" r="4.2" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.6"/>
+<circle cx="0" cy="154" r="3.8" fill="#2b211a"/>
+<circle cx="140" cy="154" r="3.8" fill="#2b211a"/>
+<circle cx="70" cy="14" r="3.8" fill="#2b211a"/>
+<circle cx="0" cy="84" r="3.8" fill="#2b211a"/>
+<circle cx="210" cy="49" r="3.8" fill="#2b211a"/>
+<circle cx="175" cy="14" r="3.8" fill="#2b211a"/>
+<circle cx="84" cy="126" r="3.8" fill="#2b211a"/>
+<text x="105" y="190" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">the shadow complex</text>
+</g>
+<line x1="262" y1="90" x2="284" y2="90" stroke="#57473a" stroke-width="1"/>
+<path d="M 278 86 L 285 90 L 278 94" fill="none" stroke="#57473a" stroke-width="1"/>
+<line x1="522" y1="90" x2="544" y2="90" stroke="#57473a" stroke-width="1"/>
+<path d="M 538 86 L 545 90 L 538 94" fill="none" stroke="#57473a" stroke-width="1"/>
+<text x="285" y="80" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">p</text>
+</svg>
