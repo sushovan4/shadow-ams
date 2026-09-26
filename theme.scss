@@ -2515,3 +2515,26 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
   margin-top: 0.3em;
   text-align: right;
 }
+
+// Comparison table on a math slide: compact, ruled like a printed table.
+.reveal .methods table {
+  margin: 0.4rem auto 0;
+  font-size: 0.56em;
+  border-collapse: collapse;
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+}
+.reveal .methods th {
+  font-family: var(--smallcaps);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--oxblood);
+  border-bottom: 0.8px solid var(--ink) !important;
+  padding: 0.25em 0.8em;
+}
+.reveal .methods td {
+  padding: 0.2em 0.8em;
+  border-bottom: 0.5px solid var(--rule) !important;
+  line-height: 1.25;
+}
+.reveal .methods tr:last-child td { border-bottom: none !important; background: var(--paper-soft); }

@@ -4,8 +4,7 @@ Slides for a talk at the AMS Fall Eastern Sectional Meeting, George Washington
 University, Washington, D.C., October 3, 2026. Special Session on Advances in
 Applied Topology: Theory and Applications, I.
 
-Joint work with Atish Mitra. The apex condition (§ V) is joint with Kazuhiro
-Kawamura and Atish Mitra, in preparation.
+Joint work with Kazuhiro Kawamura and Atish Mitra.
 
 **Slides:** <https://smajhi.com/shadow-ams/>
 **Abstract:** <https://meetings.ams.org/math/fall2026e/meetingapp.cgi/Paper/64011>

@@ -375,54 +375,6 @@ def fig_hairpin():
                              "Euclidean and path-metric Rips complexes of a hairpin sample"))
 
 
-def fig_lifting():
-    """The two alternatives of the lifting condition, in the plane."""
-    body = []
-    # Case (A)
-    A, B, C, D = (40, 110), (250, 110), (150, 20), (175, 205)
-    v = seg_intersect(A, B, C, D)
-    E = (205, 70)
-    g = ['<g transform="translate(20,20)">',
-         poly([A, B, E], fill=OX, fill_opacity=0.10, stroke="none"),
-         poly([C, D, E], fill=OX, fill_opacity=0.10, stroke="none"),
-         line(A, B, stroke=INK, stroke_width=2), line(C, D, stroke=INK, stroke_width=2),
-         line(A, E, stroke=OX, stroke_width=1.8), line(E, D, stroke=OX, stroke_width=1.8),
-         line(B, E, stroke=OX, stroke_width=0.8, opacity=0.5),
-         line(C, E, stroke=OX, stroke_width=0.8, opacity=0.5),
-         circle(v, 4.5, fill=PAPER, stroke=OX, stroke_width=1.6)]
-    for p, s, off in [(A, "A", (-14, 5)), (B, "B", (14, 5)), (C, "C", (0, -9)),
-                      (D, "D", (0, 20)), (E, "E", (12, -4))]:
-        g += [circle(p, 4, fill=INK), text((p[0] + off[0], p[1] + off[1]), s, 16)]
-    g += [text((v[0] - 12, v[1] + 20), "v", 15, fill=OX),
-          text((150, 250), "(A)  one apex E joins both", 18, fill=SEPIA), "</g>"]
-    body += g
-    # Case (B)
-    A, B, C, D = (40, 110), (250, 110), (95, 25), (205, 200)
-    v = seg_intersect(A, B, C, D)
-    E, F = (90, 185), (175, 45)
-    w = seg_intersect(A, B, E, F)
-    g = ['<g transform="translate(340,20)">',
-         poly([C, F, D, E], fill=OX, fill_opacity=0.10, stroke="none"),
-         poly([A, E, F], fill=OX, fill_opacity=0.10, stroke="none"),
-         line(A, B, stroke=INK, stroke_width=2), line(C, D, stroke=INK, stroke_width=2),
-         line(E, F, stroke=OX, stroke_width=1.1, opacity=0.7),
-         line(A, F, stroke=OX, stroke_width=1.8), line(F, D, stroke=OX, stroke_width=1.8),
-         line(A, E, stroke=OX, stroke_width=0.8, opacity=0.5),
-         line(C, F, stroke=OX, stroke_width=0.8, opacity=0.5),
-         line(C, E, stroke=OX, stroke_width=0.8, opacity=0.5),
-         line(E, D, stroke=OX, stroke_width=0.8, opacity=0.5),
-         circle(v, 4.5, fill=PAPER, stroke=OX, stroke_width=1.6),
-         circle(w, 4.0, fill=PAPER, stroke=SEPIA, stroke_width=1.4)]
-    for p, s, off in [(A, "A", (-14, 5)), (B, "B", (14, 5)), (C, "C", (0, -9)),
-                      (D, "D", (0, 20)), (E, "E", (-12, 12)), (F, "F", (10, -6))]:
-        g += [circle(p, 4, fill=INK), text((p[0] + off[0], p[1] + off[1]), s, 16)]
-    g += [text((v[0] + 14, v[1] - 6), "v", 15, fill=OX),
-          text((w[0] - 6, w[1] + 22), "w", 18, fill=SEPIA),
-          text((150, 250), "(B)  E, F straddle the hyperplane of σ", 18, fill=SEPIA), "</g>"]
-    body += g
-    write("lifting.svg", svg(660, 290, body, "The two alternatives of the lifting condition"))
-
-
 def fig_annuli():
     """Branch detection: the punctured annulus has 2 components on an edge, 3 at a vertex."""
     body = []
@@ -434,7 +386,10 @@ def fig_annuli():
              f'stroke-width="1" stroke-dasharray="3 3"/>')
     pts = sample_curve((10, 170), (130, 70), (250, 120), 9, 1.2, rng)
     c = min(pts, key=lambda p: dist(p, (130, 118)))
-    for r, op in [(34, 0.5), (68, 0.5)]:
+    for r0, r1 in [(42.5, 56.1)]:
+        g.append(circle(c, (r0 + r1) / 2, fill="none", stroke=OX, stroke_width=r1 - r0,
+                        opacity=0.07))
+    for r in (34, 68):
         g.append(circle(c, r, fill="none", stroke=RULE, stroke_width=1))
     for p in pts:
         inside = 34 <= dist(p, c) <= 68
@@ -452,6 +407,9 @@ def fig_annuli():
         g.append(f'<path d="M {v[0]} {v[1]} Q {ctrl[0]} {ctrl[1]} {end[0]} {end[1]}" '
                  f'fill="none" stroke="{SEPIA}" stroke-width="1" stroke-dasharray="3 3"/>')
         pts += sample_curve(v, ctrl, end, 9, 1.2, rng, skip_start=True)
+    for r0, r1 in [(42.5, 56.1)]:
+        g.append(circle(v, (r0 + r1) / 2, fill="none", stroke=OX, stroke_width=r1 - r0,
+                        opacity=0.07))
     for r in (34, 68):
         g.append(circle(v, r, fill="none", stroke=RULE, stroke_width=1))
     for p in pts:
@@ -462,9 +420,9 @@ def fig_annuli():
     g.append(text((v[0] + 8, v[1] - 10), "v", 15, anchor="start"))
     g += [text((130, 238), "at a branch vertex: 3 branches", 18, fill=SEPIA), "</g>"]
     body += g
-    body.append(text((330, 278), "annulus  β/2 ≤ dᵋ(A, ·) ≤ β  about a sample point A",
-                     14, fill=SEPIA))
-    write("annuli.svg", svg(660, 290, body, "Branch detection by counting annulus components"))
+    body.append(text((330, 280), "annulus β ≤ dᵋ(A, ·) ≤ 2β; a branch counts if it reaches the shaded band",
+                     15, fill=SEPIA))
+    write("annuli.svg", svg(660, 295, body, "Branch detection by counting annulus components"))
 
 
 def fig_apex():
@@ -488,6 +446,84 @@ def fig_apex():
              text((160, 288), "apex: vₓ ∗ st(x, 𝒦) ⊂ 𝒦", 18, fill=SEPIA), "</g>"]
     write("apex.svg", svg(460, 300, body, "The apex condition at a point of the shadow"))
 
+
+def fig_r4():
+    """Why pairwise lifting must quantify over all pairs: two triangles meeting at a
+    single interior point (transversely, as in R^4) and one edge joining them."""
+    body = ['<g transform="translate(20,10)">']
+    x = (210, 140)
+    # triangle 1, drawn flat; triangle 2, drawn upright: in R^4 they meet only at x
+    t1 = [(60, 175), (250, 205), (200, 120)]
+    t2 = [(185, 20), (245, 250), (160, 215)]
+    a, d = t1[0], t2[0]
+    body += [poly(t1, fill=OX, fill_opacity=0.10, stroke=INK, stroke_width=1.3),
+             poly(t2, fill=OX, fill_opacity=0.10, stroke=INK, stroke_width=1.3),
+             line(a, d, stroke=INK, stroke_width=1.6),
+             line(x, a, stroke=OX, stroke_width=2.2, opacity=0.85),
+             line(x, d, stroke=OX, stroke_width=2.2, opacity=0.85)]
+    for p in t1 + t2:
+        body.append(circle(p, 3.8, fill=INK))
+    body += [circle(x, 4.8, fill=PAPER, stroke=OX, stroke_width=1.7),
+             text((x[0] + 12, x[1] + 6), "x", 17, fill=OX, anchor="start"),
+             text((a[0] - 12, a[1] + 6), "a", 17, anchor="end"),
+             text((d[0] - 10, d[1] + 2), "d", 17, anchor="end"),
+             "</g>",
+             text((220, 300), "|𝒦| is contractible; Sh(𝒦) is two disks at x plus an arc,", 17,
+                  fill=SEPIA),
+             text((220, 322), "so π₁(Sh 𝒦) ≅ ℤ, generated by the loop x a d x", 17, fill=SEPIA)]
+    write("r4.svg", svg(440, 335, body, "Two triangles meeting at a point and an edge joining them"))
+
+
+def fig_sharp():
+    """The scale-free configuration at a sharp vertex (discussion of the paper):
+    a 30-degree angle bisected by a third branch. The chord from 0.95 beta out on one
+    sharp branch to 0.04 beta out on the other crosses the bisector at about 0.074
+    beta, inside an edge of the bisector from 0.07 beta to 1.07 beta. Left: the
+    configuration at scale; right: the corner magnified."""
+    def at(O, s, r, deg):
+        a = math.radians(deg)
+        return (O[0] + s * r * math.cos(a), O[1] - s * r * math.sin(a))
+
+    body = []
+    for O, s, L, zoom in [((30.0, 130.0), 250.0, 1.2, False), ((412.0, 130.0), 1750.0, 0.12, True)]:
+        P, Q = at(O, s, 0.95, 15), at(O, s, 0.04, -15)
+        R, T = at(O, s, 0.07, 0), at(O, s, 1.07, 0)
+        X = seg_intersect(P, Q, R, T)
+        clip = ''
+        if zoom:
+            body.append('<defs><clipPath id="zoom"><rect x="385" y="30" width="230" height="200"/>'
+                        '</clipPath></defs>')
+            body.append('<rect x="385" y="30" width="230" height="200" fill="none" '
+                        f'stroke="{RULE}" stroke-width="1"/>')
+            clip = ' clip-path="url(#zoom)"'
+        g = [f'<g{clip}>']
+        for deg in (15, -15, 0):
+            g.append(line(O, at(O, s, L, deg), stroke=SEPIA, stroke_width=1.1,
+                          stroke_dasharray="4 3"))
+        g += [line(R, T, stroke=INK, stroke_width=2.4), line(P, Q, stroke=OX, stroke_width=2.0),
+              circle(O, 4.5, fill=PAPER, stroke=INK, stroke_width=1.5)]
+        for p in (P, Q, R, T):
+            g.append(circle(p, 4.0, fill=INK))
+        g.append(circle(X, 4.6, fill=PAPER, stroke=OX, stroke_width=1.7))
+        if zoom:
+            g += [text((O[0] - 4, O[1] - 10), "v", 18, anchor="end"),
+                  text((Q[0] + 4, Q[1] + 22), "0.04β", 16, fill=OX, anchor="start"),
+                  text((R[0] - 20, R[1] - 12), "0.07β", 16, anchor="start"),
+                  text((X[0] + 6, X[1] + 26), "0.074β", 16, fill=OX, anchor="start")]
+        else:
+            g += [text((O[0] - 6, O[1] + 5), "v", 18, anchor="end"),
+                  text((P[0] - 10, P[1] - 10), "0.95β", 16, fill=OX, anchor="start"),
+                  text((T[0] - 20, T[1] + 24), "1.07β", 16, anchor="start"),
+                  text((O[0] + 85, O[1] - 4), "15°", 15, fill=SEPIA, anchor="start"),
+                  text((O[0] + 85, O[1] + 17), "15°", 15, fill=SEPIA, anchor="start"),
+                  f'<rect x="{O[0] - 6}" y="{O[1] - 14}" width="40" height="30" fill="none" '
+                  f'stroke="{RULE}" stroke-width="1"/>']
+        g.append('</g>')
+        body += g
+    body += [text((320, 262), "no point is within β of all four endpoints, at any scale β;", 17,
+                  fill=SEPIA),
+             text((320, 284), "the pairwise condition (B) still holds", 17, fill=SEPIA)]
+    write("sharp.svg", svg(640, 300, body, "A scale-free configuration at a sharp vertex"))
 
 def title_plate():
     """Left title-plate: a sampled three-pronged graph and its eps-path Rips shadow."""
@@ -540,10 +576,10 @@ def plate_iii():
     art = [f'<path d="{curve_path(curves)}" fill="none" stroke="{INK}" '
            f'stroke-width="0.8" opacity="0.5" stroke-dasharray="3 3"/>']
     art += complex_layers(pts, edges, tris, fill_opacity=0.2, edge_w=0.7, pt_r=2.0)
-    write("section-iii-plate.svg", plate(
-        "CERTIFIED RECONSTRUCTION",
-        "— explicit scales, in every ambient dimension —",
-        "— A SAMPLE, ITS SHADOW, THE GRAPH BENEATH —", art, "Section III plate"))
+    write("section-v-plate.svg", plate(
+        "THE SHADOW IN ℝᴺ",
+        "— two scales, and every surviving feature is real —",
+        "— A SAMPLE, ITS SHADOW, THE GRAPH BENEATH —", art, "Section V plate"))
 
 
 def plate_iv():
@@ -560,10 +596,10 @@ def plate_iv():
             circle((wx, wy), 4, fill=OX)]
     art += [text((360, 224), "≃", 26, italic=False, fill=OX),
             text((360, 305), "homotopy equivalent, yet not homeomorphic", 13, fill=SEPIA)]
-    write("section-iv-plate.svg", plate(
-        "BEYOND HOMOTOPY TYPE",
-        "— a theta graph and a wedge of two circles —",
-        "— HOMOTOPY SEES ONLY THE FIRST BETTI NUMBER —", art, "Section IV plate"))
+    write("section-iii-plate.svg", plate(
+        "EMBEDDED RECONSTRUCTION",
+        "— homeomorphic, not merely homotopy equivalent —",
+        "— HOMOTOPY SEES ONLY THE FIRST BETTI NUMBER —", art, "Section III plate"))
 
 
 def plate_v():
@@ -577,10 +613,10 @@ def plate_v():
         art += [line(vx, p, stroke=OX, stroke_width=0.9, stroke_dasharray="4 3", opacity=0.8),
                 circle(p, 3.2, fill=INK)]
     art += [circle(vx, 4.8, fill=OX), circle(x, 3.8, fill=PAPER, stroke=OX, stroke_width=1.4)]
-    write("section-v-plate.svg", plate(
+    write("section-iv-plate.svg", plate(
         "THE APEX CONDITION",
-        "— homotopy equivalence without asphericity —",
-        "— WITH K. KAWAMURA AND A. MITRA · IN PREPARATION —", art, "Section V plate"))
+        "— homotopy equivalence in every dimension —",
+        "— EVERY SIMPLEX COVERING x JOINS ONE VERTEX —", art, "Section IV plate"))
 
 
 if __name__ == "__main__":
@@ -588,7 +624,8 @@ if __name__ == "__main__":
     fig_shadow()
     fig_hexagon()
     fig_hairpin()
-    fig_lifting()
+    fig_r4()
+    fig_sharp()
     fig_annuli()
     fig_apex()
     title_plate()

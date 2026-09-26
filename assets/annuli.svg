@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 290" role="img" aria-label="Branch detection by counting annulus components">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 295" role="img" aria-label="Branch detection by counting annulus components">
 <g transform="translate(40,20)">
 <path d="M 10 170 Q 130 70 250 120" fill="none" stroke="#57473a" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="124.5" cy="109.5" r="49.3" fill="none" stroke="#6c1d1a" stroke-width="13.600000000000001" opacity="0.07"/>
 <circle cx="124.5" cy="109.5" r="34" fill="none" stroke="#c8b894" stroke-width="1"/>
 <circle cx="124.5" cy="109.5" r="68" fill="none" stroke="#c8b894" stroke-width="1"/>
 <circle cx="9.9" cy="170.1" r="2" fill="#2b211a" opacity="0.45"/>
@@ -39,6 +40,7 @@
 <path d="M 130 120 Q 80 90 10 60" fill="none" stroke="#57473a" stroke-width="1" stroke-dasharray="3 3"/>
 <path d="M 130 120 Q 200 110 260 40" fill="none" stroke="#57473a" stroke-width="1" stroke-dasharray="3 3"/>
 <path d="M 130 120 Q 150 160 215 205" fill="none" stroke="#57473a" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="130" cy="120" r="49.3" fill="none" stroke="#6c1d1a" stroke-width="13.600000000000001" opacity="0.07"/>
 <circle cx="130" cy="120" r="34" fill="none" stroke="#c8b894" stroke-width="1"/>
 <circle cx="130" cy="120" r="68" fill="none" stroke="#c8b894" stroke-width="1"/>
 <circle cx="130" cy="120" r="2" fill="#2b211a" opacity="0.45"/>
@@ -89,5 +91,5 @@
 <text x="138" y="110" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="start">v</text>
 <text x="130" y="238" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">at a branch vertex: 3 branches</text>
 </g>
-<text x="330" y="278" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="14" font-style="italic" text-anchor="middle">annulus  β/2 ≤ dᵋ(A, ·) ≤ β  about a sample point A</text>
+<text x="330" y="280" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">annulus β ≤ dᵋ(A, ·) ≤ 2β; a branch counts if it reaches the shaded band</text>
 </svg>
