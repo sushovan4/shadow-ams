@@ -64,9 +64,10 @@ Let $\mathcal K$ be a simplicial complex with vertices $\mathcal K^{(0)}\subset\
 $$
 \mathrm{Sh}(\mathcal K)\;=\;p\big(|\mathcal K|\big)\;=\;\bigcup_{\sigma\in\mathcal K}\operatorname{Conv}(\sigma)\;\subset\;\mathbb R^N .
 $$
+For the Euclidean complex this is also written $SR(F;\beta)=\mathrm{Sh}(\mathcal R_\beta(F))$.
 :::
 
-::: {.fig-wide style="width: 70%;"}
+::: {.fig-wide style="width: 60%; margin: 0 auto;"}
 ![](assets/shadow.svg)
 :::
 
@@ -75,7 +76,7 @@ A triangulation $\mathrm{SC}(\mathcal K)$ of $\mathrm{Sh}(\mathcal K)$ in which 
 :::
 
 ::: {.notes}
-The shadow is the natural candidate for the second half. Take a complex whose vertices happen to be points of R^N. The shadow projection sends each vertex to itself and extends linearly; its image, the union of the convex hulls of the simplices, is the shadow, an explicit polyhedron in R^N.
+Kazuhiro has just defined this, as SR of F and beta; I will write Sh of the complex, because we will take shadows of complexes other than the Euclidean Rips complex. The shadow is the natural candidate for the second half. Take a complex whose vertices happen to be points of R^N. The shadow projection sends each vertex to itself and extends linearly; its image, the union of the convex hulls of the simplices, is the shadow, an explicit polyhedron in R^N.
 
 In the picture: an abstract complex with a triangle and two edges crossing it; its shadow; and a shadow complex, a triangulation of the shadow in which every hull is a subcomplex. Such a triangulation always exists, by common subdivision of finitely many polyhedra. The one fact the arguments use is the carrier property: a shadow simplex that enters a hull lies inside it.
 
@@ -102,40 +103,44 @@ In $\mathbb R^3$, $p_*$ is onto on $\pi_1$ (Adamaszek–Frick–Vakili 2017). Th
 :::
 
 ::: {.notes}
-For the Euclidean Vietoris–Rips complex the picture is understood, and it is discouraging. Chambers, de Silva, Erickson and Ghrist: in the plane the projection is 1-connected. But already in the plane higher homotopy is not preserved, and from dimension four on even the fundamental group fails. Adamaszek, Frick and Vakili recovered surjectivity on pi_1 in R^3.
+(If this follows Kazuhiro's talk, he has just stated these; do not dwell.) in the plane the projection is 1-connected; already in the plane higher homotopy is not preserved; from dimension four on even the fundamental group fails; and in R^3 surjectivity on pi_1 is due to Adamaszek, Frick and Vakili.
 
-The picture is their planar example. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. Its shadow is the solid hexagon, contractible. Keep this example in mind; it comes back in section four.
+What I want is the picture, their planar example. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. Its shadow is the solid hexagon, contractible. Keep this example in mind; it comes back in section four.
 :::
 
 
-## Two ways past the wall
+## The shadow in the limit
 
-::: {.standfirst .math}
-Every statement on the last slide is a theorem about the **Euclidean** metric on the sample.
+::: {.theorem data-num="6" data-name="In the limit" data-cite="Kawamura–Majhi–Mitra"}
+Let $M\subset\mathbb R^N$ be a compact ANR whose metric satisfies (M1)–(M3), and let $F$ range over the finite subsets of $M$. Then
+$$
+\varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)\;\cong\;\pi_q(M),
+$$
+and, given a Hausmann-type theorem for $M$, the shadow projections induce an isomorphism of the same limits from $\pi_q(\mathcal R_\beta(F))$.
 :::
 
 ::: {.env-row}
-::: {.theorem data-num="6" data-name="In the limit" data-cite="Kawamura–Majhi–Mitra"}
-Let $X\subset\mathbb R^N$ be a compact ANR. For each $\beta>0$ form the direct limit of $\pi_k\big(\mathrm{Sh}(\mathcal R_\beta(S))\big)$ over finite $S\subset X$. As $\beta\to0$, the inverse limit of these groups is isomorphic to $\pi_k(X)$.
+::: {.rmk .fragment data-name="Question (a): stabilization" data-cite="Kawamura"}
+When is $\varprojlim_\beta\varinjlim_F\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)\cong\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)$ for **one** dense finite $F$ and **one** small $\beta$?
 :::
 
-::: {.rmk .fragment data-name="At one scale: this talk"}
-Keep **one** finite sample and **one** scale. Replace the Euclidean metric on $\mathcal S$ by a path metric $d^{\varepsilon}_{\mathcal S}$ built from its pairwise distances.
-
-The hypotheses of the obstruction are then not met. We decline them; we do not contradict them.
+::: {.rmk .fragment data-name="This talk"}
+For embedded graphs, with the Euclidean metric on the sample replaced by a path metric $d^\varepsilon_{\mathcal S}$: explicit scales, one finite sample. A homeomorphic $1$-complex at one scale; for the shadow, a two-scale form of (a).
 :::
 :::
 
 ::: {.aside-note .fragment}
-The shape-theoretic route says the limit exists. The question here is what a fixed sample already knows, and at which explicit scale.
+The obstruction is a theorem about the **Euclidean** metric. We decline its hypothesis; we do not contradict it.
 :::
 
 ::: {.notes}
-The hinge of the talk. Everything on the previous slide is a theorem about the Euclidean metric; the counterexamples are built out of Euclidean distances.
+This is where Kazuhiro's talk ended; in another venue, introduce it as the limit theorem of Kawamura, Majhi and Mitra. In the limit, the system of shadows recovers the homotopy groups of any compact ANR with a reasonable metric, and the shadow projections are isomorphisms in the limit. It is a geometric Latschev theorem, and it is qualitative.
 
-There are two ways past it. The first is the one Kazuhiro just presented: let the scale go to zero and study the shadows as an inverse system; shape theory recovers the homotopy groups of any compact ANR. It is qualitative.
+His first closing question was stabilization: when does one dense finite sample, at one small scale, already carry the limit?
 
-The second is this talk. Keep one finite sample, one scale, and change the metric on the sample. Chambers et al. remain true; their hypothesis is simply not met.
+This talk is an answer to a version of that question. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not Euclidean but a path metric built from its pairwise distances. In that setting everything is at explicit scales and for one finite sample: a homeomorphic 1-complex at a single scale, and for the shadow a two-scale form of stabilization, where every feature that survives an explicit enlargement is a feature of the graph.
+
+And the reason changing the metric is allowed: the obstruction we just saw is a theorem about the Euclidean metric. Chambers et al. remain true; their hypothesis is simply not met.
 
 This is joint work with Kazuhiro and Atish.
 :::
@@ -586,8 +591,8 @@ Are two admissible planar graphs that are Hausdorff-close at the scale of the wi
 Every constant here belongs to the unknown $\mathcal G$. The degrees are recovered from $\mathcal S$, and for straight edges $\Delta(\mathcal G)$ is a finite computation. Can a reconstruction certify its own scales?
 :::
 
-::: {.question .fragment data-num="30" data-name="Limits and samples"}
-How do these sampling thresholds relate to the scale at which the inverse limit of the limit theorem stabilizes?
+::: {.question .fragment data-num="30" data-name="Back to the limit"}
+Kawamura's question (a) asks when the inverse limit stabilizes for the **Euclidean** shadow of a compact ANR. Our scales answer a two-scale version for the path-metric shadow of a graph. Is there a Euclidean one?
 :::
 
 ::: {.notes}
@@ -599,7 +604,7 @@ Isotopy in the plane: for planar graphs we expect more than homeomorphism. The c
 
 Scales from the sample: like every reach-type theorem, ours is stated in quantities of the unknown graph. But the degree statistic recovers the vertices, and for polygonal graphs the shadow radius is a finite computation. A reconstruction that certifies its own scales looks within reach.
 
-And the connection to Kazuhiro's talk: the limit theorem says the shadows converge; ours says what one sample already knows. Relating the two thresholds is the natural joint question.
+And back to Kazuhiro's question (a). His stabilization question is about the Euclidean shadow of a compact ANR. What we have is a two-scale answer for the path-metric shadow of a graph. Whether a Euclidean version holds, even for graphs, is the natural joint question.
 
 Thank you.
 :::
