@@ -58,8 +58,10 @@
 <text x="411.7" y="217.5" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="14.0" text-anchor="middle">5</text>
 <circle cx="424.7" cy="95" r="3.6" fill="#2b211a"/>
 <text x="411.7" y="92.5" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="14.0" text-anchor="middle">6</text>
+<polygon points="583.5,150 551.8,95 488.2,95 456.5,150 488.2,205 551.8,205" fill="#6c1d1a" fill-opacity="0.32" stroke="#6c1d1a" stroke-width="1.2"/>
 <circle cx="520" cy="150" r="4.2" fill="#f5efde" stroke="#6c1d1a" stroke-width="1.6"/>
 <text x="534" y="155" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15.0" font-style="italic" text-anchor="start">x</text>
+<text x="498" y="174" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15.0" font-style="italic" text-anchor="middle">H</text>
 <text x="170" y="312" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">ℛ ≃ S²,  π₂(ℛ) ≅ ℤ</text>
-<text x="520" y="312" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">Sh(ℛ) is a hexagon: contractible</text>
+<text x="520" y="312" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">Sh(ℛ) contractible; no apex on H</text>
 </svg>

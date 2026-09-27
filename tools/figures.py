@@ -339,12 +339,17 @@ def octa_hexagon(scale=1.0, dx=0, dy=0, labels=True, captions=True):
             ang = math.radians(90 - 60 * (k - 1))
             q = (p[0] + 15 * math.cos(ang), p[1] - 15 * math.sin(ang) + 5)
             out.append(text(T(q), str(k), 14 * scale, italic=False, fill=SEPIA))
+    Hc = [(hc[0] + hr / math.sqrt(3) * math.cos(math.radians(60 * k)),
+           hc[1] - hr / math.sqrt(3) * math.sin(math.radians(60 * k))) for k in range(6)]
+    out.append(poly([T(p) for p in Hc], fill=OX, fill_opacity=0.32, stroke=OX,
+                    stroke_width=1.2 * scale))
     out.append(circle(T(hc), 4.2 * scale, fill=PAPER, stroke=OX, stroke_width=1.6 * scale))
     if labels:
         out.append(text(T((hc[0] + 14, hc[1] + 5)), "x", 15 * scale, fill=OX, anchor="start"))
+        out.append(text(T((hc[0] - 22, hc[1] + 24)), "H", 15 * scale, fill=OX, italic=True))
     if captions:
         out.append(text(T((170, 312)), "ℛ ≃ S²,  π₂(ℛ) ≅ ℤ", 18, fill=SEPIA))
-        out.append(text(T((520, 312)), "Sh(ℛ) is a hexagon: contractible", 18, fill=SEPIA))
+        out.append(text(T((520, 312)), "Sh(ℛ) contractible; no apex on H", 18, fill=SEPIA))
     return out
 
 
@@ -478,7 +483,7 @@ def fig_sharp():
     """The scale-free configuration at a sharp vertex (discussion of the paper):
     a 30-degree angle bisected by a third branch. The chord from 0.95 beta out on one
     sharp branch to 0.04 beta out on the other crosses the bisector at about 0.074
-    beta, inside an edge of the bisector from 0.07 beta to 1.07 beta. Left: the
+    beta, inside an edge of the bisector from 0.07 beta to 1.06 beta. Left: the
     configuration at scale; right: the corner magnified."""
     def at(O, s, r, deg):
         a = math.radians(deg)
@@ -487,7 +492,7 @@ def fig_sharp():
     body = []
     for O, s, L, zoom in [((30.0, 130.0), 250.0, 1.2, False), ((412.0, 130.0), 1750.0, 0.12, True)]:
         P, Q = at(O, s, 0.95, 15), at(O, s, 0.04, -15)
-        R, T = at(O, s, 0.07, 0), at(O, s, 1.07, 0)
+        R, T = at(O, s, 0.07, 0), at(O, s, 1.06, 0)
         X = seg_intersect(P, Q, R, T)
         clip = ''
         if zoom:
@@ -513,7 +518,7 @@ def fig_sharp():
         else:
             g += [text((O[0] - 6, O[1] + 5), "v", 18, anchor="end"),
                   text((P[0] - 10, P[1] - 10), "0.95β", 16, fill=OX, anchor="start"),
-                  text((T[0] - 20, T[1] + 24), "1.07β", 16, anchor="start"),
+                  text((T[0] - 20, T[1] + 24), "1.06β", 16, anchor="start"),
                   text((O[0] + 85, O[1] - 4), "15°", 15, fill=SEPIA, anchor="start"),
                   text((O[0] + 85, O[1] + 17), "15°", 15, fill=SEPIA, anchor="start"),
                   f'<rect x="{O[0] - 6}" y="{O[1] - 14}" width="40" height="30" fill="none" '
