@@ -6,10 +6,10 @@
   // ============================================================
   // CUSTOMIZE PER TALK—title-block content
   // ============================================================
-  // Empty until the preprint is posted: the QR plate is then a placeholder and
-  // not a link. When the ID exists, set it here, regenerate the QR
-  // (see README), and update the caption in theme.scss (.qr-plate::after).
-  var ARXIV_URL = '';
+  // The QR plate links to the published predecessor in JACT until the shadow
+  // paper is on the arXiv; then swap the URL, the QR and the caption in
+  // theme.scss (.qr-plate::after). See README.
+  var ARXIV_URL = 'https://doi.org/10.1007/s41468-026-00242-2';
 
   // Eyebrow/kicker shown above the (long, registered) title—the human hook.
   // Empty string disables it.
@@ -45,6 +45,10 @@
     '<p>Thank you, and thanks to Atish, Jacob and Abigail for the session. This is joint work with Kazuhiro Kawamura and Atish Mitra.</p>' +
     '<p>Kazuhiro has just shown how shape theory gets past the Euclidean obstruction for shadows in the limit, as the scale goes to zero. This talk is the finite-sample half of the same question: one sample, explicit scales, embedded graphs in any ambient dimension.</p>' +
     '<p>Three results, all in every ambient dimension. A combinatorial condition on a flag complex, the apex condition, under which the shadow projection is a homotopy equivalence. For a sample on the graph, at one scale, the shadow is a geometric reconstruction: homotopy equivalent to the graph and Hausdorff-close to it. For a sample merely near the graph, the shadow projection is injective on every homotopy group.</p>';
+
+  // QR of the JACT paper, doi:10.1007/s41468-026-00242-2 (generated with the
+  // Python package qrcode, error correction M).
+  var JACT_QR_SVG = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="qr-code" role="img" aria-label="QR code: the JACT paper"><g transform="translate(60,60) scale(16.55172)"><path d="M0 0h7v1h-7zM8 0h3v1h-3zM13 0h1v1h-1zM15 0h1v1h-1zM20 0h1v1h-1zM22 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM11 1h1v1h-1zM13 1h2v1h-2zM17 1h1v1h-1zM19 1h2v1h-2zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM10 2h1v1h-1zM12 2h1v1h-1zM15 2h4v1h-4zM22 2h1v1h-1zM24 2h3v1h-3zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h1v1h-1zM10 3h4v1h-4zM15 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h3v1h-3zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h3v1h-3zM13 4h1v1h-1zM15 4h1v1h-1zM17 4h2v1h-2zM20 4h1v1h-1zM22 4h1v1h-1zM24 4h3v1h-3zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM10 5h1v1h-1zM14 5h1v1h-1zM16 5h2v1h-2zM19 5h2v1h-2zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h7v1h-7zM8 7h1v1h-1zM10 7h1v1h-1zM15 7h1v1h-1zM17 7h2v1h-2zM0 8h1v1h-1zM4 8h1v1h-1zM6 8h3v1h-3zM10 8h1v1h-1zM14 8h2v1h-2zM17 8h1v1h-1zM19 8h1v1h-1zM21 8h5v1h-5zM28 8h1v1h-1zM3 9h1v1h-1zM5 9h1v1h-1zM7 9h2v1h-2zM10 9h1v1h-1zM12 9h2v1h-2zM15 9h1v1h-1zM20 9h1v1h-1zM22 9h7v1h-7zM2 10h1v1h-1zM4 10h1v1h-1zM6 10h2v1h-2zM14 10h3v1h-3zM20 10h1v1h-1zM23 10h2v1h-2zM28 10h1v1h-1zM2 11h2v1h-2zM5 11h1v1h-1zM7 11h1v1h-1zM9 11h1v1h-1zM17 11h2v1h-2zM24 11h2v1h-2zM27 11h2v1h-2zM0 12h1v1h-1zM2 12h9v1h-9zM12 12h1v1h-1zM14 12h1v1h-1zM16 12h4v1h-4zM21 12h1v1h-1zM27 12h1v1h-1zM0 13h1v1h-1zM3 13h1v1h-1zM10 13h1v1h-1zM13 13h1v1h-1zM15 13h1v1h-1zM20 13h3v1h-3zM24 13h5v1h-5zM0 14h2v1h-2zM4 14h1v1h-1zM6 14h1v1h-1zM9 14h1v1h-1zM12 14h2v1h-2zM15 14h4v1h-4zM21 14h2v1h-2zM25 14h2v1h-2zM28 14h1v1h-1zM0 15h2v1h-2zM5 15h1v1h-1zM11 15h2v1h-2zM16 15h2v1h-2zM19 15h3v1h-3zM23 15h2v1h-2zM27 15h2v1h-2zM5 16h2v1h-2zM8 16h2v1h-2zM14 16h1v1h-1zM16 16h3v1h-3zM20 16h2v1h-2zM27 16h1v1h-1zM0 17h2v1h-2zM3 17h3v1h-3zM7 17h1v1h-1zM10 17h3v1h-3zM14 17h2v1h-2zM20 17h1v1h-1zM22 17h4v1h-4zM27 17h2v1h-2zM2 18h1v1h-1zM4 18h4v1h-4zM10 18h1v1h-1zM14 18h4v1h-4zM22 18h1v1h-1zM24 18h1v1h-1zM26 18h1v1h-1zM28 18h1v1h-1zM5 19h1v1h-1zM11 19h1v1h-1zM14 19h5v1h-5zM24 19h1v1h-1zM27 19h2v1h-2zM0 20h2v1h-2zM3 20h2v1h-2zM6 20h1v1h-1zM9 20h1v1h-1zM11 20h1v1h-1zM14 20h1v1h-1zM16 20h10v1h-10zM28 20h1v1h-1zM8 21h1v1h-1zM10 21h1v1h-1zM12 21h2v1h-2zM15 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM28 21h1v1h-1zM0 22h7v1h-7zM8 22h1v1h-1zM11 22h3v1h-3zM15 22h1v1h-1zM17 22h4v1h-4zM22 22h1v1h-1zM24 22h3v1h-3zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h3v1h-3zM15 23h1v1h-1zM17 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM27 23h1v1h-1zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM8 24h1v1h-1zM10 24h6v1h-6zM17 24h9v1h-9zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h3v1h-3zM6 25h1v1h-1zM9 25h7v1h-7zM20 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h3v1h-3zM6 26h1v1h-1zM10 26h3v1h-3zM14 26h3v1h-3zM18 26h1v1h-1zM21 26h1v1h-1zM25 26h4v1h-4zM0 27h1v1h-1zM6 27h1v1h-1zM9 27h2v1h-2zM14 27h4v1h-4zM19 27h2v1h-2zM23 27h1v1h-1zM25 27h1v1h-1zM27 27h2v1h-2zM0 28h7v1h-7zM8 28h1v1h-1zM10 28h2v1h-2zM13 28h13v1h-13zM27 28h1v1h-1z" fill="currentColor" shape-rendering="crispEdges"/></g></svg>';
 
   // Placeholder QR: finder patterns and a caption, no data modules. Swap for
   // a real QR of ARXIV_URL once the preprint is posted.
@@ -96,7 +100,7 @@
   // Title-block plates: Pl. I is the sampled graph and its shadow; Pl. III
   // is the arXiv QR (a placeholder until the preprint is posted).
   var LEFT_PLATE_SVG  = '<img src="assets/title-plate.svg" alt="">';
-  var RIGHT_PLATE_SVG = QR_PLACEHOLDER_SVG;
+  var RIGHT_PLATE_SVG = JACT_QR_SVG;
 
   // Wax seal—initials inside a serif circle. Customize the textPaths
   // (top/bottom band) and inner monogram for your name.

@@ -779,9 +779,9 @@ html body div.reveal div.slides .qr-plate > svg {
 }
 .reveal .quarto-title-block .qr-plate:hover { opacity: 0.85; }
 // Override the default "Pl. III" caption—show the arxiv ID directly below the QR.
-// Placeholder until the preprint is posted; replace with the arXiv ID.
+// The QR links to the JACT paper; replace with the arXiv ID once posted.
 .reveal .quarto-title-block .qr-plate::after {
-  content: "arXiv · forthcoming" !important;
+  content: "JACT 2026" !important;
   letter-spacing: 0.16em !important;
 }
 

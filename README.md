@@ -38,18 +38,21 @@ are avoided because Quarto claims those names.) Numbers are set by hand in
 `data-num`. Use `.env-row` for two statements side by side and `.fig-row` for a
 figure beside statements.
 
-## When the preprint is posted
+## The QR code
 
-The arXiv QR on the title slide is a placeholder. Once the ID exists:
+The QR on the title slide links to the planar predecessor,
+[doi:10.1007/s41468-026-00242-2](https://doi.org/10.1007/s41468-026-00242-2)
+(Komendarczyk, Majhi and Mitra, *Journal of Applied and Computational
+Topology*, 2026). When the shadow paper is on the arXiv:
 
 1. set `ARXIV_URL` in `assets/inject-landmark.js`;
-2. replace `QR_PLACEHOLDER_SVG` there with a real code, e.g.
+2. regenerate the code, e.g.
 
    ```bash
-   python3 -c "import qrcode, qrcode.image.svg as s; \
-   qrcode.make('https://arxiv.org/abs/XXXX.XXXXX', image_factory=s.SvgPathImage).save('qr.svg')"
+   python3 -c "import qrcode; q=qrcode.QRCode(border=0); q.add_data('https://arxiv.org/abs/XXXX.XXXXX'); q.make(fit=True); print(len(q.get_matrix()))"
    ```
 
-   and paste its `<svg>` with `class="qr-code"`;
+   and replace the path in `JACT_QR_SVG` (one unit square per dark module,
+   as in the current code), keeping `class="qr-code"`;
 3. change the caption in `theme.scss` (`.qr-plate::after`) and the contact
    line on the last slide.
