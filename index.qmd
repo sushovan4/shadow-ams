@@ -36,11 +36,11 @@ For a metric space $(\mathcal S,d)$ and a scale $\beta>0$, $\mathcal R_\beta(\ma
 :::
 
 ::: {.definition .fragment data-num="2" data-name="Geometric reconstruction"}
-A subset of $\mathbb R^N$, built from the sample, that is **homotopy equivalent** to $\mathcal G$ and lies within a fixed multiple of the scale of $\mathcal G$ in the Hausdorff distance.
+A subset of $\mathbb R^N$, built from the sample, that is **homotopy equivalent** to $\mathcal G$ and lies within a fixed multiple of the scale from $\mathcal G$ in the Hausdorff distance.
 :::
 
 ::: {.rmk .fragment data-name="What is known"}
-For sets of positive $\mu$-reach, unions of balls and $\alpha$-shapes are geometric reconstructions (Chazal–Cohen-Steiner–Lieutier; Kim et al.); for curves, the crust. Graph methods return an abstract graph, a Reeb graph, or a complex. Our graphs have positive $\mu$-reach: we claim no advance in the class of sets, only in the object.
+For sets of positive $\mu$-reach, unions of balls and $\alpha$-shapes are geometric reconstructions (Chazal–Cohen-Steiner–Lieutier; Kim et al.); for curves, the crust. Graph methods return an abstract graph, a Reeb graph, or a complex. Our hypotheses are of the positive-$\mu$-reach kind: we claim no advance in the class of sets, only in the object.
 :::
 
 ::: {.notes}
@@ -50,7 +50,7 @@ The Vietoris–Rips complex is the standard tool: flag, so it costs no more than
 
 So we ask for a geometric reconstruction: a subset of the same R^N, built from the sample, homotopy equivalent to G, and Hausdorff-close to it at the scale of the construction.
 
-These exist in other settings. For sets of positive mu-reach, the union of balls and the alpha-shape do it; for curves, the crust. And our graphs do have positive mu-reach, so I want to say clearly: no advance in the class of sets. The question is about a specific object, the one that comes with a Rips complex for free.
+These exist in other settings. For sets of positive mu-reach, the union of balls and the alpha-shape do it; for curves, the crust. And our hypotheses on the graph are of that kind (in the plane they give positive mu-reach), so I want to say clearly: no advance in the class of sets. The question is about a specific object, the one that comes with a Rips complex for free.
 :::
 
 
@@ -124,7 +124,7 @@ When is $\varprojlim_\beta\varinjlim_F\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))
 :::
 
 ::: {.rmk .fragment data-name="This talk"}
-For embedded graphs, with a path metric $d^\varepsilon_{\mathcal S}$ on the sample: for a sample **on** the graph, one scale suffices, as $\mathrm{Sh}\simeq\mathcal G$; for a sample **near** it, $\pi_q(\mathcal G)$ injects into $\pi_q(\mathrm{Sh})$.
+For embedded graphs, with a path metric $d^\varepsilon_{\mathcal S}$ on the sample: for a sample **on** the graph, with edges straight near its branch points, one scale suffices, as $\mathrm{Sh}\simeq\mathcal G$; for a sample **near** it, $\pi_q(\mathcal G)$ injects into $\pi_q(\mathrm{Sh})$.
 :::
 :::
 
@@ -238,7 +238,7 @@ Under (A1)–(A3), $\Delta_\xi(\mathcal G)>0$. For straight edges, $\Delta_\xi(\
 :::
 
 ::: {.rmk .fragment data-name="Why this threshold"}
-At the sharpest corner $d_{\mathcal G}/\|x-y\|\to1/\sin\tfrac{\theta_{\min}}2$, so $\delta_{\le r}\ge1/s$ always. $\Delta_\xi$ is the scale up to which the distortion stays within the tolerance of that; $\Delta_\xi=\infty$ for a straight star.
+At the sharpest corner $d_{\mathcal G}/\|x-y\|\to1/\sin\tfrac{\theta_{\min}}2$, so $\delta_{\le r}\ge1/\sin\tfrac{\theta_{\min}}2$ for every $r$. $\Delta_\xi$ is the scale up to which the distortion stays within the tolerance of that; $\Delta_\xi=\infty$ for a straight star.
 :::
 :::
 
@@ -247,7 +247,7 @@ Everything from here is stated in two quantities of G.
 
 The hypotheses are mild: finitely many C^1 edges, and positive angles at vertices. The condition number Theta records the sharpest angle; s, the square root of 1 minus Theta, is essentially the sine of half of it.
 
-The shadow radius compares the two metrics on G, restricted to pairs of points that are close in R^N. Near the sharpest corner the ratio of graph distance to Euclidean distance tends to one over sine of half the angle; so the small-scale distortion is always at least 1/s. The shadow radius is the scale up to which it stays within a tolerance xi of that value. What it rules out below the radius is two parts of the graph passing close in R^N without meeting: the hairpin. For a straight star it is infinite; for straight edges in general it is a finite computation, bounded below by half the shortest edge over the global distortion.
+The shadow radius compares the two metrics on G, restricted to pairs of points that are close in R^N. Near the sharpest corner the ratio of graph distance to Euclidean distance tends to one over sine of half the angle, so the small-scale distortion is always at least that. The shadow radius is the scale up to which it stays below (1 + xi)/s, a tolerance above the corner's own value. What it rules out below the radius is two parts of the graph passing close in R^N without meeting: the hairpin. For a straight star it is infinite; for straight edges in general it is a finite computation, bounded below by half the shortest edge over the global distortion.
 
 It replaces the chord condition of the planar paper, which implies a bound of this form with a worse constant.
 :::
@@ -291,7 +291,7 @@ Send the barycenter $b_\tau$ of each shadow simplex to an apex $a_\tau$ of it. A
 :::
 
 ::: {.rmk .fragment data-name="The word"}
-"Apex" is Adamaszek–Frick–Vakili's, for a pair of simplices in $\mathbb R^3$. Here one vertex serves *all* the simplices through $x$, and the conclusion is a homotopy equivalence.
+"Apex" is Adamaszek–Frick–Vakili's, for a triangle and a segment in $\mathbb R^3$. Here one vertex serves *all* the simplices through $x$, and the conclusion is a homotopy equivalence.
 :::
 :::
 :::
@@ -353,7 +353,7 @@ In particular $p_*$ is injective on every homotopy group whenever the inclusion 
 :::
 
 ::: {.aside-note .fragment}
-The single-scale apex can fail for a sample near a sharp vertex. Its two-scale form is what the shadow radius certifies, for any sample near the graph.
+The single-scale apex can fail at a sharp vertex, even for a sample on the graph. Its two-scale form is what the shadow radius certifies, for any sample near the graph.
 :::
 
 ::: {.notes}
@@ -427,7 +427,7 @@ A curve whose corners are wider than a right angle needs no marking: the apex co
 :::
 
 ::: {.rmk .fragment data-name="At a marked vertex"}
-Above the level $\varepsilon/s$ the $\varepsilon$-path distance to another germ decreases exactly as the level does. That fills the cone from $v$ over each hull: the union of the hulls at $v$ is star-shaped about $v$.
+Above the level $\varepsilon/s$ the $\varepsilon$-path distance to another germ decreases exactly as the level does. That fills the cone from $v$ over each hull: the union of the hulls at $v$ is star-shaped about $v$, up to a tip missing when $v$ is not a sample.
 :::
 :::
 
@@ -436,7 +436,7 @@ The main theorem. A sample lying on the graph, in every dimension, at one scale.
 
 Two cases worth naming. A curve whose corners are all wider than a right angle needs no marked vertex at all, and then the complex satisfies the apex condition outright; for a smooth closed curve with the intrinsic metric that is the limits-paper theorem. And a straight-line graph: mark every vertex, and both shape conditions hold automatically.
 
-The proof along the edges is the apex theorem, via monotonicity of the path distance on slowly turning arcs. At a marked vertex the apex condition can fail, as we saw, and the proof is geometric: above the level epsilon over s, the path distance to a sample on another germ decreases exactly as the level does, and that is enough to fill the cone from the vertex over the hull of every simplex with hulls of other simplices. So the union of the hulls at the vertex is star-shaped about it, hence contractible, and the pieces glue.
+The proof along the edges is the apex theorem, via monotonicity of the path distance on slowly turning arcs. At a marked vertex the apex condition can fail, as we saw, and the proof is geometric: above the level epsilon over s, the path distance to a sample on another germ decreases exactly as the level does, and that is enough to fill the cone from the vertex over the hull of every simplex with hulls of other simplices. So the union of the hulls at the vertex is star-shaped about it, up to a small tip when the vertex itself is not sampled; with the short segments of the germs added it is contractible, and the pieces glue.
 :::
 
 
