@@ -185,16 +185,16 @@ Sushovan Majhi
 <p>For a metric space <span class="math inline">(\mathcal S,d)</span> and a scale <span class="math inline">\beta&gt;0</span>, <span class="math inline">\mathcal R_\beta(\mathcal S)</span> is the abstract simplicial complex with a simplex for every finite <span class="math inline">\sigma\subseteq\mathcal S</span> of diameter <span class="math inline">&lt;\beta</span>. It is a flag complex: determined by its edges.</p>
 </div>
 <div class="definition fragment" data-num="2" data-name="Geometric reconstruction">
-<p>A subset of <span class="math inline">\mathbb R^N</span>, built from the sample, that is <strong>homotopy equivalent</strong> to <span class="math inline">\mathcal G</span> and lies within a fixed multiple of the scale of <span class="math inline">\mathcal G</span> in the Hausdorff distance.</p>
+<p>A subset of <span class="math inline">\mathbb R^N</span>, built from the sample, that is <strong>homotopy equivalent</strong> to <span class="math inline">\mathcal G</span> and lies within a fixed multiple of the scale from <span class="math inline">\mathcal G</span> in the Hausdorff distance.</p>
 </div>
 <div class="rmk fragment" data-name="What is known">
-<p>For sets of positive <span class="math inline">\mu</span>-reach, unions of balls and <span class="math inline">\alpha</span>-shapes are geometric reconstructions (Chazal–Cohen-Steiner–Lieutier; Kim et al.); for curves, the crust. Graph methods return an abstract graph, a Reeb graph, or a complex. Our graphs have positive <span class="math inline">\mu</span>-reach: we claim no advance in the class of sets, only in the object.</p>
+<p>For sets of positive <span class="math inline">\mu</span>-reach, unions of balls and <span class="math inline">\alpha</span>-shapes are geometric reconstructions (Chazal–Cohen-Steiner–Lieutier; Kim et al.); for curves, the crust. Graph methods return an abstract graph, a Reeb graph, or a complex. Our hypotheses are of the positive-<span class="math inline">\mu</span>-reach kind: we claim no advance in the class of sets, only in the object.</p>
 </div>
 <aside class="notes">
 <p>The setting. An unknown embedded metric graph G in R^N (road networks from GPS traces, vascular and neuronal trees, fault networks from earthquake hypocenters) and a finite sample S near it.</p>
 <p>The Vietoris–Rips complex is the standard tool: flag, so it costs no more than its edges, and indifferent to the ambient dimension. It recovers the homotopy type. But it is an abstract complex; where the reconstruction sits in R^N is not part of the guarantee.</p>
 <p>So we ask for a geometric reconstruction: a subset of the same R^N, built from the sample, homotopy equivalent to G, and Hausdorff-close to it at the scale of the construction.</p>
-<p>These exist in other settings. For sets of positive mu-reach, the union of balls and the alpha-shape do it; for curves, the crust. And our graphs do have positive mu-reach, so I want to say clearly: no advance in the class of sets. The question is about a specific object, the one that comes with a Rips complex for free.</p>
+<p>These exist in other settings. For sets of positive mu-reach, the union of balls and the alpha-shape do it; for curves, the crust. And our hypotheses on the graph are of that kind (in the plane they give positive mu-reach), so I want to say clearly: no advance in the class of sets. The question is about a specific object, the one that comes with a Rips complex for free.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -280,7 +280,7 @@ Sushovan Majhi
 <p>When is <span class="math inline">\varprojlim_\beta\varinjlim_F\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)\cong\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)</span> for <strong>one</strong> dense finite <span class="math inline">F</span> and <strong>one</strong> small <span class="math inline">\beta</span>?</p>
 </div>
 <div class="rmk fragment" data-name="This talk">
-<p>For embedded graphs, with a path metric <span class="math inline">d^\varepsilon_{\mathcal S}</span> on the sample: for a sample <strong>on</strong> the graph, one scale suffices, as <span class="math inline">\mathrm{Sh}\simeq\mathcal G</span>; for a sample <strong>near</strong> it, <span class="math inline">\pi_q(\mathcal G)</span> injects into <span class="math inline">\pi_q(\mathrm{Sh})</span>.</p>
+<p>For embedded graphs, with a path metric <span class="math inline">d^\varepsilon_{\mathcal S}</span> on the sample: for a sample <strong>on</strong> the graph, with edges straight near its branch points, one scale suffices, as <span class="math inline">\mathrm{Sh}\simeq\mathcal G</span>; for a sample <strong>near</strong> it, <span class="math inline">\pi_q(\mathcal G)</span> injects into <span class="math inline">\pi_q(\mathrm{Sh})</span>.</p>
 </div>
 </div>
 <div class="aside-note fragment">
@@ -405,13 +405,13 @@ d^\varepsilon_{\mathcal A}(p,q)=\inf\ \sum_i\|a_i-a_{i+1}\| ,
 <p>Under (A1)–(A3), <span class="math inline">\Delta_\xi(\mathcal G)&gt;0</span>. For straight edges, <span class="math inline">\Delta_\xi(\mathcal G)\ge\min\{\|x-y\|: d_{\mathcal G}(x,y)\ge\tfrac12\lambda\}\ge\frac{\lambda}{2\,\delta(\mathcal G)}</span>.</p>
 </div>
 <div class="rmk fragment" data-name="Why this threshold">
-<p>At the sharpest corner <span class="math inline">d_{\mathcal G}/\|x-y\|\to1/\sin\tfrac{\theta_{\min}}2</span>, so <span class="math inline">\delta_{\le r}\ge1/s</span> always. <span class="math inline">\Delta_\xi</span> is the scale up to which the distortion stays within the tolerance of that; <span class="math inline">\Delta_\xi=\infty</span> for a straight star.</p>
+<p>At the sharpest corner <span class="math inline">d_{\mathcal G}/\|x-y\|\to1/\sin\tfrac{\theta_{\min}}2</span>, so <span class="math inline">\delta_{\le r}\ge1/\sin\tfrac{\theta_{\min}}2</span> for every <span class="math inline">r</span>. <span class="math inline">\Delta_\xi</span> is the scale up to which the distortion stays within the tolerance of that; <span class="math inline">\Delta_\xi=\infty</span> for a straight star.</p>
 </div>
 </div>
 <aside class="notes">
 <p>Everything from here is stated in two quantities of G.</p>
 <p>The hypotheses are mild: finitely many C^1 edges, and positive angles at vertices. The condition number Theta records the sharpest angle; s, the square root of 1 minus Theta, is essentially the sine of half of it.</p>
-<p>The shadow radius compares the two metrics on G, restricted to pairs of points that are close in R^N. Near the sharpest corner the ratio of graph distance to Euclidean distance tends to one over sine of half the angle; so the small-scale distortion is always at least 1/s. The shadow radius is the scale up to which it stays within a tolerance xi of that value. What it rules out below the radius is two parts of the graph passing close in R^N without meeting: the hairpin. For a straight star it is infinite; for straight edges in general it is a finite computation, bounded below by half the shortest edge over the global distortion.</p>
+<p>The shadow radius compares the two metrics on G, restricted to pairs of points that are close in R^N. Near the sharpest corner the ratio of graph distance to Euclidean distance tends to one over sine of half the angle, so the small-scale distortion is always at least that. The shadow radius is the scale up to which it stays below (1 + xi)/s, a tolerance above the corner’s own value. What it rules out below the radius is two parts of the graph passing close in R^N without meeting: the hairpin. For a straight star it is infinite; for straight edges in general it is a finite computation, bounded below by half the shortest edge over the global distortion.</p>
 <p>It replaces the chord condition of the planar paper, which implies a bound of this form with a worse constant.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -466,7 +466,7 @@ v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
 <p>Send the barycenter <span class="math inline">b_\tau</span> of each shadow simplex to an apex <span class="math inline">a_\tau</span> of it. Along a chain <span class="math inline">\tau_0\prec\cdots\prec\tau_m</span> the apices are pairwise adjacent: the simplex <span class="math inline">\sigma_{\tau_j}\cup\{a_{\tau_j}\}</span> covers <span class="math inline">b_{\tau_i}</span>, so <span class="math inline">a_{\tau_i}</span> sees <span class="math inline">a_{\tau_j}</span>. By flagness they span a simplex: a simplicial map <span class="math inline">A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K</span>. Both composites with <span class="math inline">p</span> stay in single simplices or single convex hulls, so straight lines give the homotopies.</p>
 </div>
 <div class="rmk fragment" data-name="The word">
-<p>“Apex” is Adamaszek–Frick–Vakili’s, for a pair of simplices in <span class="math inline">\mathbb R^3</span>. Here one vertex serves <em>all</em> the simplices through <span class="math inline">x</span>, and the conclusion is a homotopy equivalence.</p>
+<p>“Apex” is Adamaszek–Frick–Vakili’s, for a triangle and a segment in <span class="math inline">\mathbb R^3</span>. Here one vertex serves <em>all</em> the simplices through <span class="math inline">x</span>, and the conclusion is a homotopy equivalence.</p>
 </div>
 </div>
 </div>
@@ -532,7 +532,7 @@ q\circ p\;\simeq\;|\iota|\colon|\mathcal K|\to|\mathcal K'| .
 </span> In particular <span class="math inline">p_*</span> is injective on every homotopy group whenever the inclusion <span class="math inline">\iota</span> is a homotopy equivalence.</p>
 </div>
 <div class="aside-note fragment">
-<p>The single-scale apex can fail for a sample near a sharp vertex. Its two-scale form is what the shadow radius certifies, for any sample near the graph.</p>
+<p>The single-scale apex can fail at a sharp vertex, even for a sample on the graph. Its two-scale form is what the shadow radius certifies, for any sample near the graph.</p>
 </div>
 <aside class="notes">
 <p>For a sample merely near a graph we cannot hope for the apex condition at the scale of the complex; the last example shows it can fail even on the graph. What we can certify is the same kind of condition with the target coarsened: the vertices of every star at scale beta span a simplex at a larger scale beta’. Star domination.</p>
@@ -618,13 +618,13 @@ p\colon|\mathcal R^\varepsilon_\beta(\mathcal S)|\;\xrightarrow{\;\simeq\;}\;\ma
 <p>A curve whose corners are wider than a right angle needs no marking: the apex condition holds. A straight-line graph: mark every vertex, and (P1), (P2) hold.</p>
 </div>
 <div class="rmk fragment" data-name="At a marked vertex">
-<p>Above the level <span class="math inline">\varepsilon/s</span> the <span class="math inline">\varepsilon</span>-path distance to another germ decreases exactly as the level does. That fills the cone from <span class="math inline">v</span> over each hull: the union of the hulls at <span class="math inline">v</span> is star-shaped about <span class="math inline">v</span>.</p>
+<p>Above the level <span class="math inline">\varepsilon/s</span> the <span class="math inline">\varepsilon</span>-path distance to another germ decreases exactly as the level does. That fills the cone from <span class="math inline">v</span> over each hull: the union of the hulls at <span class="math inline">v</span> is star-shaped about <span class="math inline">v</span>, up to a tip missing when <span class="math inline">v</span> is not a sample.</p>
 </div>
 </div>
 <aside class="notes">
 <p>The main theorem. A sample lying on the graph, in every dimension, at one scale. The window: beta below a third of the shadow radius, the edges of G_0 at least 5 beta over s long, epsilon below 2 s beta over 5, and the density condition. Two shape conditions: near each marked vertex the edges are straight up to level 4 beta over s; and within an edge the graph turns by less than a right angle over arcs of length 13 beta over 2 s. Then the shadow projection is a homotopy equivalence, and the shadow is within beta of G: a geometric reconstruction, at a single scale, in every dimension.</p>
 <p>Two cases worth naming. A curve whose corners are all wider than a right angle needs no marked vertex at all, and then the complex satisfies the apex condition outright; for a smooth closed curve with the intrinsic metric that is the limits-paper theorem. And a straight-line graph: mark every vertex, and both shape conditions hold automatically.</p>
-<p>The proof along the edges is the apex theorem, via monotonicity of the path distance on slowly turning arcs. At a marked vertex the apex condition can fail, as we saw, and the proof is geometric: above the level epsilon over s, the path distance to a sample on another germ decreases exactly as the level does, and that is enough to fill the cone from the vertex over the hull of every simplex with hulls of other simplices. So the union of the hulls at the vertex is star-shaped about it, hence contractible, and the pieces glue.</p>
+<p>The proof along the edges is the apex theorem, via monotonicity of the path distance on slowly turning arcs. At a marked vertex the apex condition can fail, as we saw, and the proof is geometric: above the level epsilon over s, the path distance to a sample on another germ decreases exactly as the level does, and that is enough to fill the cone from the vertex over the hull of every simplex with hulls of other simplices. So the union of the hulls at the vertex is star-shaped about it, up to a small tip when the vertex itself is not sampled; with the short segments of the germs added it is contractible, and the pieces glue.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
