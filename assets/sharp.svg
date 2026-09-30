@@ -37,6 +37,6 @@
 <text x="514.5" y="118" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="start">0.07β</text>
 <text x="547.8" y="156" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="start">0.074β</text>
 </g>
-<text x="320" y="262" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">no point is within β of all four endpoints, at any scale β;</text>
-<text x="320" y="284" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">the pairwise condition (B) still holds</text>
+<text x="320" y="262" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">the far ends are more than 2β apart in dᵋ: x has no apex;</text>
+<text x="320" y="284" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">yet, for a sample on the graph, p is a homotopy equivalence</text>
 </svg>
