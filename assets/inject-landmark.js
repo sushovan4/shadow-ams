@@ -44,7 +44,7 @@
   var TITLE_NOTES_HTML =
     '<p>Thank you, and thanks to Atish, Jacob and Abigail for the session. This is joint work with Kazuhiro Kawamura and Atish Mitra.</p>' +
     '<p>Kazuhiro has just shown how shape theory gets past the Euclidean obstruction for shadows in the limit, as the scale goes to zero. This talk is the finite-sample half of the same question: one sample, explicit scales, embedded graphs in any ambient dimension.</p>' +
-    '<p>Two results. First, from a sample merely Hausdorff-close to the graph, an embedded 1-complex homeomorphic to it, at a single scale. Second, the shadow in every dimension: injective on homotopy groups, and every feature that survives an explicit enlargement of scale is a feature of the graph. The engine is a combinatorial condition, the apex condition, under which the shadow projection of a flag complex is a homotopy equivalence in every dimension.</p>';
+    '<p>Three results, all in every ambient dimension. A combinatorial condition on a flag complex, the apex condition, under which the shadow projection is a homotopy equivalence. For a sample on the graph, at one scale, the shadow is a geometric reconstruction: homotopy equivalent to the graph and Hausdorff-close to it. For a sample merely near the graph, the shadow projection is injective on every homotopy group.</p>';
 
   // Placeholder QR: finder patterns and a caption, no data modules. Swap for
   // a real QR of ARXIV_URL once the preprint is posted.
