@@ -564,7 +564,7 @@ Thank you.
 ## Thank you {.colophon}
 
 ```{=html}
-<div class="finis">F  I  N  I  S</div>
+<div class="finis">Q.E.D.</div>
 <svg class="wax-seal" viewBox="0 0 80 80" role="img" aria-label="Author's seal" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>

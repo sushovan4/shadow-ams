@@ -2639,3 +2639,8 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
 .reveal #shadow-collapse { max-width: 760px; margin: 0 auto; }
 .reveal .collapse-figure { display: block; width: 100%; }
 .reveal .collapse-step { display: none; }
+
+// The closing mark: Q.E.D., with the deck's penumbra.
+.reveal .colophon .finis {
+  text-shadow: 0.06em 0.08em 0 rgba(200, 184, 148, 0.85);
+}
