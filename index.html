@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-737d9c953dcf69d5b835b77289db6829.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-d7d9db7996e0dcf492061a93a80ae557.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -247,15 +247,15 @@ Sushovan Majhi
 <li>If <span class="math inline">N\ge4</span>, then <span class="math inline">p_*</span> on <span class="math inline">\pi_1</span> need not be surjective.</li>
 </ol>
 </div>
-<div class="fig-wide fragment" style="width: 50%; margin-top: 0;">
-<p><img data-src="assets/hexagon.svg"></p>
-</div>
+<div id="shadow-collapse"></div>
+<span class="fragment collapse-step" data-collapse="1"></span>
+<span class="fragment collapse-step" data-collapse="2"></span>
 <div class="aside-note fragment">
 <p>In <span class="math inline">\mathbb R^3</span>, <span class="math inline">p_*</span> is onto on <span class="math inline">\pi_1</span> and its injectivity is open (Adamaszek–Frick–Vakili 2017).</p>
 </div>
 <aside class="notes">
 <p>(If this follows Kazuhiro’s talk, he has just stated these; do not dwell.) In the plane the projection is 1-connected; already in the plane higher homotopy is not preserved; from dimension four on even the fundamental group fails; in R^3 surjectivity on pi_1 is due to Adamaszek, Frick and Vakili, and injectivity there is open.</p>
-<p>The picture is their planar example. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. Its shadow is the solid hexagon, contractible. The shaded central hexagon comes back in section three.</p>
+<p>The picture is their planar example, and it moves. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. [click] Now let the shadow projection act: every vertex goes to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] And the central hexagon, where the two big triangles overlap, is where it goes wrong; it comes back in section three.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -345,6 +345,29 @@ d^\varepsilon_{\mathcal A}(p,q)=\inf\ \sum_i\|a_i-a_{i+1}\| ,
 <p>The replacement metric, introduced by Fasy, Komendarczyk, Majhi and Wenk, and by me. An epsilon-path hops through the sample in steps shorter than epsilon; the epsilon-path distance is the shortest such chain. It is computed from pairwise Euclidean distances alone: the epsilon-neighborhood graph and shortest paths.</p>
 <p>The comparison says what it measures: up to 1/(1-xi) and an additive xi epsilon, it is the intrinsic distance along the graph, and it never undercuts the Euclidean distance.</p>
 <p>The picture: a hairpin, two legs of one arc, close in R^N and far along the arc. The Euclidean Rips complex at this scale bridges the gap and fills in a disk. The path-metric complex on the same points, at the same beta, does not. Both are computed from the sample.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Watch the shadow</h2>
+<div class="standfirst math">
+<p>A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scale <span class="math inline">\beta</span>; and the shadow, the union of its hulls. Computed live.</p>
+</div>
+<div id="shadow-lab" data-prevent-swipe=""></div>
+<script src="assets/shadow-lab.js"></script>
+<aside class="notes">
+<p>A live slide; everything here is computed as I move the sliders. In the plane the shadow of a flag complex is the union of its edges and triangles.</p>
+<p>Hairpin, Euclidean: raise beta past the width of the gap and the edges across it light up, the shadow fills the gap, and the loop is gone. Switch to the epsilon-path metric at the same beta: the legs stay apart, because along the arc they are far. Now raise epsilon: once a single hop can cross the gap, the path metric is Euclidean again across it, and the gap fills. That is the density condition: epsilon has to be small against the geometry.</p>
+<p>Sharp vertex, three straight branches at 15, 0 and minus 15 degrees: in the Euclidean metric the branches are joined far out. With the path metric they meet only near the vertex, where a hop of length epsilon cuts the corner, at levels below about epsilon over the sine of the half angle. That corner-cutting is the configuration of the “not necessary” example in section three.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
