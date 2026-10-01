@@ -501,7 +501,14 @@ def title_plate():
     body.insert(0, f'<path d="{curve_path(curves)}" fill="none" stroke="{INK}" '
                    f'stroke-width="3" opacity="0.55" stroke-dasharray="10 8"/>')
     body.append(circle((300, 290), 13, fill="none", stroke=OX, stroke_width=4))
-    write("title-plate.svg", svg(600, 600, body, "A sampled graph and its shadow"))
+    # crop to the drawing, with a small margin, so it fills the plate
+    xs = [x for x, _ in pts]; ys = [y for _, y in pts]
+    side = max(max(xs) - min(xs), max(ys) - min(ys)) + 40
+    cx, cy = (max(xs) + min(xs)) / 2, (max(ys) + min(ys)) / 2
+    out = svg(600, 600, body, "A sampled graph and its shadow")
+    out = out.replace('viewBox="0 0 600 600"',
+                      f'viewBox="{f(cx - side / 2)} {f(cy - side / 2)} {f(side)} {f(side)}"')
+    write("title-plate.svg", out)
 
 
 # --------------------------------------------------------------------------
