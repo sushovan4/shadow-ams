@@ -2538,3 +2538,104 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
   line-height: 1.25;
 }
 .reveal .methods tr:last-child td { border-bottom: none !important; background: var(--paper-soft); }
+
+// =========================================================================
+// SHADOWS — the talk's subject, in the type.
+// A penumbra cast down and to the right, in parchment, under the section
+// titles and the title; the tombstone of a proof sketch casts one too.
+// =========================================================================
+.reveal .section-divider h1,
+.reveal .section-divider h2 {
+  text-shadow:
+    0.025em 0.035em 0 rgba(200, 184, 148, 0.85),
+    0.05em  0.07em  0 rgba(200, 184, 148, 0.55),
+    0.075em 0.105em 0 rgba(200, 184, 148, 0.32),
+    0.1em   0.14em  0 rgba(200, 184, 148, 0.16) !important;
+}
+.reveal .quarto-title-block .masthead h1.title {
+  text-shadow:
+    0.02em 0.03em 0 rgba(200, 184, 148, 0.7),
+    0.04em 0.06em 0 rgba(200, 184, 148, 0.35);
+}
+.reveal .sketch p:last-child::after {
+  text-shadow: 0.14em 0.14em 0 rgba(200, 184, 148, 0.9);
+}
+
+// ---------------------------------------------------------------------------
+// The live shadow (assets/shadow-lab.js): controls in the broadsheet manner.
+// ---------------------------------------------------------------------------
+.reveal #shadow-lab {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.reveal .lab-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.6rem;
+  margin: 0.1rem auto 0.3rem;
+  font-size: 0.56em;
+}
+.reveal .lab-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  transition: opacity 0.3s;
+}
+.reveal .lab-group.off { opacity: 0.3; }
+.reveal .lab-label {
+  font-family: var(--smallcaps);
+  letter-spacing: 0.12em;
+  color: var(--oxblood);
+}
+.reveal .lab-group button {
+  font-family: var(--serif);
+  font-size: 1em;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  padding: 0.1em 0.7em;
+  cursor: pointer;
+}
+.reveal .lab-group button.on {
+  background: var(--oxblood);
+  border-color: var(--oxblood);
+  color: var(--paper);
+}
+.reveal .lab-group input[type=range] {
+  width: 9em;
+  accent-color: #6c1d1a;
+}
+.reveal .lab-value {
+  min-width: 2.2em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}
+.reveal .lab-figure {
+  display: block;
+  width: 100%;
+  max-height: 470px;
+  margin: 0 auto;
+  background: var(--paper-soft);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.reveal .lab-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.62em;
+  color: var(--ink-soft);
+  margin-top: 0.25rem;
+}
+.reveal .lab-stat {
+  font-style: normal;
+  font-family: var(--smallcaps);
+  letter-spacing: 0.08em;
+  color: var(--oxblood);
+  margin-right: 0.8em;
+}
+
+// The collapsing hexagon on the obstruction slide.
+.reveal #shadow-collapse { max-width: 760px; margin: 0 auto; }
+.reveal .collapse-figure { display: block; width: 100%; }
+.reveal .collapse-step { display: none; }

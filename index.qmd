@@ -10,6 +10,7 @@ format:
     theme: [default, theme.scss]
 resources:
   - assets/title-plate.svg
+  - assets/shadow-lab.js
 footer: "Beyond a Shadow of a Doubt  ·  S. Majhi  ·  AMS Fall Eastern Sectional · Washington, D.C.  ·  October 2026"
 ---
 
@@ -93,9 +94,11 @@ Let $\mathcal S\subset\mathbb R^N$ be finite and $\mathcal R_\beta(\mathcal S)$ 
 3. If $N\ge4$, then $p_*$ on $\pi_1$ need not be surjective.
 :::
 
-::: {.fig-wide .fragment style="width: 50%; margin-top: 0;"}
-![](assets/hexagon.svg)
-:::
+```{=html}
+<div id="shadow-collapse"></div>
+<span class="fragment collapse-step" data-collapse="1"></span>
+<span class="fragment collapse-step" data-collapse="2"></span>
+```
 
 ::: {.aside-note .fragment}
 In $\mathbb R^3$, $p_*$ is onto on $\pi_1$ and its injectivity is open (Adamaszek–Frick–Vakili 2017).
@@ -104,7 +107,7 @@ In $\mathbb R^3$, $p_*$ is onto on $\pi_1$ and its injectivity is open (Adamasze
 ::: {.notes}
 (If this follows Kazuhiro's talk, he has just stated these; do not dwell.) In the plane the projection is 1-connected; already in the plane higher homotopy is not preserved; from dimension four on even the fundamental group fails; in R^3 surjectivity on pi_1 is due to Adamaszek, Frick and Vakili, and injectivity there is open.
 
-The picture is their planar example. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. Its shadow is the solid hexagon, contractible. The shaded central hexagon comes back in section three.
+The picture is their planar example, and it moves. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. [click] Now let the shadow projection act: every vertex goes to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] And the central hexagon, where the two big triangles overlap, is where it goes wrong; it comes back in section three.
 :::
 
 
@@ -185,6 +188,26 @@ The replacement metric, introduced by Fasy, Komendarczyk, Majhi and Wenk, and by
 The comparison says what it measures: up to 1/(1-xi) and an additive xi epsilon, it is the intrinsic distance along the graph, and it never undercuts the Euclidean distance.
 
 The picture: a hairpin, two legs of one arc, close in R^N and far along the arc. The Euclidean Rips complex at this scale bridges the gap and fills in a disk. The path-metric complex on the same points, at the same beta, does not. Both are computed from the sample.
+:::
+
+
+## Watch the shadow
+
+::: {.standfirst .math}
+A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scale $\beta$; and the shadow, the union of its hulls. Computed live.
+:::
+
+```{=html}
+<div id="shadow-lab" data-prevent-swipe></div>
+<script src="assets/shadow-lab.js"></script>
+```
+
+::: {.notes}
+A live slide; everything here is computed as I move the sliders. In the plane the shadow of a flag complex is the union of its edges and triangles.
+
+Hairpin, Euclidean: raise beta past the width of the gap and the edges across it light up, the shadow fills the gap, and the loop is gone. Switch to the epsilon-path metric at the same beta: the legs stay apart, because along the arc they are far. Now raise epsilon: once a single hop can cross the gap, the path metric is Euclidean again across it, and the gap fills. That is the density condition: epsilon has to be small against the geometry.
+
+Sharp vertex, three straight branches at 15, 0 and minus 15 degrees: in the Euclidean metric the branches are joined far out. With the path metric they meet only near the vertex, where a hop of length epsilon cuts the corner, at levels below about epsilon over the sine of the half angle. That corner-cutting is the configuration of the "not necessary" example in section three.
 :::
 
 
