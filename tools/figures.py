@@ -488,17 +488,19 @@ def fig_vertex_apex():
 
 
 def title_plate():
-    """Left title-plate: a sampled three-pronged graph and its eps-path Rips shadow."""
-    pts, curves = y_graph((300, 300), [((230, 200), (110, 150)),
-                                       ((380, 230), (500, 130)),
-                                       ((330, 420), (290, 520))], 15, 7.0, seed=3)
-    D = path_metric(pts, 30)
-    edges, tris = rips(D, 84)
-    body = [f'<path d="{curve_path(curves)}" fill="none" stroke="{INK}" '
-            f'stroke-width="1.1" opacity="0.5" stroke-dasharray="5 4"/>']
-    body += complex_layers(pts, edges, tris, fill_opacity=0.18, edge_w=1.1,
-                           edge_opacity=0.5, pt_r=3.6)
-    body.append(circle((300, 300), 6.5, fill="none", stroke=OX, stroke_width=1.8))
+    """Left title-plate: a sampled three-pronged graph and its eps-path Rips shadow.
+    Drawn bold, as it is shown at about 130 pixels: few, large sample points and a
+    thick shadow band that reads as one shape."""
+    pts, curves = y_graph((300, 290), [((240, 200), (70, 120)),
+                                       ((370, 210), (530, 105)),
+                                       ((320, 420), (285, 555))], 32, 17.0, seed=3)
+    D = path_metric(pts, 70)
+    edges, tris = rips(D, 185)
+    body = complex_layers(pts, edges, tris, fill_opacity=0.32, edge_w=2.6,
+                          edge_opacity=0.55, pt_r=8.5)
+    body.insert(0, f'<path d="{curve_path(curves)}" fill="none" stroke="{INK}" '
+                   f'stroke-width="3" opacity="0.55" stroke-dasharray="10 8"/>')
+    body.append(circle((300, 290), 13, fill="none", stroke=OX, stroke_width=4))
     write("title-plate.svg", svg(600, 600, body, "A sampled graph and its shadow"))
 
 
