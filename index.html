@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-06a0990c22dda5d0f50125a6c41f6473.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-775af21571e44e138e4a43e831bce0a2.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -290,6 +290,81 @@ Sushovan Majhi
 <aside class="notes">
 <p>(If this follows Kazuhiro’s talk, he has just stated these; do not dwell.) In the plane the projection is 1-connected; already in the plane higher homotopy is not preserved; from dimension four on even the fundamental group fails; in R^3 surjectivity on pi_1 is due to Adamaszek, Frick and Vakili, and injectivity there is open.</p>
 <p>The picture is their planar example, and it moves. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. [click] Now let the shadow projection act: every vertex goes to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] And the central hexagon, where the two big triangles overlap, is where it goes wrong; it comes back in section three.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>What the shadow can lose</h2>
+<div class="fig-wide" style="width: 62%; margin: -0.4rem auto 0;">
+<p><img data-src="assets/losses.svg"></p>
+</div>
+<div class="methods scorecard fragment">
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="math inline">p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)</span></th>
+<th style="text-align: center;">onto <span class="math inline">\pi_1</span></th>
+<th style="text-align: center;">into on <span class="math inline">\pi_1</span></th>
+<th style="text-align: center;">into on <span class="math inline">\pi_{k\ge2}</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Euclidean, <span class="math inline">\mathbb R^2</span></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✗</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Euclidean, <span class="math inline">\mathbb R^3</span></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">✗</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Euclidean, <span class="math inline">\mathbb R^{N\ge4}</span></td>
+<td style="text-align: center;">✗</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">✗</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Path metric, on polygonal <span class="math inline">\mathcal G</span>, any <span class="math inline">N</span></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Path metric, near polygonal <span class="math inline">\mathcal G</span>, any <span class="math inline">N</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="aside-note fragment">
+<p>✗ Chambers et al.; ℝ³ onto: Adamaszek–Frick–Vakili, whose conjecture is “?”. Last two rows: this talk.</p>
+</div>
+<aside class="notes">
+<p>Two pictures of what goes wrong, and a scorecard.</p>
+<p>On the left, the plane: the hexagon we just saw. The complex is a 2-sphere; the shadow crushes it onto a disk. A sphere that was there is gone: the projection is not injective on pi_2.</p>
+<p>On the right, four dimensions, the other example of Chambers et al.: two triangles in polar position, arranged so their centroids land on the same point. The complex is still a 2-sphere, but in the shadow those two points are glued, and a sphere with two points glued is a pinched torus, a sphere with a circle attached. A loop appears in the shadow that comes from no loop of the complex: the projection is not onto pi_1.</p>
+<p>[click] The scorecard for the Euclidean complex: in the plane, onto and into on pi_1, but higher homotopy is lost. In R^3, onto by Adamaszek, Frick and Vakili; into is their conjecture. From R^4 on, not even onto. [click] And the last two rows are what this talk proves, in every dimension, for the path metric: everything for a sample on a polygonal graph, and the injective column for a sample near it.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
