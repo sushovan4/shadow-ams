@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-label="Section IV plate">
 <rect x="36" y="36" width="648" height="328" fill="none" stroke="#c8b894" stroke-width="0.6"/>
-<text x="360" y="68" fill="#6c1d1a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="16" letter-spacing="4" font-weight="500" text-anchor="middle">A SAMPLE ON THE GRAPH</text>
-<text x="360" y="92" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="13" font-style="italic" text-anchor="middle">— the shadow has the homotopy type of the graph —</text>
+<text x="360" y="68" fill="#6c1d1a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="16" letter-spacing="4" font-weight="500" text-anchor="middle">THE SHADOW OF A GRAPH SAMPLE</text>
+<text x="360" y="92" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="13" font-style="italic" text-anchor="middle">— on the graph, and near it —</text>
 <line x1="120" y1="104" x2="600" y2="104" stroke="#c8b894" stroke-width="0.5"/>
 <path d="M 360 215 Q 320 160 250 140 M 360 215 Q 410 170 480 128 M 360 215 Q 372 270 352 318" fill="none" stroke="#2b211a" stroke-width="0.8" opacity="0.5" stroke-dasharray="3 3"/>
 <g opacity="0.2" fill="#6c1d1a" stroke="none">
