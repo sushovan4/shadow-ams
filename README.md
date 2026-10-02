@@ -46,7 +46,8 @@ Kinds: `.theorem`, `.proposition`, `.lemma`, `.corollary`, `.conjecture`
 (italic body); `.definition`, `.example`, `.question`, `.problem` (roman body);
 `.rmk` for remarks and `.sketch` for proof sketches. (`.remark` and `.proof`
 are avoided because Quarto claims those names.) Numbers are set by hand in
-`data-num`. Use `.env-row` for two statements side by side and `.fig-row` for a
+`data-num`, one counter per environment (Definition 1, 2, …; Theorem 1, 2, …),
+counting the visible slides in order. Use `.env-row` for two statements side by side and `.fig-row` for a
 figure beside statements.
 
 ## The QR code

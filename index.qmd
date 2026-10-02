@@ -175,7 +175,7 @@ The question, which is Chambers, de Silva, Erickson and Ghrist's, is whether the
 
 ## The Euclidean obstruction
 
-::: {.theorem data-num="3" data-cite="Chambers–de Silva–Erickson–Ghrist 2010"}
+::: {.theorem data-num="1" data-cite="Chambers–de Silva–Erickson–Ghrist 2010"}
 Let $\mathcal S\subset\mathbb R^N$ be finite and $\mathcal R_\beta(\mathcal S)$ its **Euclidean** Vietoris–Rips complex.
 
 1. If $N=2$, then $p_*$ is a bijection on $\pi_0$ and an isomorphism on $\pi_1$.
@@ -215,8 +215,8 @@ In $\mathbb R^3$, $p_*$ is surjective on $\pi_1$ and its injectivity is open (Ad
 | Euclidean, $\mathbb R^2$ | ✓ | ✓ | ✗ |
 | Euclidean, $\mathbb R^3$ | ✓ | ? | ✗ |
 | Euclidean, $\mathbb R^{N\ge4}$ | ✗ | ? | ✗ |
-| Path metric, on polygonal $\mathcal G$: Thm 9 | ✓ | ✓ | ✓ |
-| Path metric, near polygonal $\mathcal G$: Thm 10 | ? | ✓ | ✓ |
+| Path metric, on polygonal $\mathcal G$: Thm 4 | ✓ | ✓ | ✓ |
+| Path metric, near polygonal $\mathcal G$: Thm 5 | ? | ✓ | ✓ |
 :::
 
 ::: {.aside-note .fragment}
@@ -228,7 +228,7 @@ The plane we just saw: a sphere crushed, so higher homotopy is lost. Here is the
 
 The complex is again the octahedral sphere: two triangles, 135 and 246, in polar position. [click] In R^4 they can be placed so that their centroids have the same image: in the shadow those two points are one point. [click] Now walk from the centroid of 135 to vertex 1, along the edge to vertex 2, and into the centroid of 246. In the complex that path is not closed; in the shadow it is, through the glued point. It is a loop in the shadow that no loop of the complex maps onto: the shadow is a sphere with two points identified, a sphere with a circle attached, and its fundamental group is Z while the complex's is trivial.
 
-[click] The scorecard for the Euclidean complex: in the plane, surjective and injective on pi_1, but higher homotopy is lost. In R^3, surjective by Adamaszek, Frick and Vakili; injective is their conjecture. From R^4 on, not even surjective. [click] And the last two rows are what this talk proves in section three, Theorems 9 and 10, in every dimension, for the path metric: everything for a sample on a polygonal graph, and both injective columns for a sample near it. Surjectivity on pi_1 near the graph is open.
+[click] The scorecard for the Euclidean complex: in the plane, surjective and injective on pi_1, but higher homotopy is lost. In R^3, surjective by Adamaszek, Frick and Vakili; injective is their conjecture. From R^4 on, not even surjective. [click] And the last two rows are what this talk proves in section three, Theorems 4 and 5, in every dimension, for the path metric: everything for a sample on a polygonal graph, and both injective columns for a sample near it. Surjectivity on pi_1 near the graph is open.
 :::
 
 
@@ -283,7 +283,7 @@ Section two: why the Euclidean shadow fails. The combinatorial condition that de
 ## The apex condition
 
 ::: {.env-row}
-::: {.definition data-num="4" data-name="Apex condition"}
+::: {.definition data-num="3" data-name="Apex condition"}
 For $x\in\mathrm{Sh}(\mathcal K)$ let $\mathrm{st}(x,\mathcal K)=\{\sigma: x\in\operatorname{Conv}(\sigma)\}$. A vertex $v_x$ is an *apex* of $x$ if
 $$
 v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
@@ -291,7 +291,7 @@ $$
 that is, $\sigma\cup\{v_x\}\in\mathcal K$ for every $\sigma\in\mathrm{st}(x,\mathcal K)$. A flag $\mathcal K$ satisfies the *apex condition* if every $x$ has an apex.
 :::
 
-::: {.theorem .fragment data-num="5" data-name="Apex theorem" data-cite="Kawamura–Majhi–Mitra"}
+::: {.theorem .fragment data-num="2" data-name="Apex theorem" data-cite="Kawamura–Majhi–Mitra"}
 If a finite flag complex $\mathcal K$ with $\mathcal K^{(0)}\subset\mathbb R^N$ satisfies the apex condition, then $p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)$ is a homotopy equivalence, in every $N$.
 :::
 :::
@@ -357,7 +357,7 @@ The proof, on a small example: three triangles of K, EAB, ECD and CFG, whose hul
 
 ## The hexagon, again
 
-::: {.example data-num="6" data-name="The hexagon"}
+::: {.example data-num="1" data-name="The hexagon"}
 For the octahedral Rips complex of the hexagon, $|\mathcal K|\simeq S^2$ and $\mathrm{Sh}(\mathcal K)$ is contractible. On the central hexagon $H=\operatorname{Conv}[135]\cap\operatorname{Conv}[246]$ an apex would see all other five vertices, and every vertex misses its antipode: the condition fails exactly on $H$.
 :::
 
@@ -378,11 +378,11 @@ The hexagon from section one, again. It is exactly a failure of the condition. O
 
 ## Star domination: the apex across two scales {visibility="hidden"}
 
-::: {.definition data-num="17" data-name="Star domination"}
+::: {.definition data-num="5" data-name="Star domination"}
 Let $\mathcal K\subseteq\mathcal K'$ on the same vertices in $\mathbb R^N$, with $\mathcal K'$ flag. $\mathcal K'$ *dominates the stars of* $\mathcal K$ if for every $x\in\mathrm{Sh}(\mathcal K)$ the vertices $V(x)$ of $\mathrm{st}(x,\mathcal K)$ span a simplex of $\mathcal K'$. For $\mathcal K'=\mathcal K$ this implies the apex condition.
 :::
 
-::: {.proposition .fragment data-num="18" data-name="Lifting"}
+::: {.proposition .fragment data-num="1" data-name="Lifting"}
 If $\mathcal K'$ dominates the stars of $\mathcal K$, there is a map $q\colon\mathrm{Sh}(\mathcal K)\to|\mathcal K'|$ with
 $$
 q\circ p\;\simeq\;|\iota|\colon|\mathcal K|\to|\mathcal K'| .
@@ -415,11 +415,11 @@ Section three, five minutes: a metric in which the apex condition can hold, the 
 ## Change the metric
 
 ::: {.env-row}
-::: {.definition data-num="7" data-name="Path metric" data-cite="Fasy–Komendarczyk–Majhi–Wenk; Majhi"}
+::: {.definition data-num="4" data-name="Path metric" data-cite="Fasy–Komendarczyk–Majhi–Wenk; Majhi"}
 For $\mathcal A\subset\mathbb R^N$ and $\varepsilon>0$, $d^\varepsilon_{\mathcal A}(p,q)$ is the length of a shortest chain $p=a_0,\dots,a_{k+1}=q$ in $\mathcal A$ with hops ${\|a_i-a_{i+1}\|<\varepsilon}$. Write $\mathcal R^\varepsilon_\beta(\mathcal S)$ for the Rips complex of $(\mathcal S,d^\varepsilon_{\mathcal S})$.
 :::
 
-::: {.theorem .fragment data-fragment-index="2" data-num="8" data-name="Reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT"}
+::: {.theorem .fragment data-fragment-index="2" data-num="3" data-name="Reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT"}
 For a compact connected graph $\mathcal G\subset\mathbb R^N$ and a sample close enough to it, at explicit scales $\varepsilon\ll\beta$:
 
 - $\mathcal R^\varepsilon_\beta(\mathcal S)\simeq\mathcal G$, in every dimension;
@@ -434,7 +434,7 @@ For a compact connected graph $\mathcal G\subset\mathbb R^N$ and a sample close 
 
 ::: {.stmts}
 ::: {.rmk .fragment data-fragment-index="3" data-name="First difficulty: why a path metric?"}
-Sets of positive $\mu$-reach are already reconstructed, by unions of balls and $\alpha$-shapes: we claim no new class of sets. The question is the Rips shadow, and for the Euclidean complex what is known stops at $\pi_1$ (Theorem 3). The $\varepsilon$-path complex is $\simeq\mathcal G$ in every dimension, so its shadow is the candidate.
+Sets of positive $\mu$-reach are already reconstructed, by unions of balls and $\alpha$-shapes: we claim no new class of sets. The question is the Rips shadow, and for the Euclidean complex what is known stops at $\pi_1$ (Theorem 1). The $\varepsilon$-path complex is $\simeq\mathcal G$ in every dimension, so its shadow is the candidate.
 :::
 :::
 :::
@@ -453,13 +453,13 @@ Change the metric. Hop through the sample in steps shorter than epsilon and take
 ## In every dimension
 
 ::: {.env-row}
-::: {.theorem data-num="9" data-name="A sample on the graph" data-cite="Kawamura–Majhi–Mitra"}
+::: {.theorem data-num="4" data-name="A sample on the graph" data-cite="Kawamura–Majhi–Mitra"}
 [Let $\mathcal G\subset\mathbb R^N$ be **polygonal**, $\mathcal S\subset\mathcal G$ dense, and $\varepsilon\ll\beta$ at **one** explicit scale set by the sharpest angle, the shadow radius and the shortest edge.]{.hyp} Then $p$ is a homotopy equivalence, and $\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))$ is a geometric reconstruction of $\mathcal G$.
 
 [**Via the apex theorem:** the apex condition holds on each edge; a star-shaped set at each sharp vertex.]{.via}
 :::
 
-::: {.theorem .fragment data-fragment-index="1" data-num="10" data-name="A sample off the graph" data-cite="Kawamura–Majhi–Mitra"}
+::: {.theorem .fragment data-fragment-index="1" data-num="5" data-name="A sample off the graph" data-cite="Kawamura–Majhi–Mitra"}
 [Let $\mathcal G\subset\mathbb R^N$ be **polygonal**, $\mathcal S$ merely Hausdorff-close to it, at explicit scales.]{.hyp} Then $p_*$ is injective on every $\pi_k$, bijective on $\pi_0$: $\pi_1(\mathcal G)\hookrightarrow\pi_1(\mathrm{Sh})$.
 
 [**Via the apex condition across two scales:** $\mathcal R^\varepsilon_{\beta'}$ dominates the stars of $\mathcal R^\varepsilon_\beta$, for $\beta'$ a fixed multiple of $\beta$.]{.via}
@@ -512,7 +512,7 @@ Sharp vertex, three straight branches at 15, 0 and minus 15 degrees: in the Eucl
 
 ## What is known: the abstract complex, and the plane {visibility="hidden"}
 
-::: {.theorem data-num="9" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT"}
+::: {.theorem data-num="3" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT"}
 [Let $\mathcal G\subset\mathbb R^N$ be a compact, connected metric graph. Fix $\xi\in(0,\tfrac14)$, let $0<\beta<\tfrac14\ell(\mathcal G)$, and choose $0<\varepsilon\le\tfrac13\beta$ such that (T) holds.]{.hyp} If $d_H(\mathcal G,\mathcal S)<\tfrac12\xi\varepsilon$, then
 $$
 \mathcal R^\varepsilon_\beta(\mathcal S)\;\simeq\;\mathcal G .
@@ -544,7 +544,7 @@ This talk: the shadow in R^N, for a metric computed from the sample, and a graph
 $\mathcal G$ is compact and connected, with finitely many $C^1$ edges meeting at positive angles.
 :::
 
-::: {.definition data-num="9" data-name="Condition number and shadow radius"}
+::: {.definition data-num="6" data-name="Condition number and shadow radius"}
 With $\theta_{\min}$ the sharpest angle at a vertex, $\Theta(\mathcal G)=\max\{\tfrac12,\cos^2\tfrac{\theta_{\min}}2\}$ and $s=\sqrt{1-\Theta}$. For a tolerance $\xi$, the *shadow radius* $\Delta_\xi(\mathcal G)$ is the supremum of the $r$ with
 $$
 d_{\mathcal G}(x,y)\;\le\;(1+\xi)\,\frac{\|x-y\|}{s}\qquad\text{whenever }\|x-y\|\le r .
@@ -575,7 +575,7 @@ Section four: where the apex fails, and the two theorems. A sample on the graph,
 
 ## Where the apex fails {visibility="hidden"}
 
-::: {.example data-num="10" data-name="Not necessary"}
+::: {.example data-num="2" data-name="Not necessary"}
 Three straight branches at $15^\circ,0^\circ,-15^\circ$, a sample on them, and $\varepsilon\le\tfrac{1}{200}\beta\sin\tfrac{15^\circ}2$: the chord $CD$ cuts the corner and crosses the Rips edge $AB$ at $x$, and $d^\varepsilon(B,C)>2\beta$, so $x$ has no apex. Yet $p$ is a homotopy equivalence.
 :::
 
@@ -592,11 +592,11 @@ Yet the shadow projection is a homotopy equivalence here, by the theorem on the 
 
 ## Turning, and marked vertices {visibility="hidden"}
 
-::: {.definition data-num="19" data-name="Turning"}
+::: {.definition data-num="7" data-name="Turning"}
 The *turning* $\omega(J)$ of an oriented arc $J\subset\mathcal G$ is the supremum of the angles between its tangents. $\mathcal G$ *turns slowly over $r$* along a family of arcs if $\omega(J)<\tfrac\pi2$ for every arc of the family of length at most $r$. A corner of angle $\theta$ contributes $\pi-\theta$.
 :::
 
-::: {.definition .fragment data-num="20" data-name="Marked vertices"}
+::: {.definition .fragment data-num="8" data-name="Marked vertices"}
 A vertex is *singular* if its degree is at least $3$, or it is $2$ with an angle of at most $\tfrac\pi2$. *Mark* a set of vertices containing the singular ones; $\mathcal G_0$ suppresses the unmarked vertices of degree $2$, and the *level* of a point on an edge of $\mathcal G_0$ is its distance along the edge to a marked end.
 :::
 
@@ -625,7 +625,7 @@ Why these. Along an arc that turns slowly, the path distance between two samples
 
 ## A sample on the graph {visibility="hidden"}
 
-::: {.theorem data-num="11" data-name="A sample on the graph" data-cite="Kawamura–Majhi–Mitra"}
+::: {.theorem data-num="4" data-name="A sample on the graph" data-cite="Kawamura–Majhi–Mitra"}
 [Let $\mathcal G\subset\mathbb R^N$ be a **polygonal** graph, $\xi\le\tfrac1{12}$, and]{.hyp}
 $$
 3\beta\le\Delta_\xi(\mathcal G),\qquad \frac{5\beta}{s}\le\lambda(\mathcal G),\qquad \frac{5\varepsilon}{2s}<\beta .
@@ -658,7 +658,7 @@ The theorem holds more generally, for curved edges that turn slowly and are stra
 
 ## The shadow radius certifies star domination {visibility="hidden"}
 
-::: {.lemma data-num="22" data-name="Union diameter"}
+::: {.lemma data-num="1" data-name="Union diameter"}
 [Let (A1)–(A3) hold, $\xi\le\tfrac1{12}$, $\varepsilon\le\tfrac1{48}\beta$ with (T), $d_H(\mathcal S,\mathcal G)<\tfrac12\xi\varepsilon$, and $3\beta\le\Delta_\xi(\mathcal G)$.]{.hyp} If $\sigma,\tau\in\mathcal R^\varepsilon_\beta(\mathcal S)$ have $\operatorname{Conv}(\sigma)\cap\operatorname{Conv}(\tau)\neq\emptyset$, then
 $$
 \operatorname{diam}^\varepsilon_{\mathcal S}(\sigma\cup\tau)\;\le\;\frac{9\,\beta}{2s} .
@@ -669,7 +669,7 @@ $$
 Projected to $\mathcal G$, both simplices have graph diameter $<\tfrac{11}{10}\beta$, by (T), and a common point of the hulls puts them within $\tfrac94\beta\le\Delta_\xi$ in $\mathbb R^N$. The shadow radius turns that into graph distance $<\tfrac{41}{10}\beta/s$; the comparison of metrics brings it back to $d^\varepsilon$.
 :::
 
-::: {.corollary .fragment data-num="23" data-name="Star domination"}
+::: {.corollary .fragment data-num="1" data-name="Star domination"}
 For $\beta'>\tfrac{9}{2s}\beta$, $\mathcal R^\varepsilon_{\beta'}(\mathcal S)$ dominates the stars of $\mathcal R^\varepsilon_\beta(\mathcal S)$; and for $\beta'<\tfrac14\ell(\mathcal G)$ the inclusion $\mathcal R^\varepsilon_\beta\hookrightarrow\mathcal R^\varepsilon_{\beta'}$ is a homotopy equivalence.
 :::
 
@@ -684,7 +684,7 @@ So at any scale beta' above 9 beta over 2 s, every star at scale beta spans a si
 
 ## A sample off the graph {visibility="hidden"}
 
-::: {.theorem data-num="12" data-name="A sample off the graph" data-cite="Kawamura–Majhi–Mitra"}
+::: {.theorem data-num="5" data-name="A sample off the graph" data-cite="Kawamura–Majhi–Mitra"}
 [Let $\mathcal G\subset\mathbb R^N$ be a **polygonal** graph, and $\beta,\varepsilon$ in an explicit window in $\Delta_\xi$, $s$, $\lambda$ and the systole.]{.hyp} If $\mathcal S\subset\mathbb R^N$ is merely Hausdorff-close to $\mathcal G$, then
 $$
 p_*\colon\pi_k\big(|\mathcal R^\varepsilon_\beta(\mathcal S)|\big)\;\hookrightarrow\;\pi_k\big(\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))\big)\qquad\text{for every }k,
@@ -713,15 +713,15 @@ In the plane this is a lemma of the JACT paper, by a planar proof. For the Eucli
 
 ## What remains, and what is next
 
-::: {.question data-num="11" data-name="Two open cases"}
+::: {.question data-num="1" data-name="Two open cases"}
 For $N\ge3$: is the shadow a geometric reconstruction for a sample **off** the graph, or at a sharp vertex where the edges **curve**? In the plane both hold (JACT).
 :::
 
-::: {.question .fragment data-num="12" data-name="The Euclidean question"}
+::: {.question .fragment data-num="2" data-name="The Euclidean question"}
 Question (a) for the **Euclidean** complex stays open. For a smooth closed curve it is a conjecture of Kawamura–Majhi–Mitra.
 :::
 
-::: {.question .fragment data-num="13" data-name="Beyond graphs"}
+::: {.question .fragment data-num="3" data-name="Beyond graphs"}
 How much of this extends beyond graphs, to the geodesic subspaces of $\mathbb R^N$ whose Rips complexes are already understood?
 :::
 
