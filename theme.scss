@@ -929,7 +929,7 @@ html body div.reveal div.slides .qr-plate > svg {
   bottom: 60px;
   right: 60px;
   width: 26em;
-  max-width: 42vw;
+  max-width: 540px;   /* 42vw of the 1280-px slide */
   text-align: right;
   margin: 0;
   padding: 0;
@@ -1207,9 +1207,9 @@ html body div.reveal div.slides section.section-divider > h2 {
 .reveal section.section-divider .plate svg {
   display: block;
   width: auto !important;
-  height: 44vh !important;
-  max-width: 88vw !important;
-  max-height: 44vh !important;
+  height: 352px !important;        /* 44vh of the 800-px slide; vh would track the window */
+  max-width: 1100px !important;
+  max-height: 352px !important;
 }
 .reveal section.section-divider .plate-caption {
   font-size: 0.95rem;
