@@ -189,7 +189,7 @@ Let $\mathcal S\subset\mathbb R^N$ be finite and $\mathcal R_\beta(\mathcal S)$ 
 ```
 
 ::: {.aside-note .fragment}
-In $\mathbb R^3$, $p_*$ is onto on $\pi_1$ and its injectivity is open (Adamaszek–Frick–Vakili 2017).
+In $\mathbb R^3$, $p_*$ is surjective on $\pi_1$ and its injectivity is open (Adamaszek–Frick–Vakili 2017).
 :::
 
 ::: {.notes}
@@ -208,17 +208,17 @@ In $\mathbb R^3$, $p_*$ is onto on $\pi_1$ and its injectivity is open (Adamasze
 ```
 
 ::: {.methods .scorecard .fragment}
-| $p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)$ | onto $\pi_1$ | into on $\pi_1$ | into on $\pi_{k\ge2}$ |
+| $p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)$ | surjective on $\pi_1$ | injective on $\pi_1$ | injective on $\pi_{k\ge2}$ |
 |:--|:-:|:-:|:-:|
 | Euclidean, $\mathbb R^2$ | ✓ | ✓ | ✗ |
 | Euclidean, $\mathbb R^3$ | ✓ | ? | ✗ |
 | Euclidean, $\mathbb R^{N\ge4}$ | ✗ | ? | ✗ |
 | Path metric, on polygonal $\mathcal G$, any $N$ | ✓ | ✓ | ✓ |
-| Path metric, near polygonal $\mathcal G$, any $N$ | | ✓ | ✓ |
+| Path metric, near polygonal $\mathcal G$, any $N$ | ? | ✓ | ✓ |
 :::
 
 ::: {.aside-note .fragment}
-✗ Chambers et al.; ℝ³ onto: Adamaszek–Frick–Vakili, whose conjecture is "?". Last two rows: this talk.
+✗ Chambers et al. · ✓ in ℝ³: Adamaszek–Frick–Vakili · ? open · last two rows: this talk.
 :::
 
 ::: {.notes}
@@ -226,7 +226,7 @@ The plane we just saw: a sphere crushed, so higher homotopy is lost. Here is the
 
 The complex is again the octahedral sphere: two triangles, 135 and 246, in polar position. [click] In R^4 they can be placed so that their centroids have the same image: in the shadow those two points are one point. [click] Now walk from the centroid of 135 to vertex 1, along the edge to vertex 2, and into the centroid of 246. In the complex that path is not closed; in the shadow it is, through the glued point. It is a loop in the shadow that no loop of the complex maps onto: the shadow is a sphere with two points identified, a sphere with a circle attached, and its fundamental group is Z while the complex's is trivial.
 
-[click] The scorecard for the Euclidean complex: in the plane, onto and into on pi_1, but higher homotopy is lost. In R^3, onto by Adamaszek, Frick and Vakili; into is their conjecture. From R^4 on, not even onto. [click] And the last two rows are what this talk proves, in every dimension, for the path metric: everything for a sample on a polygonal graph, and the injective column for a sample near it.
+[click] The scorecard for the Euclidean complex: in the plane, surjective and injective on pi_1, but higher homotopy is lost. In R^3, surjective by Adamaszek, Frick and Vakili; injective is their conjecture. From R^4 on, not even surjective. [click] And the last two rows are what this talk proves, in every dimension, for the path metric: everything for a sample on a polygonal graph, and both injective columns for a sample near it. Surjectivity on pi_1 near the graph is open.
 :::
 
 
