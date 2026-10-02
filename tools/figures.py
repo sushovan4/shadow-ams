@@ -473,7 +473,7 @@ def octa_hexagon(scale=1.0, dx=0, dy=0, labels=True, captions=True):
         out.append(text(T((hc[0] + 14, hc[1] + 5)), "x", 15 * scale, fill=OX, anchor="start"))
         out.append(text(T((hc[0] - 22, hc[1] + 24)), "H", 15 * scale, fill=OX, italic=True))
     if captions:
-        out.append(text(T((170, 312)), "ℛ ≃ S²,  π₂(ℛ) ≅ ℤ", 18, fill=SEPIA))
+        out.append(text(T((170, 312)), 'ℛ ≃ S²,  π<tspan baseline-shift="sub" font-size="13" font-style="normal" font-family="KaTeX_Main, Georgia, serif">2</tspan>(ℛ) ≅ ℤ', 18, fill=SEPIA))
         out.append(text(T((520, 312)), "Sh(ℛ) contractible; no apex on H", 18, fill=SEPIA))
     return out
 

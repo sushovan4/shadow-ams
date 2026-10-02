@@ -195,7 +195,7 @@ In $\mathbb R^3$, $p_*$ is surjective on $\pi_1$ and its injectivity is open (Ad
 ::: {.notes}
 (If this follows Kazuhiro's talk, he has just stated these; do not dwell.) In the plane the projection is 1-connected; already in the plane higher homotopy is not preserved; from dimension four on even the fundamental group fails; in R^3 surjectivity on pi_1 is due to Adamaszek, Frick and Vakili, and injectivity there is open.
 
-[click] The picture is their planar example, and it moves. Six points in the plane, on a regular hexagon. [click] Take the Rips complex at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. It lives nowhere; I draw it in space. [click] Now let the shadow projection act: every vertex goes back to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] Where does the sphere go? Over the central hexagon H, two opposite faces of the octahedron, 135 and 246, land on top of each other: the sphere is folded flat, and that fold is what kills pi_2. H comes back in section three.
+[click] The picture is their planar example, and it moves. Six points in the plane, on a regular hexagon. [click] Take the Rips complex at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. It lives nowhere; I draw it in space. [click] Now let the shadow projection act: every vertex goes back to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] Where does the sphere go? Over the central hexagon H, two opposite faces of the octahedron, 135 and 246, land on top of each other: the sphere is folded flat, and that fold is what kills pi_2. H comes back in the next section.
 :::
 
 
@@ -267,25 +267,125 @@ This is joint work with Kazuhiro and Atish.
 :::
 
 
-# § II.  Change the Metric {.section-divider}
+# § II.  The Apex Condition {.section-divider}
 
 ::: {.plate data-plate="II"}
+![](assets/section-iii-plate.svg)
+:::
+
+::: {.notes}
+Section two: why the Euclidean shadow fails. The combinatorial condition that decides whether the shadow projection is a homotopy equivalence, in every dimension, for any flag complex with vertices in R^N.
+:::
+
+
+## The apex condition
+
+::: {.env-row}
+::: {.definition data-num="4" data-name="Apex condition"}
+For $x\in\mathrm{Sh}(\mathcal K)$ let $\mathrm{st}(x,\mathcal K)=\{\sigma: x\in\operatorname{Conv}(\sigma)\}$. A vertex $v_x$ is an *apex* of $x$ if
+$$
+v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
+$$
+that is, $\sigma\cup\{v_x\}\in\mathcal K$ for every $\sigma\in\mathrm{st}(x,\mathcal K)$. A flag $\mathcal K$ satisfies the *apex condition* if every $x$ has an apex.
+:::
+
+::: {.theorem .fragment data-num="5" data-name="Apex theorem" data-cite="Kawamura–Majhi–Mitra"}
+If a finite flag complex $\mathcal K$ with $\mathcal K^{(0)}\subset\mathbb R^N$ satisfies the apex condition, then $p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)$ is a homotopy equivalence, in every $N$.
+:::
+:::
+
+::: {.fig-row}
+::: {.fig style="flex-basis: 36%;"}
+![](assets/apex.svg)
+:::
+
+::: {.stmts}
+::: {.sketch .fragment}
+Send the barycenter $b_\tau$ of each shadow simplex to an apex $a_\tau$ of it. Along a chain $\tau_0\prec\cdots\prec\tau_m$ the apices are pairwise adjacent: the simplex $\sigma_{\tau_j}\cup\{a_{\tau_j}\}$ covers $b_{\tau_i}$, so $a_{\tau_i}$ sees $a_{\tau_j}$. By flagness they span a simplex: a simplicial map $A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K$. Both composites with $p$ stay in single simplices or single convex hulls, so straight lines give the homotopies.
+:::
+
+::: {.rmk .fragment data-name="The word"}
+"Apex" is Adamaszek–Frick–Vakili's, for a triangle and a segment in $\mathbb R^3$. Here one vertex serves *all* the simplices through $x$, and the conclusion is a homotopy equivalence.
+:::
+:::
+:::
+
+::: {.notes}
+The apex condition. At a point x of the shadow, collect every simplex whose hull contains x. The condition asks for one vertex, the apex, that cones off all of them at once. This is weaker than asking all their vertices together to span a simplex, and it is all the proof needs.
+
+The theorem: for a finite flag complex, the apex condition makes the shadow projection a homotopy equivalence, in every dimension.
+
+The proof is short. Triangulate the shadow compatibly with the hulls, subdivide once, and send each barycenter to an apex of it. Along a chain of faces the apices are pairwise adjacent, because the simplex coning off a bigger face also covers the smaller barycenter; a flag complex turns pairwise adjacency into a simplex, so the map is simplicial. Both composites move each point only inside one simplex of K, or one convex hull in the shadow, and straight lines finish it.
+
+The word apex is from Adamaszek, Frick and Vakili, who find an apex among the five vertices of a triangle and a segment of the Euclidean complex in R^3, and deduce pi_1-surjectivity there. That fails in R^4. We ask for more, one apex for everything through the point, and get more.
+:::
+
+
+## The hexagon, again
+
+::: {.example data-num="6" data-name="The hexagon"}
+For the octahedral Rips complex of the hexagon, $|\mathcal K|\simeq S^2$ and $\mathrm{Sh}(\mathcal K)$ is contractible. On the central hexagon $H=\operatorname{Conv}[135]\cap\operatorname{Conv}[246]$ an apex would see all other five vertices, and every vertex misses its antipode: the condition fails exactly on $H$.
+:::
+
+::: {.fig-wide style="width: 64%; margin: 0.3rem auto 0;"}
+![](assets/hexagon.svg)
+:::
+
+::: {.aside-note .fragment}
+The points with no apex are exactly the fold: where the two opposite faces land on each other.
+:::
+
+::: {.notes}
+The hexagon from section one, again. It is exactly a failure of the condition. On the central hexagon, where the two big triangles overlap, both cover x, so an apex would have to see all the other five vertices, and every vertex misses its antipode. Off the central hexagon, the vertex beyond whose neighbors' chord x lies is an apex. So the condition fails exactly on the shaded hexagon, and that is where the 2-sphere is crushed.
+
+[click] So the obstruction has a location: the points with no apex are exactly where the sphere is folded. To beat it we need a complex in which every point of the shadow has an apex: that is what changing the metric will buy, along the edges of a graph.
+:::
+
+
+## Star domination: the apex across two scales {visibility="hidden"}
+
+::: {.definition data-num="17" data-name="Star domination"}
+Let $\mathcal K\subseteq\mathcal K'$ on the same vertices in $\mathbb R^N$, with $\mathcal K'$ flag. $\mathcal K'$ *dominates the stars of* $\mathcal K$ if for every $x\in\mathrm{Sh}(\mathcal K)$ the vertices $V(x)$ of $\mathrm{st}(x,\mathcal K)$ span a simplex of $\mathcal K'$. For $\mathcal K'=\mathcal K$ this implies the apex condition.
+:::
+
+::: {.proposition .fragment data-num="18" data-name="Lifting"}
+If $\mathcal K'$ dominates the stars of $\mathcal K$, there is a map $q\colon\mathrm{Sh}(\mathcal K)\to|\mathcal K'|$ with
+$$
+q\circ p\;\simeq\;|\iota|\colon|\mathcal K|\to|\mathcal K'| .
+$$
+In particular $p_*$ is injective on every homotopy group whenever the inclusion $\iota$ is a homotopy equivalence.
+:::
+
+::: {.aside-note .fragment}
+The single-scale apex can fail at a sharp vertex, even for a sample on the graph. Its two-scale form is what the shadow radius certifies, for a sample near the graph.
+:::
+
+::: {.notes}
+For a sample merely near a graph we cannot hope for the apex condition at the scale of the complex; the last example shows it can fail even on the graph. What we can certify is the same kind of condition with the target coarsened: the vertices of every star at scale beta span a simplex at a larger scale beta'. Star domination.
+
+The proof of the apex theorem goes through with the target changed and gives a map q from the shadow at scale beta to the complex at scale beta' such that q after p is the inclusion of complexes. When that inclusion is a homotopy equivalence, p is injective on all homotopy groups. That is section five.
+:::
+
+
+# § III.  Change the Metric {.section-divider}
+
+::: {.plate data-plate="III"}
 ![](assets/section-ii-plate.svg)
 :::
 
 ::: {.notes}
-Section two: the path metric, what it already buys for the abstract complex, and the two quantities of the graph that the scales are stated in.
+Section three: a metric in which the apex condition can hold. The path metric, what it already buys for the abstract complex, and the two quantities of the graph that the scales are stated in.
 :::
 
 
 ## The $\varepsilon$-path metric
 
 ::: {.env-row}
-::: {.definition data-num="4" data-name="Path metric" data-cite="Fasy–Komendarczyk–Majhi–Wenk; Majhi"}
+::: {.definition data-num="7" data-name="Path metric" data-cite="Fasy–Komendarczyk–Majhi–Wenk; Majhi"}
 For $\mathcal A\subset\mathbb R^N$ and $\varepsilon>0$, $d^\varepsilon_{\mathcal A}(p,q)$ is the length of a shortest chain $p=a_0,\dots,a_{k+1}=q$ in $\mathcal A$ with hops ${\|a_i-a_{i+1}\|<\varepsilon}$. Write $\mathcal R^\varepsilon_\beta(\mathcal S)$ for the Rips complex of $(\mathcal S,d^\varepsilon_{\mathcal S})$.
 :::
 
-::: {.theorem .fragment data-num="5" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT"}
+::: {.theorem .fragment data-num="8" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT"}
 For a compact connected graph $\mathcal G\subset\mathbb R^N$ and a sample close enough to it, at explicit scales $\varepsilon\ll\beta$,
 $$
 \mathcal R^\varepsilon_\beta(\mathcal S)\;\simeq\;\mathcal G .
@@ -322,7 +422,7 @@ A live slide; everything here is computed as I move the sliders. In the plane th
 
 Hairpin, Euclidean: raise beta past the width of the gap and the edges across it light up, the shadow fills the gap, and the loop is gone. Switch to the epsilon-path metric at the same beta: the legs stay apart, because along the arc they are far. Now raise epsilon: once a single hop can cross the gap, the path metric is Euclidean again across it, and the gap fills. That is the density condition: epsilon has to be small against the geometry.
 
-Sharp vertex, three straight branches at 15, 0 and minus 15 degrees: in the Euclidean metric the branches are joined far out. With the path metric they meet only near the vertex, where a hop of length epsilon cuts the corner, at levels below about epsilon over the sine of the half angle. That corner-cutting is the configuration of the "not necessary" example in section three.
+Sharp vertex, three straight branches at 15, 0 and minus 15 degrees: in the Euclidean metric the branches are joined far out. With the path metric they meet only near the vertex, where a hop of length epsilon cuts the corner, at levels below about epsilon over the sine of the half angle. That corner-cutting is where the apex condition fails; it opens section four.
 :::
 
 
@@ -360,7 +460,7 @@ This talk: the shadow in R^N, for a metric computed from the sample, and a graph
 $\mathcal G$ is compact and connected, with finitely many $C^1$ edges meeting at positive angles.
 :::
 
-::: {.definition data-num="6" data-name="Condition number and shadow radius"}
+::: {.definition data-num="9" data-name="Condition number and shadow radius"}
 With $\theta_{\min}$ the sharpest angle at a vertex, $\Theta(\mathcal G)=\max\{\tfrac12,\cos^2\tfrac{\theta_{\min}}2\}$ and $s=\sqrt{1-\Theta}$. For a tolerance $\xi$, the *shadow radius* $\Delta_\xi(\mathcal G)$ is the supremum of the $r$ with
 $$
 d_{\mathcal G}(x,y)\;\le\;(1+\xi)\,\frac{\|x-y\|}{s}\qquad\text{whenever }\|x-y\|\le r .
@@ -378,116 +478,6 @@ The condition number Theta records the sharpest angle; s is essentially the sine
 :::
 
 
-# § III.  The Apex Condition {.section-divider}
-
-::: {.plate data-plate="III"}
-![](assets/section-iii-plate.svg)
-:::
-
-::: {.notes}
-Section three: the combinatorial condition that decides whether the shadow projection is a homotopy equivalence, in every dimension, for any flag complex with vertices in R^N.
-:::
-
-
-## The apex condition
-
-::: {.env-row}
-::: {.definition data-num="7" data-name="Apex condition"}
-For $x\in\mathrm{Sh}(\mathcal K)$ let $\mathrm{st}(x,\mathcal K)=\{\sigma: x\in\operatorname{Conv}(\sigma)\}$. A vertex $v_x$ is an *apex* of $x$ if
-$$
-v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
-$$
-that is, $\sigma\cup\{v_x\}\in\mathcal K$ for every $\sigma\in\mathrm{st}(x,\mathcal K)$. A flag $\mathcal K$ satisfies the *apex condition* if every $x$ has an apex.
-:::
-
-::: {.theorem .fragment data-num="8" data-name="Apex theorem" data-cite="Kawamura–Majhi–Mitra"}
-If a finite flag complex $\mathcal K$ with $\mathcal K^{(0)}\subset\mathbb R^N$ satisfies the apex condition, then $p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)$ is a homotopy equivalence, in every $N$.
-:::
-:::
-
-::: {.fig-row}
-::: {.fig style="flex-basis: 36%;"}
-![](assets/apex.svg)
-:::
-
-::: {.stmts}
-::: {.sketch .fragment}
-Send the barycenter $b_\tau$ of each shadow simplex to an apex $a_\tau$ of it. Along a chain $\tau_0\prec\cdots\prec\tau_m$ the apices are pairwise adjacent: the simplex $\sigma_{\tau_j}\cup\{a_{\tau_j}\}$ covers $b_{\tau_i}$, so $a_{\tau_i}$ sees $a_{\tau_j}$. By flagness they span a simplex: a simplicial map $A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K$. Both composites with $p$ stay in single simplices or single convex hulls, so straight lines give the homotopies.
-:::
-
-::: {.rmk .fragment data-name="The word"}
-"Apex" is Adamaszek–Frick–Vakili's, for a triangle and a segment in $\mathbb R^3$. Here one vertex serves *all* the simplices through $x$, and the conclusion is a homotopy equivalence.
-:::
-:::
-:::
-
-::: {.notes}
-The apex condition. At a point x of the shadow, collect every simplex whose hull contains x. The condition asks for one vertex, the apex, that cones off all of them at once. This is weaker than asking all their vertices together to span a simplex, and it is all the proof needs.
-
-The theorem: for a finite flag complex, the apex condition makes the shadow projection a homotopy equivalence, in every dimension.
-
-The proof is short. Triangulate the shadow compatibly with the hulls, subdivide once, and send each barycenter to an apex of it. Along a chain of faces the apices are pairwise adjacent, because the simplex coning off a bigger face also covers the smaller barycenter; a flag complex turns pairwise adjacency into a simplex, so the map is simplicial. Both composites move each point only inside one simplex of K, or one convex hull in the shadow, and straight lines finish it.
-
-The word apex is from Adamaszek, Frick and Vakili, who find an apex among the five vertices of a triangle and a segment of the Euclidean complex in R^3, and deduce pi_1-surjectivity there. That fails in R^4. We ask for more, one apex for everything through the point, and get more.
-:::
-
-
-## Two examples
-
-::: {.env-row}
-::: {.example data-num="9" data-name="The hexagon"}
-For the octahedral Rips complex of the hexagon, $|\mathcal K|\simeq S^2$ and $\mathrm{Sh}(\mathcal K)$ is contractible. On the central hexagon $H=\operatorname{Conv}[135]\cap\operatorname{Conv}[246]$ an apex would see all other five vertices, and every vertex misses its antipode: the condition fails exactly on $H$.
-:::
-
-::: {.example .fragment data-num="10" data-name="Not necessary"}
-Three straight branches at $15^\circ,0^\circ,-15^\circ$, a sample on them, and $\varepsilon\le\tfrac{1}{200}\beta\sin\tfrac{15^\circ}2$: the chord $CD$ cuts the corner and crosses the Rips edge $AB$ at $x$, and $d^\varepsilon(B,C)>2\beta$, so $x$ has no apex. Yet $p$ is a homotopy equivalence.
-:::
-:::
-
-::: {.env-row}
-::: {.fig .fragment}
-![](assets/hexagon.svg)
-:::
-
-::: {.fig .fragment}
-![](assets/sharp.svg)
-:::
-:::
-
-::: {.notes}
-Two examples, one on each side.
-
-The Chambers et al. hexagon is exactly a failure of the condition. On the central hexagon, where the two big triangles overlap, both cover x, so an apex would have to see all the other five vertices, and every vertex misses its antipode. Off the central hexagon, the vertex beyond whose neighbors' chord x lies is an apex. So the condition fails exactly on the shaded hexagon, and the projection is not an equivalence there: the 2-sphere is crushed.
-
-But the condition is not necessary. At a vertex with three straight branches at plus and minus fifteen degrees and zero, sample the branches. A shortest epsilon-path between the two sharp branches cuts the corner, so the Rips complex has an edge from C, 0.95 beta out on one, to D, 0.04 beta out on the other, and it crosses the edge AB along the bisecting branch near the vertex. An apex of the crossing would have to be adjacent to both B and C, which are more than 2 beta apart in the path metric. No apex. Yet the shadow projection is a homotopy equivalence here, by the theorem of the next section. That theorem cannot be proved from the apex condition alone at a sharp vertex; the proof there is geometric.
-:::
-
-
-## Star domination: the apex across two scales {visibility="hidden"}
-
-::: {.definition data-num="17" data-name="Star domination"}
-Let $\mathcal K\subseteq\mathcal K'$ on the same vertices in $\mathbb R^N$, with $\mathcal K'$ flag. $\mathcal K'$ *dominates the stars of* $\mathcal K$ if for every $x\in\mathrm{Sh}(\mathcal K)$ the vertices $V(x)$ of $\mathrm{st}(x,\mathcal K)$ span a simplex of $\mathcal K'$. For $\mathcal K'=\mathcal K$ this implies the apex condition.
-:::
-
-::: {.proposition .fragment data-num="18" data-name="Lifting"}
-If $\mathcal K'$ dominates the stars of $\mathcal K$, there is a map $q\colon\mathrm{Sh}(\mathcal K)\to|\mathcal K'|$ with
-$$
-q\circ p\;\simeq\;|\iota|\colon|\mathcal K|\to|\mathcal K'| .
-$$
-In particular $p_*$ is injective on every homotopy group whenever the inclusion $\iota$ is a homotopy equivalence.
-:::
-
-::: {.aside-note .fragment}
-The single-scale apex can fail at a sharp vertex, even for a sample on the graph. Its two-scale form is what the shadow radius certifies, for a sample near the graph.
-:::
-
-::: {.notes}
-For a sample merely near a graph we cannot hope for the apex condition at the scale of the complex; the last example shows it can fail even on the graph. What we can certify is the same kind of condition with the target coarsened: the vertices of every star at scale beta span a simplex at a larger scale beta'. Star domination.
-
-The proof of the apex theorem goes through with the target changed and gives a map q from the shadow at scale beta to the complex at scale beta' such that q after p is the inclusion of complexes. When that inclusion is a homotopy equivalence, p is injective on all homotopy groups. That is section five.
-:::
-
-
 # § IV.  The Shadow of a Graph Sample {.section-divider}
 
 ::: {.plate data-plate="IV"}
@@ -495,7 +485,24 @@ The proof of the apex theorem goes through with the target changed and gives a m
 :::
 
 ::: {.notes}
-Section four: the two theorems. A sample on the graph, at one scale; and a sample near it.
+Section four: where the apex fails, and the two theorems. A sample on the graph, at one scale; and a sample near it.
+:::
+
+
+## Where the apex fails
+
+::: {.example data-num="10" data-name="Not necessary"}
+Three straight branches at $15^\circ,0^\circ,-15^\circ$, a sample on them, and $\varepsilon\le\tfrac{1}{200}\beta\sin\tfrac{15^\circ}2$: the chord $CD$ cuts the corner and crosses the Rips edge $AB$ at $x$, and $d^\varepsilon(B,C)>2\beta$, so $x$ has no apex. Yet $p$ is a homotopy equivalence.
+:::
+
+::: {.fig style="width: 78%; margin: 0.4rem auto 0;"}
+![](assets/sharp.svg)
+:::
+
+::: {.notes}
+Along an edge the path metric gives an apex. At a sharp vertex it need not. Three straight branches at plus and minus fifteen degrees and zero, a sample on them. A shortest epsilon-path between the two sharp branches cuts the corner, so the Rips complex has an edge from C, 0.95 beta out on one, to D, 0.04 beta out on the other, and it crosses the edge AB along the bisecting branch near the vertex. An apex of the crossing would have to be adjacent to both B and C, which are more than 2 beta apart in the path metric. No apex.
+
+Yet the shadow projection is a homotopy equivalence here, by the theorem on the next slide. That theorem cannot be proved from the apex condition alone at a sharp vertex; the proof there is geometric.
 :::
 
 
