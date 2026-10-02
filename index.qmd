@@ -714,10 +714,14 @@ In the plane this is a lemma of the JACT paper, by a planar proof. For the Eucli
 ## What remains, and what is next
 
 ::: {.question data-num="11" data-name="Two open cases"}
-For $N\ge3$: is the shadow a geometric reconstruction for a sample **off** the graph, or at a singular vertex with **curved** germs? In the plane both hold (JACT). For a smooth closed curve and the Euclidean complex this is a conjecture of the limits paper.
+For $N\ge3$: is the shadow a geometric reconstruction for a sample **off** the graph, or at a sharp vertex where the edges **curve**? In the plane both hold (JACT).
 :::
 
-::: {.question .fragment data-num="12" data-name="Beyond graphs"}
+::: {.question .fragment data-num="12" data-name="The Euclidean question"}
+Question (a) for the **Euclidean** complex stays open. For a smooth closed curve it is a conjecture of Kawamura–Majhi–Mitra.
+:::
+
+::: {.question .fragment data-num="13" data-name="Beyond graphs"}
 How much of this extends beyond graphs, to the geodesic subspaces of $\mathbb R^N$ whose Rips complexes are already understood?
 :::
 
@@ -727,11 +731,13 @@ How much of this extends beyond graphs, to the geodesic subspaces of $\mathbb R^
 :::
 
 ::: {.notes}
-What remains. In dimension three and up, two cases are open: a sample off the graph, where we have injectivity but not surjectivity, and a singular vertex with curved germs, where the geometric argument at the vertex needs straight branches. In the plane both are theorems of the JACT paper. And for a smooth closed curve with the Euclidean complex, the question is a conjecture of the limits paper, which ties it back to Kazuhiro's talk.
+What remains. In dimension three and up, two cases are open: a sample off the graph, where we have injectivity but not surjectivity, and a sharp vertex where the edges curve, where the geometric argument at the vertex needs straight branches. In the plane both are theorems of the JACT paper.
 
-Beyond graphs: the geodesic subspaces of R^N whose Rips complexes are already understood, where the shadow question is open.
+[click] And the Euclidean question, where we started: Kazuhiro's question (a) for the Euclidean complex itself stays open. For a smooth closed curve it is a conjecture of Kawamura, Majhi and Mitra.
 
-Two pieces of future work. First, a companion paper with Pramita Bagchi and Atish on homeomorphic reconstruction: from the one-skeleton alone, an embedded 1-complex homeomorphic to the graph, isotopic to it when the edges are straight, so that in R^3 the knot type of a polygonal graph comes out; and statistical guarantees for random samples. Second, with Kazuhiro and Atish: whether the shadow of a knot sample determines its knot type. A homotopy equivalence does not; the question is what more the shadow carries.
+[click] Beyond graphs: the geodesic subspaces of R^N whose Rips complexes are already understood, where the shadow question is open.
+
+[click] Two pieces of future work. First, a companion paper with Pramita Bagchi and Atish on homeomorphic reconstruction: from the one-skeleton alone, an embedded 1-complex homeomorphic to the graph, isotopic to it when the edges are straight, so that in R^3 the knot type of a polygonal graph comes out; and statistical guarantees for random samples. Second, with Kazuhiro and Atish: whether the shadow of a knot sample determines its knot type. A homotopy equivalence does not; the question is what more the shadow carries.
 
 Thank you.
 :::
