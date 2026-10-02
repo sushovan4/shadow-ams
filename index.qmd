@@ -21,19 +21,19 @@ footer: "Beyond a Shadow of a Doubt  ·  S. Majhi  ·  AMS Fall Eastern Sectiona
      For another venue, hide it: change the heading attribute to {.opener visibility="hidden"}. -->
 
 ::: {.opener-quote}
-Samples $F$ of a compact ANR $M\subset\mathbb R^N$; $\pi$ a retraction of a neighborhood onto $M$:
+For finite samples $F$ of a compact ANR $M\subset\mathbb R^N$:
 $$
-\varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)\;\xrightarrow[\ \pi_*\ ]{\ \cong\ }\;\pi_q(M)
+\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)
+\;\underset{\text{question (a)}}{\overset{?}{\cong}}\;
+\varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)
+\;\underset{\text{theorem}}{\cong}\;
+\pi_q(M)
 $$
-Stabilization: for **one** dense $F$ and **one** small $\beta$, is $\pi|\colon\mathrm{Sh}(\mathcal R_\beta(F))\to M$ already an isomorphism on all $\pi_q$?
+Is **one** dense finite sample $F$, at **one** small scale $\beta$, already enough?
 :::
 
 ::: {.opener-attrib}
-Theorem: Kawamura–Majhi–Mitra · Question (a): K. Kawamura, the previous talk
-:::
-
-::: {.aside-note .fragment}
-By Whitehead, that is $\mathrm{Sh}\simeq M$: through the natural map, stabilization is reconstruction at one scale.
+Theorem: Kawamura–Majhi–Mitra · Question (a), stabilization: K. Kawamura, the previous talk
 :::
 
 ::: {.opener-answer .fragment}
@@ -48,9 +48,7 @@ The Euclidean question stays open. It is where we end.
 :::
 
 ::: {.notes}
-Kazuhiro ended with a question, and I will start with it. The theorem, his with Atish and me: in the limit, over all finite samples and as the scale goes to zero, the shadows recover the homotopy groups of the space, through the neighborhood retraction onto M. His question (a) is stabilization: is one dense sample at one small scale already enough? To ask that precisely we compare through the same map: is the retraction, restricted to one shadow, an isomorphism on every homotopy group?
-
-[click] And by Whitehead, that is exactly a homotopy equivalence between that one shadow and M. So asked through the natural map, stabilization at one scale is topological reconstruction at one scale; an abstract isomorphism of groups would not be enough.
+Kazuhiro ended with a question, and I will start with it. Read the line from the right. His theorem, with Atish and me, is the isomorphism on the right: over all finite samples and as the scale goes to zero, the shadows recover the homotopy groups of the space itself. His question (a) is the one on the left, marked with a question mark: stabilization. When does one dense finite sample, at one small scale, already have the homotopy groups of the space?
 
 [click] This talk answers a version of it, and I want to be precise about the version. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not the Euclidean one but a path metric computed from its pairwise distances. In that setting, in every ambient dimension: for a sample lying on the graph, one explicit scale suffices; the shadow is homotopy equivalent to the graph. For a sample merely near a polygonal graph, we get the injective half.
 
