@@ -712,7 +712,7 @@ For $N\ge3$: is the shadow a geometric reconstruction for a sample **off** the g
 :::
 
 ::: {.question .fragment data-num="2" data-name="The Euclidean question"}
-Question (a) for the **Euclidean** complex stays open. For a smooth closed curve it is a conjecture of Kawamura–Majhi–Mitra.
+**Stabilization**, Kazuhiro's question (a), for the **Euclidean** complex stays open in $\mathbb R^N$, $N\ge3$. For a smooth closed curve it is a conjecture of Kawamura–Majhi–Mitra.
 :::
 
 ::: {.question .fragment data-num="3" data-name="Beyond graphs"}
@@ -728,7 +728,7 @@ How much of this extends beyond graphs, to the geodesic subspaces of $\mathbb R^
 ::: {.notes}
 What remains. In dimension three and up, two cases are open: a sample off the graph, where we have injectivity but not surjectivity, and a sharp vertex where the edges curve, where the geometric argument at the vertex needs straight branches. In the plane both are theorems of the JACT paper.
 
-[click] And the Euclidean question, where we started: Kazuhiro's question (a) for the Euclidean complex itself stays open. For a smooth closed curve it is a conjecture of Kawamura, Majhi and Mitra.
+[click] And the Euclidean question, where we started: stabilization, Kazuhiro's question (a), for the Euclidean complex itself stays open from dimension three on. (In the plane, Chambers et al. give the pi_1-isomorphism and a planar shadow carries no higher homotopy, so for nice graphs it should follow from the known results on Euclidean Rips complexes; I would not claim more.) For a smooth closed curve it is a conjecture of Kawamura, Majhi and Mitra.
 
 [click] Beyond graphs: the geodesic subspaces of R^N whose Rips complexes are already understood, where the shadow question is open.
 
