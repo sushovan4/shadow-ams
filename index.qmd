@@ -726,8 +726,8 @@ How much of this extends beyond graphs, to the geodesic subspaces of $\mathbb R^
 :::
 
 ::: {.rmk .fragment data-name="Future work"}
-- *Homeomorphic reconstruction of embedded graphs in $\mathbb R^N$*, with Kazuhiro Kawamura and Atish Mitra: an embedded $1$-complex, homeomorphic to $\mathcal G$, read off the $1$-skeleton; isotopic to $\mathcal G$ for straight edges, hence the knot type in $\mathbb R^3$.
-- *Statistical guarantees* for random samples, with [Pramita Bagchi]{.name-hl}, Kazuhiro Kawamura and Atish Mitra.
+- *Homeomorphic reconstruction of embedded graphs in $\mathbb R^N$*, with Kazuhiro Kawamura and Atish Mitra: an embedded $1$-complex, homeomorphic to $\mathcal G$, read off the $1$-skeleton.
+- *Statistical guarantees*, with [Pramita Bagchi]{.name-hl}.
 - Knots, with Kazuhiro Kawamura and Atish Mitra: does the shadow determine the knot type of a curve?
 :::
 
@@ -738,7 +738,7 @@ What remains. In dimension three and up, two cases are open: a sample off the gr
 
 [click] Beyond graphs: the geodesic subspaces of R^N whose Rips complexes are already understood, where the shadow question is open.
 
-[click] Future work, all with Kazuhiro and Atish. First, homeomorphic reconstruction: from the one-skeleton alone, an embedded 1-complex homeomorphic to the graph, isotopic to it when the edges are straight, so that in R^3 the knot type of a polygonal graph comes out. Second, statistical guarantees for random samples, with Pramita Bagchi. Third, whether the shadow of a knot sample determines its knot type. A homotopy equivalence does not; the question is what more the shadow carries.
+[click] Future work, all with Kazuhiro and Atish. First, homeomorphic reconstruction: from the one-skeleton alone, an embedded 1-complex homeomorphic to the graph. Second, statistical guarantees, with Pramita Bagchi. Third, whether the shadow of a knot sample determines its knot type. A homotopy equivalence does not; the question is what more the shadow carries.
 
 Thank you.
 :::
