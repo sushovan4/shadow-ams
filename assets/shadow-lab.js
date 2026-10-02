@@ -379,7 +379,9 @@
   }
 
   // ------------------------------------------------------------------------
-  // the pinch: in R^4 two polar triangles have centroids with the same image
+  // the pinch: Chambers et al., Prop. 5.4. The hexagon octahedron with the odd vertices
+  // lifted into R^4, (r x_i, d x_i) for i odd and (r x_i, 0) for i even: the opposite faces
+  // 135 and 246 then have the same centroid, the origin, and meet only there
   // (Chambers--de Silva--Erickson--Ghrist). The complex is the octahedral
   // sphere; in the shadow the two centroids are one point, and a path from one
   // to the other through the vertices 1 and 2 becomes a loop that no loop of the
@@ -400,7 +402,7 @@
     var c135 = cen(1, 3, 5), c246 = cen(2, 4, 6);
 
     var svg = el('svg', { viewBox: '0 0 640 396', class: 'collapse-figure', role: 'img',
-                          'aria-label': 'Two polar triangles in R^4 whose centroids are glued in the shadow' }, root);
+                          'aria-label': 'Two opposite faces of an octahedron in R^4 whose centroids coincide in the shadow' }, root);
     el('polygon', { points: [1, 3, 5].map(function (i) { return P[i].join(','); }).join(' '),
                     fill: OX, 'fill-opacity': 0.13, stroke: 'none' }, svg);
     el('polygon', { points: [2, 4, 6].map(function (i) { return P[i].join(','); }).join(' '),
@@ -464,7 +466,7 @@
       cap.innerHTML = state.loop > 0.98
         ? 'a loop of Sh that no loop of ℛ maps onto: π<tspan baseline-shift="sub" font-size="15" font-style="normal" font-family="KaTeX_Main, Georgia, serif">1</tspan>(Sh) ≅ ℤ, π<tspan baseline-shift="sub" font-size="15" font-style="normal" font-family="KaTeX_Main, Georgia, serif">1</tspan>(ℛ) = 0'
         : state.glue > 0.98 ? 'in ℝ⁴ the centroids c<tspan baseline-shift="sub" font-size="15" font-style="normal" font-family="KaTeX_Main, Georgia, serif">135</tspan> and c<tspan baseline-shift="sub" font-size="15" font-style="normal" font-family="KaTeX_Main, Georgia, serif">246</tspan> have the same image'
-        : 'ℛ: two polar triangles 135 and 246 in ℝ⁴, an octahedron ≃ S²';
+        : 'ℛ: an octahedron ≃ S² in ℝ⁴, opposite faces 135 and 246';
     }
     function animateTo(target) {
       if (timer) clearInterval(timer);
