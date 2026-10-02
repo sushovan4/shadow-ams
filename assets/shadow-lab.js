@@ -584,7 +584,7 @@
                                          : 'each b' + sub('τ') + 'goes to an apex a' + sub('τ') + '…')
         : state.n >= 2 ? 'subdivide once: a vertex b' + sub('τ') + 'for each simplex τ'
         : state.n >= 1 ? 'the shadow complex SC(𝒦): crossings become vertices'
-        : 'Sh(𝒦): the triangles EAB and ECD, whose hulls cross';
+        : 'Sh(𝒦) for EAB, ECD, CFG: not a cone';
     }
     function animateTo(target) {
       if (timer) clearInterval(timer);

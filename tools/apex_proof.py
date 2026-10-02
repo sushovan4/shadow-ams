@@ -1,8 +1,8 @@
 """Geometry for the animated proof of the apex theorem.
 
 Run from the repository root:  python3 tools/apex_proof.py
-Writes assets/apex-proof-data.js. A flag complex K in the plane (triangles EAB
-and ECD, whose edges cross), its shadow complex SC(K) (the arrangement of the
+Writes assets/apex-proof-data.js. A flag complex K in the plane (triangles EAB,
+ECD and CFG, whose edges cross; no vertex is adjacent to all the others), its shadow complex SC(K) (the arrangement of the
 hull boundaries, each cell triangulated), the barycentric subdivision of SC(K),
 and for each simplex tau of SC(K) an apex a_tau of its barycenter. The script
 checks that each cell of SC(K) lies in a fixed set of hulls and that along every
@@ -11,9 +11,12 @@ chain the apices span a simplex of K, the step of the proof the animation shows.
 
 import os
 import itertools, math, json
-# K: flag complex on A..E; triangles EAB, ECD (edges AB, CD cross)
-P = {'E': (60, 170), 'A': (300, 40), 'B': (290, 285), 'C': (400, 105), 'D': (210, 300)}
-edgesK = {frozenset(e) for e in [('E','A'),('E','B'),('A','B'),('E','C'),('E','D'),('C','D')]}
+# K: flag complex on A..G; triangles EAB, ECD, CFG. EAB and ECD overlap (apex E only),
+# ECD and CFG overlap (apex C only), and no vertex is adjacent to all: K is not a cone.
+P = {'E': (60, 170), 'A': (300, 40), 'B': (290, 285), 'C': (400, 105), 'D': (210, 300),
+     'F': (350, 52), 'G': (372, 205)}
+edgesK = {frozenset(e) for e in [('E','A'),('E','B'),('A','B'),('E','C'),('E','D'),('C','D'),
+                                  ('C','F'),('C','G'),('F','G')]}
 V = list(P)
 adj = lambda u, v: u == v or frozenset((u, v)) in edgesK
 # flag: all cliques
@@ -117,6 +120,17 @@ def apex(x, prefer=None):
     assert ok, f'no apex at {x}'
     if prefer in ok: return prefer
     return min(ok, key=lambda v: math.dist(P[v], x))
+# the apex condition on a dense grid over the shadow, and no universal apex
+xs = [P[v][0] for v in V]; ys = [P[v][1] for v in V]
+grid = [(x, y) for x in range(int(min(xs)), int(max(xs)) + 1, 2) for y in range(int(min(ys)), int(max(ys)) + 1, 2)]
+grid = [g for g in grid if any(in_hull(g, t) for t in tris)]
+for g in grid: apex(g)
+assert not [v for v in V if all(adj(v, w) for w in V)], 'K is a cone'
+only = {}
+for g in grid:
+    Vx = set().union(*st(g)); ok = tuple(sorted(v for v in V if all(adj(v, w) for w in Vx)))
+    if len(ok) == 1: only[ok[0]] = only.get(ok[0], 0) + 1
+print('apex condition holds at', len(grid), 'grid points; sole apex in places:', only)
 # sd SC
 SCedges = {frozenset(e) for t in SC for e in itertools.combinations(t, 2)}
 nodes = {}   # key -> (pos, apex)

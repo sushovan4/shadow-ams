@@ -312,7 +312,7 @@ The theorem: for a finite flag complex, the apex condition makes the shadow proj
 ## Proof of the apex theorem
 
 ```{=html}
-<script src="assets/apex-proof-data.js?v=202610021400"></script>
+<script src="assets/apex-proof-data.js?v=202610021500"></script>
 ```
 
 ::: {.fig-row}
@@ -342,7 +342,7 @@ The theorem: for a finite flag complex, the apex condition makes the shadow proj
 :::
 
 ::: {.notes}
-The proof, on a small example: two triangles of K, EAB and ECD, whose hulls cross. Their shadow is the shaded region.
+The proof, on a small example: three triangles of K, EAB, ECD and CFG, whose hulls cross. No vertex is adjacent to all the others, so K is not a cone. Where EAB and ECD overlap the only apex is E; where ECD and CFG overlap the only apex is C.
 
 [click] Cut the shadow along every hull boundary and triangulate the pieces: the shadow complex. The crossings become new vertices, and each simplex of it lies in a fixed set of hulls.
 
@@ -447,7 +447,7 @@ A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scal
 
 ```{=html}
 <div id="shadow-lab" data-prevent-swipe></div>
-<script src="assets/shadow-lab.js?v=202610021410"></script>
+<script src="assets/shadow-lab.js?v=202610021510"></script>
 ```
 
 ::: {.notes}
