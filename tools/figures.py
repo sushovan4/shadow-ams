@@ -236,8 +236,9 @@ def fig_shadow():
     tri = (0, 1, 2)
     segs = [(3, 4), (5, 6)]
     body = []
-    panels = [(40, "the complex 𝒦"), (300, "its shadow Sh(𝒦) ⊂ ℝᴺ"),
-              (560, "the shadow complex")]
+    panels = [(40, "the complex 𝒦"), (330, "its shadow Sh(𝒦) ⊂ ℝᴺ"),
+              (620, "the shadow complex")]
+    sub = ["three pieces · no loop", "one piece · one loop", "crossings become vertices"]
     cross = []
     for a, b in segs:
         for e in [(0, 1), (1, 2), (2, 0), (3, 4), (5, 6)]:
@@ -247,6 +248,9 @@ def fig_shadow():
             if X:
                 cross.append(X)
     cross = sorted({(round(x, 3), round(y, 3)) for x, y in cross})
+    body.append(f'<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" '
+                f'markerWidth="8" markerHeight="8" orient="auto-start-reverse">'
+                f'<path d="M 0 1 L 10 5 L 0 9 Z" fill="{SEPIA}"/></marker></defs>')
     for k, (dx, label) in enumerate(panels):
         g = [f'<g transform="translate({dx},18)">']
         P = V
@@ -276,14 +280,17 @@ def fig_shadow():
         for p in P:
             g.append(circle(p, 3.8, fill=INK))
         g.append(text((105, 190), label, 18, fill=SEPIA))
+        g.append(text((105, 212), sub[k], 13, caps=True, fill=OX if k == 1 else PENCIL,
+                      spacing=1.5))
         g.append("</g>")
         body += g
-    for x0 in (262, 522):
-        body.append(line((x0, 90), (x0 + 22, 90), stroke=SEPIA, stroke_width=1))
-        body.append(f'<path d="M {x0+16} 86 L {x0+23} 90 L {x0+16} 94" '
-                    f'fill="none" stroke="{SEPIA}" stroke-width="1"/>')
-    body.append(text((285, 80), "p", 18, fill=SEPIA))
-    write("shadow.svg", svg(780, 220, body, "A complex, its shadow, and the shadow complex"))
+    for x0, lab, caps in ((262, "p", False), (552, "subdivide", True)):
+        x1, y = x0 + 58, 132
+        body.append(f'<path d="M {x0} {y} Q {x0 + 29} {y - 16} {x1} {y}" fill="none" '
+                    f'stroke="{SEPIA}" stroke-width="1.6" marker-end="url(#ah)"/>')
+        body.append(text((x0 + 29, y - 16), lab, 14 if caps else 22, caps=caps,
+                         fill=SEPIA, spacing=1 if caps else None))
+    write("shadow.svg", svg(870, 236, body, "A complex, its shadow, and the shadow complex"))
 
 
 def loop_tail(spacing, noise, seed):

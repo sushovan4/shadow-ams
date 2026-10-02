@@ -152,10 +152,10 @@ Let $\mathcal K$ be a simplicial complex with vertices in $\mathbb R^N$. The *sh
 $$
 \mathrm{Sh}(\mathcal K)\;=\;p\big(|\mathcal K|\big)\;=\;\bigcup_{\sigma\in\mathcal K}\operatorname{Conv}(\sigma)\;\subset\;\mathbb R^N .
 $$
-For the Euclidean complex this is also written $SR(F;\beta)=\mathrm{Sh}(\mathcal R_\beta(F))$.
+For the Euclidean complex this is also written $\mathrm{SR}(F;\beta)=\mathrm{Sh}(\mathcal R_\beta(F))$.
 :::
 
-::: {.fig-wide style="width: 66%; margin: 0.4rem auto 0;"}
+::: {.fig-wide style="width: 72%; margin: 0.4rem auto 0;"}
 ![](assets/shadow.svg)
 :::
 
@@ -166,7 +166,7 @@ A polyhedron within the scale of the sample. Does it have the topology of the co
 ::: {.notes}
 (If this follows Kazuhiro's talk, he has just defined this, as SR of F and beta; I write Sh of the complex because we take shadows of complexes other than the Euclidean one.)
 
-The shadow: take a complex whose vertices happen to be points of R^N, send each vertex to itself and extend linearly. The image, the union of the convex hulls of the simplices, is a polyhedron in R^N within the scale of the sample. In the picture: a complex, its shadow, and a triangulation of the shadow whose new vertices are where images cross.
+The shadow: take a complex whose vertices happen to be points of R^N, send each vertex to itself and extend linearly. The image, the union of the convex hulls of the simplices, is a polyhedron in R^N within the scale of the sample. In the picture: a complex with three pieces and no loop; its shadow is one piece with a loop, cut out by the two segments and the side of the triangle. On the right, a triangulation of the shadow whose new vertices are where images cross.
 
 The question, which is Chambers, de Silva, Erickson and Ghrist's, is whether the shadow has the topology of the complex.
 :::

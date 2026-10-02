@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" role="img" aria-label="A complex, its shadow, and the shadow complex">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 236" role="img" aria-label="A complex, its shadow, and the shadow complex">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 Z" fill="#57473a"/></marker></defs>
 <g transform="translate(40,18)">
 <polygon points="0,154 140,154 70,14" fill="#6c1d1a" fill-opacity="0.1" stroke="#6c1d1a" stroke-width="1.2"/>
 <line x1="0" y1="84" x2="210" y2="49" stroke="#6c1d1a" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.8"/>
@@ -11,8 +12,9 @@
 <circle cx="175" cy="14" r="3.8" fill="#2b211a"/>
 <circle cx="84" cy="126" r="3.8" fill="#2b211a"/>
 <text x="105" y="190" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">the complex 𝒦</text>
+<text x="105" y="212" fill="#8c7d6a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="13" letter-spacing="1.5" text-anchor="middle">three pieces · no loop</text>
 </g>
-<g transform="translate(300,18)">
+<g transform="translate(330,18)">
 <polygon points="0,154 140,154 70,14" fill="#6c1d1a" fill-opacity="0.16" stroke="none"/>
 <line x1="0" y1="84" x2="210" y2="49" stroke="#6c1d1a" stroke-width="2.2" stroke-linecap="round" opacity="0.75"/>
 <line x1="175" y1="14" x2="84" y2="126" stroke="#6c1d1a" stroke-width="2.2" stroke-linecap="round" opacity="0.75"/>
@@ -24,8 +26,9 @@
 <circle cx="175" cy="14" r="3.8" fill="#2b211a"/>
 <circle cx="84" cy="126" r="3.8" fill="#2b211a"/>
 <text x="105" y="190" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">its shadow Sh(𝒦) ⊂ ℝᴺ</text>
+<text x="105" y="212" fill="#6c1d1a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="13" letter-spacing="1.5" text-anchor="middle">one piece · one loop</text>
 </g>
-<g transform="translate(560,18)">
+<g transform="translate(620,18)">
 <polygon points="0,154 140,154 70,14" fill="#6c1d1a" fill-opacity="0.1" stroke="#6c1d1a" stroke-width="1.0"/>
 <line x1="0" y1="84" x2="210" y2="49" stroke="#6c1d1a" stroke-width="1.0"/>
 <line x1="175" y1="14" x2="84" y2="126" stroke="#6c1d1a" stroke-width="1.0"/>
@@ -47,10 +50,10 @@
 <circle cx="175" cy="14" r="3.8" fill="#2b211a"/>
 <circle cx="84" cy="126" r="3.8" fill="#2b211a"/>
 <text x="105" y="190" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">the shadow complex</text>
+<text x="105" y="212" fill="#8c7d6a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="13" letter-spacing="1.5" text-anchor="middle">crossings become vertices</text>
 </g>
-<line x1="262" y1="90" x2="284" y2="90" stroke="#57473a" stroke-width="1"/>
-<path d="M 278 86 L 285 90 L 278 94" fill="none" stroke="#57473a" stroke-width="1"/>
-<line x1="522" y1="90" x2="544" y2="90" stroke="#57473a" stroke-width="1"/>
-<path d="M 538 86 L 545 90 L 538 94" fill="none" stroke="#57473a" stroke-width="1"/>
-<text x="285" y="80" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">p</text>
+<path d="M 262 132 Q 291 116 320 132" fill="none" stroke="#57473a" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="291" y="116" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="22" font-style="italic" text-anchor="middle">p</text>
+<path d="M 552 132 Q 581 116 610 132" fill="none" stroke="#57473a" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="581" y="116" fill="#57473a" font-family="Alegreya SC, EB Garamond, Georgia, serif" font-size="14" letter-spacing="1" text-anchor="middle">subdivide</text>
 </svg>
