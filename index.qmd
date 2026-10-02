@@ -15,6 +15,45 @@ footer: "Beyond a Shadow of a Doubt  ·  S. Majhi  ·  AMS Fall Eastern Sectiona
 ---
 
 
+## The question we start from {.opener}
+
+<!-- AMS Washington only: this slide picks up where Kazuhiro Kawamura's talk ends.
+     For another venue, hide it: change the heading attribute to {.opener visibility="hidden"}. -->
+
+::: {.opener-quote}
+When is
+$$
+\varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)\;\cong\;\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)
+$$
+for **one** dense finite sample $F$ and **one** small scale $\beta$?
+:::
+
+::: {.opener-attrib}
+Question (a), stabilization: K. Kawamura, the previous talk
+:::
+
+::: {.opener-answer .fragment}
+**This talk.** For an embedded graph $\mathcal G\subset\mathbb R^N$, with a path metric on the sample in place of the Euclidean one, in every $N$:
+
+- a sample **on** $\mathcal G$: one explicit scale suffices, as $\mathrm{Sh}\simeq\mathcal G$;
+- a sample **near** a polygonal $\mathcal G$: $\pi_q(\mathcal G)\hookrightarrow\pi_q(\mathrm{Sh})$, the injective half.
+:::
+
+::: {.aside-note .fragment}
+The Euclidean question stays open. It is where we end.
+:::
+
+::: {.notes}
+Kazuhiro ended with a question, and I will start with it. His theorem says the shadows recover the homotopy groups in the limit, over all samples and as the scale goes to zero. His question (a) is stabilization: when does one dense finite sample, at one small scale, already carry the limit?
+
+[click] This talk answers a version of it, and I want to be precise about the version. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not the Euclidean one but a path metric computed from its pairwise distances. In that setting, in every ambient dimension: for a sample lying on the graph, one explicit scale suffices; the shadow is homotopy equivalent to the graph. For a sample merely near a polygonal graph, we get the injective half.
+
+[click] For the Euclidean complex, his question stays open, and that is where I will end.
+
+(Since Kazuhiro has just defined the shadow and stated Chambers–de Silva–Erickson–Ghrist, the next three slides can go quickly, and the limit slide takes fifteen seconds.)
+:::
+
+
 # § I.  The Shadow and Its Obstruction {.section-divider}
 
 ::: {.plate data-plate="I"}

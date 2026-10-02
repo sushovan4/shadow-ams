@@ -2644,3 +2644,42 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
 .reveal .colophon .finis {
   text-shadow: 0.06em 0.08em 0 rgba(200, 184, 148, 0.85);
 }
+
+// ---------------------------------------------------------------------------
+// The opener: the previous speaker's question, set large.
+// ---------------------------------------------------------------------------
+.reveal .opener-quote {
+  max-width: 40em;
+  margin: 0.6rem auto 0.2rem;
+  padding: 0.6rem 1.6rem 0.5rem;
+  border-top: 3px double var(--ink);
+  border-bottom: 3px double var(--ink);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.02em;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--ink);
+}
+.reveal .opener-quote p { text-align: center; margin: 0.15em 0; }
+.reveal .opener-quote .katex-display { margin: 0.35em 0; }
+.reveal .opener-attrib {
+  text-align: center;
+  font-family: var(--smallcaps);
+  letter-spacing: 0.12em;
+  font-size: 0.6em;
+  color: var(--oxblood);
+  margin: 0.35rem auto 0.9rem;
+}
+.reveal .opener-answer {
+  max-width: 44em;
+  margin: 0 auto;
+  font-size: 0.74em;
+  line-height: 1.42;
+  padding: 0.45rem 1.2rem;
+  border-left: 3px solid var(--oxblood);
+  background: var(--paper-soft);
+}
+.reveal .opener-answer p { text-align: left; margin: 0.15em 0; }
+.reveal .opener-answer ul { margin: 0.2em 0 0.1em 1.2em; }
+.reveal .opener-answer li { margin: 0.1em 0; font-size: 1em; }
