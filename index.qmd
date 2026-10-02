@@ -304,10 +304,6 @@ If a finite flag complex $\mathcal K$ with $\mathcal K^{(0)}\subset\mathbb R^N$ 
 ::: {.sketch .fragment}
 Send the barycenter $b_\tau$ of each shadow simplex to an apex $a_\tau$ of it. Along a chain $\tau_0\prec\cdots\prec\tau_m$ the apices are pairwise adjacent: the simplex $\sigma_{\tau_j}\cup\{a_{\tau_j}\}$ covers $b_{\tau_i}$, so $a_{\tau_i}$ sees $a_{\tau_j}$. By flagness they span a simplex: a simplicial map $A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K$. Both composites with $p$ stay in single simplices or single convex hulls, so straight lines give the homotopies.
 :::
-
-::: {.rmk .fragment data-name="The word"}
-"Apex" is Adamaszek–Frick–Vakili's, for a triangle and a segment in $\mathbb R^3$. Here one vertex serves *all* the simplices through $x$, and the conclusion is a homotopy equivalence.
-:::
 :::
 :::
 
@@ -318,7 +314,7 @@ The theorem: for a finite flag complex, the apex condition makes the shadow proj
 
 The proof is short. Triangulate the shadow compatibly with the hulls, subdivide once, and send each barycenter to an apex of it. Along a chain of faces the apices are pairwise adjacent, because the simplex coning off a bigger face also covers the smaller barycenter; a flag complex turns pairwise adjacency into a simplex, so the map is simplicial. Both composites move each point only inside one simplex of K, or one convex hull in the shadow, and straight lines finish it.
 
-The word apex is from Adamaszek, Frick and Vakili, who find an apex among the five vertices of a triangle and a segment of the Euclidean complex in R^3, and deduce pi_1-surjectivity there. That fails in R^4. We ask for more, one apex for everything through the point, and get more.
+(If asked: Adamaszek, Frick and Vakili find one vertex adjacent to the other four among the five vertices of a triangle and a segment of the Euclidean complex in R^3, and deduce pi_1-surjectivity there. That fails in R^4. We ask for more, one apex for everything through the point, and get more.)
 :::
 
 
