@@ -385,9 +385,11 @@
   // ------------------------------------------------------------------------
   function buildPinch(root) {
     var C = [300, 178], R = 150;
-    var OCT = { 1: [0, -1.05], 4: [0, 1.05], 2: [0.95, -0.12], 3: [0.42, 0.26],
-                5: [-0.95, 0.12], 6: [-0.42, -0.26] };
-    var HIDDEN = { '4-6': 1, '5-6': 1, '2-6': 1 };
+    // an orthographic view chosen so that each centroid sits well inside its face,
+    // clear of every edge; vertex 3 is at the back
+    var OCT = { 1: [0, -1.033], 4: [0, 1.033], 2: [1.049, 0.033], 3: [0.147, -0.236],
+                5: [-1.049, -0.033], 6: [-0.147, 0.236] };
+    var HIDDEN = { '1-3': 1, '2-3': 1, '3-4': 1, '3-5': 1 };
     var P = {};
     for (var k = 1; k <= 6; k++) P[k] = [C[0] + R * OCT[k][0], C[1] + R * OCT[k][1]];
     var cen = function (a, b, c) {
@@ -398,9 +400,9 @@
     var svg = el('svg', { viewBox: '0 0 640 396', class: 'collapse-figure', role: 'img',
                           'aria-label': 'Two polar triangles in R^4 whose centroids are glued in the shadow' }, root);
     el('polygon', { points: [1, 3, 5].map(function (i) { return P[i].join(','); }).join(' '),
-                    fill: OX, 'fill-opacity': 0.18, stroke: 'none' }, svg);
+                    fill: OX, 'fill-opacity': 0.13, stroke: 'none' }, svg);
     el('polygon', { points: [2, 4, 6].map(function (i) { return P[i].join(','); }).join(' '),
-                    fill: OX, 'fill-opacity': 0.09, stroke: 'none' }, svg);
+                    fill: OX, 'fill-opacity': 0.13, stroke: 'none' }, svg);
     for (var i = 1; i <= 6; i++) for (var j = i + 1; j <= 6; j++) {
       if (Math.abs(i - j) === 3) continue;
       el('line', { x1: P[i][0], y1: P[i][1], x2: P[j][0], y2: P[j][1], stroke: INK,
@@ -439,12 +441,12 @@
       path.setAttribute('stroke-dashoffset', len * (1 - u));
     }
 
-    [[c135, 'c₁₃₅', 10, -10], [c246, 'c₂₄₆', 14, 22]].forEach(function (c) {
+    [[c135, 'c<tspan baseline-shift="sub" font-size="12" font-style="normal" font-family="KaTeX_Main, Georgia, serif">135</tspan>', -8, 26], [c246, 'c<tspan baseline-shift="sub" font-size="12" font-style="normal" font-family="KaTeX_Main, Georgia, serif">246</tspan>', 0, 25]].forEach(function (c) {
       el('circle', { cx: c[0][0], cy: c[0][1], r: 5, fill: PAPER, stroke: OX, 'stroke-width': 2 }, svg);
-      var tt = el('text', { x: c[0][0] + c[2], y: c[0][1] + c[3], 'text-anchor': c[2] < 0 ? 'end' : 'start',
+      var tt = el('text', { x: c[0][0] + c[2], y: c[0][1] + c[3], 'text-anchor': 'middle',
                             fill: OX, 'font-family': 'EB Garamond, Georgia, serif', 'font-style': 'italic',
                             'font-size': 17 }, svg);
-      tt.textContent = c[1];
+      tt.innerHTML = c[1];
     });
     var cap = el('text', { x: 320, y: 388, 'text-anchor': 'middle', 'font-family': 'EB Garamond, Georgia, serif',
                            'font-style': 'italic', 'font-size': 20, fill: SEPIA }, svg);
@@ -457,9 +459,9 @@
       if (state.glue > 0) setDraw(glue, state.glue);
       setDraw(loop, state.loop);
       loop.setAttribute('opacity', state.loop > 0 ? 1 : 0);
-      cap.textContent = state.loop > 0.98
-        ? 'a loop of Sh that no loop of ℛ maps onto: π₁(Sh) ≅ ℤ, π₁(ℛ) = 0'
-        : state.glue > 0.98 ? 'in ℝ⁴ the centroids c₁₃₅ and c₂₄₆ have the same image'
+      cap.innerHTML = state.loop > 0.98
+        ? 'a loop of Sh that no loop of ℛ maps onto: π<tspan baseline-shift="sub" font-size="15" font-style="normal" font-family="KaTeX_Main, Georgia, serif">1</tspan>(Sh) ≅ ℤ, π<tspan baseline-shift="sub" font-size="15" font-style="normal" font-family="KaTeX_Main, Georgia, serif">1</tspan>(ℛ) = 0'
+        : state.glue > 0.98 ? 'in ℝ⁴ the centroids c<tspan baseline-shift="sub" font-size="15" font-style="normal" font-family="KaTeX_Main, Georgia, serif">135</tspan> and c<tspan baseline-shift="sub" font-size="15" font-style="normal" font-family="KaTeX_Main, Georgia, serif">246</tspan> have the same image'
         : 'ℛ: two polar triangles 135 and 246 in ℝ⁴, an octahedron ≃ S²';
     }
     function animateTo(target) {
