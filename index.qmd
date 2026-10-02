@@ -144,9 +144,11 @@ The picture is their planar example, and it moves. Six points on a regular hexag
 
 ## What the shadow can lose
 
-::: {.fig-wide style="width: 62%; margin: -0.4rem auto 0;"}
-![](assets/losses.svg)
-:::
+```{=html}
+<div id="shadow-pinch"></div>
+<span class="fragment collapse-step" data-pinch="1"></span>
+<span class="fragment collapse-step" data-pinch="2"></span>
+```
 
 ::: {.methods .scorecard .fragment}
 | $p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)$ | onto $\pi_1$ | into on $\pi_1$ | into on $\pi_{k\ge2}$ |
@@ -163,11 +165,9 @@ The picture is their planar example, and it moves. Six points on a regular hexag
 :::
 
 ::: {.notes}
-Two pictures of what goes wrong, and a scorecard.
+The plane we just saw: a sphere crushed, so higher homotopy is lost. Here is the other way it fails, in four dimensions, also from Chambers et al.
 
-On the left, the plane: the hexagon we just saw. The complex is a 2-sphere; the shadow crushes it onto a disk. A sphere that was there is gone: the projection is not injective on pi_2.
-
-On the right, four dimensions, the other example of Chambers et al.: two triangles in polar position, arranged so their centroids land on the same point. The complex is still a 2-sphere, but in the shadow those two points are glued, and a sphere with two points glued is a pinched torus, a sphere with a circle attached. A loop appears in the shadow that comes from no loop of the complex: the projection is not onto pi_1.
+The complex is again the octahedral sphere: two triangles, 135 and 246, in polar position. [click] In R^4 they can be placed so that their centroids have the same image: in the shadow those two points are one point. [click] Now walk from the centroid of 135 to vertex 1, along the edge to vertex 2, and into the centroid of 246. In the complex that path is not closed; in the shadow it is, through the glued point. It is a loop in the shadow that no loop of the complex maps onto: the shadow is a sphere with two points identified, a sphere with a circle attached, and its fundamental group is Z while the complex's is trivial.
 
 [click] The scorecard for the Euclidean complex: in the plane, onto and into on pi_1, but higher homotopy is lost. In R^3, onto by Adamaszek, Frick and Vakili; into is their conjecture. From R^4 on, not even onto. [click] And the last two rows are what this talk proves, in every dimension, for the path metric: everything for a sample on a polygonal graph, and the injective column for a sample near it.
 :::

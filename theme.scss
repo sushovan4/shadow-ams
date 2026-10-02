@@ -2693,3 +2693,4 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
 .reveal .scorecard td, .reveal .scorecard th { padding: 0.12em 0.8em !important; }
 .reveal .scorecard tr:nth-last-child(2) td { border-top: 1.5px solid var(--oxblood) !important; }
 .reveal .scorecard tbody tr:nth-last-child(-n+2) td { background: var(--paper-soft); font-weight: 600; }
+.reveal #shadow-pinch { max-width: 620px; margin: -0.7rem auto 0; }
