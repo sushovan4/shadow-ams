@@ -11,6 +11,7 @@ format:
 resources:
   - assets/title-plate.svg
   - assets/shadow-lab.js
+  - assets/*.svg
 footer: "Beyond a Shadow of a Doubt  ·  S. Majhi  ·  AMS Fall Eastern Sectional · Washington, D.C.  ·  October 2026"
 ---
 
@@ -124,7 +125,7 @@ Section one: what the shadow is, and the theorem that says it usually fails.
 A sample $\mathcal S\subset\mathbb R^N$ lies near an unknown graph $\mathcal G\subset\mathbb R^N$. Its Vietoris–Rips complex recovers *what* $\mathcal G$ is: it is abstract, so it cannot say *where* $\mathcal G$ is.
 :::
 
-![](assets/where.svg){.where-fig}
+![](assets/where.svg?v=202610021100){.where-fig}
 
 ::: {.definition data-num="1" data-name="Geometric reconstruction"}
 A subset of $\mathbb R^N$, built from the sample, that is **homotopy equivalent** to $\mathcal G$ and lies within a fixed multiple of the scale from $\mathcal G$ in the Hausdorff distance.
@@ -155,7 +156,7 @@ $$
 :::
 
 ::: {.fig-wide style="width: 72%; margin: 0.4rem auto 0;"}
-![](assets/shadow.svg)
+![](assets/shadow.svg?v=202610021100)
 :::
 
 ::: {.aside-note .fragment}
@@ -328,7 +329,7 @@ For the octahedral Rips complex of the hexagon, $|\mathcal K|\simeq S^2$ and $\m
 :::
 
 ::: {.fig-wide style="width: 64%; margin: 0.3rem auto 0;"}
-![](assets/hexagon.svg)
+![](assets/hexagon.svg?v=202610021100)
 :::
 
 ::: {.aside-note .fragment}
@@ -394,7 +395,7 @@ $$
 :::
 
 ::: {.fig-wide .fragment style="width: 62%;"}
-![](assets/hairpin.svg)
+![](assets/hairpin.svg?v=202610021100)
 :::
 
 ::: {.notes}
