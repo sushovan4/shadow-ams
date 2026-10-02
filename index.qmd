@@ -89,7 +89,7 @@ Theorem: Kawamura–Majhi–Mitra · Question (a), stabilization: K. Kawamura, t
 :::
 
 ::: {.opener-answer .fragment data-fragment-index="2"}
-**This talk: the shadow.** Embedded graph $\mathcal G\subset\mathbb R^N$, path metric on the sample, every $N$. For polygonal $\mathcal G$, a sample **on** it: one explicit scale suffices, $\mathrm{Sh}\simeq\mathcal G$. A sample **near** it: $\pi_q(\mathcal G)\hookrightarrow\pi_q(\mathrm{Sh})$.
+**This talk: the shadow of $\mathcal R^\varepsilon_\beta(\mathcal S)$.** Embedded graph $\mathcal G\subset\mathbb R^N$, path metric on the sample, every $N$. For polygonal $\mathcal G$, a sample **on** it: one explicit scale suffices, $\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))\simeq\mathcal G$. A sample **near** it: $\pi_q(\mathcal G)\hookrightarrow\pi_q\big(\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))\big)$.
 :::
 
 ::: {.aside-note .fragment data-fragment-index="3"}
