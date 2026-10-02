@@ -257,7 +257,7 @@ A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scal
 
 ```{=html}
 <div id="shadow-lab" data-prevent-swipe></div>
-<script src="assets/shadow-lab.js"></script>
+<script src="assets/shadow-lab.js?v=202610012219"></script>
 ```
 
 ::: {.notes}

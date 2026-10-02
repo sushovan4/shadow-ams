@@ -99,7 +99,7 @@
 
   // Title-block plates: Pl. I is the sampled graph and its shadow; Pl. III
   // is the arXiv QR (a placeholder until the preprint is posted).
-  var LEFT_PLATE_SVG  = '<img src="assets/title-plate.svg" alt="">';
+  var LEFT_PLATE_SVG  = '<img src="assets/title-plate.svg?v=202610012219" alt="">';
   var RIGHT_PLATE_SVG = JACT_QR_SVG;
 
   // Wax seal—initials inside a serif circle. Customize the textPaths
