@@ -286,6 +286,94 @@ def fig_shadow():
     write("shadow.svg", svg(780, 220, body, "A complex, its shadow, and the shadow complex"))
 
 
+def loop_tail(spacing, noise, seed):
+    """A loop with a tail: an ellipse and a curved arm leaving it on the right."""
+    rng = random.Random(seed)
+    cx, cy, rx, ry = 78, 78, 56, 50
+    n = int(2 * math.pi * 53 / spacing)
+    pts = [(cx + rx * math.cos(2 * math.pi * i / n),
+            cy + ry * math.sin(2 * math.pi * i / n)) for i in range(n)]
+    pts = [(x + rng.uniform(-noise, noise), y + rng.uniform(-noise, noise))
+           for x, y in pts]
+    a, c, e = (cx + rx, cy), (186, 70), (206, 150)
+    pts += sample_curve(a, c, e, spacing, noise, rng, skip_start=True)
+    d = (f"M {f(cx - rx)} {f(cy)} A {f(rx)} {f(ry)} 0 1 0 {f(cx + rx)} {f(cy)} "
+         f"A {f(rx)} {f(ry)} 0 1 0 {f(cx - rx)} {f(cy)} "
+         f"M {f(a[0])} {f(a[1])} Q {f(c[0])} {f(c[1])} {f(e[0])} {f(e[1])}")
+    return pts, d
+
+
+def spring_layout(n, edges, seed, steps=600):
+    """Fruchterman--Reingold from random positions: the complex, placed nowhere."""
+    rng = random.Random(seed)
+    P = [[rng.uniform(0, 1), rng.uniform(0, 1)] for _ in range(n)]
+    k = 1 / math.sqrt(n)
+    for it in range(steps):
+        t = 0.1 * (1 - it / steps) + 0.002
+        F = [[0.0, 0.0] for _ in range(n)]
+        for i in range(n):
+            for j in range(i + 1, n):
+                dx, dy = P[i][0] - P[j][0], P[i][1] - P[j][1]
+                d = math.hypot(dx, dy) or 1e-6
+                r = k * k / d
+                F[i][0] += dx / d * r; F[i][1] += dy / d * r
+                F[j][0] -= dx / d * r; F[j][1] -= dy / d * r
+        for i, j in edges:
+            dx, dy = P[i][0] - P[j][0], P[i][1] - P[j][1]
+            d = math.hypot(dx, dy) or 1e-6
+            a = d * d / k
+            F[i][0] -= dx / d * a; F[i][1] -= dy / d * a
+            F[j][0] += dx / d * a; F[j][1] += dy / d * a
+        for i in range(n):
+            m = math.hypot(*F[i]) or 1e-6
+            P[i][0] += F[i][0] / m * min(m, t)
+            P[i][1] += F[i][1] / m * min(m, t)
+    return P
+
+
+def fit_box(P, x0, y0, w, h):
+    xs, ys = [p[0] for p in P], [p[1] for p in P]
+    s = min(w / (max(xs) - min(xs)), h / (max(ys) - min(ys)))
+    ox = x0 + (w - s * (max(xs) - min(xs))) / 2
+    oy = y0 + (h - s * (max(ys) - min(ys))) / 2
+    return [(ox + s * (x - min(xs)), oy + s * (y - min(ys))) for x, y in P]
+
+
+def fig_where():
+    """What versus where: a sample near G, its abstract Rips complex, a subset of R^N."""
+    pts, d = loop_tail(spacing=10.5, noise=2.6, seed=7)
+    beta = 23
+    edges, tris = rips(euclid_metric(pts), beta)
+    body = []
+    panels = [(20, "a sample 𝒮 near 𝒢 ⊂ ℝᴺ"),
+              (280, "ℛ<tspan font-size=\"12\" baseline-shift=\"sub\">β</tspan>(𝒮): <tspan fill=\"%s\">what</tspan> 𝒢 is" % OX),
+              (540, "a subset of ℝᴺ: <tspan fill=\"%s\">where</tspan> 𝒢 is" % OX)]
+    for k, (dx, label) in enumerate(panels):
+        g = [f'<g transform="translate({dx},14)">']
+        if k == 0:
+            g.append(f'<path d="{d}" fill="none" stroke="{PENCIL}" stroke-width="1.1" '
+                     f'stroke-dasharray="4 3"/>')
+            g += [circle(p, 2.6, fill=INK) for p in pts]
+        elif k == 1:
+            g.append(f'<rect x="4" y="-4" width="212" height="172" rx="6" fill="none" '
+                     f'stroke="{RULE}" stroke-width="0.8" stroke-dasharray="3 4"/>')
+            Q = fit_box(spring_layout(len(pts), edges, seed=3), 22, 8, 176, 150)
+            g += complex_layers(Q, edges, tris, fill_opacity=0.14, edge_w=0.9,
+                                edge_opacity=0.6, pt_r=2.4)
+        else:
+            g.append(f'<g opacity="0.16" fill="{OX}">')
+            g += [circle(p, 0.62 * beta) for p in pts]
+            g.append("</g>")
+            g.append(f'<path d="{d}" fill="none" stroke="{PENCIL}" stroke-width="1.1" '
+                     f'stroke-dasharray="4 3"/>')
+            g += [circle(p, 2.2, fill=INK) for p in pts]
+        g.append(text((110, 196), label, 17, fill=SEPIA))
+        g.append("</g>")
+        body += g
+    write("where.svg", svg(780, 222, body,
+                           "A sample near a graph, its abstract Rips complex, and a subset of R^N"))
+
+
 def octa_hexagon(scale=1.0, dx=0, dy=0, labels=True, captions=True):
     """Chambers--de Silva--Erickson--Ghrist: R is an octahedron (S^2), Sh(R) a hexagon."""
     def T(p):
@@ -584,6 +672,7 @@ def plate_iii():
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     fig_shadow()
+    fig_where()
     fig_hexagon()
     fig_hairpin()
     fig_vertex_apex()
