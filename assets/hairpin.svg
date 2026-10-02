@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-label="Euclidean and path-metric Rips complexes of a thin-loop sample">
-<g transform="translate(150,34)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img" aria-label="Euclidean and path-metric Rips complexes of a thin-loop sample">
+<g transform="translate(140,14) scale(1.45)">
 <path d="M 0 22 L 0 150 A 22 22 0 0 0 44 150 L 44 22 A 22 22 0 0 0 0 22 Z" fill="none" stroke="#57473a" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
 <g opacity="0.16" fill="#6c1d1a" stroke="none">
 <polygon points="-0.6,20.9 0.5,32.2 13.3,1.8"/>
@@ -503,7 +503,7 @@
 <polygon points="24.9,0.4 5.3,10.5 0,20.2"/>
 <polygon points="13.3,1.8 5.3,10.5 0,20.2"/>
 </g>
-<g stroke="#6c1d1a" stroke-width="0.7" opacity="0.55" stroke-linecap="round">
+<g stroke="#6c1d1a" stroke-width="0.6" opacity="0.55" stroke-linecap="round">
 <line x1="-0.6" y1="20.9" x2="0.5" y2="32.2"/>
 <line x1="-0.6" y1="20.9" x2="0.1" y2="44.7"/>
 <line x1="-0.6" y1="20.9" x2="-1.4" y2="56.8"/>
@@ -712,45 +712,45 @@
 <line x1="5.3" y1="10.5" x2="0" y2="20.2"/>
 </g>
 <g fill="#2b211a" stroke="none">
-<circle cx="-0.6" cy="20.9" r="2.2"/>
-<circle cx="0.5" cy="32.2" r="2.2"/>
-<circle cx="0.1" cy="44.7" r="2.2"/>
-<circle cx="-1.4" cy="56.8" r="2.2"/>
-<circle cx="-1.5" cy="68.1" r="2.2"/>
-<circle cx="-1.4" cy="78.6" r="2.2"/>
-<circle cx="-0.2" cy="92.5" r="2.2"/>
-<circle cx="-1.2" cy="102.2" r="2.2"/>
-<circle cx="0.4" cy="116.1" r="2.2"/>
-<circle cx="0.2" cy="125.9" r="2.2"/>
-<circle cx="1.5" cy="136.3" r="2.2"/>
-<circle cx="1.1" cy="148.7" r="2.2"/>
-<circle cx="1.3" cy="158.8" r="2.2"/>
-<circle cx="9.4" cy="169.5" r="2.2"/>
-<circle cx="19.8" cy="172.2" r="2.2"/>
-<circle cx="32.4" cy="169.2" r="2.2"/>
-<circle cx="40.6" cy="160.6" r="2.2"/>
-<circle cx="42.6" cy="150.2" r="2.2"/>
-<circle cx="44.6" cy="139.5" r="2.2"/>
-<circle cx="43.4" cy="128.4" r="2.2"/>
-<circle cx="43.9" cy="115.9" r="2.2"/>
-<circle cx="44.9" cy="105.6" r="2.2"/>
-<circle cx="43.2" cy="93.6" r="2.2"/>
-<circle cx="44.1" cy="83" r="2.2"/>
-<circle cx="44.7" cy="69.6" r="2.2"/>
-<circle cx="45.5" cy="57.4" r="2.2"/>
-<circle cx="43.7" cy="47.9" r="2.2"/>
-<circle cx="42.9" cy="35.5" r="2.2"/>
-<circle cx="42.5" cy="24.5" r="2.2"/>
-<circle cx="42.9" cy="13.3" r="2.2"/>
-<circle cx="36.1" cy="3.6" r="2.2"/>
-<circle cx="24.9" cy="0.4" r="2.2"/>
-<circle cx="13.3" cy="1.8" r="2.2"/>
-<circle cx="5.3" cy="10.5" r="2.2"/>
-<circle cx="0" cy="20.2" r="2.2"/>
+<circle cx="-0.6" cy="20.9" r="1.8"/>
+<circle cx="0.5" cy="32.2" r="1.8"/>
+<circle cx="0.1" cy="44.7" r="1.8"/>
+<circle cx="-1.4" cy="56.8" r="1.8"/>
+<circle cx="-1.5" cy="68.1" r="1.8"/>
+<circle cx="-1.4" cy="78.6" r="1.8"/>
+<circle cx="-0.2" cy="92.5" r="1.8"/>
+<circle cx="-1.2" cy="102.2" r="1.8"/>
+<circle cx="0.4" cy="116.1" r="1.8"/>
+<circle cx="0.2" cy="125.9" r="1.8"/>
+<circle cx="1.5" cy="136.3" r="1.8"/>
+<circle cx="1.1" cy="148.7" r="1.8"/>
+<circle cx="1.3" cy="158.8" r="1.8"/>
+<circle cx="9.4" cy="169.5" r="1.8"/>
+<circle cx="19.8" cy="172.2" r="1.8"/>
+<circle cx="32.4" cy="169.2" r="1.8"/>
+<circle cx="40.6" cy="160.6" r="1.8"/>
+<circle cx="42.6" cy="150.2" r="1.8"/>
+<circle cx="44.6" cy="139.5" r="1.8"/>
+<circle cx="43.4" cy="128.4" r="1.8"/>
+<circle cx="43.9" cy="115.9" r="1.8"/>
+<circle cx="44.9" cy="105.6" r="1.8"/>
+<circle cx="43.2" cy="93.6" r="1.8"/>
+<circle cx="44.1" cy="83" r="1.8"/>
+<circle cx="44.7" cy="69.6" r="1.8"/>
+<circle cx="45.5" cy="57.4" r="1.8"/>
+<circle cx="43.7" cy="47.9" r="1.8"/>
+<circle cx="42.9" cy="35.5" r="1.8"/>
+<circle cx="42.5" cy="24.5" r="1.8"/>
+<circle cx="42.9" cy="13.3" r="1.8"/>
+<circle cx="36.1" cy="3.6" r="1.8"/>
+<circle cx="24.9" cy="0.4" r="1.8"/>
+<circle cx="13.3" cy="1.8" r="1.8"/>
+<circle cx="5.3" cy="10.5" r="1.8"/>
+<circle cx="0" cy="20.2" r="1.8"/>
 </g>
 </g>
-<text x="172" y="262" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">Euclidean Vietoris–Rips</text>
-<g transform="translate(490,34)">
+<text x="172" y="300" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">Euclidean Vietoris–Rips</text>
+<g transform="translate(480,14) scale(1.45)">
 <path d="M 0 22 L 0 150 A 22 22 0 0 0 44 150 L 44 22 A 22 22 0 0 0 0 22 Z" fill="none" stroke="#57473a" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
 <g opacity="0.16" fill="#6c1d1a" stroke="none">
 <polygon points="-0.6,20.9 0.5,32.2 13.3,1.8"/>
@@ -984,7 +984,7 @@
 <polygon points="24.9,0.4 5.3,10.5 0,20.2"/>
 <polygon points="13.3,1.8 5.3,10.5 0,20.2"/>
 </g>
-<g stroke="#6c1d1a" stroke-width="0.7" opacity="0.55" stroke-linecap="round">
+<g stroke="#6c1d1a" stroke-width="0.6" opacity="0.55" stroke-linecap="round">
 <line x1="-0.6" y1="20.9" x2="0.5" y2="32.2"/>
 <line x1="-0.6" y1="20.9" x2="0.1" y2="44.7"/>
 <line x1="-0.6" y1="20.9" x2="-1.4" y2="56.8"/>
@@ -1132,44 +1132,44 @@
 <line x1="5.3" y1="10.5" x2="0" y2="20.2"/>
 </g>
 <g fill="#2b211a" stroke="none">
-<circle cx="-0.6" cy="20.9" r="2.2"/>
-<circle cx="0.5" cy="32.2" r="2.2"/>
-<circle cx="0.1" cy="44.7" r="2.2"/>
-<circle cx="-1.4" cy="56.8" r="2.2"/>
-<circle cx="-1.5" cy="68.1" r="2.2"/>
-<circle cx="-1.4" cy="78.6" r="2.2"/>
-<circle cx="-0.2" cy="92.5" r="2.2"/>
-<circle cx="-1.2" cy="102.2" r="2.2"/>
-<circle cx="0.4" cy="116.1" r="2.2"/>
-<circle cx="0.2" cy="125.9" r="2.2"/>
-<circle cx="1.5" cy="136.3" r="2.2"/>
-<circle cx="1.1" cy="148.7" r="2.2"/>
-<circle cx="1.3" cy="158.8" r="2.2"/>
-<circle cx="9.4" cy="169.5" r="2.2"/>
-<circle cx="19.8" cy="172.2" r="2.2"/>
-<circle cx="32.4" cy="169.2" r="2.2"/>
-<circle cx="40.6" cy="160.6" r="2.2"/>
-<circle cx="42.6" cy="150.2" r="2.2"/>
-<circle cx="44.6" cy="139.5" r="2.2"/>
-<circle cx="43.4" cy="128.4" r="2.2"/>
-<circle cx="43.9" cy="115.9" r="2.2"/>
-<circle cx="44.9" cy="105.6" r="2.2"/>
-<circle cx="43.2" cy="93.6" r="2.2"/>
-<circle cx="44.1" cy="83" r="2.2"/>
-<circle cx="44.7" cy="69.6" r="2.2"/>
-<circle cx="45.5" cy="57.4" r="2.2"/>
-<circle cx="43.7" cy="47.9" r="2.2"/>
-<circle cx="42.9" cy="35.5" r="2.2"/>
-<circle cx="42.5" cy="24.5" r="2.2"/>
-<circle cx="42.9" cy="13.3" r="2.2"/>
-<circle cx="36.1" cy="3.6" r="2.2"/>
-<circle cx="24.9" cy="0.4" r="2.2"/>
-<circle cx="13.3" cy="1.8" r="2.2"/>
-<circle cx="5.3" cy="10.5" r="2.2"/>
-<circle cx="0" cy="20.2" r="2.2"/>
+<circle cx="-0.6" cy="20.9" r="1.8"/>
+<circle cx="0.5" cy="32.2" r="1.8"/>
+<circle cx="0.1" cy="44.7" r="1.8"/>
+<circle cx="-1.4" cy="56.8" r="1.8"/>
+<circle cx="-1.5" cy="68.1" r="1.8"/>
+<circle cx="-1.4" cy="78.6" r="1.8"/>
+<circle cx="-0.2" cy="92.5" r="1.8"/>
+<circle cx="-1.2" cy="102.2" r="1.8"/>
+<circle cx="0.4" cy="116.1" r="1.8"/>
+<circle cx="0.2" cy="125.9" r="1.8"/>
+<circle cx="1.5" cy="136.3" r="1.8"/>
+<circle cx="1.1" cy="148.7" r="1.8"/>
+<circle cx="1.3" cy="158.8" r="1.8"/>
+<circle cx="9.4" cy="169.5" r="1.8"/>
+<circle cx="19.8" cy="172.2" r="1.8"/>
+<circle cx="32.4" cy="169.2" r="1.8"/>
+<circle cx="40.6" cy="160.6" r="1.8"/>
+<circle cx="42.6" cy="150.2" r="1.8"/>
+<circle cx="44.6" cy="139.5" r="1.8"/>
+<circle cx="43.4" cy="128.4" r="1.8"/>
+<circle cx="43.9" cy="115.9" r="1.8"/>
+<circle cx="44.9" cy="105.6" r="1.8"/>
+<circle cx="43.2" cy="93.6" r="1.8"/>
+<circle cx="44.1" cy="83" r="1.8"/>
+<circle cx="44.7" cy="69.6" r="1.8"/>
+<circle cx="45.5" cy="57.4" r="1.8"/>
+<circle cx="43.7" cy="47.9" r="1.8"/>
+<circle cx="42.9" cy="35.5" r="1.8"/>
+<circle cx="42.5" cy="24.5" r="1.8"/>
+<circle cx="42.9" cy="13.3" r="1.8"/>
+<circle cx="36.1" cy="3.6" r="1.8"/>
+<circle cx="24.9" cy="0.4" r="1.8"/>
+<circle cx="13.3" cy="1.8" r="1.8"/>
+<circle cx="5.3" cy="10.5" r="1.8"/>
+<circle cx="0" cy="20.2" r="1.8"/>
 </g>
 </g>
-<text x="512" y="262" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">ε-path Vietoris–Rips</text>
-<text x="172" y="290" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">fills the gap: a disk, the loop is lost</text>
-<text x="512" y="290" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">respects the gap: the loop survives</text>
+<text x="512" y="300" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">ε-path Vietoris–Rips</text>
+<text x="172" y="328" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="19" font-style="italic" text-anchor="middle">fills the gap: a disk, the loop is lost</text>
+<text x="512" y="328" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="19" font-style="italic" text-anchor="middle">respects the gap: the loop survives</text>
 </svg>
