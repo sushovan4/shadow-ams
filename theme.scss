@@ -2766,3 +2766,16 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
 
 // A collaborator's name to highlight (future work)
 .reveal .name-hl { color: var(--oxblood); font-weight: 700; }
+
+// Large displays: Reveal scales the slide, not the chrome around it, so the running
+// footer, the page number and the menu button grow with the window instead.
+@media (min-width: 1800px) {
+  .reveal .footer, .reveal aside.footer { font-size: 0.95rem !important; }
+  .reveal .slide-number, .reveal .slide-number a { font-size: 1.05rem !important; }
+  .reveal .slide-menu-button { transform: scale(1.5); transform-origin: bottom left; }
+}
+@media (min-width: 2400px) {
+  .reveal .footer, .reveal aside.footer { font-size: 1.3rem !important; }
+  .reveal .slide-number, .reveal .slide-number a { font-size: 1.45rem !important; }
+  .reveal .slide-menu-button { transform: scale(2); transform-origin: bottom left; }
+}
