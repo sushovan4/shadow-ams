@@ -2763,3 +2763,6 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
   color: var(--oxblood);
 }
 .reveal .via strong { font-weight: 600; }
+
+// A collaborator's name to highlight (future work)
+.reveal .name-hl { color: var(--oxblood); font-weight: 700; }
