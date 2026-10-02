@@ -552,8 +552,8 @@ def y_plate(noise, seed):
 
 def plate_iv():
     write("section-iv-plate.svg", plate(
-        "A SAMPLE ON THE GRAPH",
-        "— the shadow has the homotopy type of the graph —",
+        "THE SHADOW OF A GRAPH SAMPLE",
+        "— on the graph, and near it —",
         "— A SAMPLE ON 𝒢, ITS SHADOW —", y_plate(0.0, 9), "Section IV plate"))
 
 
