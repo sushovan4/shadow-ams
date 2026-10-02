@@ -21,6 +21,16 @@ quarto publish gh-pages               # deploy to GitHub Pages
 Every figure showing a sample, a Vietoris–Rips complex or a shadow is computed
 by `tools/figures.py` from actual sampled points under the stated metric.
 
+## Caching
+
+smajhi.com sits behind Cloudflare, which caches scripts and images for up to
+four hours. After changing `assets/shadow-lab.js` or `assets/title-plate.svg`,
+bump the `?v=` stamp on its URL (in `index.qmd` and `assets/inject-landmark.js`
+respectively) before `quarto publish`, or the old file keeps being served.
+
+To present offline, run `quarto render index.qmd` and open `index.html`; the
+live slides run without a network connection.
+
 ## Math environments
 
 The deck states results in amsthm-style boxes defined in `theme.scss`:
