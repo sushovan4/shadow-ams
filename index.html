@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c346a46285608ced8fad1d84de0aea3b.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-79abdc154fceb51504dd4a6a122c0d03.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -161,30 +161,68 @@ Sushovan Majhi
 <!-- AMS Washington only: this slide picks up where Kazuhiro Kawamura's talk ends.
      For another venue, hide it: change the heading attribute to {.opener visibility="hidden"}. -->
 <div class="opener-quote">
-<p>For finite samples <span class="math inline">F</span> of a compact ANR <span class="math inline">M\subset\mathbb R^N</span>: <span class="math display">
+<p>For finite samples <span class="math inline">F</span> of a compact ANR <span class="math inline">M\subset\mathbb R^N</span>:</p>
+<div class="chain-stack">
+<div class="chain fragment fade-out" data-fragment-index="1">
+<p><span class="math display">
 \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)
 \;\underset{\text{question (a)}}{\overset{?}{\cong}}\;
 \varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)
 \;\underset{\text{theorem}}{\cong}\;
 \pi_q(M)
-</span> Is <strong>one</strong> dense finite sample <span class="math inline">F</span>, at <strong>one</strong> small scale <span class="math inline">\beta</span>, already enough?</p>
+</span></p>
+</div>
+<div class="chain chain-abstract fragment fade-in-then-out" data-fragment-index="1">
+<p><span class="math display">
+\pi_q\big(\mathcal R_\beta(F)\big)
+\;\underset{\text{known, one explicit scale}}{\cong}\;
+\varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathcal R_\beta(F)\big)
+\;\underset{\text{theorem}}{\cong}\;
+\pi_q(M)
+</span></p>
+</div>
+<div class="chain fragment fade-in" data-fragment-index="2">
+<p><span class="math display">
+\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)
+\;\underset{\text{question (a)}}{\overset{?}{\cong}}\;
+\varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)
+\;\underset{\text{theorem}}{\cong}\;
+\pi_q(M)
+</span></p>
+</div>
+</div>
+<p>Is <strong>one</strong> dense finite sample <span class="math inline">F</span>, at <strong>one</strong> small scale <span class="math inline">\beta</span>, already enough?</p>
 </div>
 <div class="opener-attrib">
 <p>Theorem: Kawamura–Majhi–Mitra · Question (a), stabilization: K. Kawamura, the previous talk</p>
 </div>
-<div class="opener-answer fragment">
-<p><strong>This talk.</strong> For an embedded graph <span class="math inline">\mathcal G\subset\mathbb R^N</span>, with a path metric on the sample in place of the Euclidean one, in every <span class="math inline">N</span>:</p>
-<ul>
-<li>a sample <strong>on</strong> <span class="math inline">\mathcal G</span>: one explicit scale suffices, as <span class="math inline">\mathrm{Sh}\simeq\mathcal G</span>;</li>
-<li>a sample <strong>near</strong> a polygonal <span class="math inline">\mathcal G</span>: <span class="math inline">\pi_q(\mathcal G)\hookrightarrow\pi_q(\mathrm{Sh})</span>, the injective half.</li>
-</ul>
+<div class="prior fragment" data-fragment-index="1">
+<p><span class="prior-head">Without the shadow, one explicit scale already suffices for the abstract complex <span class="math inline">\mathcal R_\beta(F)</span>:</span></p>
+<div class="prior-cards">
+<div class="prior-card">
+<p><strong>Riemannian and Euclidean submanifolds</strong></p>
+<p><span class="prior-venue">Majhi · SoCG 2024 · DCG 2024</span></p>
 </div>
-<div class="aside-note fragment">
+<div class="prior-card">
+<p><strong>Metric graphs</strong></p>
+<p><span class="prior-venue">Majhi · JACT 2023</span></p>
+</div>
+<div class="prior-card">
+<p><strong>CAT(<span class="math inline">\kappa</span>) spaces</strong></p>
+<p><span class="prior-venue">Komendarczyk–Majhi–Tran · DCG, under review</span></p>
+</div>
+</div>
+</div>
+<div class="opener-answer fragment" data-fragment-index="2">
+<p><strong>This talk: the shadow.</strong> Embedded graph <span class="math inline">\mathcal G\subset\mathbb R^N</span>, path metric on the sample, every <span class="math inline">N</span>. A sample <strong>on</strong> <span class="math inline">\mathcal G</span>: one explicit scale suffices, <span class="math inline">\mathrm{Sh}\simeq\mathcal G</span>. A sample <strong>near</strong> a polygonal <span class="math inline">\mathcal G</span>: <span class="math inline">\pi_q(\mathcal G)\hookrightarrow\pi_q(\mathrm{Sh})</span>.</p>
+</div>
+<div class="aside-note fragment" data-fragment-index="3">
 <p>The Euclidean question stays open. It is where we end.</p>
 </div>
 <aside class="notes">
 <p>Kazuhiro ended with a question, and I will start with it. Read the line from the right. His theorem, with Atish and me, is the isomorphism on the right: over all finite samples and as the scale goes to zero, the shadows recover the homotopy groups of the space itself. His question (a) is the one on the left, marked with a question mark: stabilization. When does one dense finite sample, at one small scale, already have the homotopy groups of the space?</p>
-<p>[click] This talk answers a version of it, and I want to be precise about the version. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not the Euclidean one but a path metric computed from its pairwise distances. In that setting, in every ambient dimension: for a sample lying on the graph, one explicit scale suffices; the shadow is homotopy equivalent to the graph. For a sample merely near a polygonal graph, we get the injective half.</p>
+<p>[click] Watch the formula: take the shadow away. For the abstract Rips complex itself, one explicit scale is already known to suffice. These are my quantitative Latschev theorems: for Riemannian and Euclidean submanifolds, at SoCG 2024 and in Discrete &amp; Computational Geometry; for metric graphs, in JACT; and, with Komendarczyk and Tran, for spaces of curvature bounded above, CAT(kappa), under review at DCG. Those are exactly the Hausmann-type input his second theorem assumes.</p>
+<p>[click] And the shadow comes back: that is this talk. It answers a version of his question, and I want to be precise about the version. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not the Euclidean one but a path metric computed from its pairwise distances. In that setting, in every ambient dimension: for a sample lying on the graph, one explicit scale suffices; the shadow is homotopy equivalent to the graph. For a sample merely near a polygonal graph, we get the injective half.</p>
 <p>[click] For the Euclidean complex, his question stays open, and that is where I will end.</p>
 <p>(Since Kazuhiro has just defined the shadow and stated Chambers–de Silva–Erickson–Ghrist, the next three slides can go quickly. Budget: about 20 minutes; the live slide is the one place to spend an extra minute.)</p>
 <style type="text/css">
@@ -224,6 +262,7 @@ Sushovan Majhi
 <div class="standfirst math">
 <p>A sample <span class="math inline">\mathcal S\subset\mathbb R^N</span> lies near an unknown graph <span class="math inline">\mathcal G\subset\mathbb R^N</span>. Its Vietoris–Rips complex recovers <em>what</em> <span class="math inline">\mathcal G</span> is: it is abstract, so it cannot say <em>where</em> <span class="math inline">\mathcal G</span> is.</p>
 </div>
+<p><img data-src="assets/where.svg?v=202610021100" class="where-fig"></p>
 <div class="definition" data-num="1" data-name="Geometric reconstruction">
 <p>A subset of <span class="math inline">\mathbb R^N</span>, built from the sample, that is <strong>homotopy equivalent</strong> to <span class="math inline">\mathcal G</span> and lies within a fixed multiple of the scale from <span class="math inline">\mathcal G</span> in the Hausdorff distance.</p>
 </div>
@@ -232,6 +271,7 @@ Sushovan Majhi
 </div>
 <aside class="notes">
 <p>The setting. An unknown embedded graph G in R^N (road networks, vascular and neuronal trees, fault networks) and a finite sample near it. The Vietoris–Rips complex recovers the homotopy type, but it is abstract: it says what G is, not where.</p>
+<p>The picture: on the left the sample; in the middle its Rips complex, the actual complex at this scale, but drawn by a layout that knows only which points are joined, so it sits nowhere in particular. It knows there is one loop and one tail. On the right a subset of the plane itself, around the graph: that is what we want.</p>
 <p>So we ask for a geometric reconstruction: a subset of the same R^N, built from the sample, homotopy equivalent to G and Hausdorff-close to it at the scale of the construction.</p>
 <p>These exist in other settings, for sets of positive mu-reach, and graphs like ours have positive mu-reach in the plane, so: no advance in the class of sets. The question is about a specific object, the one that comes with a Rips complex for free.</p>
 <style type="text/css">
@@ -251,17 +291,17 @@ Sushovan Majhi
 <div class="definition" data-num="2" data-name="Shadow">
 <p>Let <span class="math inline">\mathcal K</span> be a simplicial complex with vertices in <span class="math inline">\mathbb R^N</span>. The <em>shadow projection</em> <span class="math inline">p\colon|\mathcal K|\to\mathbb R^N</span> sends each vertex to itself and extends linearly. The <em>shadow</em> is <span class="math display">
 \mathrm{Sh}(\mathcal K)\;=\;p\big(|\mathcal K|\big)\;=\;\bigcup_{\sigma\in\mathcal K}\operatorname{Conv}(\sigma)\;\subset\;\mathbb R^N .
-</span> For the Euclidean complex this is also written <span class="math inline">SR(F;\beta)=\mathrm{Sh}(\mathcal R_\beta(F))</span>.</p>
+</span></p>
 </div>
-<div class="fig-wide" style="width: 66%; margin: 0.4rem auto 0;">
-<p><img data-src="assets/shadow.svg"></p>
+<div class="fig-wide" style="width: 72%; margin: 0.4rem auto 0;">
+<p><img data-src="assets/shadow.svg?v=202610021100"></p>
 </div>
 <div class="aside-note fragment">
 <p>A polyhedron within the scale of the sample. Does it have the topology of the complex?</p>
 </div>
 <aside class="notes">
-<p>(If this follows Kazuhiro’s talk, he has just defined this, as SR of F and beta; I write Sh of the complex because we take shadows of complexes other than the Euclidean one.)</p>
-<p>The shadow: take a complex whose vertices happen to be points of R^N, send each vertex to itself and extend linearly. The image, the union of the convex hulls of the simplices, is a polyhedron in R^N within the scale of the sample. In the picture: a complex, its shadow, and a triangulation of the shadow whose new vertices are where images cross.</p>
+<p>(If this follows Kazuhiro’s talk, say it aloud: his SR of F and epsilon is our Sh of the Rips complex. I write Sh of the complex because we take shadows of complexes other than the Euclidean one.)</p>
+<p>The shadow: take a complex whose vertices happen to be points of R^N, send each vertex to itself and extend linearly. The image, the union of the convex hulls of the simplices, is a polyhedron in R^N within the scale of the sample. In the picture: a complex with three pieces and no loop; its shadow is one piece with a loop, cut out by the two segments and the side of the triangle. On the right, a triangulation of the shadow whose new vertices are where images cross.</p>
 <p>The question, which is Chambers, de Silva, Erickson and Ghrist’s, is whether the shadow has the topology of the complex.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -280,20 +320,21 @@ Sushovan Majhi
 <div class="theorem" data-num="3" data-cite="Chambers–de Silva–Erickson–Ghrist 2010">
 <p>Let <span class="math inline">\mathcal S\subset\mathbb R^N</span> be finite and <span class="math inline">\mathcal R_\beta(\mathcal S)</span> its <strong>Euclidean</strong> Vietoris–Rips complex.</p>
 <ol type="1">
-<li>If <span class="math inline">N=2</span>, then <span class="math inline">p</span> is bijective on <span class="math inline">\pi_0</span> and an isomorphism on <span class="math inline">\pi_1</span>.</li>
+<li>If <span class="math inline">N=2</span>, then <span class="math inline">p_*</span> is a bijection on <span class="math inline">\pi_0</span> and an isomorphism on <span class="math inline">\pi_1</span>.</li>
 <li>If <span class="math inline">N=2</span> and <span class="math inline">k\ge2</span>, then <span class="math inline">p_*</span> on <span class="math inline">\pi_k</span> need not be injective.</li>
 <li>If <span class="math inline">N\ge4</span>, then <span class="math inline">p_*</span> on <span class="math inline">\pi_1</span> need not be surjective.</li>
 </ol>
 </div>
-<div id="shadow-collapse"></div>
+<div id="shadow-collapse" class="fragment"></div>
 <span class="fragment collapse-step" data-collapse="1"></span>
 <span class="fragment collapse-step" data-collapse="2"></span>
+<span class="fragment collapse-step" data-collapse="3"></span>
 <div class="aside-note fragment">
-<p>In <span class="math inline">\mathbb R^3</span>, <span class="math inline">p_*</span> is onto on <span class="math inline">\pi_1</span> and its injectivity is open (Adamaszek–Frick–Vakili 2017).</p>
+<p>In <span class="math inline">\mathbb R^3</span>, <span class="math inline">p_*</span> is surjective on <span class="math inline">\pi_1</span> and its injectivity is open (Adamaszek–Frick–Vakili 2017).</p>
 </div>
 <aside class="notes">
 <p>(If this follows Kazuhiro’s talk, he has just stated these; do not dwell.) In the plane the projection is 1-connected; already in the plane higher homotopy is not preserved; from dimension four on even the fundamental group fails; in R^3 surjectivity on pi_1 is due to Adamaszek, Frick and Vakili, and injectivity there is open.</p>
-<p>The picture is their planar example, and it moves. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. [click] Now let the shadow projection act: every vertex goes to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] And the central hexagon, where the two big triangles overlap, is where it goes wrong; it comes back in section three.</p>
+<p>[click] The picture is their planar example, and it moves. Six points in the plane, on a regular hexagon. [click] Take the Rips complex at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. It lives nowhere; I draw it in space. [click] Now let the shadow projection act: every vertex goes back to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] Where does the sphere go? Over the central hexagon H, two opposite faces of the octahedron, 135 and 246, land on top of each other: the sphere is folded flat, and that fold is what kills pi_2. H comes back in the next section.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -322,9 +363,9 @@ Sushovan Majhi
 <thead>
 <tr class="header">
 <th style="text-align: left;"><span class="math inline">p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)</span></th>
-<th style="text-align: center;">onto <span class="math inline">\pi_1</span></th>
-<th style="text-align: center;">into on <span class="math inline">\pi_1</span></th>
-<th style="text-align: center;">into on <span class="math inline">\pi_{k\ge2}</span></th>
+<th style="text-align: center;">surjective on <span class="math inline">\pi_1</span></th>
+<th style="text-align: center;">injective on <span class="math inline">\pi_1</span></th>
+<th style="text-align: center;">injective on <span class="math inline">\pi_{k\ge2}</span></th>
 </tr>
 </thead>
 <tbody>
@@ -354,7 +395,7 @@ Sushovan Majhi
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Path metric, near polygonal <span class="math inline">\mathcal G</span>, any <span class="math inline">N</span></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">?</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
@@ -362,12 +403,12 @@ Sushovan Majhi
 </table>
 </div>
 <div class="aside-note fragment">
-<p>✗ Chambers et al.; ℝ³ onto: Adamaszek–Frick–Vakili, whose conjecture is “?”. Last two rows: this talk.</p>
+<p>✗ Chambers et al.&nbsp;· ✓ in ℝ³: Adamaszek–Frick–Vakili · ? open · last two rows: this talk.</p>
 </div>
 <aside class="notes">
 <p>The plane we just saw: a sphere crushed, so higher homotopy is lost. Here is the other way it fails, in four dimensions, also from Chambers et al.</p>
 <p>The complex is again the octahedral sphere: two triangles, 135 and 246, in polar position. [click] In R^4 they can be placed so that their centroids have the same image: in the shadow those two points are one point. [click] Now walk from the centroid of 135 to vertex 1, along the edge to vertex 2, and into the centroid of 246. In the complex that path is not closed; in the shadow it is, through the glued point. It is a loop in the shadow that no loop of the complex maps onto: the shadow is a sphere with two points identified, a sphere with a circle attached, and its fundamental group is Z while the complex’s is trivial.</p>
-<p>[click] The scorecard for the Euclidean complex: in the plane, onto and into on pi_1, but higher homotopy is lost. In R^3, onto by Adamaszek, Frick and Vakili; into is their conjecture. From R^4 on, not even onto. [click] And the last two rows are what this talk proves, in every dimension, for the path metric: everything for a sample on a polygonal graph, and the injective column for a sample near it.</p>
+<p>[click] The scorecard for the Euclidean complex: in the plane, surjective and injective on pi_1, but higher homotopy is lost. In R^3, surjective by Adamaszek, Frick and Vakili; injective is their conjecture. From R^4 on, not even surjective. [click] And the last two rows are what this talk proves, in every dimension, for the path metric: everything for a sample on a polygonal graph, and both injective columns for a sample near it. Surjectivity on pi_1 near the graph is open.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -383,115 +424,12 @@ Sushovan Majhi
 </section>
 <section>
 <section class="title-slide slide level1 section-divider center">
-<h1>§ II. Change the Metric</h1>
+<h1>§ II. The Apex Condition</h1>
 <div class="plate" data-plate="II">
-<p><img data-src="assets/section-ii-plate.svg"></p>
-</div>
-<aside class="notes">
-<p>Section two: the path metric, what it already buys for the abstract complex, and the two quantities of the graph that the scales are stated in.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>The <span class="math inline">\varepsilon</span>-path metric</h2>
-<div class="env-row">
-<div class="definition" data-num="4" data-name="Path metric" data-cite="Fasy–Komendarczyk–Majhi–Wenk; Majhi">
-<p>For <span class="math inline">\mathcal A\subset\mathbb R^N</span> and <span class="math inline">\varepsilon&gt;0</span>, <span class="math inline">d^\varepsilon_{\mathcal A}(p,q)</span> is the length of a shortest chain <span class="math inline">p=a_0,\dots,a_{k+1}=q</span> in <span class="math inline">\mathcal A</span> with hops <span class="math inline">\|a_i-a_{i+1}\|&lt;\varepsilon</span>. Write <span class="math inline">\mathcal R^\varepsilon_\beta(\mathcal S)</span> for the Rips complex of <span class="math inline">(\mathcal S,d^\varepsilon_{\mathcal S})</span>.</p>
-</div>
-<div class="theorem fragment" data-num="5" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT">
-<p>For a compact connected graph <span class="math inline">\mathcal G\subset\mathbb R^N</span> and a sample close enough to it, at explicit scales <span class="math inline">\varepsilon\ll\beta</span>, <span class="math display">
-\mathcal R^\varepsilon_\beta(\mathcal S)\;\simeq\;\mathcal G .
-</span></p>
-</div>
-</div>
-<div class="fig-wide fragment" style="width: 52%;">
-<p><img data-src="assets/hairpin.svg"></p>
-</div>
-<aside class="notes">
-<p>The replacement metric, introduced by Fasy, Komendarczyk, Majhi and Wenk, and by me: hop through the sample in steps shorter than epsilon and take the shortest such chain. It is computed from pairwise distances alone, and up to small errors it measures distance along the graph.</p>
-<p>For the abstract complex this already works in every dimension: Komendarczyk, Majhi and Mitra, in JACT, show it has the homotopy type of the graph. In the plane they also show the shadow is a geometric reconstruction, by a planar argument. This talk is about the shadow in R^N.</p>
-<p>The picture: a hairpin. The Euclidean complex bridges the gap and fills a disk; the path-metric complex on the same points, at the same beta, does not.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>Watch the shadow</h2>
-<div class="standfirst math">
-<p>A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scale <span class="math inline">\beta</span>; and the shadow, the union of its hulls. Computed live.</p>
-</div>
-<div id="shadow-lab" data-prevent-swipe=""></div>
-<script src="assets/shadow-lab.js?v=202610012219"></script>
-<aside class="notes">
-<p>A live slide; everything here is computed as I move the sliders. In the plane the shadow of a flag complex is the union of its edges and triangles.</p>
-<p>Hairpin, Euclidean: raise beta past the width of the gap and the edges across it light up, the shadow fills the gap, and the loop is gone. Switch to the epsilon-path metric at the same beta: the legs stay apart, because along the arc they are far. Now raise epsilon: once a single hop can cross the gap, the path metric is Euclidean again across it, and the gap fills. That is the density condition: epsilon has to be small against the geometry.</p>
-<p>Sharp vertex, three straight branches at 15, 0 and minus 15 degrees: in the Euclidean metric the branches are joined far out. With the path metric they meet only near the vertex, where a hop of length epsilon cuts the corner, at levels below about epsilon over the sine of the half angle. That corner-cutting is the configuration of the “not necessary” example in section three.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-
-<section class="slide level2">
-<h2>Two quantities of the graph</h2>
-<div class="standfirst math">
-<p><span class="math inline">\mathcal G</span> is compact and connected, with finitely many <span class="math inline">C^1</span> edges meeting at positive angles.</p>
-</div>
-<div class="definition" data-num="6" data-name="Condition number and shadow radius">
-<p>With <span class="math inline">\theta_{\min}</span> the sharpest angle at a vertex, <span class="math inline">\Theta(\mathcal G)=\max\{\tfrac12,\cos^2\tfrac{\theta_{\min}}2\}</span> and <span class="math inline">s=\sqrt{1-\Theta}</span>. For a tolerance <span class="math inline">\xi</span>, the <em>shadow radius</em> <span class="math inline">\Delta_\xi(\mathcal G)</span> is the supremum of the <span class="math inline">r</span> with <span class="math display">
-d_{\mathcal G}(x,y)\;\le\;(1+\xi)\,\frac{\|x-y\|}{s}\qquad\text{whenever }\|x-y\|\le r .
-</span></p>
-</div>
-<div class="rmk fragment" data-name="In words">
-<p>Below <span class="math inline">\Delta_\xi</span>, two points close in <span class="math inline">\mathbb R^N</span> are close along <span class="math inline">\mathcal G</span>, up to the factor of the sharpest corner: no hairpins. It is positive, and for straight edges a finite computation.</p>
-</div>
-<aside class="notes">
-<p>Every scale in the theorems is stated in two quantities of G.</p>
-<p>The condition number Theta records the sharpest angle; s is essentially the sine of half of it. The shadow radius is the scale below which two points that are close in R^N are also close along the graph, with the corner’s own factor one over s as the allowance. What it rules out is the hairpin: two parts of the graph passing close without meeting. It is positive for every such graph, and for straight edges it is a finite computation.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section>
-<section class="title-slide slide level1 section-divider center">
-<h1>§ III. The Apex Condition</h1>
-<div class="plate" data-plate="III">
 <p><img data-src="assets/section-iii-plate.svg"></p>
 </div>
 <aside class="notes">
-<p>Section three: the combinatorial condition that decides whether the shadow projection is a homotopy equivalence, in every dimension, for any flag complex with vertices in R^N.</p>
+<p>Section two: why the Euclidean shadow fails. The combinatorial condition that decides whether the shadow projection is a homotopy equivalence, in every dimension, for any flag complex with vertices in R^N.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -507,12 +445,12 @@ d_{\mathcal G}(x,y)\;\le\;(1+\xi)\,\frac{\|x-y\|}{s}\qquad\text{whenever }\|x-y\
 <section class="slide level2">
 <h2>The apex condition</h2>
 <div class="env-row">
-<div class="definition" data-num="7" data-name="Apex condition">
+<div class="definition" data-num="4" data-name="Apex condition">
 <p>For <span class="math inline">x\in\mathrm{Sh}(\mathcal K)</span> let <span class="math inline">\mathrm{st}(x,\mathcal K)=\{\sigma: x\in\operatorname{Conv}(\sigma)\}</span>. A vertex <span class="math inline">v_x</span> is an <em>apex</em> of <span class="math inline">x</span> if <span class="math display">
 v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
 </span> that is, <span class="math inline">\sigma\cup\{v_x\}\in\mathcal K</span> for every <span class="math inline">\sigma\in\mathrm{st}(x,\mathcal K)</span>. A flag <span class="math inline">\mathcal K</span> satisfies the <em>apex condition</em> if every <span class="math inline">x</span> has an apex.</p>
 </div>
-<div class="theorem fragment" data-num="8" data-name="Apex theorem" data-cite="Kawamura–Majhi–Mitra">
+<div class="theorem fragment" data-num="5" data-name="Apex theorem" data-cite="Kawamura–Majhi–Mitra">
 <p>If a finite flag complex <span class="math inline">\mathcal K</span> with <span class="math inline">\mathcal K^{(0)}\subset\mathbb R^N</span> satisfies the apex condition, then <span class="math inline">p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)</span> is a homotopy equivalence, in every <span class="math inline">N</span>.</p>
 </div>
 </div>
@@ -547,27 +485,19 @@ v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
       }</style></aside>
 </section>
 <section class="slide level2">
-<h2>Two examples</h2>
-<div class="env-row">
-<div class="example" data-num="9" data-name="The hexagon">
+<h2>The hexagon, again</h2>
+<div class="example" data-num="6" data-name="The hexagon">
 <p>For the octahedral Rips complex of the hexagon, <span class="math inline">|\mathcal K|\simeq S^2</span> and <span class="math inline">\mathrm{Sh}(\mathcal K)</span> is contractible. On the central hexagon <span class="math inline">H=\operatorname{Conv}[135]\cap\operatorname{Conv}[246]</span> an apex would see all other five vertices, and every vertex misses its antipode: the condition fails exactly on <span class="math inline">H</span>.</p>
 </div>
-<div class="example fragment" data-num="10" data-name="Not necessary">
-<p>Three straight branches at <span class="math inline">15^\circ,0^\circ,-15^\circ</span>, a sample on them, and <span class="math inline">\varepsilon\le\tfrac{1}{200}\beta\sin\tfrac{15^\circ}2</span>: the chord <span class="math inline">CD</span> cuts the corner and crosses the Rips edge <span class="math inline">AB</span> at <span class="math inline">x</span>, and <span class="math inline">d^\varepsilon(B,C)&gt;2\beta</span>, so <span class="math inline">x</span> has no apex. Yet <span class="math inline">p</span> is a homotopy equivalence.</p>
+<div class="fig-wide" style="width: 64%; margin: 0.3rem auto 0;">
+<p><img data-src="assets/hexagon.svg?v=202610021100"></p>
 </div>
-</div>
-<div class="env-row">
-<div class="fig fragment">
-<p><img data-src="assets/hexagon.svg"></p>
-</div>
-<div class="fig fragment">
-<p><img data-src="assets/sharp.svg"></p>
-</div>
+<div class="aside-note fragment">
+<p>The points with no apex are exactly the fold: where the two opposite faces land on each other.</p>
 </div>
 <aside class="notes">
-<p>Two examples, one on each side.</p>
-<p>The Chambers et al.&nbsp;hexagon is exactly a failure of the condition. On the central hexagon, where the two big triangles overlap, both cover x, so an apex would have to see all the other five vertices, and every vertex misses its antipode. Off the central hexagon, the vertex beyond whose neighbors’ chord x lies is an apex. So the condition fails exactly on the shaded hexagon, and the projection is not an equivalence there: the 2-sphere is crushed.</p>
-<p>But the condition is not necessary. At a vertex with three straight branches at plus and minus fifteen degrees and zero, sample the branches. A shortest epsilon-path between the two sharp branches cuts the corner, so the Rips complex has an edge from C, 0.95 beta out on one, to D, 0.04 beta out on the other, and it crosses the edge AB along the bisecting branch near the vertex. An apex of the crossing would have to be adjacent to both B and C, which are more than 2 beta apart in the path metric. No apex. Yet the shadow projection is a homotopy equivalence here, by the theorem of the next section. That theorem cannot be proved from the apex condition alone at a sharp vertex; the proof there is geometric.</p>
+<p>The hexagon from section one, again. It is exactly a failure of the condition. On the central hexagon, where the two big triangles overlap, both cover x, so an apex would have to see all the other five vertices, and every vertex misses its antipode. Off the central hexagon, the vertex beyond whose neighbors’ chord x lies is an apex. So the condition fails exactly on the shaded hexagon, and that is where the 2-sphere is crushed.</p>
+<p>[click] So the obstruction has a location: the points with no apex are exactly where the sphere is folded. To beat it we need a complex in which every point of the shadow has an apex: that is what changing the metric will buy, along the edges of a graph.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -583,12 +513,138 @@ v_x\ast\mathrm{st}(x,\mathcal K)\subseteq\mathcal K ,
 </section>
 <section>
 <section class="title-slide slide level1 section-divider center">
+<h1>§ III. Change the Metric</h1>
+<div class="plate" data-plate="III">
+<p><img data-src="assets/section-ii-plate.svg"></p>
+</div>
+<aside class="notes">
+<p>Section three: a metric in which the apex condition can hold. The path metric, what it already buys for the abstract complex, and the two quantities of the graph that the scales are stated in.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The <span class="math inline">\varepsilon</span>-path metric</h2>
+<div class="env-row">
+<div class="definition" data-num="7" data-name="Path metric" data-cite="Fasy–Komendarczyk–Majhi–Wenk; Majhi">
+<p>For <span class="math inline">\mathcal A\subset\mathbb R^N</span> and <span class="math inline">\varepsilon&gt;0</span>, <span class="math inline">d^\varepsilon_{\mathcal A}(p,q)</span> is the length of a shortest chain <span class="math inline">p=a_0,\dots,a_{k+1}=q</span> in <span class="math inline">\mathcal A</span> with hops <span class="math inline">{\|a_i-a_{i+1}\|&lt;\varepsilon}</span>. Write <span class="math inline">\mathcal R^\varepsilon_\beta(\mathcal S)</span> for the Rips complex of <span class="math inline">(\mathcal S,d^\varepsilon_{\mathcal S})</span>.</p>
+</div>
+<div class="theorem fragment" data-num="8" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT">
+<p>For a compact connected graph <span class="math inline">\mathcal G\subset\mathbb R^N</span> and a sample close enough to it, at explicit scales <span class="math inline">\varepsilon\ll\beta</span>, <span class="math display">
+\mathcal R^\varepsilon_\beta(\mathcal S)\;\simeq\;\mathcal G .
+</span></p>
+</div>
+</div>
+<div class="fig-wide fragment" style="width: 62%;">
+<p><img data-src="assets/hairpin.svg?v=202610021100"></p>
+</div>
+<aside class="notes">
+<p>The replacement metric, introduced by Fasy, Komendarczyk, Majhi and Wenk, and by me: hop through the sample in steps shorter than epsilon and take the shortest such chain. It is computed from pairwise distances alone, and up to small errors it measures distance along the graph.</p>
+<p>For the abstract complex this already works in every dimension: Komendarczyk, Majhi and Mitra, in JACT, show it has the homotopy type of the graph. In the plane they also show the shadow is a geometric reconstruction, by a planar argument. This talk is about the shadow in R^N.</p>
+<p>The picture: a thin loop, narrower than the scale. The Euclidean complex bridges the gap and fills a disk, so the loop is lost; the path-metric complex on the same points, at the same beta, hops only along the loop, and the loop survives.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Watch the shadow</h2>
+<div class="standfirst math">
+<p>A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scale <span class="math inline">\beta</span>; and the shadow, the union of its hulls. Computed live.</p>
+</div>
+<div id="shadow-lab" data-prevent-swipe=""></div>
+<script src="assets/shadow-lab.js?v=202610021010"></script>
+<aside class="notes">
+<p>A live slide; everything here is computed as I move the sliders. In the plane the shadow of a flag complex is the union of its edges and triangles.</p>
+<p>Hairpin, Euclidean: raise beta past the width of the gap and the edges across it light up, the shadow fills the gap, and the loop is gone. Switch to the epsilon-path metric at the same beta: the legs stay apart, because along the arc they are far. Now raise epsilon: once a single hop can cross the gap, the path metric is Euclidean again across it, and the gap fills. That is the density condition: epsilon has to be small against the geometry.</p>
+<p>Sharp vertex, three straight branches at 15, 0 and minus 15 degrees: in the Euclidean metric the branches are joined far out. With the path metric they meet only near the vertex, where a hop of length epsilon cuts the corner, at levels below about epsilon over the sine of the half angle. That corner-cutting is where the apex condition fails; it opens section four.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section class="slide level2">
+<h2>Two quantities of the graph</h2>
+<div class="standfirst math">
+<p><span class="math inline">\mathcal G</span> is compact and connected, with finitely many <span class="math inline">C^1</span> edges meeting at positive angles.</p>
+</div>
+<div class="definition" data-num="9" data-name="Condition number and shadow radius">
+<p>With <span class="math inline">\theta_{\min}</span> the sharpest angle at a vertex, <span class="math inline">\Theta(\mathcal G)=\max\{\tfrac12,\cos^2\tfrac{\theta_{\min}}2\}</span> and <span class="math inline">s=\sqrt{1-\Theta}</span>. For a tolerance <span class="math inline">\xi</span>, the <em>shadow radius</em> <span class="math inline">\Delta_\xi(\mathcal G)</span> is the supremum of the <span class="math inline">r</span> with <span class="math display">
+d_{\mathcal G}(x,y)\;\le\;(1+\xi)\,\frac{\|x-y\|}{s}\qquad\text{whenever }\|x-y\|\le r .
+</span></p>
+</div>
+<div class="rmk fragment" data-name="In words">
+<p>Below <span class="math inline">\Delta_\xi</span>, two points close in <span class="math inline">\mathbb R^N</span> are close along <span class="math inline">\mathcal G</span>, up to the factor of the sharpest corner: no hairpins. It is positive, and for straight edges a finite computation.</p>
+</div>
+<aside class="notes">
+<p>Every scale in the theorems is stated in two quantities of G.</p>
+<p>The condition number Theta records the sharpest angle; s is essentially the sine of half of it. The shadow radius is the scale below which two points that are close in R^N are also close along the graph, with the corner’s own factor one over s as the allowance. What it rules out is the hairpin: two parts of the graph passing close without meeting. It is positive for every such graph, and for straight edges it is a finite computation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section class="title-slide slide level1 section-divider center">
 <h1>§ IV. The Shadow of a Graph Sample</h1>
 <div class="plate" data-plate="IV">
 <p><img data-src="assets/section-iv-plate.svg"></p>
 </div>
 <aside class="notes">
-<p>Section four: the two theorems. A sample on the graph, at one scale; and a sample near it.</p>
+<p>Section four: where the apex fails, and the two theorems. A sample on the graph, at one scale; and a sample near it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Where the apex fails</h2>
+<div class="example" data-num="10" data-name="Not necessary">
+<p>Three straight branches at <span class="math inline">15^\circ,0^\circ,-15^\circ</span>, a sample on them, and <span class="math inline">\varepsilon\le\tfrac{1}{200}\beta\sin\tfrac{15^\circ}2</span>: the chord <span class="math inline">CD</span> cuts the corner and crosses the Rips edge <span class="math inline">AB</span> at <span class="math inline">x</span>, and <span class="math inline">d^\varepsilon(B,C)&gt;2\beta</span>, so <span class="math inline">x</span> has no apex. Yet <span class="math inline">p</span> is a homotopy equivalence.</p>
+</div>
+<div class="fig" style="width: 78%; margin: 0.4rem auto 0;">
+<p><img data-src="assets/sharp.svg"></p>
+</div>
+<aside class="notes">
+<p>Along an edge the path metric gives an apex. At a sharp vertex it need not. Three straight branches at plus and minus fifteen degrees and zero, a sample on them. A shortest epsilon-path between the two sharp branches cuts the corner, so the Rips complex has an edge from C, 0.95 beta out on one, to D, 0.04 beta out on the other, and it crosses the edge AB along the bisecting branch near the vertex. An apex of the crossing would have to be adjacent to both B and C, which are more than 2 beta apart in the path metric. No apex.</p>
+<p>Yet the shadow projection is a homotopy equivalence here, by the theorem on the next slide. That theorem cannot be proved from the apex condition alone at a sharp vertex; the proof there is geometric.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
