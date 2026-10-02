@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c3efd942c0fb47e68b9178f89ab606db.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-8e1b9261b195679690bb6cf8594df260.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -155,6 +155,45 @@ Sushovan Majhi
 </div>
 
   <p class="date">October 3, 2026</p>
+</section>
+<section class="slide level2 opener">
+<h2>The question we start from</h2>
+<!-- AMS Washington only: this slide picks up where Kazuhiro Kawamura's talk ends.
+     For another venue, hide it: change the heading attribute to {.opener visibility="hidden"}. -->
+<div class="opener-quote">
+<p>When is <span class="math display">
+\varprojlim_{\beta}\ \varinjlim_{F}\ \pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)\;\cong\;\pi_q\big(\mathrm{Sh}(\mathcal R_\beta(F))\big)
+</span> for <strong>one</strong> dense finite sample <span class="math inline">F</span> and <strong>one</strong> small scale <span class="math inline">\beta</span>?</p>
+</div>
+<div class="opener-attrib">
+<p>Question (a), stabilization: K. Kawamura, the previous talk</p>
+</div>
+<div class="opener-answer fragment">
+<p><strong>This talk.</strong> For an embedded graph <span class="math inline">\mathcal G\subset\mathbb R^N</span>, with a path metric on the sample in place of the Euclidean one, in every <span class="math inline">N</span>:</p>
+<ul>
+<li>a sample <strong>on</strong> <span class="math inline">\mathcal G</span>: one explicit scale suffices, as <span class="math inline">\mathrm{Sh}\simeq\mathcal G</span>;</li>
+<li>a sample <strong>near</strong> a polygonal <span class="math inline">\mathcal G</span>: <span class="math inline">\pi_q(\mathcal G)\hookrightarrow\pi_q(\mathrm{Sh})</span>, the injective half.</li>
+</ul>
+</div>
+<div class="aside-note fragment">
+<p>The Euclidean question stays open. It is where we end.</p>
+</div>
+<aside class="notes">
+<p>Kazuhiro ended with a question, and I will start with it. His theorem says the shadows recover the homotopy groups in the limit, over all samples and as the scale goes to zero. His question (a) is stabilization: when does one dense finite sample, at one small scale, already carry the limit?</p>
+<p>[click] This talk answers a version of it, and I want to be precise about the version. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not the Euclidean one but a path metric computed from its pairwise distances. In that setting, in every ambient dimension: for a sample lying on the graph, one explicit scale suffices; the shadow is homotopy equivalent to the graph. For a sample merely near a polygonal graph, we get the injective half.</p>
+<p>[click] For the Euclidean complex, his question stays open, and that is where I will end.</p>
+<p>(Since Kazuhiro has just defined the shadow and stated Chambers–de Silva–Erickson–Ghrist, the next three slides can go quickly, and the limit slide takes fifteen seconds.)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section>
 <section class="title-slide slide level1 section-divider center">
