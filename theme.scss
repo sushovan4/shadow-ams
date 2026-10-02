@@ -2683,3 +2683,13 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
 .reveal .opener-answer p { text-align: left; margin: 0.15em 0; }
 .reveal .opener-answer ul { margin: 0.2em 0 0.1em 1.2em; }
 .reveal .opener-answer li { margin: 0.1em 0; font-size: 1em; }
+
+// The scorecard on "What the shadow can lose": compact, centered marks, the
+// last two rows (this talk) set apart by a rule and a tint.
+.reveal .methods.scorecard table { font-size: 0.5em; margin: 0.1rem auto 0; }
+.reveal .scorecard td:not(:first-child), .reveal .scorecard th:not(:first-child) {
+  text-align: center; min-width: 7em;
+}
+.reveal .scorecard td, .reveal .scorecard th { padding: 0.12em 0.8em !important; }
+.reveal .scorecard tr:nth-last-child(2) td { border-top: 1.5px solid var(--oxblood) !important; }
+.reveal .scorecard tbody tr:nth-last-child(-n+2) td { background: var(--paper-soft); font-weight: 600; }

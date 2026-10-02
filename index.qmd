@@ -142,6 +142,37 @@ The picture is their planar example, and it moves. Six points on a regular hexag
 :::
 
 
+## What the shadow can lose
+
+::: {.fig-wide style="width: 62%; margin: -0.4rem auto 0;"}
+![](assets/losses.svg)
+:::
+
+::: {.methods .scorecard .fragment}
+| $p\colon|\mathcal K|\to\mathrm{Sh}(\mathcal K)$ | onto $\pi_1$ | into on $\pi_1$ | into on $\pi_{k\ge2}$ |
+|:--|:-:|:-:|:-:|
+| Euclidean, $\mathbb R^2$ | ✓ | ✓ | ✗ |
+| Euclidean, $\mathbb R^3$ | ✓ | ? | ✗ |
+| Euclidean, $\mathbb R^{N\ge4}$ | ✗ | ? | ✗ |
+| Path metric, on polygonal $\mathcal G$, any $N$ | ✓ | ✓ | ✓ |
+| Path metric, near polygonal $\mathcal G$, any $N$ | | ✓ | ✓ |
+:::
+
+::: {.aside-note .fragment}
+✗ Chambers et al.; ℝ³ onto: Adamaszek–Frick–Vakili, whose conjecture is "?". Last two rows: this talk.
+:::
+
+::: {.notes}
+Two pictures of what goes wrong, and a scorecard.
+
+On the left, the plane: the hexagon we just saw. The complex is a 2-sphere; the shadow crushes it onto a disk. A sphere that was there is gone: the projection is not injective on pi_2.
+
+On the right, four dimensions, the other example of Chambers et al.: two triangles in polar position, arranged so their centroids land on the same point. The complex is still a 2-sphere, but in the shadow those two points are glued, and a sphere with two points glued is a pinched torus, a sphere with a circle attached. A loop appears in the shadow that comes from no loop of the complex: the projection is not onto pi_1.
+
+[click] The scorecard for the Euclidean complex: in the plane, onto and into on pi_1, but higher homotopy is lost. In R^3, onto by Adamaszek, Frick and Vakili; into is their conjecture. From R^4 on, not even onto. [click] And the last two rows are what this talk proves, in every dimension, for the path metric: everything for a sample on a polygonal graph, and the injective column for a sample near it.
+:::
+
+
 ## The shadow in the limit {visibility="hidden"}
 
 ::: {.theorem data-num="6" data-name="In the limit" data-cite="Kawamura–Majhi–Mitra"}

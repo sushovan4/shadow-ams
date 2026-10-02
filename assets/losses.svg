@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 290" role="img" aria-label="What the Euclidean shadow can lose">
+<defs><radialGradient id="sph" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#f5efde"/><stop offset="0.55" stop-color="#e2cdbd"/><stop offset="1" stop-color="#b98c80"/></radialGradient><radialGradient id="flat" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#d9b9ad"/><stop offset="1" stop-color="#c49a8e"/></radialGradient></defs>
+<circle cx="95" cy="132" r="62" fill="url(#sph)" stroke="#2b211a" stroke-width="1.3"/>
+<path d="M 33 132 A 62 19.84 0 0 0 157 132" fill="none" stroke="#2b211a" stroke-width="1"/>
+<path d="M 33 132 A 62 19.84 0 0 1 157 132" fill="none" stroke="#2b211a" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="95" y="218" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">ℛ ≃ S²</text>
+<line x1="172" y1="132" x2="228" y2="132" stroke="#57473a" stroke-width="1.3"/>
+<path d="M 220 127 L 228 132 L 220 137" fill="none" stroke="#57473a" stroke-width="1.3"/>
+<text x="200" y="123" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">p</text>
+<ellipse cx="300" cy="132" rx="62" ry="62" fill="url(#flat)" stroke="#2b211a" stroke-width="1.3"/>
+<text x="300" y="218" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">Sh(ℛ) ≃ ∗</text>
+<text x="200" y="248" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">in ℝ²: the sphere is crushed</text>
+<text x="200" y="272" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">π₂(ℛ) ≅ ℤ but π₂(Sh) = 0: not injective on π₂</text>
+<circle cx="470" cy="132" r="62" fill="url(#sph)" stroke="#2b211a" stroke-width="1.3"/>
+<circle cx="442" cy="110" r="5" fill="#6c1d1a"/>
+<circle cx="496" cy="162" r="5" fill="#6c1d1a"/>
+<text x="434" y="101" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="end">c₁₃₅</text>
+<text x="505" y="179" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="start">c₂₄₆</text>
+<text x="470" y="218" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">ℛ ≃ S²</text>
+<line x1="548" y1="132" x2="604" y2="132" stroke="#57473a" stroke-width="1.3"/>
+<path d="M 596 127 L 604 132 L 596 137" fill="none" stroke="#57473a" stroke-width="1.3"/>
+<text x="576" y="123" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="17" font-style="italic" text-anchor="middle">p</text>
+<path d="M 618 132 A 62 62 0 1 0 742 132 A 62 62 0 1 0 618 132 Z M 653 97 A 27 27 0 1 1 707 97 A 27 27 0 1 1 653 97 Z" fill="url(#sph)" fill-rule="evenodd" stroke="#2b211a" stroke-width="1.3"/>
+<circle cx="680" cy="70" r="5" fill="#6c1d1a"/>
+<text x="680" y="58" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="15" font-style="italic" text-anchor="middle">c₁₃₅ = c₂₄₆</text>
+<path d="M 680 70 C 600 102, 622 208, 680 171 C 738 208, 760 102, 680 70" fill="none" stroke="#6c1d1a" stroke-width="2.2" stroke-dasharray="6 4"/>
+<text x="680" y="218" fill="#2b211a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">Sh(ℛ) ≃ S² ∨ S¹</text>
+<text x="575" y="248" fill="#6c1d1a" font-family="EB Garamond, Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">in ℝ⁴: two points are glued</text>
+<text x="575" y="272" fill="#57473a" font-family="EB Garamond, Georgia, serif" font-size="16" font-style="italic" text-anchor="middle">π₁(ℛ) = 0 but π₁(Sh) ≅ ℤ: not onto π₁</text>
+</svg>

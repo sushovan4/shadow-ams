@@ -358,6 +358,71 @@ def fig_hexagon():
                              "The octahedral Rips complex of a hexagon and its contractible shadow"))
 
 
+def fig_losses():
+    """What the Euclidean shadow can lose (Chambers--de Silva--Erickson--Ghrist).
+    Left, in the plane: the octahedral sphere of the hexagon is crushed onto a disk,
+    so pi_2 is not injected. Right, in R^4: two polar triangles whose centroids
+    coincide; the shadow is the sphere with two points identified, a pinched torus,
+    S^2 v S^1, so a loop appears that no loop of the complex maps onto."""
+    defs = ('<defs>'
+            '<radialGradient id="sph" cx="38%" cy="32%" r="75%">'
+            f'<stop offset="0" stop-color="{PAPER}"/><stop offset="0.55" stop-color="#e2cdbd"/>'
+            f'<stop offset="1" stop-color="#b98c80"/></radialGradient>'
+            '<radialGradient id="flat" cx="50%" cy="50%" r="60%">'
+            f'<stop offset="0" stop-color="#d9b9ad"/><stop offset="1" stop-color="#c49a8e"/></radialGradient>'
+            '</defs>')
+    body = [defs]
+
+    def arrow(x0, x1, y, label):
+        out = [line((x0, y), (x1, y), stroke=SEPIA, stroke_width=1.3),
+               f'<path d="M {x1-8} {y-5} L {x1} {y} L {x1-8} {y+5}" fill="none" '
+               f'stroke="{SEPIA}" stroke-width="1.3"/>']
+        out.append(text(((x0 + x1) / 2, y - 9), label, 17, fill=SEPIA))
+        return out
+
+    # ---- left panel: a sphere crushed onto a disk
+    cx, cy, r = 95, 132, 62
+    body += [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="url(#sph)" stroke="{INK}" stroke-width="1.3"/>',
+             f'<path d="M {cx-r} {cy} A {r} {r*0.32} 0 0 0 {cx+r} {cy}" fill="none" stroke="{INK}" '
+             f'stroke-width="1"/>',
+             f'<path d="M {cx-r} {cy} A {r} {r*0.32} 0 0 1 {cx+r} {cy}" fill="none" stroke="{INK}" '
+             f'stroke-width="0.8" stroke-dasharray="3 3"/>',
+             text((cx, cy + r + 24), "ℛ ≃ S²", 18, fill=INK)]
+    body += arrow(172, 228, cy, "p")
+    dx = 300
+    body += [f'<ellipse cx="{dx}" cy="{cy}" rx="{r}" ry="{r}" fill="url(#flat)" stroke="{INK}" '
+             f'stroke-width="1.3"/>',
+             text((dx, cy + r + 24), "Sh(ℛ) ≃ ∗", 18, fill=INK)]
+    body += [text((200, 248), "in ℝ²: the sphere is crushed", 18, fill=OX),
+             text((200, 272), "π₂(ℛ) ≅ ℤ but π₂(Sh) = 0: not injective on π₂", 16, fill=SEPIA)]
+
+    # ---- right panel: a sphere with two points glued, a pinched torus
+    ox = 470
+    body += [f'<circle cx="{ox}" cy="{cy}" r="{r}" fill="url(#sph)" stroke="{INK}" stroke-width="1.3"/>']
+    a, b = (ox - 28, cy - 22), (ox + 26, cy + 30)
+    body += [circle(a, 5, fill=OX), circle(b, 5, fill=OX),
+             text((a[0] - 8, a[1] - 9), "c₁₃₅", 15, fill=OX, anchor="end"),
+             text((b[0] + 9, b[1] + 17), "c₂₄₆", 15, fill=OX, anchor="start"),
+             text((ox, cy + r + 24), "ℛ ≃ S²", 18, fill=INK)]
+    body += arrow(548, 604, cy, "p")
+    # pinched torus: a ring whose hole touches the outer rim at one point
+    tx, ty, R1, R2 = 680, cy, 62, 27
+    hx, hy = tx, ty - (R1 - R2)          # hole centre, so the hole touches the rim at the top
+    pinch = (tx, ty - R1)
+    body += [f'<path d="M {tx-R1} {ty} A {R1} {R1} 0 1 0 {tx+R1} {ty} A {R1} {R1} 0 1 0 {tx-R1} {ty} Z '
+             f'M {hx-R2} {hy} A {R2} {R2} 0 1 1 {hx+R2} {hy} A {R2} {R2} 0 1 1 {hx-R2} {hy} Z" '
+             f'fill="url(#sph)" fill-rule="evenodd" stroke="{INK}" stroke-width="1.3"/>',
+             circle(pinch, 5, fill=OX),
+             text((pinch[0], pinch[1] - 12), "c₁₃₅ = c₂₄₆", 15, fill=OX),
+             f'<path d="M {pinch[0]} {pinch[1]} C {tx-R1-18} {ty-30}, {tx-R1+4} {ty+R1+14}, {tx} {ty+R2+12} '
+             f'C {tx+R1-4} {ty+R1+14}, {tx+R1+18} {ty-30}, {pinch[0]} {pinch[1]}" fill="none" '
+             f'stroke="{OX}" stroke-width="2.2" stroke-dasharray="6 4"/>',
+             text((tx, cy + r + 24), "Sh(ℛ) ≃ S² ∨ S¹", 18, fill=INK)]
+    body += [text((575, 248), "in ℝ⁴: two points are glued", 18, fill=OX),
+             text((575, 272), "π₁(ℛ) = 0 but π₁(Sh) ≅ ℤ: not onto π₁", 16, fill=SEPIA)]
+    write("losses.svg", svg(760, 290, body, "What the Euclidean shadow can lose"))
+
+
 def fig_hairpin():
     """Euclidean Rips versus eps-path Rips on a sample of a hairpin."""
     body = []
@@ -585,6 +650,7 @@ if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     fig_shadow()
     fig_hexagon()
+    fig_losses()
     fig_hairpin()
     fig_vertex_apex()
     fig_sharp()
