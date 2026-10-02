@@ -332,7 +332,7 @@ The theorem: for a finite flag complex, the apex condition makes the shadow proj
 :::
 
 ::: {.fragment data-aproof="3"}
-**3.** Send each $b_\tau$ to an apex $a_\tau$ of it. Along a chain $\tau_0\prec\cdots\prec\tau_m$ the simplex $\sigma_{\tau_j}\cup\{a_{\tau_j}\}$ covers $b_{\tau_i}$, so $a_{\tau_i}$ sees $a_{\tau_j}$. By flagness the apices span a simplex: a simplicial map $A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K$.
+**3.** Send each $b_\tau$ to an apex $a_\tau$ of it. Along a chain ${\tau_0\prec\cdots\prec\tau_m}$ the simplex $\sigma_{\tau_j}\cup\{a_{\tau_j}\}$ covers $b_{\tau_i}$, so $a_{\tau_i}$ sees $a_{\tau_j}$. By flagness the apices span a simplex: a simplicial map $A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K$.
 :::
 
 ::: {.fragment data-aproof="4"}
