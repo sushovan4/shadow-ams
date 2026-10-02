@@ -468,16 +468,8 @@ Change the metric. Hop through the sample in steps shorter than epsilon and take
 :::
 :::
 
-::: {.fig-row}
-::: {.fig .fragment data-fragment-index="2" style="flex-basis: 56%;"}
-![](assets/sharp.svg)
-:::
-
-::: {.stmts}
 ::: {.rmk .fragment data-fragment-index="2" data-name="Second difficulty: sharp vertices"}
-At a sharp vertex the $\varepsilon$-path complex can fail the apex condition: an edge between the outer branches cuts the corner and crosses an edge on the middle one, whose far ends are more than $2\beta$ apart in $d^\varepsilon$. There the proof is geometric.
-:::
-:::
+At a sharp vertex the $\varepsilon$-path complex can fail the apex condition: a short path between two branches cuts the corner, and the crossing it makes has no apex. There the proof is geometric.
 :::
 
 ::: {.notes}
@@ -487,7 +479,7 @@ And the proof is the apex theorem: on each edge the complex satisfies the apex c
 
 [click] A sample merely near a polygonal graph: injective on every homotopy group, so the graph's fundamental group sits inside the shadow's. The proof is the apex condition across two scales: the coarser complex contains, for every point of the shadow, a simplex on all the vertices around it. The shadow radius is what certifies that.
 
-[click] The second difficulty. Along an edge the apex theorem applies: the nearest sample point on one side is an apex. But at a sharp vertex it fails: three branches at fifteen degrees, the path between the two outer ones cuts the corner, and the crossing it makes has no apex, since B and C are more than 2 beta apart in the path metric. So the apex theorem alone does not prove the first theorem. At such a vertex the proof is geometric: the hulls of the simplices at the vertex fill a set that is star-shaped about it, hence contractible, and the pieces glue.
+[click] The second difficulty. Along an edge the apex theorem applies: the nearest sample point on one side is an apex. But at a sharp vertex it can fail: a short path between two branches cuts the corner, and the crossing it makes has no apex. (If asked: three branches at fifteen degrees; the two far ends of the crossing edges are more than 2 beta apart in the path metric, so no vertex sees both.) So the apex theorem alone does not prove the first theorem. At such a vertex the proof is geometric: the hulls of the simplices at the vertex fill a set that is star-shaped about it, hence contractible, and the pieces glue.
 :::
 
 
