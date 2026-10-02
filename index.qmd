@@ -781,7 +781,7 @@ Thank you.
 ```
 
 ::: {.contact}
-Planar predecessor: [JACT 2026](https://doi.org/10.1007/s41468-026-00242-2) · [smajhi.com](https://smajhi.com) · [s.majhi@email.gwu.edu](mailto:s.majhi@email.gwu.edu)
+Planar predecessor: [JACT 2026](https://doi.org/10.1007/s41468-026-00242-2) · [smajhi.com](https://smajhi.com) · [s.majhi@gwu.edu](mailto:s.majhi@gwu.edu)
 :::
 
 ::: {.subscription}
