@@ -13,6 +13,7 @@ Joint work with Kazuhiro Kawamura and Atish Mitra.
 
 ```bash
 python3 tools/figures.py              # regenerate the figures and section plates
+python3 tools/apex_proof.py           # geometry for the animated proof of the apex theorem
 quarto render index.qmd --to revealjs # render to index.html
 quarto preview index.qmd              # live preview
 quarto publish gh-pages               # deploy to GitHub Pages

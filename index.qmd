@@ -12,6 +12,7 @@ resources:
   - assets/title-plate.svg
   - assets/shadow-lab.js
   - assets/*.svg
+  - assets/apex-proof-data.js
 footer: "Beyond a Shadow of a Doubt  ·  S. Majhi  ·  AMS Fall Eastern Sectional · Washington, D.C.  ·  October 2026"
 ---
 
@@ -295,16 +296,8 @@ If a finite flag complex $\mathcal K$ with $\mathcal K^{(0)}\subset\mathbb R^N$ 
 :::
 :::
 
-::: {.fig-row}
-::: {.fig style="flex-basis: 36%;"}
+::: {.fig-wide style="width: 38%; margin: 0.3rem auto 0;"}
 ![](assets/apex.svg)
-:::
-
-::: {.stmts}
-::: {.sketch .fragment}
-Send the barycenter $b_\tau$ of each shadow simplex to an apex $a_\tau$ of it. Along a chain $\tau_0\prec\cdots\prec\tau_m$ the apices are pairwise adjacent: the simplex $\sigma_{\tau_j}\cup\{a_{\tau_j}\}$ covers $b_{\tau_i}$, so $a_{\tau_i}$ sees $a_{\tau_j}$. By flagness they span a simplex: a simplicial map $A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K$. Both composites with $p$ stay in single simplices or single convex hulls, so straight lines give the homotopies.
-:::
-:::
 :::
 
 ::: {.notes}
@@ -312,9 +305,52 @@ The apex condition. At a point x of the shadow, collect every simplex whose hull
 
 The theorem: for a finite flag complex, the apex condition makes the shadow projection a homotopy equivalence, in every dimension.
 
-The proof is short. Triangulate the shadow compatibly with the hulls, subdivide once, and send each barycenter to an apex of it. Along a chain of faces the apices are pairwise adjacent, because the simplex coning off a bigger face also covers the smaller barycenter; a flag complex turns pairwise adjacency into a simplex, so the map is simplicial. Both composites move each point only inside one simplex of K, or one convex hull in the shadow, and straight lines finish it.
-
 (If asked: Adamaszek, Frick and Vakili find one vertex adjacent to the other four among the five vertices of a triangle and a segment of the Euclidean complex in R^3, and deduce pi_1-surjectivity there. That fails in R^4. We ask for more, one apex for everything through the point, and get more.)
+:::
+
+
+## Proof of the apex theorem
+
+```{=html}
+<script src="assets/apex-proof-data.js?v=202610021400"></script>
+```
+
+::: {.fig-row}
+::: {.fig style="flex-basis: 50%;"}
+```{=html}
+<div id="apex-proof"></div>
+```
+:::
+
+::: {.stmts .proof-steps}
+::: {.fragment data-aproof="1"}
+**1.** Cut the shadow along every hull boundary and triangulate: the *shadow complex* $\mathrm{SC}(\mathcal K)$. Each simplex $\tau$ of it lies in a fixed set of hulls.
+:::
+
+::: {.fragment data-aproof="2"}
+**2.** Subdivide once: a vertex $b_\tau$, the barycenter, for each $\tau$.
+:::
+
+::: {.fragment data-aproof="3"}
+**3.** Send each $b_\tau$ to an apex $a_\tau$ of it. Along a chain $\tau_0\prec\cdots\prec\tau_m$ the simplex $\sigma_{\tau_j}\cup\{a_{\tau_j}\}$ covers $b_{\tau_i}$, so $a_{\tau_i}$ sees $a_{\tau_j}$. By flagness the apices span a simplex: a simplicial map $A\colon\operatorname{sd}\mathrm{SC}(\mathcal K)\to\mathcal K$.
+:::
+
+::: {.fragment data-aproof="4"}
+**4.** Both composites with $p$ move each point inside one simplex of $\mathcal K$ or one hull in $\mathrm{Sh}(\mathcal K)$: straight lines give the homotopies.
+:::
+:::
+:::
+
+::: {.notes}
+The proof, on a small example: two triangles of K, EAB and ECD, whose hulls cross. Their shadow is the shaded region.
+
+[click] Cut the shadow along every hull boundary and triangulate the pieces: the shadow complex. The crossings become new vertices, and each simplex of it lies in a fixed set of hulls.
+
+[click] Subdivide once: one new vertex, the barycenter, for each simplex.
+
+[click] Now send each barycenter to an apex of it, and watch: every small triangle lands on a simplex of K. That is the key step. Along a chain of faces the apices are pairwise adjacent, because the simplex coning off a bigger face also covers the smaller barycenter, and a flag complex turns pairwise adjacency into a simplex. So A is simplicial. And the motion you just saw is the homotopy from the identity of the shadow to p after A: each point moved inside one hull.
+
+[click] The other composite, A after p on the subdivided complex, moves each point inside one simplex of K. Straight lines again. So p is a homotopy equivalence.
 :::
 
 
@@ -411,7 +447,7 @@ A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scal
 
 ```{=html}
 <div id="shadow-lab" data-prevent-swipe></div>
-<script src="assets/shadow-lab.js?v=202610021010"></script>
+<script src="assets/shadow-lab.js?v=202610021410"></script>
 ```
 
 ::: {.notes}

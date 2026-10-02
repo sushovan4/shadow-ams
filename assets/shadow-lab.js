@@ -4,6 +4,8 @@
 //                    as the scale beta, the hop epsilon and the metric change.
 //  #shadow-collapse  the octahedral Rips complex of a hexagon falling onto its
 //                    shadow, driven by the fragments of its slide.
+//  #shadow-pinch     the R^4 example: two centroids glued in the shadow.
+//  #apex-proof       the proof of the apex theorem, step by step.
 //
 // Both are computed, not drawn: the complexes are flag complexes of the sampled
 // points under the stated metric, and in the plane the shadow of a flag complex
@@ -500,6 +502,130 @@
     hook();
   }
 
+  // ------------------------------------------------------------------------
+  // the proof of the apex theorem: shadow, shadow complex, subdivision, apex map.
+  // Geometry from tools/apex_proof.py (window.APEX_PROOF); the fragments of the
+  // slide carry data-aproof = 1 (SC), 2 (sd SC), 3 (b_tau to a_tau), 4 (text only).
+  // ------------------------------------------------------------------------
+  function buildApexProof(root) {
+    var D = window.APEX_PROOF;
+    if (!D) return;
+    var svg = el('svg', { viewBox: '20 8 420 372', class: 'collapse-figure', role: 'img',
+                          'aria-label': 'The proof of the apex theorem, step by step' }, root);
+    var K = D.K, XY = K.pos;
+    // the shadow: the hulls of the triangles of K
+    K.tris.forEach(function (t) {
+      el('polygon', { points: t.map(function (i) { return XY[i].join(','); }).join(' '),
+                      fill: OX, 'fill-opacity': 0.13, stroke: 'none' }, svg);
+    });
+    // the shadow complex: cells triangulated, crossings as new vertices
+    var scLayer = el('g', { opacity: 0 }, svg);
+    D.scEdges.forEach(function (e) {
+      el('line', { x1: e[0][0], y1: e[0][1], x2: e[1][0], y2: e[1][1], stroke: OX,
+                   'stroke-width': 1.1, opacity: 0.75 }, scLayer);
+    });
+    // the subdivision, drawn as moving triangles
+    var sdLayer = el('g', { opacity: 0 }, svg);
+    var polys = D.sd.map(function () {
+      return el('polygon', { fill: OX, 'fill-opacity': 0.07, stroke: OX, 'stroke-width': 0.6,
+                             'stroke-opacity': 0.7, 'stroke-linejoin': 'round' }, sdLayer);
+    });
+    // the edges of K and its vertices, on top
+    K.edges.forEach(function (e) {
+      el('line', { x1: XY[e[0]][0], y1: XY[e[0]][1], x2: XY[e[1]][0], y2: XY[e[1]][1],
+                   stroke: INK, 'stroke-width': 1.4 }, svg);
+    });
+    var cx = 0, cy = 0;
+    XY.forEach(function (q) { cx += q[0] / XY.length; cy += q[1] / XY.length; });
+    XY.forEach(function (q, i) {
+      el('circle', { cx: q[0], cy: q[1], r: 4.2, fill: INK }, svg);
+      var dx = q[0] - cx, dy = q[1] - cy, n = Math.hypot(dx, dy) || 1;
+      var t = el('text', { x: q[0] + 17 * dx / n, y: q[1] + 17 * dy / n + 6, 'text-anchor': 'middle',
+                           'font-family': 'EB Garamond, Georgia, serif', 'font-style': 'italic',
+                           'font-size': 19, fill: SEPIA }, svg);
+      t.textContent = K.names[i];
+    });
+    var crossDots = D.cross.map(function (q) {
+      return el('circle', { cx: q[0], cy: q[1], r: 4.4, fill: PAPER, stroke: OX, 'stroke-width': 1.6,
+                            opacity: 0 }, svg);
+    });
+    var dots = D.nodes.map(function (nd) {
+      return nd.kind === 'v' ? null :
+        el('circle', { r: nd.kind === 't' ? 3 : 2.4, fill: nd.kind === 't' ? OX : SEPIA, opacity: 0 }, svg);
+    });
+    var cap = el('text', { x: 230, y: 368, 'text-anchor': 'middle', 'font-family': 'EB Garamond, Georgia, serif',
+                           'font-style': 'italic', 'font-size': 19, fill: SEPIA }, svg);
+    var sub = function (s) {
+      return '<tspan dy="4" font-size="14">' + s + '</tspan><tspan dy="-4"> </tspan>';
+    };
+
+    var state = { sc: 0, sd: 0, t: 0, n: 0 }, timer = null;
+    function ease(u) { return u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2; }
+    function render() {
+      var e = ease(state.t);
+      var at = function (k) {
+        var nd = D.nodes[k];
+        return [nd.pos[0] + (nd.to[0] - nd.pos[0]) * e, nd.pos[1] + (nd.to[1] - nd.pos[1]) * e];
+      };
+      scLayer.setAttribute('opacity', state.sc * (1 - e));
+      crossDots.forEach(function (c) { c.setAttribute('opacity', state.sc * (1 - e)); });
+      sdLayer.setAttribute('opacity', state.sd);
+      D.sd.forEach(function (ch, i) {
+        polys[i].setAttribute('points', ch.map(function (k) { return at(k).join(','); }).join(' '));
+      });
+      D.nodes.forEach(function (nd, k) {
+        if (!dots[k]) return;
+        var q = at(k);
+        dots[k].setAttribute('cx', q[0]); dots[k].setAttribute('cy', q[1]);
+        dots[k].setAttribute('opacity', state.sd);
+      });
+      cap.innerHTML = state.n >= 4 ? 'p∘A ≃ id and A∘p ≃ id, along straight lines'
+        : state.n >= 3 ? (state.t > 0.98 ? 'A: sd SC(𝒦) → 𝒦 is simplicial; it lands on 𝒦'
+                                         : 'each b' + sub('τ') + 'goes to an apex a' + sub('τ') + '…')
+        : state.n >= 2 ? 'subdivide once: a vertex b' + sub('τ') + 'for each simplex τ'
+        : state.n >= 1 ? 'the shadow complex SC(𝒦): crossings become vertices'
+        : 'Sh(𝒦): the triangles EAB and ECD, whose hulls cross';
+    }
+    function animateTo(target) {
+      if (timer) clearInterval(timer);
+      var from = { sc: state.sc, sd: state.sd, t: state.t }, t0 = Date.now();
+      var dur = Math.abs(target.t - from.t) > 0.5 ? 2000 : 700;
+      state.n = target.n;
+      timer = setInterval(function () {
+        var u = Math.min(1, (Date.now() - t0) / dur);
+        state.sc = from.sc + (target.sc - from.sc) * u;
+        state.sd = from.sd + (target.sd - from.sd) * u;
+        state.t = from.t + (target.t - from.t) * u;
+        render();
+        if (u >= 1) { clearInterval(timer); timer = null; }
+      }, 16);
+    }
+
+    var slide = root.closest('section');
+    function steps() {
+      var n = 0;
+      Array.prototype.forEach.call(slide.querySelectorAll('[data-aproof]'), function (f) {
+        if (f.classList.contains('visible')) n = Math.max(n, +f.getAttribute('data-aproof'));
+      });
+      return { n: n, sc: n >= 1 ? 1 : 0, sd: n >= 2 ? 1 : 0, t: n >= 3 ? 1 : 0 };
+    }
+    function sync(animate) {
+      var t = steps();
+      if (animate) animateTo(t);
+      else { state.sc = t.sc; state.sd = t.sd; state.t = t.t; state.n = t.n; render(); }
+    }
+    render();
+    function hook() {
+      if (typeof Reveal === 'undefined' || !Reveal.on) { setTimeout(hook, 100); return; }
+      Reveal.on('fragmentshown', function (ev) { if (slide.contains(ev.fragment)) sync(true); });
+      Reveal.on('fragmenthidden', function (ev) { if (slide.contains(ev.fragment)) sync(true); });
+      Reveal.on('slidechanged', function (ev) { if (ev.currentSlide === slide) sync(false); });
+      Reveal.on('ready', function () { sync(false); });
+      sync(false);
+    }
+    hook();
+  }
+
   function init() {
     var lab = document.getElementById('shadow-lab');
     if (lab && !lab.dataset.built) { lab.dataset.built = 1; buildLab(lab); }
@@ -507,6 +633,8 @@
     if (col && !col.dataset.built) { col.dataset.built = 1; buildCollapse(col); }
     var pin = document.getElementById('shadow-pinch');
     if (pin && !pin.dataset.built) { pin.dataset.built = 1; buildPinch(pin); }
+    var apx = document.getElementById('apex-proof');
+    if (apx && !apx.dataset.built) { apx.dataset.built = 1; buildApexProof(apx); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
