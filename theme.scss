@@ -2686,14 +2686,14 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
 
 // The scorecard on "What the shadow can lose": compact, centered marks, the
 // last two rows (this talk) set apart by a rule and a tint.
-.reveal .methods.scorecard table { font-size: 0.5em; margin: 0.1rem auto 0; }
+.reveal .methods.scorecard table { font-size: 0.6em; margin: 0.1rem auto 0; }
 .reveal .scorecard td:not(:first-child), .reveal .scorecard th:not(:first-child) {
   text-align: center; min-width: 7em;
 }
 .reveal .scorecard td, .reveal .scorecard th { padding: 0.12em 0.8em !important; }
 .reveal .scorecard tr:nth-last-child(2) td { border-top: 1.5px solid var(--oxblood) !important; }
 .reveal .scorecard tbody tr:nth-last-child(-n+2) td { background: var(--paper-soft); font-weight: 600; }
-.reveal #shadow-pinch { max-width: 620px; margin: -0.7rem auto 0; }
+.reveal #shadow-pinch { max-width: 570px; margin: -0.7rem auto 0; }
 
 // Prior work on the opener: three citation cards, venue in oxblood.
 .reveal .prior { max-width: 1120px; margin: 0.15rem auto 0.35rem; }
@@ -2779,3 +2779,7 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
   .reveal .slide-number, .reveal .slide-number a { font-size: 1.45rem !important; }
   .reveal .slide-menu-button { transform: scale(2); transform-origin: bottom left; }
 }
+
+// Scorecard at the larger size: inset from the slide edges, labels on one line
+.reveal .methods.scorecard table { width: 92% !important; }
+.reveal .scorecard td:first-child, .reveal .scorecard th:first-child { white-space: nowrap; }
