@@ -2753,3 +2753,13 @@ html.finis .footer, html.finis .footer-default, html.finis .slide-number,
   margin-left: 0.6em;
 }
 .reveal #apex-proof { width: 100%; }
+
+// "Via ..." line under a theorem: how the apex condition enters the proof
+.reveal .via {
+  display: block;
+  margin-top: 0.45em;
+  font-style: normal;
+  font-size: 0.86em;
+  color: var(--oxblood);
+}
+.reveal .via strong { font-weight: 600; }
