@@ -313,6 +313,7 @@ The theorem: for a finite flag complex, the apex condition makes the shadow proj
 
 ```{=html}
 <script src="assets/apex-proof-data.js?v=202610021500"></script>
+<script src="assets/shadow-lab.js?v=202610021510"></script>
 ```
 
 ::: {.fig-row}
@@ -400,18 +401,18 @@ The proof of the apex theorem goes through with the target changed and gives a m
 :::
 
 
-# § III.  Change the Metric {.section-divider}
+# § III.  Reconstruction {.section-divider}
 
 ::: {.plate data-plate="III"}
-![](assets/section-ii-plate.svg)
+![](assets/section-iv-plate.svg)
 :::
 
 ::: {.notes}
-Section three: a metric in which the apex condition can hold. The path metric, what it already buys for the abstract complex, and the two quantities of the graph that the scales are stated in.
+Section three, five minutes: a metric in which the apex condition can hold, the two theorems in every dimension, and the two difficulties on the way.
 :::
 
 
-## The $\varepsilon$-path metric
+## Change the metric
 
 ::: {.env-row}
 ::: {.definition data-num="7" data-name="Path metric" data-cite="Fasy–Komendarczyk–Majhi–Wenk; Majhi"}
@@ -419,27 +420,67 @@ For $\mathcal A\subset\mathbb R^N$ and $\varepsilon>0$, $d^\varepsilon_{\mathcal
 :::
 
 ::: {.theorem .fragment data-num="8" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT"}
-For a compact connected graph $\mathcal G\subset\mathbb R^N$ and a sample close enough to it, at explicit scales $\varepsilon\ll\beta$,
-$$
-\mathcal R^\varepsilon_\beta(\mathcal S)\;\simeq\;\mathcal G .
-$$
+For a compact connected graph $\mathcal G\subset\mathbb R^N$ and a sample close enough to it, at explicit scales $\varepsilon\ll\beta$, $\mathcal R^\varepsilon_\beta(\mathcal S)\simeq\mathcal G$. In the plane, its shadow is a geometric reconstruction of $\mathcal G$.
 :::
 :::
 
-::: {.fig-wide .fragment style="width: 62%;"}
+::: {.fig-row}
+::: {.fig .fragment style="flex-basis: 44%;"}
 ![](assets/hairpin.svg?v=202610021100)
 :::
 
+::: {.stmts}
+::: {.rmk .fragment data-name="First difficulty: why a path metric?"}
+Sets of positive $\mu$-reach are already reconstructed, by unions of balls and $\alpha$-shapes: we claim no new class of sets. The question is the Rips shadow, and for the Euclidean complex what is known stops at $\pi_1$ (Theorem 3). The $\varepsilon$-path complex is $\simeq\mathcal G$ in every dimension, so its shadow is the candidate.
+:::
+:::
+:::
+
 ::: {.notes}
-The replacement metric, introduced by Fasy, Komendarczyk, Majhi and Wenk, and by me: hop through the sample in steps shorter than epsilon and take the shortest such chain. It is computed from pairwise distances alone, and up to small errors it measures distance along the graph.
+Change the metric. Hop through the sample in steps shorter than epsilon and take the shortest chain: computed from pairwise distances alone, and up to small errors it is distance along the graph. Komendarczyk, Majhi and Mitra, in JACT: its Rips complex has the homotopy type of the graph, in every dimension; and in the plane its shadow is a geometric reconstruction, by a planar argument.
 
-For the abstract complex this already works in every dimension: Komendarczyk, Majhi and Mitra, in JACT, show it has the homotopy type of the graph. In the plane they also show the shadow is a geometric reconstruction, by a planar argument. This talk is about the shadow in R^N.
+[click] The picture: a thin loop. The Euclidean complex bridges the gap and loses the loop; the path-metric complex keeps it.
 
-The picture: a thin loop, narrower than the scale. The Euclidean complex bridges the gap and fills a disk, so the loop is lost; the path-metric complex on the same points, at the same beta, hops only along the loop, and the loop survives.
+[click] The first difficulty, and a fair question: why a path metric at all, when sets of positive mu-reach are already reconstructed by unions of balls and alpha-shapes? We claim no new class of sets. The question is about the shadow of a Rips complex, and for the Euclidean complex what is known stops at the fundamental group: the theorem we saw. The path-metric complex is right in every dimension, so its shadow is the one to ask about.
 :::
 
 
-## Watch the shadow
+## In every dimension
+
+::: {.env-row}
+::: {.theorem data-num="9" data-name="A sample on the graph" data-cite="Kawamura–Majhi–Mitra"}
+[Let $\mathcal G\subset\mathbb R^N$ be **polygonal**, $\mathcal S\subset\mathcal G$ dense, and $\varepsilon\ll\beta$ at one explicit scale set by the sharpest angle, the shadow radius and the shortest edge.]{.hyp} Then $p$ is a homotopy equivalence, and $\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))$ is a geometric reconstruction of $\mathcal G$.
+:::
+
+::: {.theorem .fragment data-num="10" data-name="A sample off the graph" data-cite="Kawamura–Majhi–Mitra"}
+[Let $\mathcal G\subset\mathbb R^N$ be **polygonal**, $\mathcal S$ merely Hausdorff-close to it, at explicit scales.]{.hyp} Then $p_*$ is injective on every $\pi_k$, bijective on $\pi_0$: $\pi_1(\mathcal G)\hookrightarrow\pi_1(\mathrm{Sh})$.
+:::
+:::
+
+::: {.fig-row}
+::: {.fig .fragment style="flex-basis: 46%;"}
+![](assets/sharp.svg)
+:::
+
+::: {.stmts}
+::: {.rmk .fragment data-name="Second difficulty: sharp vertices"}
+Along an edge the nearest sample point is an apex. At a sharp vertex the $\varepsilon$-path complex can fail the apex condition: an edge between the outer branches cuts the corner and crosses an edge on the middle one, whose far ends are more than $2\beta$ apart in $d^\varepsilon$. There the proof is geometric: the hulls at the vertex fill a set **star-shaped** about it.
+:::
+:::
+:::
+
+::: {.notes}
+The two theorems, in every dimension. A polygonal graph, a sample on it, one explicit scale set by the sharpest angle, the shadow radius and the shortest edge: the shadow projection is a homotopy equivalence and the shadow is a geometric reconstruction. That answers Kazuhiro's question, for this setting: one sample, one scale.
+
+[click] A sample merely near a polygonal graph: injective on every homotopy group, so the graph's fundamental group sits inside the shadow's. The proof is the apex idea across two scales, through the shadow radius.
+
+[click] The second difficulty. Along an edge the apex theorem applies: the nearest sample point on one side is an apex. [click] But at a sharp vertex it fails: three branches at fifteen degrees, the path between the two outer ones cuts the corner, and the crossing it makes has no apex, since B and C are more than 2 beta apart in the path metric. So the apex theorem alone does not prove the first theorem. At such a vertex the proof is geometric: the hulls of the simplices at the vertex fill a set that is star-shaped about it, hence contractible, and the pieces glue.
+:::
+
+
+<!-- Backup slides from the full deck (main branch), hidden for the 20-minute AMS talk. -->
+
+## Watch the shadow {visibility="hidden"}
 
 ::: {.standfirst .math}
 A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scale $\beta$; and the shadow, the union of its hulls. Computed live.
@@ -447,7 +488,6 @@ A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scal
 
 ```{=html}
 <div id="shadow-lab" data-prevent-swipe></div>
-<script src="assets/shadow-lab.js?v=202610021510"></script>
 ```
 
 ::: {.notes}
@@ -487,7 +527,7 @@ This talk: the shadow in R^N, for a metric computed from the sample, and a graph
 :::
 
 
-## Two quantities of the graph
+## Two quantities of the graph {visibility="hidden"}
 
 ::: {.standfirst .math}
 $\mathcal G$ is compact and connected, with finitely many $C^1$ edges meeting at positive angles.
@@ -511,7 +551,7 @@ The condition number Theta records the sharpest angle; s is essentially the sine
 :::
 
 
-# § IV.  The Shadow of a Graph Sample {.section-divider}
+## § IV.  The Shadow of a Graph Sample {.section-divider visibility="hidden"}
 
 ::: {.plate data-plate="IV"}
 ![](assets/section-iv-plate.svg)
@@ -522,7 +562,7 @@ Section four: where the apex fails, and the two theorems. A sample on the graph,
 :::
 
 
-## Where the apex fails
+## Where the apex fails {visibility="hidden"}
 
 ::: {.example data-num="10" data-name="Not necessary"}
 Three straight branches at $15^\circ,0^\circ,-15^\circ$, a sample on them, and $\varepsilon\le\tfrac{1}{200}\beta\sin\tfrac{15^\circ}2$: the chord $CD$ cuts the corner and crosses the Rips edge $AB$ at $x$, and $d^\varepsilon(B,C)>2\beta$, so $x$ has no apex. Yet $p$ is a homotopy equivalence.
@@ -572,7 +612,7 @@ Why these. Along an arc that turns slowly, the path distance between two samples
 :::
 
 
-## A sample on the graph
+## A sample on the graph {visibility="hidden"}
 
 ::: {.theorem data-num="11" data-name="A sample on the graph" data-cite="Kawamura–Majhi–Mitra"}
 [Let $\mathcal G\subset\mathbb R^N$ be a **polygonal** graph, $\xi\le\tfrac1{12}$, and]{.hyp}
@@ -631,7 +671,7 @@ So at any scale beta' above 9 beta over 2 s, every star at scale beta spans a si
 :::
 
 
-## A sample off the graph
+## A sample off the graph {visibility="hidden"}
 
 ::: {.theorem data-num="12" data-name="A sample off the graph" data-cite="Kawamura–Majhi–Mitra"}
 [Let $\mathcal G\subset\mathbb R^N$ be a **polygonal** graph, and $\beta,\varepsilon$ in an explicit window in $\Delta_\xi$, $s$, $\lambda$ and the systole.]{.hyp} If $\mathcal S\subset\mathbb R^N$ is merely Hausdorff-close to $\mathcal G$, then
@@ -662,11 +702,11 @@ In the plane this is a lemma of the JACT paper, by a planar proof. For the Eucli
 
 ## What remains, and what is next
 
-::: {.question data-num="13" data-name="Two open cases"}
+::: {.question data-num="11" data-name="Two open cases"}
 For $N\ge3$: is the shadow a geometric reconstruction for a sample **off** the graph, or at a singular vertex with **curved** germs? In the plane both hold (JACT). For a smooth closed curve and the Euclidean complex this is a conjecture of the limits paper.
 :::
 
-::: {.question .fragment data-num="14" data-name="Beyond graphs"}
+::: {.question .fragment data-num="12" data-name="Beyond graphs"}
 How much of this extends beyond graphs, to the geodesic subspaces of $\mathbb R^N$ whose Rips complexes are already understood?
 :::
 
