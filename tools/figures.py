@@ -492,16 +492,16 @@ def fig_hairpin():
             (60, "Euclidean Vietoris–Rips", euclid_metric(pts)),
             (400, "ε-path Vietoris–Rips", path_metric(pts, eps))]):
         edges, tris = rips(D, beta)
-        g = [f'<g transform="translate({dx + 90},34)">']
+        g = [f'<g transform="translate({dx + 80},14) scale(1.45)">']
         g.append(f'<path d="{d}" fill="none" stroke="{SEPIA}" stroke-width="1" '
                  f'stroke-dasharray="3 3" opacity="0.7"/>')
-        g += complex_layers(pts, edges, tris, edge_w=0.7, pt_r=2.2)
+        g += complex_layers(pts, edges, tris, edge_w=0.6, pt_r=1.8)
         g.append("</g>")
         body += g
-        body.append(text((dx + 112, 262), title, 16, fill=OX if k else SEPIA))
-    body.append(text((172, 290), "fills the gap: a disk, the loop is lost", 18, fill=SEPIA))
-    body.append(text((512, 290), "respects the gap: the loop survives", 18, fill=SEPIA))
-    write("hairpin.svg", svg(680, 300, body,
+        body.append(text((dx + 112, 300), title, 17, fill=OX if k else SEPIA))
+    body.append(text((172, 328), "fills the gap: a disk, the loop is lost", 19, fill=SEPIA))
+    body.append(text((512, 328), "respects the gap: the loop survives", 19, fill=SEPIA))
+    write("hairpin.svg", svg(680, 340, body,
                              "Euclidean and path-metric Rips complexes of a thin-loop sample"))
 
 

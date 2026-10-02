@@ -425,8 +425,8 @@ For a compact connected graph $\mathcal G\subset\mathbb R^N$ and a sample close 
 :::
 
 ::: {.fig-row}
-::: {.fig .fragment style="flex-basis: 44%;"}
-![](assets/hairpin.svg?v=202610021100)
+::: {.fig .fragment style="flex-basis: 50%;"}
+![](assets/hairpin.svg?v=202610021230)
 :::
 
 ::: {.stmts}
