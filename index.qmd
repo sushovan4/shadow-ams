@@ -282,7 +282,7 @@ Section two: the path metric, what it already buys for the abstract complex, and
 
 ::: {.env-row}
 ::: {.definition data-num="4" data-name="Path metric" data-cite="Fasy–Komendarczyk–Majhi–Wenk; Majhi"}
-For $\mathcal A\subset\mathbb R^N$ and $\varepsilon>0$, $d^\varepsilon_{\mathcal A}(p,q)$ is the length of a shortest chain $p=a_0,\dots,a_{k+1}=q$ in $\mathcal A$ with hops $\|a_i-a_{i+1}\|<\varepsilon$. Write $\mathcal R^\varepsilon_\beta(\mathcal S)$ for the Rips complex of $(\mathcal S,d^\varepsilon_{\mathcal S})$.
+For $\mathcal A\subset\mathbb R^N$ and $\varepsilon>0$, $d^\varepsilon_{\mathcal A}(p,q)$ is the length of a shortest chain $p=a_0,\dots,a_{k+1}=q$ in $\mathcal A$ with hops ${\|a_i-a_{i+1}\|<\varepsilon}$. Write $\mathcal R^\varepsilon_\beta(\mathcal S)$ for the Rips complex of $(\mathcal S,d^\varepsilon_{\mathcal S})$.
 :::
 
 ::: {.theorem .fragment data-num="5" data-name="Homotopy reconstruction" data-cite="Komendarczyk–Majhi–Mitra, JACT"}
@@ -293,7 +293,7 @@ $$
 :::
 :::
 
-::: {.fig-wide .fragment style="width: 52%;"}
+::: {.fig-wide .fragment style="width: 62%;"}
 ![](assets/hairpin.svg)
 :::
 
@@ -302,7 +302,7 @@ The replacement metric, introduced by Fasy, Komendarczyk, Majhi and Wenk, and by
 
 For the abstract complex this already works in every dimension: Komendarczyk, Majhi and Mitra, in JACT, show it has the homotopy type of the graph. In the plane they also show the shadow is a geometric reconstruction, by a planar argument. This talk is about the shadow in R^N.
 
-The picture: a hairpin. The Euclidean complex bridges the gap and fills a disk; the path-metric complex on the same points, at the same beta, does not.
+The picture: a thin loop, narrower than the scale. The Euclidean complex bridges the gap and fills a disk, so the loop is lost; the path-metric complex on the same points, at the same beta, hops only along the loop, and the loop survives.
 :::
 
 

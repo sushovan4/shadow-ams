@@ -225,6 +225,36 @@ def hairpin(x0, gap, top, bottom, spacing, noise, seed):
     return pts, d
 
 
+def thin_loop(x0, gap, top, bottom, spacing, noise, seed):
+    """A stadium: two vertical legs closed by half-circles at both ends."""
+    rng = random.Random(seed)
+    r = gap / 2
+    cx = x0 + r
+    fine = []
+    for i in range(200):
+        fine.append((x0, top + (bottom - top) * i / 199))
+    for i in range(1, 120):
+        a = math.pi - math.pi * i / 120
+        fine.append((cx + r * math.cos(a), bottom + r * math.sin(a)))
+    for i in range(200):
+        fine.append((x0 + gap, bottom - (bottom - top) * i / 199))
+    for i in range(1, 120):
+        a = -math.pi * i / 120
+        fine.append((cx + r * math.cos(a), top + r * math.sin(a)))
+    pts, acc = [fine[0]], 0.0
+    for a, b in zip(fine, fine[1:]):
+        acc += dist(a, b)
+        if acc >= spacing:
+            pts.append(b)
+            acc = 0.0
+    pts = [(x + rng.uniform(-noise, noise), y + rng.uniform(-noise, noise))
+           for x, y in pts]
+    d = (f"M {f(x0)} {f(top)} L {f(x0)} {f(bottom)} "
+         f"A {f(r)} {f(r)} 0 0 0 {f(x0 + gap)} {f(bottom)} L {f(x0 + gap)} {f(top)} "
+         f"A {f(r)} {f(r)} 0 0 0 {f(x0)} {f(top)} Z")
+    return pts, d
+
+
 # --------------------------------------------------------------------------
 # figures
 # --------------------------------------------------------------------------
@@ -454,9 +484,9 @@ def fig_hexagon():
 
 
 def fig_hairpin():
-    """Euclidean Rips versus eps-path Rips on a sample of a hairpin."""
+    """Euclidean Rips versus eps-path Rips on a sample of a thin loop."""
     body = []
-    pts, d = hairpin(0, 44, 0, 150, 11, 1.6, seed=7)
+    pts, d = thin_loop(0, 44, 22, 150, 11, 1.6, seed=7)
     beta, eps = 50, 16
     for k, (dx, title, D) in enumerate([
             (60, "Euclidean Vietoris–Rips", euclid_metric(pts)),
@@ -470,9 +500,9 @@ def fig_hairpin():
         body += g
         body.append(text((dx + 112, 262), title, 16, fill=OX if k else SEPIA))
     body.append(text((172, 290), "fills the gap: a disk, the loop is lost", 18, fill=SEPIA))
-    body.append(text((512, 290), "respects the gap: the arc survives", 18, fill=SEPIA))
+    body.append(text((512, 290), "respects the gap: the loop survives", 18, fill=SEPIA))
     write("hairpin.svg", svg(680, 300, body,
-                             "Euclidean and path-metric Rips complexes of a hairpin sample"))
+                             "Euclidean and path-metric Rips complexes of a thin-loop sample"))
 
 
 def fig_apex():
