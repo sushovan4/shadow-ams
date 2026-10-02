@@ -214,7 +214,7 @@ Sushovan Majhi
 </div>
 </div>
 <div class="opener-answer fragment" data-fragment-index="2">
-<p><strong>This talk: the shadow.</strong> Embedded graph <span class="math inline">\mathcal G\subset\mathbb R^N</span>, path metric on the sample, every <span class="math inline">N</span>. A sample <strong>on</strong> <span class="math inline">\mathcal G</span>: one explicit scale suffices, <span class="math inline">\mathrm{Sh}\simeq\mathcal G</span>. A sample <strong>near</strong> a polygonal <span class="math inline">\mathcal G</span>: <span class="math inline">\pi_q(\mathcal G)\hookrightarrow\pi_q(\mathrm{Sh})</span>.</p>
+<p><strong>This talk: the shadow.</strong> Embedded graph <span class="math inline">\mathcal G\subset\mathbb R^N</span>, path metric on the sample, every <span class="math inline">N</span>. For polygonal <span class="math inline">\mathcal G</span>, a sample <strong>on</strong> it: one explicit scale suffices, <span class="math inline">\mathrm{Sh}\simeq\mathcal G</span>. A sample <strong>near</strong> it: <span class="math inline">\pi_q(\mathcal G)\hookrightarrow\pi_q(\mathrm{Sh})</span>.</p>
 </div>
 <div class="aside-note fragment" data-fragment-index="3">
 <p>The Euclidean question stays open. It is where we end.</p>
@@ -222,7 +222,7 @@ Sushovan Majhi
 <aside class="notes">
 <p>Kazuhiro ended with a question, and I will start with it. Read the line from the right. His theorem, with Atish and me, is the isomorphism on the right: over all finite samples and as the scale goes to zero, the shadows recover the homotopy groups of the space itself. His question (a) is the one on the left, marked with a question mark: stabilization. When does one dense finite sample, at one small scale, already have the homotopy groups of the space?</p>
 <p>[click] Watch the formula: take the shadow away. For the abstract Rips complex itself, one explicit scale is already known to suffice. These are my quantitative Latschev theorems: for Riemannian and Euclidean submanifolds, at SoCG 2024 and in Discrete &amp; Computational Geometry; for metric graphs, in JACT; and, with Komendarczyk and Tran, for spaces of curvature bounded above, CAT(kappa), under review at DCG. Those are exactly the Hausmann-type input his second theorem assumes.</p>
-<p>[click] And the shadow comes back: that is this talk. It answers a version of his question, and I want to be precise about the version. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not the Euclidean one but a path metric computed from its pairwise distances. In that setting, in every ambient dimension: for a sample lying on the graph, one explicit scale suffices; the shadow is homotopy equivalent to the graph. For a sample merely near a polygonal graph, we get the injective half.</p>
+<p>[click] And the shadow comes back: that is this talk. It answers a version of his question, and I want to be precise about the version. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not the Euclidean one but a path metric computed from its pairwise distances. In that setting, in every ambient dimension: for a polygonal graph and a sample lying on it, one explicit scale suffices; the shadow is homotopy equivalent to the graph. For a sample merely near a polygonal graph, we get the injective half.</p>
 <p>[click] For the Euclidean complex, his question stays open, and that is where I will end.</p>
 <p>(Since Kazuhiro has just defined the shadow and stated Chambers–de Silva–Erickson–Ghrist, the next three slides can go quickly. Budget: about 20 minutes; the live slide is the one place to spend an extra minute.)</p>
 <style type="text/css">
@@ -266,14 +266,11 @@ Sushovan Majhi
 <div class="definition" data-num="1" data-name="Geometric reconstruction">
 <p>A subset of <span class="math inline">\mathbb R^N</span>, built from the sample, that is <strong>homotopy equivalent</strong> to <span class="math inline">\mathcal G</span> and lies within a fixed multiple of the scale from <span class="math inline">\mathcal G</span> in the Hausdorff distance.</p>
 </div>
-<div class="rmk fragment" data-name="Not a new class of sets">
-<p>For sets of positive <span class="math inline">\mu</span>-reach, unions of balls and <span class="math inline">\alpha</span>-shapes already are; graph methods return abstract graphs. The question here is about one object: the one a Rips complex gives for free.</p>
-</div>
 <aside class="notes">
 <p>The setting. An unknown embedded graph G in R^N (road networks, vascular and neuronal trees, fault networks) and a finite sample near it. The Vietoris–Rips complex recovers the homotopy type, but it is abstract: it says what G is, not where.</p>
 <p>The picture: on the left the sample; in the middle its Rips complex, the actual complex at this scale, but drawn by a layout that knows only which points are joined, so it sits nowhere in particular. It knows there is one loop and one tail. On the right a subset of the plane itself, around the graph: that is what we want.</p>
 <p>So we ask for a geometric reconstruction: a subset of the same R^N, built from the sample, homotopy equivalent to G and Hausdorff-close to it at the scale of the construction.</p>
-<p>These exist in other settings, for sets of positive mu-reach, and graphs like ours have positive mu-reach in the plane, so: no advance in the class of sets. The question is about a specific object, the one that comes with a Rips complex for free.</p>
+<p>(Sets of positive mu-reach already have geometric reconstructions; that comes back as the first difficulty in section three. The question here is about one object, the one that comes with a Rips complex for free.)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
