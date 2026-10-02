@@ -368,11 +368,135 @@
     hook();
   }
 
+  // ------------------------------------------------------------------------
+  // the pinch: in R^4 two polar triangles have centroids with the same image
+  // (Chambers--de Silva--Erickson--Ghrist). The complex is the octahedral
+  // sphere; in the shadow the two centroids are one point, and a path from one
+  // to the other through the vertices 1 and 2 becomes a loop that no loop of the
+  // complex maps onto. Driven by fragments data-pinch="1" (glue) and "2" (loop).
+  // ------------------------------------------------------------------------
+  function buildPinch(root) {
+    var C = [300, 178], R = 150;
+    var OCT = { 1: [0, -1.05], 4: [0, 1.05], 2: [0.95, -0.12], 3: [0.42, 0.26],
+                5: [-0.95, 0.12], 6: [-0.42, -0.26] };
+    var HIDDEN = { '4-6': 1, '5-6': 1, '2-6': 1 };
+    var P = {};
+    for (var k = 1; k <= 6; k++) P[k] = [C[0] + R * OCT[k][0], C[1] + R * OCT[k][1]];
+    var cen = function (a, b, c) {
+      return [(P[a][0] + P[b][0] + P[c][0]) / 3, (P[a][1] + P[b][1] + P[c][1]) / 3];
+    };
+    var c135 = cen(1, 3, 5), c246 = cen(2, 4, 6);
+
+    var svg = el('svg', { viewBox: '0 0 640 396', class: 'collapse-figure', role: 'img',
+                          'aria-label': 'Two polar triangles in R^4 whose centroids are glued in the shadow' }, root);
+    el('polygon', { points: [1, 3, 5].map(function (i) { return P[i].join(','); }).join(' '),
+                    fill: OX, 'fill-opacity': 0.18, stroke: 'none' }, svg);
+    el('polygon', { points: [2, 4, 6].map(function (i) { return P[i].join(','); }).join(' '),
+                    fill: OX, 'fill-opacity': 0.09, stroke: 'none' }, svg);
+    for (var i = 1; i <= 6; i++) for (var j = i + 1; j <= 6; j++) {
+      if (Math.abs(i - j) === 3) continue;
+      el('line', { x1: P[i][0], y1: P[i][1], x2: P[j][0], y2: P[j][1], stroke: INK,
+                   'stroke-width': 1.2, 'stroke-dasharray': HIDDEN[i + '-' + j] ? '4 4' : 'none' }, svg);
+    }
+    for (k = 1; k <= 6; k++) {
+      el('circle', { cx: P[k][0], cy: P[k][1], r: 4, fill: INK }, svg);
+      var dx = P[k][0] - C[0], dy = P[k][1] - C[1], n = Math.hypot(dx, dy) || 1;
+      var t = el('text', { x: P[k][0] + 18 * dx / n, y: P[k][1] + 18 * dy / n + 6, 'text-anchor': 'middle',
+                           'font-family': 'EB Garamond, Georgia, serif', 'font-size': 17, fill: SEPIA }, svg);
+      t.textContent = k;
+    }
+
+    // the glue: the two centroids, joined and labeled outside the octahedron,
+    // drawn on the first click
+    var mid = [(c135[0] + c246[0]) / 2, (c135[1] + c246[1]) / 2];
+    var glue = el('path', { d: 'M ' + c135.join(' ') + ' L ' + c246.join(' '),
+                            fill: 'none', stroke: OX, 'stroke-width': 2.4, 'stroke-dasharray': '3 4',
+                            opacity: 0 }, svg);
+    var labAt = [C[0] + R + 40, C[1] + 70];
+    var leader = el('path', { d: 'M ' + mid.join(' ') + ' L ' + (labAt[0] - 6) + ' ' + (labAt[1] - 6),
+                              stroke: OX, 'stroke-width': 0.9, fill: 'none', opacity: 0 }, svg);
+    var glueLab = el('text', { x: labAt[0], y: labAt[1], 'text-anchor': 'start', fill: OX,
+                               'font-family': 'EB Garamond, Georgia, serif', 'font-style': 'italic',
+                               'font-size': 19, opacity: 0 }, svg);
+    glueLab.textContent = 'one point of Sh in ℝ⁴';
+
+    // the new loop: c135 → 1 → 2 → c246, closed by the glue; drawn on the second click
+    var loop = el('path', { d: 'M ' + c135.join(' ') + ' L ' + P[1].join(' ') + ' L ' + P[2].join(' ') +
+                                ' L ' + c246.join(' '),
+                            fill: 'none', stroke: OX, 'stroke-width': 3, 'stroke-linejoin': 'round',
+                            'stroke-linecap': 'round' }, svg);
+    function setDraw(path, u) {
+      var len = path.getTotalLength();
+      path.setAttribute('stroke-dasharray', len + ' ' + len);
+      path.setAttribute('stroke-dashoffset', len * (1 - u));
+    }
+
+    [[c135, 'c₁₃₅', 10, -10], [c246, 'c₂₄₆', 14, 22]].forEach(function (c) {
+      el('circle', { cx: c[0][0], cy: c[0][1], r: 5, fill: PAPER, stroke: OX, 'stroke-width': 2 }, svg);
+      var tt = el('text', { x: c[0][0] + c[2], y: c[0][1] + c[3], 'text-anchor': c[2] < 0 ? 'end' : 'start',
+                            fill: OX, 'font-family': 'EB Garamond, Georgia, serif', 'font-style': 'italic',
+                            'font-size': 17 }, svg);
+      tt.textContent = c[1];
+    });
+    var cap = el('text', { x: 320, y: 388, 'text-anchor': 'middle', 'font-family': 'EB Garamond, Georgia, serif',
+                           'font-style': 'italic', 'font-size': 20, fill: SEPIA }, svg);
+
+    var state = { glue: 0, loop: 0 }, timer = null;
+    function render() {
+      glue.setAttribute('opacity', state.glue > 0 ? 1 : 0);
+      glueLab.setAttribute('opacity', state.glue);
+      leader.setAttribute('opacity', state.glue);
+      if (state.glue > 0) setDraw(glue, state.glue);
+      setDraw(loop, state.loop);
+      loop.setAttribute('opacity', state.loop > 0 ? 1 : 0);
+      cap.textContent = state.loop > 0.98
+        ? 'a loop of Sh that no loop of ℛ maps onto: π₁(Sh) ≅ ℤ, π₁(ℛ) = 0'
+        : state.glue > 0.98 ? 'in ℝ⁴ the centroids c₁₃₅ and c₂₄₆ have the same image'
+        : 'ℛ: two polar triangles 135 and 246 in ℝ⁴, an octahedron ≃ S²';
+    }
+    function animateTo(target) {
+      if (timer) clearInterval(timer);
+      var from = { glue: state.glue, loop: state.loop }, t0 = Date.now(), dur = 1200;
+      timer = setInterval(function () {
+        var u = Math.min(1, (Date.now() - t0) / dur);
+        state.glue = from.glue + (target.glue - from.glue) * u;
+        state.loop = from.loop + (target.loop - from.loop) * u;
+        render();
+        if (u >= 1) { clearInterval(timer); timer = null; }
+      }, 16);
+    }
+
+    var slide = root.closest('section');
+    function steps() {
+      var n = 0;
+      Array.prototype.forEach.call(slide.querySelectorAll('[data-pinch]'), function (f) {
+        if (f.classList.contains('visible')) n = Math.max(n, +f.getAttribute('data-pinch'));
+      });
+      return { glue: n >= 1 ? 1 : 0, loop: n >= 2 ? 1 : 0 };
+    }
+    function sync(animate) {
+      var t = steps();
+      if (animate) animateTo(t); else { state.glue = t.glue; state.loop = t.loop; render(); }
+    }
+    render();
+    function hook() {
+      if (typeof Reveal === 'undefined' || !Reveal.on) { setTimeout(hook, 100); return; }
+      Reveal.on('fragmentshown', function (ev) { if (slide.contains(ev.fragment)) sync(true); });
+      Reveal.on('fragmenthidden', function (ev) { if (slide.contains(ev.fragment)) sync(true); });
+      Reveal.on('slidechanged', function (ev) { if (ev.currentSlide === slide) sync(false); });
+      Reveal.on('ready', function () { sync(false); });
+      sync(false);
+    }
+    hook();
+  }
+
   function init() {
     var lab = document.getElementById('shadow-lab');
     if (lab && !lab.dataset.built) { lab.dataset.built = 1; buildLab(lab); }
     var col = document.getElementById('shadow-collapse');
     if (col && !col.dataset.built) { col.dataset.built = 1; buildCollapse(col); }
+    var pin = document.getElementById('shadow-pinch');
+    if (pin && !pin.dataset.built) { pin.dataset.built = 1; buildPinch(pin); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
