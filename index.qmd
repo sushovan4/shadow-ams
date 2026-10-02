@@ -454,21 +454,21 @@ Change the metric. Hop through the sample in steps shorter than epsilon and take
 
 ::: {.env-row}
 ::: {.theorem data-num="9" data-name="A sample on the graph" data-cite="Kawamura–Majhi–Mitra"}
-[Let $\mathcal G\subset\mathbb R^N$ be **polygonal**, $\mathcal S\subset\mathcal G$ dense, and $\varepsilon\ll\beta$ at one explicit scale set by the sharpest angle, the shadow radius and the shortest edge.]{.hyp} Then $p$ is a homotopy equivalence, and $\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))$ is a geometric reconstruction of $\mathcal G$.
+[Let $\mathcal G\subset\mathbb R^N$ be **polygonal**, $\mathcal S\subset\mathcal G$ dense, and $\varepsilon\ll\beta$ at **one** explicit scale set by the sharpest angle, the shadow radius and the shortest edge.]{.hyp} Then $p$ is a homotopy equivalence, and $\mathrm{Sh}(\mathcal R^\varepsilon_\beta(\mathcal S))$ is a geometric reconstruction of $\mathcal G$.
 :::
 
-::: {.theorem .fragment data-num="10" data-name="A sample off the graph" data-cite="Kawamura–Majhi–Mitra"}
+::: {.theorem .fragment data-fragment-index="1" data-num="10" data-name="A sample off the graph" data-cite="Kawamura–Majhi–Mitra"}
 [Let $\mathcal G\subset\mathbb R^N$ be **polygonal**, $\mathcal S$ merely Hausdorff-close to it, at explicit scales.]{.hyp} Then $p_*$ is injective on every $\pi_k$, bijective on $\pi_0$: $\pi_1(\mathcal G)\hookrightarrow\pi_1(\mathrm{Sh})$.
 :::
 :::
 
 ::: {.fig-row}
-::: {.fig .fragment style="flex-basis: 46%;"}
+::: {.fig .fragment data-fragment-index="2" style="flex-basis: 56%;"}
 ![](assets/sharp.svg)
 :::
 
 ::: {.stmts}
-::: {.rmk .fragment data-name="Second difficulty: sharp vertices"}
+::: {.rmk .fragment data-fragment-index="2" data-name="Second difficulty: sharp vertices"}
 Along an edge the nearest sample point is an apex. At a sharp vertex the $\varepsilon$-path complex can fail the apex condition: an edge between the outer branches cuts the corner and crosses an edge on the middle one, whose far ends are more than $2\beta$ apart in $d^\varepsilon$. There the proof is geometric: the hulls at the vertex fill a set **star-shaped** about it.
 :::
 :::
@@ -479,7 +479,7 @@ The two theorems, in every dimension. A polygonal graph, a sample on it, one exp
 
 [click] A sample merely near a polygonal graph: injective on every homotopy group, so the graph's fundamental group sits inside the shadow's. The proof is the apex idea across two scales, through the shadow radius.
 
-[click] The second difficulty. Along an edge the apex theorem applies: the nearest sample point on one side is an apex. [click] But at a sharp vertex it fails: three branches at fifteen degrees, the path between the two outer ones cuts the corner, and the crossing it makes has no apex, since B and C are more than 2 beta apart in the path metric. So the apex theorem alone does not prove the first theorem. At such a vertex the proof is geometric: the hulls of the simplices at the vertex fill a set that is star-shaped about it, hence contractible, and the pieces glue.
+[click] The second difficulty. Along an edge the apex theorem applies: the nearest sample point on one side is an apex. But at a sharp vertex it fails: three branches at fifteen degrees, the path between the two outer ones cuts the corner, and the crossing it makes has no apex, since B and C are more than 2 beta apart in the path metric. So the apex theorem alone does not prove the first theorem. At such a vertex the proof is geometric: the hulls of the simplices at the vertex fill a set that is star-shaped about it, hence contractible, and the pieces glue.
 :::
 
 
