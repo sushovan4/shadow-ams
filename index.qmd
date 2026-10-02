@@ -36,6 +36,10 @@ Is **one** dense finite sample $F$, at **one** small scale $\beta$, already enou
 Theorem: Kawamura–Majhi–Mitra · Question (a), stabilization: K. Kawamura, the previous talk
 :::
 
+::: {.aside-note .fragment}
+Without the shadow, for the abstract complex $\mathcal R_\beta(F)$, one explicit scale is known to suffice: Riemannian and Euclidean submanifolds, metric graphs, CAT($\kappa$) spaces (Majhi; Komendarczyk–Majhi–Tran).
+:::
+
 ::: {.opener-answer .fragment}
 **This talk.** For an embedded graph $\mathcal G\subset\mathbb R^N$, with a path metric on the sample in place of the Euclidean one, in every $N$:
 
@@ -49,6 +53,8 @@ The Euclidean question stays open. It is where we end.
 
 ::: {.notes}
 Kazuhiro ended with a question, and I will start with it. Read the line from the right. His theorem, with Atish and me, is the isomorphism on the right: over all finite samples and as the scale goes to zero, the shadows recover the homotopy groups of the space itself. His question (a) is the one on the left, marked with a question mark: stabilization. When does one dense finite sample, at one small scale, already have the homotopy groups of the space?
+
+[click] Without the shadow, for the abstract Rips complex, one explicit scale is already known to suffice: quantitative Latschev theorems for Riemannian and Euclidean submanifolds and for metric graphs, and with Komendarczyk and Tran for CAT(kappa) spaces. Those are exactly the Hausmann-type input his second theorem assumes.
 
 [click] This talk answers a version of it, and I want to be precise about the version. Two changes of setting: the shape is an embedded graph, and the metric on the sample is not the Euclidean one but a path metric computed from its pairwise distances. In that setting, in every ambient dimension: for a sample lying on the graph, one explicit scale suffices; the shadow is homotopy equivalent to the graph. For a sample merely near a polygonal graph, we get the injective half.
 
