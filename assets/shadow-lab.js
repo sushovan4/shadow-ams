@@ -323,7 +323,7 @@
       x.setAttribute('opacity', e > 0.95 ? 1 : 0);
       cap.textContent = e < 0.02 ? 'ℛ: every edge but the three long diagonals, an octahedron, ≃ S²'
         : e < 0.98 ? 'the shadow projection p flattens it…'
-        : showH ? 'no apex on the central hexagon H'
+        : showH ? 'the central hexagon H: opposite faces 135 and 246 overlap'
         : 'Sh(ℛ): the filled hexagon, contractible';
     }
 

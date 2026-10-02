@@ -176,7 +176,7 @@ The question, which is Chambers, de Silva, Erickson and Ghrist's, is whether the
 ::: {.theorem data-num="3" data-cite="Chambers–de Silva–Erickson–Ghrist 2010"}
 Let $\mathcal S\subset\mathbb R^N$ be finite and $\mathcal R_\beta(\mathcal S)$ its **Euclidean** Vietoris–Rips complex.
 
-1. If $N=2$, then $p$ is bijective on $\pi_0$ and an isomorphism on $\pi_1$.
+1. If $N=2$, then $p_*$ is a bijection on $\pi_0$ and an isomorphism on $\pi_1$.
 2. If $N=2$ and $k\ge2$, then $p_*$ on $\pi_k$ need not be injective.
 3. If $N\ge4$, then $p_*$ on $\pi_1$ need not be surjective.
 :::
@@ -194,7 +194,7 @@ In $\mathbb R^3$, $p_*$ is onto on $\pi_1$ and its injectivity is open (Adamasze
 ::: {.notes}
 (If this follows Kazuhiro's talk, he has just stated these; do not dwell.) In the plane the projection is 1-connected; already in the plane higher homotopy is not preserved; from dimension four on even the fundamental group fails; in R^3 surjectivity on pi_1 is due to Adamaszek, Frick and Vakili, and injectivity there is open.
 
-The picture is their planar example, and it moves. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. [click] Now let the shadow projection act: every vertex goes to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] And the central hexagon, where the two big triangles overlap, is where it goes wrong; it comes back in section three.
+The picture is their planar example, and it moves. Six points on a regular hexagon, at a scale between the short and long diagonals: every pair is an edge except the three antipodal pairs, so the flag complex is an octahedron, a 2-sphere. [click] Now let the shadow projection act: every vertex goes to its point in the plane, and the sphere is flattened onto the solid hexagon, which is contractible. [click] Where does the sphere go? Over the central hexagon H, two opposite faces of the octahedron, 135 and 246, land on top of each other: the sphere is folded flat, and that fold is what kills pi_2. H comes back in section three.
 :::
 
 
@@ -313,7 +313,7 @@ A sample of a hairpin, or of a sharp vertex; its Vietoris–Rips complex at scal
 
 ```{=html}
 <div id="shadow-lab" data-prevent-swipe></div>
-<script src="assets/shadow-lab.js?v=202610012219"></script>
+<script src="assets/shadow-lab.js?v=202610020815"></script>
 ```
 
 ::: {.notes}
