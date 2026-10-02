@@ -132,6 +132,10 @@ A sample $\mathcal S\subset\mathbb R^N$ lies near an unknown graph $\mathcal G\s
 A subset of $\mathbb R^N$, built from the sample, that is **homotopy equivalent** to $\mathcal G$ and lies within a fixed multiple of the scale from $\mathcal G$ in the Hausdorff distance.
 :::
 
+::: {.aside-note .fragment}
+**Known for the path metric (Komendarczyk–Majhi–Mitra, JACT):** the Rips complex is $\simeq\mathcal G$ in every dimension, and its shadow, the union of the hulls of its simplices, is a geometric reconstruction in the plane. And in $\mathbb R^N$?
+:::
+
 ::: {.notes}
 The setting. An unknown embedded graph G in R^N (road networks, vascular and neuronal trees, fault networks) and a finite sample near it. The Vietoris–Rips complex recovers the homotopy type, but it is abstract: it says what G is, not where.
 
@@ -140,6 +144,8 @@ The picture: on the left the sample; in the middle its Rips complex, the actual 
 So we ask for a geometric reconstruction: a subset of the same R^N, built from the sample, homotopy equivalent to G and Hausdorff-close to it at the scale of the construction.
 
 (Sets of positive mu-reach already have geometric reconstructions; that comes back as the first difficulty in section three. The question here is about one object, the one that comes with a Rips complex for free.)
+
+[click] What is known, from our JACT paper with Komendarczyk and Mitra, for the path metric we will meet in section three: the Rips complex has the homotopy type of the graph in every dimension, so it gets what G is. And a candidate for where comes for free, its shadow, the union of the convex hulls of its simplices: in the plane the same paper shows it is a geometric reconstruction. The question of this talk is the shadow in R^N.
 :::
 
 
